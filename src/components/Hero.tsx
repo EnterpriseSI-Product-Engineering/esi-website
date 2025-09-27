@@ -21,7 +21,7 @@ const Hero = () => {
             Accelerating Journey towards
           </span>
           <br />
-          <div className="inline-flex mt-4 items-center gap-2 px-10 py-3 rounded-full bg-ai-purple/10 text-ai-purple text-5xl font-medium mb-8 leading-0">
+          <div className="inline-flex mt-4 items-center gap-2 px-10 py-3 rounded-full bg-ai-purple/10 text-ai-purple text-sm lg:text-5xl font-medium mb-8 leading-0">
             {/* <Sparkles className="w-4 h-4" /> */}
             Enterprise SuperIntelligence
           </div>

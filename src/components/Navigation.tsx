@@ -60,7 +60,7 @@ const Navigation = () => {
               </a>
             </div>
           </div>
-          <a href="#email-subscription">
+          <a href="#email-subscription" className="hidden md:block">
             <Button
               size="lg"
               className="bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white px-8 py-6 text-lg font-medium"
