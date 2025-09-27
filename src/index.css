@@ -5,6 +5,9 @@
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
+html {
+  scroll-behavior: smooth;
+}
 
 @layer base {
   :root {
@@ -21,7 +24,7 @@ All colors MUST be HSL.
     /* AI-themed primary colors */
     --primary: 262 83% 58%;
     --primary-foreground: 210 20% 98%;
-    
+
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
 
@@ -43,12 +46,24 @@ All colors MUST be HSL.
     --ai-purple: 262 83% 58%;
     --ai-cyan: 188 94% 68%;
     --neural-pink: 316 73% 69%;
-    
+
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(217 91% 60%));
-    --gradient-neural: linear-gradient(135deg, hsl(262 83% 58%), hsl(316 73% 69%));
-    --gradient-cyber: linear-gradient(135deg, hsl(217 91% 60%), hsl(188 94% 68%));
-    
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(262 83% 58%),
+      hsl(217 91% 60%)
+    );
+    --gradient-neural: linear-gradient(
+      135deg,
+      hsl(262 83% 58%),
+      hsl(316 73% 69%)
+    );
+    --gradient-cyber: linear-gradient(
+      135deg,
+      hsl(217 91% 60%),
+      hsl(188 94% 68%)
+    );
+
     /* Light theme overrides */
     --background-light: 0 0% 100%;
     --foreground-light: 240 10% 3.9%;
@@ -74,7 +89,6 @@ All colors MUST be HSL.
 
     --sidebar-border: 220 13% 91%;
 
-    
     /* Animations & Effects */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-ai: 0 25px 50px -12px rgba(139, 92, 246, 0.25);

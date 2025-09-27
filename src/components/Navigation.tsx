@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import { ChevronDown, Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from "react";
+import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from "@/components/ui/dropdown-menu";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,9 +18,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
-              SuperIntelligence
-            </h1>
+            <img src="/esi-logo.png" alt="" className="h-14" />
           </div>
 
           {/* Desktop Navigation */}
@@ -39,8 +38,12 @@ const Navigation = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem>Agentic AI Builder Playground</DropdownMenuItem>
-                  <DropdownMenuItem>Agentic AI Pilot Accelerator Suite</DropdownMenuItem>
+                  <DropdownMenuItem>
+                    Agentic AI Builder Playground
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    Agentic AI Pilot Accelerator Suite
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               <a
@@ -57,6 +60,15 @@ const Navigation = () => {
               </a>
             </div>
           </div>
+          <a href="#email-subscription" className="hidden md:block">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white px-8 py-6 text-lg font-medium"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </a>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -65,7 +77,11 @@ const Navigation = () => {
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -82,7 +98,9 @@ const Navigation = () => {
               Home
             </a>
             <div className="px-3 py-2">
-              <p className="text-sm font-medium text-muted-foreground mb-2">Our Products</p>
+              <p className="text-sm font-medium text-muted-foreground mb-2">
+                Our Products
+              </p>
               <div className="pl-4 space-y-1">
                 <a
                   href="#product1"
