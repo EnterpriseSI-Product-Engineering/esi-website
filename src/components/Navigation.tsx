@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
+import {
+  ArrowRight,
+  ChevronDown,
+  CornerDownRight,
+  Menu,
+  X,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -17,32 +23,67 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <img src="/esi-logo.png" alt="" className="h-14" />
+          <div className="flex-shrink-0 flex items-center">
+            <img src="/esi-logo.png" alt="" className="h-12" />
+            <div>
+              <h1 className="text-xl font-bold text-[#1683b3]">EnterpriseSI</h1>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-baseline space-x-4 ">
               <a
                 href="#home"
-                className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-md font-medium transition-colors"
               >
                 Home
               </a>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="flex items-center gap-1">
-                    Our Products
+                    Products
                     <ChevronDown className="h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuItem>
+                <DropdownMenuContent className="ml-[220px] mt-1 p-5 space-y-2">
+                  <DropdownMenuItem className="text-md">
+                    Agentic AI Acceleration Platform
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="text-md ml-1">
+                    <CornerDownRight className="mr-3" />
                     Agentic AI Builder Playground
                   </DropdownMenuItem>
-                  <DropdownMenuItem>
+                  <DropdownMenuItem className="text-md ml-1">
+                    <CornerDownRight className="mr-3" />
+                    Agentic AI Business Pilot Accelerators
+                  </DropdownMenuItem>
+                  {/* <DropdownMenuItem>
                     Agentic AI Pilot Accelerator Suite
+                  </DropdownMenuItem> */}
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="flex items-center gap-1">
+                    Solutions
+                    <ChevronDown className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="ml-[350px] mt-1 p-5 space-y-2">
+                  <DropdownMenuItem className="text-md">
+                    Agentic AI Product Pilot-as-service - Offshore Delivery
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="text-md">
+                    AI Enablement for your Employees
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="text-md ml-1">
+                    <CornerDownRight className="mr-3" />
+                    Business AI Programs
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="text-md ml-1">
+                    <CornerDownRight className="mr-3" />
+                    Technical AI Programs
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -52,12 +93,13 @@ const Navigation = () => {
               >
                 About
               </a>
-              <a
+
+              {/* <a
                 href="#contact"
                 className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Contact
-              </a>
+              </a> */}
             </div>
           </div>
           <a href="#email-subscription" className="hidden md:block">
@@ -99,7 +141,7 @@ const Navigation = () => {
             </a>
             <div className="px-3 py-2">
               <p className="text-sm font-medium text-muted-foreground mb-2">
-                Our Products
+                Products
               </p>
               <div className="pl-4 space-y-1">
                 <a
