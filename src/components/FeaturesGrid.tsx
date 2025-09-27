@@ -1,64 +1,70 @@
-import { 
-  Users, 
-  Workflow, 
-  TrendingUp, 
-  Lightbulb, 
-  Code, 
-  BarChart, 
-  ShieldCheck 
-} from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import {
+  Users,
+  Workflow,
+  TrendingUp,
+  Lightbulb,
+  Code,
+  BarChart,
+  ShieldCheck,
+} from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const features = [
   {
     icon: Users,
-    title: 'Improve Customer Experience',
-    description: 'Enhance customer interactions with AI-powered personalization and support systems.',
-    gradient: 'from-ai-purple to-ai-blue'
+    title: "Improve Customer Experience",
+    description: "Marketing | Service | E-Com | Sales | UI-UX Transformation",
+    gradient: "from-ai-purple to-ai-blue",
   },
   {
     icon: Workflow,
-    title: 'Improve Business Processes',
-    description: 'Streamline operations and automate workflows with intelligent process optimization.',
-    gradient: 'from-ai-blue to-ai-cyan'
+    title: "Improve Business Processes",
+    description:
+      "Process Intelligence | Process Automation | Process Optimization | Process Analytics & Exception Handling",
+    gradient: "from-ai-blue to-ai-cyan",
   },
   {
     icon: TrendingUp,
-    title: 'Improve Revenue, Profit & Cash Flow',
-    description: 'Drive financial growth through AI-driven insights and strategic optimization.',
-    gradient: 'from-ai-cyan to-neural-pink'
+    title: "Improve Revenue, Profit & Cash Flow",
+    description:
+      "Revenue Generation | Profit Optimization | Cash Flow Management",
+    gradient: "from-ai-cyan to-neural-pink",
   },
   {
     icon: Lightbulb,
-    title: 'Improve Employee Productivity & Creativity',
-    description: 'Empower your workforce with AI tools that enhance innovation and efficiency.',
-    gradient: 'from-neural-pink to-ai-purple'
+    title: "Improve Employee Productivity & Creativity",
+    description:
+      "Intelligent Assistance | Augmentation | Learning & Development",
+    gradient: "from-neural-pink to-ai-purple",
   },
   {
     icon: Code,
-    title: 'Improve Software Development Outcomes',
-    description: 'Accelerate development cycles with AI-assisted coding and automated testing.',
-    gradient: 'from-ai-purple to-ai-blue'
+    title: "Improve Software Development Outcomes",
+    description:
+      "Design & Analysis | Coding | Testing | Deployment | Operations Transformation",
+    gradient: "from-ai-purple to-ai-blue",
   },
   {
     icon: BarChart,
-    title: 'Improve Analysis & Decision Making',
-    description: 'Make data-driven decisions with advanced AI analytics and predictive insights.',
-    gradient: 'from-ai-blue to-ai-cyan'
+    title: "Improve Analysis & Decision Making",
+    description:
+      "Real Time Insights | Next Best Action/ Recommendation | Insight-to-action | Decision Simulation/ What-if analysis",
+    gradient: "from-ai-blue to-ai-cyan",
   },
   {
     icon: ShieldCheck,
-    title: 'Improve Regulatory Compliance & Risk Management',
-    description: 'Ensure compliance and mitigate risks with AI-powered monitoring and analysis.',
-    gradient: 'from-ai-cyan to-neural-pink'
-  }
+    title: "Improve Regulatory Compliance & Risk Management",
+    description:
+      "Real Time Risk/ Threat Detection | Compliance Automation | Audit reporting augmentation |  Audit task automation",
+    gradient: "from-ai-cyan to-neural-pink",
+  },
 ];
 
 const FeaturesGrid = () => {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8">
+    <section className="pb-24 px-4 sm:px-6 lg:px-8 -mt-20">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Transform Your Enterprise with{' '}
             <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
@@ -69,21 +75,25 @@ const FeaturesGrid = () => {
             Our platform empowers businesses across multiple dimensions, delivering measurable improvements 
             in efficiency, innovation, and growth.
           </p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card 
+            <Card
               key={index}
               className="group relative overflow-hidden border-0 bg-gradient-to-br from-background to-muted/50 hover:from-background hover:to-muted transition-all duration-300 hover:scale-105"
             >
               {/* Gradient border */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg`} />
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg`}
+              />
               <div className="absolute inset-[1px] bg-gradient-to-br from-background to-muted/50 rounded-lg" />
-              
+
               <CardContent className="relative p-8">
                 {/* Icon */}
-                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.gradient} mb-6`}>
+                <div
+                  className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${feature.gradient} mb-6`}
+                >
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
 

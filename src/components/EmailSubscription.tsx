@@ -151,12 +151,12 @@ const EmailSubscription = () => {
           <Card className="border-0 bg-background/80 backdrop-blur-sm shadow-xl">
             <CardHeader>
               <CardTitle className="text-2xl text-center">
-                Complete Your Subscription
+                To serve you better, we would request following additional info:
               </CardTitle>
-              <p className="text-center text-muted-foreground">
+              {/* <p className="text-center text-muted-foreground">
                 Please provide additional information to personalize your
                 experience
-              </p>
+              </p> */}
             </CardHeader>
             <CardContent className="p-8">
               <form onSubmit={handleFullFormSubmit} className="space-y-6">
