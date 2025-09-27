@@ -1,35 +1,41 @@
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Mail, ArrowRight, Check } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Mail, ArrowRight, Check } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const countryCodes = [
-  { code: '+1', country: 'US' },
-  { code: '+44', country: 'UK' },
-  { code: '+91', country: 'IN' },
-  { code: '+49', country: 'DE' },
-  { code: '+33', country: 'FR' },
-  { code: '+86', country: 'CN' },
-  { code: '+81', country: 'JP' },
+  { code: "+1", country: "US" },
+  { code: "+44", country: "UK" },
+  { code: "+91", country: "IN" },
+  { code: "+49", country: "DE" },
+  { code: "+33", country: "FR" },
+  { code: "+86", country: "CN" },
+  { code: "+81", country: "JP" },
 ];
 
 const EmailSubscription = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [showFullForm, setShowFullForm] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    company: '',
-    designation: '',
-    city: '',
-    country: '',
-    countryCode: '+1',
-    phone: ''
+    firstName: "",
+    lastName: "",
+    company: "",
+    designation: "",
+    city: "",
+    country: "",
+    countryCode: "+1",
+    phone: "",
   });
   const { toast } = useToast();
 
@@ -42,11 +48,18 @@ const EmailSubscription = () => {
 
   const handleFullFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate required fields
-    const requiredFields = ['firstName', 'lastName', 'company', 'designation', 'city', 'country'];
-    const missingFields = requiredFields.filter(field => !formData[field]);
-    
+    const requiredFields = [
+      "firstName",
+      "lastName",
+      "company",
+      "designation",
+      "city",
+      "country",
+    ];
+    const missingFields = requiredFields.filter((field) => !formData[field]);
+
     if (missingFields.length > 0) {
       toast({
         title: "Missing Information",
@@ -60,12 +73,13 @@ const EmailSubscription = () => {
     setIsSubmitted(true);
     toast({
       title: "Successfully Subscribed!",
-      description: "Thank you for your interest. We'll keep you updated on our platform.",
+      description:
+        "Thank you for your interest. We'll keep you updated on our platform.",
     });
   };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   if (isSubmitted) {
@@ -79,7 +93,8 @@ const EmailSubscription = () => {
           </div>
           <h2 className="text-3xl font-bold mb-4">Thank You!</h2>
           <p className="text-xl text-muted-foreground">
-            We've received your subscription and will keep you updated on our AI platform developments.
+            We've received your subscription and will keep you updated on our AI
+            platform developments.
           </p>
         </div>
       </section>
@@ -87,11 +102,14 @@ const EmailSubscription = () => {
   }
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-ai-purple/5 via-background to-ai-blue/5">
+    <section
+      id="email-subscription"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-ai-purple/5 via-background to-ai-blue/5"
+    >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Stay Updated on Our{' '}
+            Stay Updated on Our{" "}
             <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
               AI Platform
             </span>
@@ -117,8 +135,8 @@ const EmailSubscription = () => {
                       required
                     />
                   </div>
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90"
                   >
                     Continue
@@ -131,9 +149,12 @@ const EmailSubscription = () => {
         ) : (
           <Card className="border-0 bg-background/80 backdrop-blur-sm shadow-xl">
             <CardHeader>
-              <CardTitle className="text-2xl text-center">Complete Your Subscription</CardTitle>
+              <CardTitle className="text-2xl text-center">
+                Complete Your Subscription
+              </CardTitle>
               <p className="text-center text-muted-foreground">
-                Please provide additional information to personalize your experience
+                Please provide additional information to personalize your
+                experience
               </p>
             </CardHeader>
             <CardContent className="p-8">
@@ -146,7 +167,9 @@ const EmailSubscription = () => {
                     <Input
                       id="firstName"
                       value={formData.firstName}
-                      onChange={(e) => handleInputChange('firstName', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("firstName", e.target.value)
+                      }
                       className="mt-1"
                       required
                     />
@@ -158,7 +181,9 @@ const EmailSubscription = () => {
                     <Input
                       id="lastName"
                       value={formData.lastName}
-                      onChange={(e) => handleInputChange('lastName', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("lastName", e.target.value)
+                      }
                       className="mt-1"
                       required
                     />
@@ -173,19 +198,26 @@ const EmailSubscription = () => {
                     <Input
                       id="company"
                       value={formData.company}
-                      onChange={(e) => handleInputChange('company', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("company", e.target.value)
+                      }
                       className="mt-1"
                       required
                     />
                   </div>
                   <div>
-                    <Label htmlFor="designation" className="text-sm font-medium">
+                    <Label
+                      htmlFor="designation"
+                      className="text-sm font-medium"
+                    >
                       Designation/Role *
                     </Label>
                     <Input
                       id="designation"
                       value={formData.designation}
-                      onChange={(e) => handleInputChange('designation', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("designation", e.target.value)
+                      }
                       className="mt-1"
                       required
                     />
@@ -200,7 +232,9 @@ const EmailSubscription = () => {
                     <Input
                       id="city"
                       value={formData.city}
-                      onChange={(e) => handleInputChange('city', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("city", e.target.value)
+                      }
                       className="mt-1"
                       required
                     />
@@ -212,7 +246,9 @@ const EmailSubscription = () => {
                     <Input
                       id="country"
                       value={formData.country}
-                      onChange={(e) => handleInputChange('country', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("country", e.target.value)
+                      }
                       className="mt-1"
                       required
                     />
@@ -224,7 +260,12 @@ const EmailSubscription = () => {
                     Phone Number (Optional)
                   </Label>
                   <div className="flex gap-2 mt-1">
-                    <Select value={formData.countryCode} onValueChange={(value) => handleInputChange('countryCode', value)}>
+                    <Select
+                      value={formData.countryCode}
+                      onValueChange={(value) =>
+                        handleInputChange("countryCode", value)
+                      }
+                    >
                       <SelectTrigger className="w-24">
                         <SelectValue />
                       </SelectTrigger>
@@ -239,15 +280,17 @@ const EmailSubscription = () => {
                     <Input
                       placeholder="Phone number"
                       value={formData.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      onChange={(e) =>
+                        handleInputChange("phone", e.target.value)
+                      }
                       className="flex-1"
                     />
                   </div>
                 </div>
 
                 <div className="pt-4">
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="w-full bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 py-3 text-lg font-medium"
                   >
                     Subscribe to Updates
@@ -256,9 +299,9 @@ const EmailSubscription = () => {
                 </div>
 
                 <div className="text-center">
-                  <Button 
-                    type="button" 
-                    variant="ghost" 
+                  <Button
+                    type="button"
+                    variant="ghost"
                     onClick={() => setShowFullForm(false)}
                     className="text-muted-foreground hover:text-foreground"
                   >
