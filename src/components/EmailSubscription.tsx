@@ -109,13 +109,14 @@ const EmailSubscription = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Stay Updated on Our{" "}
+            Book a Demo &{" "}
             <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
-              AI Platform
+              Stay Informed
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            For updates and news about our platform, enter your email address
+            To book a product demo and stay updated with the latest developments
+            on our platform, please enter your email address.
           </p>
         </div>
 
