@@ -9,6 +9,7 @@ import FeaturesGrid from "./components/FeaturesGrid";
 import EmailSubscription from "./components/EmailSubscription";
 import NotFound from "./pages/NotFound";
 import Product from "./pages/Product";
+import Solutions from "./pages/Solutions";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
             <Route path="product/:slug" element={<Product />} />
+            <Route path="solutions/:slug" element={<Solutions />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

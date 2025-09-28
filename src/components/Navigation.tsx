@@ -80,18 +80,24 @@ const Navigation = () => {
                   <DropdownMenuItem className="text-md">
                     AI Enablement for your Employees
                   </DropdownMenuItem>
-                  <DropdownMenuItem className="text-md ml-1">
-                    <CornerDownRight className="mr-3" />
-                    AI Talent Transformation Strategy
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="text-md ml-1">
-                    <CornerDownRight className="mr-3" />
-                    Business AI Programs
-                  </DropdownMenuItem>
-                  <DropdownMenuItem className="text-md ml-1">
-                    <CornerDownRight className="mr-3" />
-                    Technical AI Programs
-                  </DropdownMenuItem>
+                  <Link to="/solutions/ai-talent-transformation-strategy">
+                    <DropdownMenuItem className="text-md ml-1">
+                      <CornerDownRight className="mr-3" />
+                      AI Talent Transformation Strategy
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link to="/solutions/business-ai-programs">
+                    <DropdownMenuItem className="text-md ml-1">
+                      <CornerDownRight className="mr-3" />
+                      Business AI Programs
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link to="/solutions/technical-ai-programs">
+                    <DropdownMenuItem className="text-md ml-1">
+                      <CornerDownRight className="mr-3" />
+                      Technical AI Programs
+                    </DropdownMenuItem>
+                  </Link>
                 </DropdownMenuContent>
               </DropdownMenu>
               <a
