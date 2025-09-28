@@ -13,6 +13,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,12 +25,12 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <Link to="/" className="flex-shrink-0 flex items-center">
             <img src="/esi-logo.png" alt="" className="h-12" />
             <div>
               <h1 className="text-xl font-bold text-[#1683b3]">EnterpriseSI</h1>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -51,17 +52,16 @@ const Navigation = () => {
                   <DropdownMenuItem className="text-md">
                     Agentic AI Acceleration Platform
                   </DropdownMenuItem>
-                  <DropdownMenuItem className="text-md ml-1">
-                    <CornerDownRight className="mr-3" />
-                    Agentic AI Builder Playground
-                  </DropdownMenuItem>
+                  <Link to="/product/agentic-ai-builder-playground">
+                    <DropdownMenuItem className="text-md ml-1">
+                      <CornerDownRight className="mr-3" />
+                      Agentic AI Builder Playground
+                    </DropdownMenuItem>
+                  </Link>
                   <DropdownMenuItem className="text-md ml-1">
                     <CornerDownRight className="mr-3" />
                     Agentic AI Business Pilot Accelerators
                   </DropdownMenuItem>
-                  {/* <DropdownMenuItem>
-                    Agentic AI Pilot Accelerator Suite
-                  </DropdownMenuItem> */}
                 </DropdownMenuContent>
               </DropdownMenu>
               <DropdownMenu>
