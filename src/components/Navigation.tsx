@@ -35,12 +35,12 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4 ">
-              <a
-                href="#home"
+              <Link
+                to={"/"}
                 className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-md font-medium transition-colors"
               >
                 Home
-              </a>
+              </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="flex items-center gap-1">
@@ -100,12 +100,12 @@ const Navigation = () => {
                   </Link>
                 </DropdownMenuContent>
               </DropdownMenu>
-              <a
+              {/* <a
                 href="#about"
                 className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 About
-              </a>
+              </a> */}
 
               {/* <a
                 href="#contact"
