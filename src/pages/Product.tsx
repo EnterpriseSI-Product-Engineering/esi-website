@@ -9,9 +9,9 @@ const Product = () => {
     <div>
       {/* Now you can use the slug parameter to conditionally render components */}
       {slug === "agentic-ai-builder-playground" ? (
-        <AgenticAIBusinessPilotAccelerators />
-      ) : (
         <AgenticAIPlayground />
+      ) : (
+        <AgenticAIBusinessPilotAccelerators />
       )}
     </div>
   );

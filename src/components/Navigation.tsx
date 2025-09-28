@@ -58,10 +58,12 @@ const Navigation = () => {
                       Agentic AI Builder Playground
                     </DropdownMenuItem>
                   </Link>
-                  <DropdownMenuItem className="text-md ml-1">
-                    <CornerDownRight className="mr-3" />
-                    Agentic AI Business Pilot Accelerators
-                  </DropdownMenuItem>
+                  <Link to="/product/agentic-ai-business-pilot-accelerators">
+                    <DropdownMenuItem className="text-md ml-1">
+                      <CornerDownRight className="mr-3" />
+                      Agentic AI Business Pilot Accelerators
+                    </DropdownMenuItem>
+                  </Link>
                 </DropdownMenuContent>
               </DropdownMenu>
               <DropdownMenu>
