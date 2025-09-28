@@ -294,12 +294,12 @@ const EmailSubscription = () => {
                     type="submit"
                     className="w-full bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 py-3 text-lg font-medium"
                   >
-                    Subscribe to Updates
+                    Submit
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
 
-                <div className="text-center">
+                {/* <div className="text-center">
                   <Button
                     type="button"
                     variant="ghost"
@@ -308,7 +308,7 @@ const EmailSubscription = () => {
                   >
                     ← Back to email entry
                   </Button>
-                </div>
+                </div> */}
               </form>
             </CardContent>
           </Card>
