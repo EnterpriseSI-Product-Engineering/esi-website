@@ -157,7 +157,7 @@ const AITalentTransformationStrategy = () => {
           </div>
         </section>
 
-        <EmailSubscription />
+        <EmailSubscription page="solutions" />
       </main>
     </div>
   );
