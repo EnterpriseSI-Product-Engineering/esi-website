@@ -166,7 +166,7 @@ const BusinessAIPrograms = () => {
           </div>
         </section>
 
-        <EmailSubscription />
+        <EmailSubscription page="solutions" />
       </main>
     </div>
   );

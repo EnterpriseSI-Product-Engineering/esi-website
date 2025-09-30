@@ -100,19 +100,6 @@ const Navigation = () => {
                   </Link>
                 </DropdownMenuContent>
               </DropdownMenu>
-              {/* <a
-                href="#about"
-                className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                About
-              </a> */}
-
-              {/* <a
-                href="#contact"
-                className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Contact
-              </a> */}
             </div>
           </div>
           <a href="#email-subscription" className="hidden md:block">
@@ -146,12 +133,12 @@ const Navigation = () => {
       {isMenuOpen && (
         <div className="md:hidden transition-all duration-200">
           <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-background border-t border-border">
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="block text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-base font-medium"
             >
               Home
-            </a>
+            </Link>
             {/* Products Collapsible */}
             <div className="px-3 py-2">
               <button
@@ -168,26 +155,23 @@ const Navigation = () => {
               </button>
               {productsOpen && (
                 <div className="pl-4 space-y-1">
-                  <a
-                    href="#product1"
-                    className="block text-foreground hover:text-ai-purple py-1 text-sm"
-                  >
+                  <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
                     Agentic AI Acceleration Platform
-                  </a>
-                  <a
-                    href="#product2"
+                  </span>
+                  <Link
+                    to="/product/agentic-ai-builder-playground"
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
                     Agentic AI Builder Playground
-                  </a>
-                  <a
-                    href="#product3"
+                  </Link>
+                  <Link
+                    to="/product/agentic-ai-business-pilot-accelerators"
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
                     Agentic AI Business Pilot Accelerators
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
@@ -207,48 +191,36 @@ const Navigation = () => {
               </button>
               {solutionsOpen && (
                 <div className="pl-4 space-y-1">
-                  <a
-                    href="#solution1"
-                    className="block text-foreground hover:text-ai-purple py-1 text-sm"
-                  >
+                  <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
                     Agentic AI Product Pilot-as-service - Offshore Delivery
-                  </a>
-                  <a
-                    href="#solution2"
-                    className="block text-foreground hover:text-ai-purple py-1 text-sm"
-                  >
+                  </span>
+                  <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
                     AI Enablement for your Employees
-                  </a>
-                  <a
-                    href="#solution3"
+                  </span>
+                  <Link
+                    to="/solutions/ai-talent-transformation-strategy"
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
                     AI Talent Transformation Strategy
-                  </a>
-                  <a
-                    href="#solution4"
+                  </Link>
+                  <Link
+                    to="/solutions/business-ai-programs"
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
                     Business AI Programs
-                  </a>
-                  <a
-                    href="#solution5"
+                  </Link>
+                  <Link
+                    to="/solutions/technical-ai-programs"
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
                     Technical AI Programs
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
-            <a
-              href="#about"
-              className="block text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-base font-medium"
-            >
-              About
-            </a>
             <a href="#email-subscription">
               <Button className="w-full mt-3 bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white py-3 text-center text-lg font-medium">
                 Contact Us

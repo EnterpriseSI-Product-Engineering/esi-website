@@ -14,16 +14,49 @@ import { Mail, ArrowRight, Check } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const countryCodes = [
-  { code: "+1", country: "US" },
-  { code: "+44", country: "UK" },
-  { code: "+91", country: "IN" },
-  { code: "+49", country: "DE" },
-  { code: "+33", country: "FR" },
-  { code: "+86", country: "CN" },
-  { code: "+81", country: "JP" },
+  { code: "+1", country: "United States" },
+  { code: "+44", country: "United Kingdom" },
+  { code: "+91", country: "India" },
+  { code: "+49", country: "Germany" },
+  { code: "+33", country: "France" },
+  { code: "+86", country: "China" },
+  { code: "+81", country: "Japan" },
+  { code: "+61", country: "Australia" },
+  { code: "+64", country: "New Zealand" },
+  { code: "+65", country: "Singapore" },
+  { code: "+82", country: "South Korea" },
+  { code: "+852", country: "Hong Kong" },
+  { code: "+971", country: "United Arab Emirates" },
+  { code: "+966", country: "Saudi Arabia" },
+  { code: "+34", country: "Spain" },
+  { code: "+39", country: "Italy" },
+  { code: "+31", country: "Netherlands" },
+  { code: "+47", country: "Norway" },
+  { code: "+46", country: "Sweden" },
+  { code: "+45", country: "Denmark" },
+  { code: "+358", country: "Finland" },
+  { code: "+48", country: "Poland" },
+  { code: "+43", country: "Austria" },
+  { code: "+41", country: "Switzerland" },
+  { code: "+32", country: "Belgium" },
+  { code: "+353", country: "Ireland" },
+  { code: "+351", country: "Portugal" },
+  { code: "+30", country: "Greece" },
+  { code: "+972", country: "Israel" },
+  { code: "+55", country: "Brazil" },
+  { code: "+52", country: "Mexico" },
+  { code: "+54", country: "Argentina" },
+  { code: "+56", country: "Chile" },
+  { code: "+57", country: "Colombia" },
+  { code: "+27", country: "South Africa" },
+  { code: "+60", country: "Malaysia" },
+  { code: "+62", country: "Indonesia" },
+  { code: "+63", country: "Philippines" },
+  { code: "+66", country: "Thailand" },
+  { code: "+84", country: "Vietnam" },
 ];
 
-const EmailSubscription = () => {
+const EmailSubscription = ({ page }: { page: string }) => {
   const [email, setEmail] = useState("");
   const [showFullForm, setShowFullForm] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -49,7 +82,6 @@ const EmailSubscription = () => {
   const handleFullFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validate required fields
     const requiredFields = [
       "firstName",
       "lastName",
@@ -69,7 +101,6 @@ const EmailSubscription = () => {
       return;
     }
 
-    // Simulate form submission
     setIsSubmitted(true);
     toast({
       title: "Successfully Subscribed!",
@@ -79,7 +110,13 @@ const EmailSubscription = () => {
   };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
+    // handle unique country code format (e.g., "India-+91")
+    if (field === "countryCode" && value.includes("-")) {
+      const code = value.split("-").pop() ?? "+1";
+      setFormData((prev) => ({ ...prev, [field]: code }));
+    } else {
+      setFormData((prev) => ({ ...prev, [field]: value }));
+    }
   };
 
   if (isSubmitted) {
@@ -107,38 +144,47 @@ const EmailSubscription = () => {
       className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-ai-purple/5 via-background to-ai-blue/5"
     >
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 flex items-center justify-center flex-col">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Book a Demo &{" "}
             <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
               Stay Informed
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
-            To book a product demo and stay updated with the latest developments
-            on our platform, please enter your email address.
-          </p>
+          {page === "solutions" ? (
+            <p className="text-xl text-muted-foreground max-w-3xl">
+              If you have an existing pain area/requirement where our "Agentic
+              AI Pilot-as-Service" offering seems a good fit, please send us an
+              enquiry:
+            </p>
+          ) : (
+            <p className="text-xl text-muted-foreground">
+              To book a product demo and stay updated with the latest
+              developments on our platform, please enter your email address.
+            </p>
+          )}
         </div>
 
         {!showFullForm ? (
-          <Card className="max-w-2xl mx-auto border-0 bg-background/80 backdrop-blur-sm shadow-xl">
+          <Card className="max-w-md mx-auto border-0 bg-background/80 backdrop-blur-sm shadow-xl">
             <CardContent className="p-8">
               <form onSubmit={handleEmailSubmit} className="space-y-6">
-                <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10 rounded-lg">
-                  <Mail className="text-ai-purple w-6 h-6" />
-                  <div className="flex-1">
+                {/* ✅ Mobile-friendly Email Row */}
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 p-4 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10 rounded-lg">
+                  <div className="flex items-center gap-3 flex-1">
+                    <Mail className="text-ai-purple w-6 h-6 shrink-0" />
                     <Input
                       type="email"
                       placeholder="Enter your email address"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="border-0 bg-transparent text-lg placeholder:text-muted-foreground focus-visible:ring-0"
+                      className="border-0 bg-transparent text-base placeholder:text-muted-foreground focus-visible:ring-0 flex-1"
                       required
                     />
                   </div>
                   <Button
                     type="submit"
-                    className="bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90"
+                    className="w-full sm:w-auto bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 py-3 text-base font-medium"
                   >
                     Continue
                     <ArrowRight className="ml-2 w-4 h-4" />
@@ -153,10 +199,6 @@ const EmailSubscription = () => {
               <CardTitle className="text-2xl text-center">
                 To serve you better, we would request following additional info:
               </CardTitle>
-              {/* <p className="text-center text-muted-foreground">
-                Please provide additional information to personalize your
-                experience
-              </p> */}
             </CardHeader>
             <CardContent className="p-8">
               <form onSubmit={handleFullFormSubmit} className="space-y-6">
@@ -262,22 +304,28 @@ const EmailSubscription = () => {
                   </Label>
                   <div className="flex gap-2 mt-1">
                     <Select
-                      value={formData.countryCode}
+                      value={`${formData.country}-${formData.countryCode}`}
                       onValueChange={(value) =>
                         handleInputChange("countryCode", value)
                       }
                     >
-                      <SelectTrigger className="w-24">
-                        <SelectValue />
+                      <SelectTrigger className="w-48">
+                        <SelectValue placeholder={formData.countryCode}>
+                          {formData.countryCode}
+                        </SelectValue>
                       </SelectTrigger>
                       <SelectContent>
                         {countryCodes.map((item) => (
-                          <SelectItem key={item.code} value={item.code}>
-                            {item.code}
+                          <SelectItem
+                            key={`${item.country}-${item.code}`}
+                            value={`${item.country}-${item.code}`}
+                          >
+                            {item.country} ({item.code})
                           </SelectItem>
                         ))}
                       </SelectContent>
                     </Select>
+
                     <Input
                       placeholder="Phone number"
                       value={formData.phone}
@@ -298,17 +346,6 @@ const EmailSubscription = () => {
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
-
-                {/* <div className="text-center">
-                  <Button
-                    type="button"
-                    variant="ghost"
-                    onClick={() => setShowFullForm(false)}
-                    className="text-muted-foreground hover:text-foreground"
-                  >
-                    ← Back to email entry
-                  </Button>
-                </div> */}
               </form>
             </CardContent>
           </Card>
