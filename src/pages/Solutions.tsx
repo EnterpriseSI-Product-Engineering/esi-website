@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import AITalentTransformationStrategy from "./AITalentTransformationStrategy";
 import BusinessAIPrograms from "./BusinessAIPrograms";
 import TechnicalAIPrograms from "./TechnicalAIPrograms";
+import AgenticAIPilotService from "./AgenticAIPilotService";
 
 const Solutions = () => {
   const { slug } = useParams();
@@ -14,6 +15,8 @@ const Solutions = () => {
         return <BusinessAIPrograms />;
       case "technical-ai-programs":
         return <TechnicalAIPrograms />;
+      case "agentic-ai-product-pilot-as-service":
+        return <AgenticAIPilotService />;
       default:
         return (
           <div className="text-center py-20">

@@ -74,9 +74,11 @@ const Navigation = () => {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="ml-[350px] mt-1 p-5 space-y-2">
-                  <DropdownMenuItem className="text-md">
-                    Agentic AI Product Pilot-as-service - Offshore Delivery
-                  </DropdownMenuItem>
+                  <Link to="/solutions/agentic-ai-product-pilot-as-service">
+                    <DropdownMenuItem className="text-md">
+                      Agentic AI Product Pilot-as-service - Offshore Delivery
+                    </DropdownMenuItem>
+                  </Link>
                   <DropdownMenuItem className="text-md">
                     AI Enablement for your Employees
                   </DropdownMenuItem>
@@ -191,9 +193,11 @@ const Navigation = () => {
               </button>
               {solutionsOpen && (
                 <div className="pl-4 space-y-1">
-                  <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
-                    Agentic AI Product Pilot-as-service - Offshore Delivery
-                  </span>
+                  <Link to="/solutions/agentic-ai-product-pilot-as-service">
+                    <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
+                      Agentic AI Product Pilot-as-service - Offshore Delivery
+                    </span>
+                  </Link>
                   <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
                     AI Enablement for your Employees
                   </span>
