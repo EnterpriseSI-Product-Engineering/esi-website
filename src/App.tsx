@@ -10,6 +10,7 @@ import EmailSubscription from "./components/EmailSubscription";
 import NotFound from "./pages/NotFound";
 import Product from "./pages/Product";
 import Solutions from "./pages/Solutions";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />

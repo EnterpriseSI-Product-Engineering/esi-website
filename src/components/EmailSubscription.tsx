@@ -56,7 +56,7 @@ const countryCodes = [
   { code: "+84", country: "Vietnam" },
 ];
 
-const EmailSubscription = ({ page }: { page: string }) => {
+const EmailSubscription = ({ page }: { page?: string }) => {
   const [email, setEmail] = useState("");
   const [showFullForm, setShowFullForm] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -145,12 +145,20 @@ const EmailSubscription = ({ page }: { page: string }) => {
     >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12 flex items-center justify-center flex-col">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Book a Demo &{" "}
-            <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
-              Stay Informed
-            </span>
-          </h2>
+          {page === "solutions" ? (
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+                Lets Start a Discussion
+              </span>
+            </h2>
+          ) : (
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Book a Demo &{" "}
+              <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+                Stay Informed
+              </span>
+            </h2>
+          )}
           {page === "solutions" ? (
             <p className="text-xl text-muted-foreground max-w-3xl">
               If you have an existing pain area/requirement where our "Agentic
