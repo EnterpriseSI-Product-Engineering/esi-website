@@ -167,7 +167,7 @@ const AITalentTransformationStrategy = () => {
                   <p className="text-muted-foreground text-center w-full">
                     Our consulting work leverages our CASH (Continuous,
                     Accelerated, Scalable, Holistic) model that leverages our
-                    unique platform driven approach
+                    unique platform driven approach 
                   </p>
                 </div>
               </CardContent>
