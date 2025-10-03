@@ -15,18 +15,17 @@ const AgenticAIPilotService = () => {
 
   const solutions = [
     "Enterprise Agentic AI Pilot & Implementation Delivery with high offshore leverage.",
-    "Dedicated, pre-vetted offshore delivery teams (India): stable on-demand core team + flexible scaling.",
-    "Training on the startup’s offering to ensure high-quality implementation and pilot success.",
-    "Product introduction to qualified enterprise leads via training workshops, demos & hands-on labs/free trials.",
+    "Dedicated pre-vetted offshore delivery teams (India): stable on-demand core team + flexible scaling. Training on the startup’s offering. ",
+    "We introduce your products to qualified/ potential Enterprise leads via training workshops, product demos & hands-on labs/ free trial access",
     "Lower cost, faster scaling, and repeatable success delivery model.",
-    "Backed by founders with proven experience in building large offshore teams and customer success units for Unicorn AI startups.",
+    "Backed by founders with proven experience in building customer success/ services BU & large offshore teams for a successful US based Unicorn AI startup & top tier Tech Sis.",
   ];
 
   const benefits = [
     "Achieve a 5–8x cost advantage by leveraging top-tier offshore Agentic AI talent.",
     "Rapidly scale pilots and implementations while allowing internal teams to focus on product innovation.",
-    "Accelerate time-to-market and enterprise adoption, boosting business growth and ROI.",
-    "Generate new enterprise leads through our experience-based product lead nurturing programs.",
+    "Speed up time-to-market and enterprise successes, boosting adoption rates and business growth",
+    "Generate new Enterprise leads supported by our on-product experience-based lead nurturing",
   ];
 
   return (
@@ -45,10 +44,12 @@ const AgenticAIPilotService = () => {
           </h1>
 
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            EnterpriseSI has been helping startups in high-cost countries (US,
-            UK and others) to run their customer pilots with high offshore
-            leverage — offering cost & profit advantages without the need to
-            invest in offshore centers or hire onsite contractors.
+            EnterpriseSI has been helping startups in high-cost countries like
+            US, UK, others to run their customer pilots with high offshore
+            leverage (cost & profit advantage) without investing in offshore
+            centers and hiring additional employees/ contractors at onsite, with
+            our Enterprise Agentic AI Product Pilot & Implementation- Offshore
+            Delivery Service
           </p>
         </div>
 
