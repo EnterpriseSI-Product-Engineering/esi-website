@@ -23,19 +23,19 @@ const AgenticAIPlayground = () => {
       icon: Users,
       title: "Learner Labs",
       description:
-        "Pre-defined scope of labs with illustrated tutorials and step-wise code tasks via integrated IDE with Cloud & AI infrastructure.",
+        "Users get access to a pre-defined scope of labs, each of which introduces a AI concept/ tech via a short illustrated tutorial, followed by step wise code/ modeling tasks that users execute via a tool/IDE integrated in our platform, alongwith Cloud & AI Infra for runtimeS",
     },
     {
       icon: Code,
       title: "Builder Labs",
       description:
-        "Build Agentic or RAG apps with full-stack development, testing, and deployment via sandbox environment.",
+        "Users build  Agentic or RAG app – FS, TS, Architecture diagram, build, test, deploy via a sandbox env with pre-bundled AI & cloud infra. Ideal for hands-on skill building, hackathons, customer demo library creation.",
     },
     {
       icon: Target,
       title: "AI Native Skill Score",
       description:
-        "Assessment tests at different stages with generated scores reflecting progress in learning journeys.",
+        "Users take assessment tests at different stages. Generated scores reflect their progress in their learning journeys",
     },
     {
       icon: BarChart3,
@@ -56,7 +56,7 @@ const AgenticAIPlayground = () => {
 
   const benefits = [
     "Continuously right-skill employees on rapidly evolving AI technology",
-    "Score and monitor AI skills development of employees",
+    "Continuously score AI skills of your employees",
     "Avoid expensive instructor-led trainings with self-paced learning",
     "Save direct and opportunity costs while improving ROI",
     "Scale to upskill thousands simultaneously",
@@ -88,14 +88,18 @@ const AgenticAIPlayground = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                The rapid progress in Artificial Intelligence is disrupting
+                The rapid progress in Artificial Intelligence is disrupting the
                 traditional models of Tech Services and business process
                 management.
               </p>
               <p className="text-muted-foreground">
-                Enterprises & Tech SIs struggle to align their workforce to
-                leverage & monetize AI effectively. Current online courses and
-                budget trainers haven't created real business impact.
+                Enterprises & Tech SIs have not been able to figure out how to
+                align/enable their workforce to leverage & monetize AI.
+              </p>
+              <p className="text-muted-foreground">
+                The current approaches/strategies on AI Talent transformation,
+                using online courses & live trainers-on-a-budget have not
+                created real business impact.
               </p>
             </CardContent>
           </Card>
@@ -108,13 +112,19 @@ const AgenticAIPlayground = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
-                Our unique CASH model delivers high-impact AI Talent
-                Transformation through our Agentic AI Playground approach.
+                Our unique approach to high impact AI Talent Transformation is
+                delivered via our{" "}
+                <strong>
+                  {" "}
+                  CASH (Continuous, Accelerated, Scalable, Holistic) model,
+                  driven by our Agentic AI Playground driven approach.
+                </strong>
               </p>
               <p className="text-muted-foreground">
-                Customized structured learning journeys for specific personas,
-                including the latest AI tools, technologies & infrastructure for
-                Enterprise-grade solutions.
+                Our CASH model is customized to suit your unique needs in the
+                form of structured & measurable learning journeys for specific
+                persona groups and including the latest, updated AI tools,
+                technologies & infra needed for Enterprise grade AI solutions.
               </p>
             </CardContent>
           </Card>

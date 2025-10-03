@@ -40,21 +40,32 @@ const AgenticAIBusinessPilotAccelerators = () => {
             <h2 className="text-3xl font-bold mb-6 text-center">
               The Challenge
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="grid md:grid-cols-1 gap-8 items-center">
               <div>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Enterprises face significant challenges with AI adoption.
+                <p className="text-lg text-muted-foreground mb-3">
+                  Enterprises (Business Stakeholders/ decision makers) have
+                  limited understanding of AI & its business applications
+                  especially when this technology is evolving rapidly.
+                </p>
+                {/* <p className="text-lg text-muted-foreground mb-6">
+                  Enterprises (Business Stakeholders/ decision makers) face significant challenges with AI adoption.
                   According to an Aug 2025 MIT report,
                   <span className="text-destructive font-semibold">
                     {" "}
                     95% of Generative AI Pilots are failing
                   </span>{" "}
                   to demonstrate returns.
+                </p> */}
+                <p className="text-lg text-muted-foreground mb-3">
+                  According to an Aug 2025 MIT report, 95% of the Generative AI
+                  Pilots are failing to demonstrate any returns, due to various
+                  reasons.
                 </p>
-                <p className="text-muted-foreground mb-6">
-                  Despite billions invested by big tech companies, business
-                  executives remain wary of AI pilot risks due to unclear value
-                  demonstrations.
+                <p className="text-lg text-muted-foreground mb-3">
+                  Though big tech & well-funded startups have been pouring 100s
+                  of billions of dollars in AI over last 3 yrs, business
+                  executives are wary of the risks of AI Pilots not able to
+                  demonstrate acceptable value/ returns.
                 </p>
               </div>
               <div className="space-y-4">
@@ -63,7 +74,12 @@ const AgenticAIBusinessPilotAccelerators = () => {
                   <div>
                     <h4 className="font-semibold">Skills Gap</h4>
                     <p className="text-sm text-muted-foreground">
-                      Lack of combined domain and AI expertise
+                      Lack of combined skills in functional domain/ business
+                      processes & enterprise data, along-with AI & Software
+                      Development in each AI Architect/ Engineer involved in the
+                      Pilots, which means technical SME and business SME cannot
+                      fully comprehend/ frictionlessly incorporate each other’s
+                      language
                     </p>
                   </div>
                 </div>
@@ -72,7 +88,9 @@ const AgenticAIBusinessPilotAccelerators = () => {
                   <div>
                     <h4 className="font-semibold">No Ready Solutions</h4>
                     <p className="text-sm text-muted-foreground">
-                      Missing pre-built AI app blueprints
+                      Lack of pre-configured/ pre-built AI app
+                      skeletons/deployable blueprints that can reduce
+                      time-to-value in pilots
                     </p>
                   </div>
                 </div>
@@ -81,7 +99,9 @@ const AgenticAIBusinessPilotAccelerators = () => {
                   <div>
                     <h4 className="font-semibold">Production Gaps</h4>
                     <p className="text-sm text-muted-foreground">
-                      Pilots become throwaway prototypes
+                      Lack of production grade architecture, coding & deployment
+                      practices in Pilots that can reduce the time to implement,
+                      rather current pilots are like throwaway prototypes
                     </p>
                   </div>
                 </div>
@@ -103,8 +123,9 @@ const AgenticAIBusinessPilotAccelerators = () => {
                 </div>
                 <CardTitle>Pre-built Production Apps</CardTitle>
                 <CardDescription>
-                  Production-grade Agentic AI applications for top 5-6
-                  high-value business use cases
+                  Pre-built production grade Agentic AI apps, addressing top 5-6
+                  high value business use cases for specific business functions/
+                  process areas and Industries
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -116,8 +137,10 @@ const AgenticAIBusinessPilotAccelerators = () => {
                 </div>
                 <CardTitle>Deployable Images</CardTitle>
                 <CardDescription>
-                  Ready-to-deploy applications for customer cloud or on-premise
-                  environments
+                  <p className="mt-6">
+                    Deployable images of the Apps that can be hosted in
+                    customer’s cloud or on-premise environments
+                  </p>
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -129,8 +152,9 @@ const AgenticAIBusinessPilotAccelerators = () => {
                 </div>
                 <CardTitle>Customization Interface</CardTitle>
                 <CardDescription>
-                  Business-friendly interface to customize accelerators for
-                  unique processes and data
+                  Interface that will enable business to customize the
+                  accelerators for their unique business process, data, frontend
+                  user channel and backend app integration related needs
                 </CardDescription>
               </CardHeader>
             </Card>

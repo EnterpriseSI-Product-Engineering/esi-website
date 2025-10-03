@@ -22,19 +22,19 @@ const AITalentTransformationStrategy = () => {
       icon: Target,
       title: "AI Native Scoring & Measurement",
       description:
-        "Build AI-native scoring & measurement frameworks across key employee categories to quantify adoption and growth.",
+        "Building AI native scoring & measurement for your organization across key employee categories",
     },
     {
       icon: Users,
       title: "Learning Paths & Journeys",
       description:
-        "Design outcome-driven learning paths and journeys tailored for different employee personas.",
+        "Building Learning paths and Journeys for key employee personas for outcome driven AI Skill development.",
     },
     {
       icon: BarChart3,
       title: "Competency & KRA Mapping",
       description:
-        "Map learning journeys to competency development goals and KRAs, supported with metrics-driven data.",
+        "Mapping learning journeys to competency development goals/ KRAs with metrics data",
     },
   ];
 
@@ -57,10 +57,12 @@ const AITalentTransformationStrategy = () => {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            EnterpriseSI’s Founding Team brings 10+ years of experience in
-            building global AI practices. In the last 3 years, we’ve advised 20+
-            enterprises on outcome-oriented AI Talent Transformation Strategies
-            and executed them with measurable results.
+            EnterpriseSI’s Founding Team brings in 10+ yrs experience in
+            building Global AI practices and customer success/ professional
+            services businesses of AI product startups. Over last 3 yrs, this
+            team has advised over 20 Enterprise customers on building
+            outcome-oriented AI Talent Transformation Strategies and helped in
+            execution, showing measurable results.
           </p>
         </div>
 
@@ -136,7 +138,7 @@ const AITalentTransformationStrategy = () => {
         </section>
 
         {/* Business Benefits */}
-        <section className="mb-16">
+        <section className="mb-8">
           <h2 className="text-3xl font-bold text-center mb-12">
             Why Choose Our Strategy
           </h2>
@@ -154,6 +156,34 @@ const AITalentTransformationStrategy = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="grid md:grid-cols-1 gap-6">
+            <Card className="hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-ai-purple/5">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-3">
+                  <p className="text-muted-foreground text-center w-full">
+                    Our consulting work leverages our CASH (Continuous,
+                    Accelerated, Scalable, Holistic) model that leverages our
+                    unique platform driven approach
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg transition-shadow bg-gradient-to-br from-background to-ai-purple/5">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-3">
+                  <p className="text-muted-foreground text-center w-full">
+                    Via our platform and our AI programs, we provide the tools,
+                    technologies, enablement mechanisms, processes and data for
+                    executing on our recommendations for AI Talent
+                    Transformation strategy
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
