@@ -236,12 +236,12 @@ const Navigation = () => {
                 </div>
               )}
             </div>
-            <a href="#email-subscription" onClick={handleCloseMenu}>
+            {/* <a href="#email-subscription" onClick={handleCloseMenu}>
               <Button className="w-full mt-3 bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white py-3 text-center text-lg font-medium">
                 Contact Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </a>
+            </a> */}
           </div>
         </div>
       )}
