@@ -20,6 +20,8 @@ const Navigation = () => {
   const [productsOpen, setProductsOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
 
+  const handleCloseMenu = () => setIsMenuOpen(false);
+
   return (
     <nav className="bg-background/80 backdrop-blur-md border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -137,6 +139,7 @@ const Navigation = () => {
           <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-background border-t border-border">
             <Link
               to="/"
+              onClick={handleCloseMenu}
               className="block text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-base font-medium"
             >
               Home
@@ -162,6 +165,7 @@ const Navigation = () => {
                   </span>
                   <Link
                     to="/product/agentic-ai-builder-playground"
+                    onClick={handleCloseMenu}
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
@@ -169,6 +173,7 @@ const Navigation = () => {
                   </Link>
                   <Link
                     to="/product/agentic-ai-business-pilot-accelerators"
+                    onClick={handleCloseMenu}
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
@@ -193,7 +198,10 @@ const Navigation = () => {
               </button>
               {solutionsOpen && (
                 <div className="pl-4 space-y-1">
-                  <Link to="/solutions/agentic-ai-product-pilot-as-service">
+                  <Link
+                    to="/solutions/agentic-ai-product-pilot-as-service"
+                    onClick={handleCloseMenu}
+                  >
                     <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
                       Agentic AI Product Pilot-as-service - Offshore Delivery
                     </span>
@@ -203,6 +211,7 @@ const Navigation = () => {
                   </span>
                   <Link
                     to="/solutions/ai-talent-transformation-strategy"
+                    onClick={handleCloseMenu}
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
@@ -210,6 +219,7 @@ const Navigation = () => {
                   </Link>
                   <Link
                     to="/solutions/business-ai-programs"
+                    onClick={handleCloseMenu}
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
@@ -217,6 +227,7 @@ const Navigation = () => {
                   </Link>
                   <Link
                     to="/solutions/technical-ai-programs"
+                    onClick={handleCloseMenu}
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
@@ -225,7 +236,7 @@ const Navigation = () => {
                 </div>
               )}
             </div>
-            <a href="#email-subscription">
+            <a href="#email-subscription" onClick={handleCloseMenu}>
               <Button className="w-full mt-3 bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white py-3 text-center text-lg font-medium">
                 Contact Us
                 <ArrowRight className="ml-2 h-5 w-5" />
