@@ -23,12 +23,12 @@ const AgenticAIBusinessPilotAccelerators = () => {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent animate-fade-in">
-            Agentic AI Business Pilot Accelerators
+          <h1 className="text-4xl md:text-6xl py-3 font-bold mb-6 bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent animate-fade-in">
+            Introducing EnterpriseSI <br /> Agentic AI Pilot Accelerator Suite
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-in">
-            Transform your AI pilots from costly experiments to valuable
-            business assets with our production-grade accelerator suite
+            Create Successful AI Pilot & Pilot-to-Implementation journeys with
+            our Production-Ready AI Business Copilots & Agents
           </p>
         </div>
       </section>

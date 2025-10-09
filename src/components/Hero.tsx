@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-20">
         {/* Main heading */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          <span className="bg-gradient-to-r from-ai-purple via-ai-blue to-ai-cyan bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-ai-purple via-ai-blue to-ai-cyan bg-clip-text text-tranjsparent">
             Accelerating Journey towards
           </span>
           <br />
@@ -33,8 +33,8 @@ const Hero = () => {
           <span className="text-ai-purple font-semibold">
             Artificial General Intelligence
           </span>{" "}
-          for building fully autonomous business processes/ operations, enabling
-          next gen{" "}
+          in their journey towards autonomous business processes/ operations,
+          enabling next gen{" "}
           <span className="text-ai-purple font-semibold">
             Digital Business Transformation.
           </span>{" "}
