@@ -29,11 +29,15 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed ">
-          We are creating pathways for Enterprises to embrace{" "}
+          Our product-led AI accelerators are helping Enterprises embrace{" "}
           <span className="text-ai-purple font-semibold">
             Artificial General Intelligence
           </span>{" "}
-          for Digital Business Transformation
+          for building fully autonomous business processes/ operations, enabling
+          next gen{" "}
+          <span className="text-ai-purple font-semibold">
+            Digital Business Transformation.
+          </span>{" "}
         </p>
 
         {/* Description */}
