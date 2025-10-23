@@ -71,7 +71,7 @@ const About = () => {
             />
           </div>
           <div className="flex items-center justify-center mb-4 mt-2">
-            <div className="flex items-end gap-2 my-3">
+            <div className="flex flex-col md:flex-row md:items-end items-center gap-2 my-3">
               <h1 className="text-2xl">Abhiroop Roy</h1>
               <span className=" mb-1 text-xs">
                 ( CEO & Head of AI Product Management )
