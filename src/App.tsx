@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Product from "./pages/Product";
 import Solutions from "./pages/Solutions";
 import ScrollToTop from "./components/ScrollToTop";
+import About from "./pages/About";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
+            <Route path="about" element={<About />} />
             <Route path="product/:slug" element={<Product />} />
             <Route path="solutions/:slug" element={<Solutions />} />
             <Route path="*" element={<NotFound />} />

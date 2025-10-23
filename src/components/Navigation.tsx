@@ -43,6 +43,12 @@ const Navigation = () => {
               >
                 Home
               </Link>
+              <Link
+                to={"/about"}
+                className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-md font-medium transition-colors"
+              >
+                About
+              </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="flex items-center gap-1">
@@ -143,6 +149,13 @@ const Navigation = () => {
               className="block text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-base font-medium"
             >
               Home
+            </Link>
+            <Link
+              to="/about"
+              onClick={handleCloseMenu}
+              className="block text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-base font-medium"
+            >
+              About
             </Link>
             {/* Products Collapsible */}
             <div className="px-3 py-2">
