@@ -85,7 +85,10 @@ const About = () => {
             successfully delivered 35+ AI projects. He has also founded and
             built 3 AI startups over the last decade.
           </p>
-          <Link to={"https://www.linkedin.com/in/abhiroop"} target="_blank">
+          <Link
+            to={"https://www.linkedin.com/in/abhiroop-roy-bb89092/"}
+            target="_blank"
+          >
             <Linkedin
               strokeWidth={1.5}
               className="text-blue-500 cursor-pointer"
