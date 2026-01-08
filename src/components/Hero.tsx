@@ -1,68 +1,142 @@
-import { ArrowRight, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Sparkles, ShieldCheck, Zap, BarChart3 } from "lucide-react";
 
 const Hero = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  const floatingVariants = {
+    animate: {
+      y: [-10, 10, -10],
+      transition: {
+        duration: 6,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-ai-purple/5 via-background to-ai-blue/5" />
+    <section className="relative min-h-screen flex items-center justify-center  px-6 overflow-hidden">
+      {/* Floating Elements */}
+      <motion.div
+        variants={floatingVariants}
+        animate="animate"
+        className="absolute top-20 left-10 w-16 h-16 rounded-full bg-gradient-to-br from-ai-purple/20 to-ai-blue/20 blur-sm"
+      />
+      <motion.div
+        variants={floatingVariants}
+        animate="animate"
+        className="absolute top-40 right-20 w-12 h-12 rounded-full bg-gradient-to-br from-ai-cyan/20 to-ai-blue/20 blur-sm [animation-delay:1s]"
+      />
+      <motion.div
+        variants={floatingVariants}
+        animate="animate"
+        className="absolute bottom-32 left-20 w-20 h-20 rounded-full bg-gradient-to-br from-ai-blue/15 to-ai-purple/15 blur-sm [animation-delay:3s]"
+      />
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-ai-purple/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-ai-cyan/10 rounded-full blur-3xl animate-pulse delay-700" />
-        <div className="absolute top-1/2 right-1/3 w-48 h-48 bg-neural-pink/10 rounded-full blur-3xl animate-pulse delay-1000" />
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -mt-20">
-        {/* Main heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          <span className="bg-gradient-to-r from-ai-purple via-ai-blue to-ai-cyan bg-clip-text text-tranjsparent">
-            Accelerating Journey towards
+      <motion.div
+        className="relative z-10 max-w-6xl w-full text-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Enhanced Badge */}
+        <motion.div
+          variants={itemVariants}
+          className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-gradient-to-r from-secondary/80 to-secondary/60 border border-border/50 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          >
+            <Sparkles className="w-4 h-4 text-ai-purple" />
+          </motion.div>
+          <span className="text-sm font-semibold uppercase tracking-wider bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+            The Future of Enterprise AI
           </span>
-          <br />
-          <div className="inline-flex mt-4 items-center gap-2 px-10 py-3 rounded-full bg-ai-purple/10 text-ai-purple text-sm lg:text-5xl font-medium mb-8 leading-0">
-            <Sparkles className="w-8 h-8 mt-1" />
-            Enterprise SuperIntelligence
+        </motion.div>
+
+        {/* Enhanced Headline */}
+        <motion.h1
+          variants={itemVariants}
+          className="text-4xl md:text-6xl lg:text-7xl tracking-tight mb-2 leading-[1.1]"
+        >
+          Accelerating journey towards <br />
+        </motion.h1>
+        <span className="relative ">
+          <span className="bg-gradient-to-r text-3xl from-ai-purple via-ai-blue to-ai-cyan bg-clip-text text-transparent tracking-normal animate-gradient-x">
+            Enterprise SuperIntelligence & Agentic Business processes with
+            human-in-loop
+          </span>
+          <motion.div
+            className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-ai-purple via-ai-blue to-ai-cyan rounded-full"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 1.5, duration: 1.2, ease: "easeOut" }}
+          />
+        </span>
+
+        {/* Enhanced Subtitle */}
+        <motion.p
+          variants={itemVariants}
+          className="text-lg md:text-xl text-muted-foreground mb-4 mt-10 max-w-4xl mx-auto leading-relaxed"
+        >
+          Our product-led AI accelerators are helping Enterprises embrace
+          Artificial General Intelligence in their journey towards autonomous
+          business processes/ operations, enabling next gen Digital Business
+          Transformation.
+        </motion.p>
+        <motion.p
+          variants={itemVariants}
+          className="text-lg md:text-xl text-muted-foreground mb-10 mt-4 max-w-4xl mx-auto leading-relaxed"
+        >
+          Our Agentic AI Acceleration platform provides AI Accelerators &
+          Playgrounds helping Enterprises embrace Artificial General
+          Intelligence in a structured manner, enabling Business Outcomes like:
+        </motion.p>
+
+        {/* Trust Indicators */}
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground mb-12"
+        >
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-green-500" />
+            <span>Enterprise Security</span>
           </div>
-        </h1>
-
-        {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed ">
-          Our product-led AI accelerators are helping Enterprises embrace{" "}
-          <span className="text-ai-purple font-semibold">
-            Artificial General Intelligence
-          </span>{" "}
-          in their journey towards autonomous business processes/ operations,
-          enabling next gen{" "}
-          <span className="text-ai-purple font-semibold">
-            Digital Business Transformation.
-          </span>{" "}
-        </p>
-
-        {/* Description */}
-        <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-5xl mx-auto">
-          Introducing our{" "}
-          <span className="text-ai-blue font-semibold">
-            Agentic AI Acceleration Platform
-          </span>{" "}
-          that will enable businesses to use AI Agents/Agentic AI and Advanced
-          Context Engineering for Business Outcomes like :
-        </p>
-
-        {/* CTA */}
-        {/* <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="#email-subscription">
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-ai-purple text-ai-purple hover:bg-ai-purple/10 px-8 py-6 text-lg"
-            >
-              Learn More
-            </Button>
-          </a>
-        </div> */}
-      </div>
+          <div className="flex items-center gap-2">
+            <Zap className="w-4 h-4 text-yellow-500" />
+            <span>Real-time Processing</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <BarChart3 className="w-4 h-4 text-blue-500" />
+            <span>Scalable Architecture</span>
+          </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

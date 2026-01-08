@@ -1,10 +1,17 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   ChevronDown,
-  CornerDownRight,
   Menu,
   X,
+  Sparkles,
+  Gamepad2,
+  Rocket,
+  Users,
+  Briefcase,
+  Code,
+  Settings,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -36,78 +43,132 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4 ">
+            <div className="ml-10 flex items-baseline space-x-1">
               <Link
                 to={"/"}
-                className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-md font-medium transition-colors"
+                className="relative group text-foreground hover:text-ai-purple px-4 py-2 rounded-lg text-md font-medium transition-all duration-300 hover:bg-ai-purple/5"
               >
-                Home
+                <span className="relative z-10">Home</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
               <Link
                 to={"/about"}
-                className="text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-md font-medium transition-colors"
+                className="relative group text-foreground hover:text-ai-purple px-4 py-2 rounded-lg text-md font-medium transition-all duration-300 hover:bg-ai-purple/5"
               >
-                About
+                <span className="relative z-10">About</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="flex items-center gap-1">
-                    Products
-                    <ChevronDown className="h-4 w-4" />
+                  <Button variant="ghost" className="relative group flex items-center gap-1 px-4 py-2 rounded-lg hover:bg-ai-purple/5 transition-all duration-300">
+                    <span className="relative z-10">Products</span>
+                    <ChevronDown className="h-4 w-4 group-hover:text-ai-purple transition-colors" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="ml-[220px] mt-1 p-5 space-y-2">
-                  <DropdownMenuItem className="text-md">
-                    Agentic AI Acceleration Platform
-                  </DropdownMenuItem>
-                  <Link to="/product/agentic-ai-builder-playground">
-                    <DropdownMenuItem className="text-md ml-1">
-                      <CornerDownRight className="mr-3" />
-                      Agentic AI Builder Playground
-                    </DropdownMenuItem>
-                  </Link>
-                  <Link to="/product/agentic-ai-business-pilot-accelerators">
-                    <DropdownMenuItem className="text-md ml-1">
-                      <CornerDownRight className="mr-3" />
-                      Agentic AI Business Pilot Accelerators
-                    </DropdownMenuItem>
-                  </Link>
+                <DropdownMenuContent className="ml-[220px] mt-2 p-6 space-y-4 bg-background/95 backdrop-blur-xl border border-border/50 shadow-2xl rounded-xl min-w-[380px]">
+                  {/* Platform Overview */}
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="border-b border-border/70"
+                  >
+                    <div className="flex items-center gap-2 text-sm font-medium bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent mb-3">
+                      <Sparkles className="w-4 h-4 text-ai-purple" />
+                      Agentic AI Acceleration Platform
+                    </div>
+                  </motion.div>
+
+                  {/* Product Components */}
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                  >
+                    <div className="space-y-2">
+                      <Link to="/product/agentic-ai-builder-playground">
+                        <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
+                          <Gamepad2 className="mr-3 w-5 h-5 group-hover:text-ai-purple transition-colors" />
+                          <div className="flex flex-col">
+                            <span className="group-hover:text-ai-purple transition-colors font-semibold">Agentic AI Builder Playground</span>
+                            <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">Interactive Development Environment</span>
+                          </div>
+                        </DropdownMenuItem>
+                      </Link>
+                      <Link to="/product/agentic-ai-business-pilot-accelerators">
+                        <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
+                          <Rocket className="mr-3 w-5 h-5 group-hover:text-ai-purple transition-colors" />
+                          <div className="flex flex-col">
+                            <span className="group-hover:text-ai-purple transition-colors font-semibold">Agentic AI Business Pilot Accelerators</span>
+                            <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">Ready-to-Deploy Business Solutions</span>
+                          </div>
+                        </DropdownMenuItem>
+                      </Link>
+                    </div>
+                  </motion.div>
                 </DropdownMenuContent>
               </DropdownMenu>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="flex items-center gap-1">
-                    Solutions
-                    <ChevronDown className="h-4 w-4" />
+                  <Button variant="ghost" className="relative group flex items-center gap-1 px-4 py-2 rounded-lg hover:bg-ai-purple/5 transition-all duration-300">
+                    <span className="relative z-10">Solutions</span>
+                    <ChevronDown className="h-4 w-4 group-hover:text-ai-purple transition-colors" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="ml-[350px] mt-1 p-5 space-y-2">
-                  <Link to="/solutions/agentic-ai-product-pilot-as-service">
-                    <DropdownMenuItem className="text-md">
-                      Agentic AI Product Pilot-as-service - Offshore Delivery
-                    </DropdownMenuItem>
-                  </Link>
-                  <DropdownMenuItem className="text-md">
-                    AI Enablement for your Employees
-                  </DropdownMenuItem>
-                  <Link to="/solutions/ai-talent-transformation-strategy">
-                    <DropdownMenuItem className="text-md ml-1">
-                      <CornerDownRight className="mr-3" />
-                      AI Talent Transformation Strategy
-                    </DropdownMenuItem>
-                  </Link>
-                  <Link to="/solutions/business-ai-programs">
-                    <DropdownMenuItem className="text-md ml-1">
-                      <CornerDownRight className="mr-3" />
-                      Business AI Programs
-                    </DropdownMenuItem>
-                  </Link>
-                  <Link to="/solutions/technical-ai-programs">
-                    <DropdownMenuItem className="text-md ml-1">
-                      <CornerDownRight className="mr-3" />
-                      Technical AI Programs
-                    </DropdownMenuItem>
-                  </Link>
+                <DropdownMenuContent className="ml-[350px] mt-2 p-6 space-y-4 bg-background/95 backdrop-blur-xl border border-border/50 shadow-2xl rounded-xl min-w-[420px]">
+                  {/* Primary Service */}
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="border-b border-border/70 pb-4"
+                  >
+                    <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground mb-2">
+                      <Sparkles className="w-4 h-4 text-ai-purple" />
+                      Primary Service
+                    </div>
+                    <Link to="/solutions/agentic-ai-product-pilot-as-service">
+                      <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
+                        <Settings className="mr-3 w-5 h-5 group-hover:text-ai-purple transition-colors" />
+                        <div className="flex flex-col">
+                          <span className="group-hover:text-ai-purple transition-colors font-semibold">Agentic AI Product Pilot-as-Service</span>
+                          <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">Offshore Delivery</span>
+                        </div>
+                      </DropdownMenuItem>
+                    </Link>
+                  </motion.div>
+
+                  {/* Employee Enablement */}
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                  >
+                    <div className="flex items-center gap-2 text-sm font-medium bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent mb-3">
+                      <Sparkles className="w-4 h-4 text-ai-purple" />
+                      AI Enablement for your Employees
+                    </div>
+                    <div className="space-y-2">
+                      <Link to="/solutions/ai-talent-transformation-strategy">
+                        <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer">
+                          <Users className="mr-3 w-4 h-4 group-hover:text-ai-purple transition-colors" />
+                          <span className="group-hover:text-ai-purple transition-colors">AI Talent Transformation Strategy</span>
+                        </DropdownMenuItem>
+                      </Link>
+                      <Link to="/solutions/business-ai-programs">
+                        <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer">
+                          <Briefcase className="mr-3 w-4 h-4 group-hover:text-ai-purple transition-colors" />
+                          <span className="group-hover:text-ai-purple transition-colors">Business AI Programs</span>
+                        </DropdownMenuItem>
+                      </Link>
+                      <Link to="/solutions/technical-ai-programs">
+                        <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer">
+                          <Code className="mr-3 w-4 h-4 group-hover:text-ai-purple transition-colors" />
+                          <span className="group-hover:text-ai-purple transition-colors">Technical AI Programs</span>
+                        </DropdownMenuItem>
+                      </Link>
+                    </div>
+                  </motion.div>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
@@ -115,10 +176,18 @@ const Navigation = () => {
           <a href="#email-subscription" className="hidden md:block">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white px-8 py-6 text-lg font-medium"
+              className="group relative bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white px-8 py-6 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
-              Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <span className="flex items-center">
+                Contact Us
+                <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </motion.div>
+              </span>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/20 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Button>
           </a>
 
