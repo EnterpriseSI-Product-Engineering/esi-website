@@ -76,20 +76,13 @@ const Hero = () => {
               Enterprise SuperIntelligence
             </span>
             <span className="border p-2  px-4 rounded-full bg-blue-200">
-              Agentic Business processes with human-in-loop
+              Agentic Business processes
+            </span>
+            <span className="border p-2  px-4 rounded-full bg-blue-200">
+              Human-in-control
             </span>
           </div>
 
-          {/* Enhanced Subtitle */}
-          <motion.p
-            variants={itemVariants}
-            className="text-lg md:text-xl text-muted-foreground mb-4 mt-10 max-w-4xl mx-auto leading-relaxed"
-          >
-            Our product-led AI accelerators are helping Enterprises embrace
-            Artificial General Intelligence in their journey towards autonomous
-            business processes/ operations, enabling next gen Digital Business
-            Transformation.
-          </motion.p>
           <motion.p
             variants={itemVariants}
             className="text-lg md:text-xl text-muted-foreground mb-10 mt-4 max-w-4xl mx-auto leading-relaxed"
@@ -99,25 +92,6 @@ const Hero = () => {
             Intelligence in a structured manner, enabling Business Outcomes
             like:
           </motion.p>
-
-          {/* Trust Indicators */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground mb-12"
-          >
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-green-500" />
-              <span>Enterprise Security</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Zap className="w-4 h-4 text-yellow-500" />
-              <span>Real-time Processing</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <BarChart3 className="w-4 h-4 text-blue-500" />
-              <span>Scalable Architecture</span>
-            </div>
-          </motion.div>
         </motion.div>
       </section>
     </>
