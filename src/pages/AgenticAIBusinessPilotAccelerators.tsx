@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   CheckCircle,
@@ -7,311 +8,455 @@ import {
   Shield,
   Globe,
   TrendingUp,
+  Sparkles,
+  AlertTriangle,
+  Lightbulb,
+  Rocket,
+  Settings,
+  BarChart3,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import EmailSubscription from "@/components/EmailSubscription";
 
 const AgenticAIBusinessPilotAccelerators = () => {
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  const floatingVariants = {
+    animate: {
+      y: [-15, 15, -15],
+      x: [-5, 5, -5],
+      transition: {
+        duration: 8,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const pulseVariants = {
+    animate: {
+      scale: [1, 1.1, 1],
+      opacity: [0.3, 0.6, 0.3],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-ai-light to-background">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-ai-purple/10 to-ai-blue/5 rounded-full blur-xl"
+          variants={pulseVariants}
+          animate="animate"
+        />
+        <motion.div
+          className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-ai-cyan/10 to-ai-purple/5 rounded-full blur-xl"
+          variants={pulseVariants}
+          animate="animate"
+          style={{ animationDelay: "2s" }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-neural-pink/8 to-ai-cyan/5 rounded-full blur-lg"
+          variants={pulseVariants}
+          animate="animate"
+          style={{ animationDelay: "4s" }}
+        />
+      </div>
+
+      {/* Floating Elements */}
+      <motion.div
+        variants={floatingVariants}
+        animate="animate"
+        className="absolute top-32 right-16 w-12 h-12 rounded-full bg-gradient-to-br from-ai-purple/20 to-ai-blue/15 blur-sm"
+      />
+      <motion.div
+        variants={floatingVariants}
+        animate="animate"
+        className="absolute bottom-40 left-16 w-16 h-16 rounded-full bg-gradient-to-br from-ai-cyan/15 to-neural-pink/10 blur-sm"
+        style={{ animationDelay: "1.5s" }}
+      />
+
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <motion.section
+        className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl py-3 font-bold mb-6 bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent animate-fade-in">
-            Introducing EnterpriseSI <br /> Agentic AI Pilot Accelerator Suite
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-fade-in">
+          {/* Enhanced Badge */}
+          <motion.div
+            variants={itemVariants}
+            className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-gradient-to-r from-secondary/80 to-secondary/60 border border-border/50 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+            >
+              <Sparkles className="w-4 h-4 text-ai-purple" />
+            </motion.div>
+            <span className="text-sm font-semibold uppercase tracking-wider bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+              AI Pilot Accelerators
+            </span>
+          </motion.div>
+
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl md:text-6xl font-bold mb-6"
+          >
+            Introducing EnterpriseSI <br />
+            <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+              Agentic AI Pilot Accelerator Suite
+            </span>
+          </motion.h1>
+          <motion.p
+            variants={itemVariants}
+            className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8"
+          >
             Create Successful AI Pilot & Pilot-to-Implementation journeys with
             our Production-Ready AI Business Copilots & Agents
-          </p>
+          </motion.p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Problem Statement */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <motion.section
+        className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <div className="max-w-7xl mx-auto">
-          <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-8 border border-border/50 shadow-elegant">
-            <h2 className="text-3xl font-bold mb-6 text-center">
-              The Challenge
-            </h2>
-            <div className="grid md:grid-cols-1 gap-8 items-center">
-              <div>
-                <p className="text-lg text-muted-foreground mb-3">
-                  Enterprises (Business Stakeholders/ decision makers) have
-                  limited understanding of AI & its business applications
-                  especially when this technology is evolving rapidly.
-                </p>
-                {/* <p className="text-lg text-muted-foreground mb-6">
-                  Enterprises (Business Stakeholders/ decision makers) face significant challenges with AI adoption.
-                  According to an Aug 2025 MIT report,
-                  <span className="text-destructive font-semibold">
-                    {" "}
-                    95% of Generative AI Pilots are failing
-                  </span>{" "}
-                  to demonstrate returns.
-                </p> */}
-                <p className="text-lg text-muted-foreground mb-3">
-                  According to an Aug 2025 MIT report, 95% of the Generative AI
-                  Pilots are failing to demonstrate any returns, due to various
-                  reasons.
-                </p>
-                <p className="text-lg text-muted-foreground mb-3">
-                  Though big tech & well-funded startups have been pouring 100s
-                  of billions of dollars in AI over last 3 yrs, business
-                  executives are wary of the risks of AI Pilots not able to
-                  demonstrate acceptable value/ returns.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Target className="h-6 w-6 text-destructive mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold">Skills Gap</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Lack of combined skills in functional domain/ business
-                      processes & enterprise data, along-with AI & Software
-                      Development in each AI Architect/ Engineer involved in the
-                      Pilots, which means technical SME and business SME cannot
-                      fully comprehend/ frictionlessly incorporate each other’s
-                      language
+          <motion.div variants={itemVariants}>
+            <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
+              <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
+
+              <CardContent className="relative p-8">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 shadow-lg">
+                    <AlertTriangle className="w-8 h-8 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:to-orange-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    The Challenge
+                  </h2>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="space-y-4">
+                    <p className="text-lg text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                      Enterprises have limited understanding of AI & its
+                      business applications, especially when this technology is
+                      evolving rapidly.
+                    </p>
+                    <p className="text-lg text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                      According to an Aug 2025 MIT report,{" "}
+                      <span className="text-red-500 font-semibold">
+                        95% of Generative AI Pilots are failing
+                      </span>{" "}
+                      to demonstrate any returns.
+                    </p>
+                    <p className="text-lg text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                      Despite billions invested in AI, business executives
+                      remain wary of pilot risks and uncertain returns.
                     </p>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-destructive mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold">No Ready Solutions</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Lack of pre-configured/ pre-built AI app
-                      skeletons/deployable blueprints that can reduce
-                      time-to-value in pilots
-                    </p>
+
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="p-2 rounded-lg bg-red-500/20">
+                        <Target className="h-5 w-5 text-red-500" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2">Skills Gap</h4>
+                        <p className="text-sm text-muted-foreground group-hover:text-foreground/70 transition-colors duration-300">
+                          Lack of combined skills in business processes,
+                          enterprise data, AI, and software development.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="p-2 rounded-lg bg-red-500/20">
+                        <Zap className="h-5 w-5 text-red-500" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2">
+                          No Ready Solutions
+                        </h4>
+                        <p className="text-sm text-muted-foreground group-hover:text-foreground/70 transition-colors duration-300">
+                          Lack of pre-built AI app blueprints that reduce
+                          time-to-value in pilots.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="p-2 rounded-lg bg-red-500/20">
+                        <Shield className="h-5 w-5 text-red-500" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold mb-2">Production Gaps</h4>
+                        <p className="text-sm text-muted-foreground group-hover:text-foreground/70 transition-colors duration-300">
+                          Pilots lack production-grade architecture, becoming
+                          throwaway prototypes.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <Shield className="h-6 w-6 text-destructive mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold">Production Gaps</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Lack of production grade architecture, coding & deployment
-                      practices in Pilots that can reduce the time to implement,
-                      rather current pilots are like throwaway prototypes
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Our Solution */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <motion.section
+        className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Solution</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="hover:shadow-glow transition-all duration-300 hover-scale">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-ai-purple to-ai-blue rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle>Pre-built Production Apps</CardTitle>
-                <CardDescription>
-                  Pre-built production grade Agentic AI apps, addressing top 5-6
-                  high value business use cases for specific business functions/
-                  process areas and Industries
-                </CardDescription>
-              </CardHeader>
-            </Card>
+          <motion.div variants={itemVariants} className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Our{" "}
+              <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+                Solution
+              </span>
+            </h2>
+          </motion.div>
 
-            <Card className="hover:shadow-glow transition-all duration-300 hover-scale">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-ai-purple to-ai-blue rounded-lg flex items-center justify-center mb-4">
-                  <Globe className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle>Deployable Images</CardTitle>
-                <CardDescription>
-                  <p className="mt-6">
-                    Deployable images of the Apps that can be hosted in
-                    customer’s cloud or on-premise environments
-                  </p>
-                </CardDescription>
-              </CardHeader>
-            </Card>
+          <motion.div
+            className="grid md:grid-cols-3 gap-8"
+            variants={containerVariants}
+          >
+            {[
+              {
+                icon: Rocket,
+                title: "Pre-built Production Apps",
+                description:
+                  "Production-grade Agentic AI apps addressing top 5-6 high-value business use cases for specific functions and industries.",
+                gradient: "from-ai-purple to-ai-blue",
+              },
+              {
+                icon: Globe,
+                title: "Deployable Images",
+                description:
+                  "Ready-to-deploy app images that can be hosted in customer's cloud or on-premise environments.",
+                gradient: "from-ai-blue to-ai-cyan",
+              },
+              {
+                icon: Settings,
+                title: "Customization Interface",
+                description:
+                  "Business-friendly interface to customize accelerators for unique processes, data, and integration needs.",
+                gradient: "from-ai-cyan to-neural-pink",
+              },
+            ].map((solution, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl`}
+                  />
+                  <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
 
-            <Card className="hover:shadow-glow transition-all duration-300 hover-scale">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-r from-ai-purple to-ai-blue rounded-lg flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle>Customization Interface</CardTitle>
-                <CardDescription>
-                  Interface that will enable business to customize the
-                  accelerators for their unique business process, data, frontend
-                  user channel and backend app integration related needs
-                </CardDescription>
-              </CardHeader>
-            </Card>
-          </div>
+                  <CardContent className="relative p-8 h-full flex flex-col">
+                    <motion.div
+                      className="mb-6"
+                      whileHover={{ scale: 1.05, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div
+                        className={`w-16 h-16 bg-gradient-to-r ${solution.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300`}
+                      >
+                        <solution.icon className="h-8 w-8 text-white" />
+                      </div>
+                    </motion.div>
+                    <h3 className="text-xl font-bold mb-4 group-hover:bg-gradient-to-r group-hover:from-ai-purple group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                      {solution.title}
+                    </h3>
+                    <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 flex-1">
+                      {solution.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Focus Areas */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card/30">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Initial Focus Areas</h2>
-          <p className="text-lg text-muted-foreground mb-12">
-            Starting with 20 high-impact use cases across key business functions
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-background/50 rounded-xl p-6 border border-border/50">
-              <h3 className="text-xl font-semibold mb-2">
-                Finance & Accounting
-              </h3>
-              <p className="text-muted-foreground">
-                Automated financial processes and reporting
-              </p>
-            </div>
-            <div className="bg-background/50 rounded-xl p-6 border border-border/50">
-              <h3 className="text-xl font-semibold mb-2">Internal Auditing</h3>
-              <p className="text-muted-foreground">
-                Intelligent audit workflows and compliance checks
-              </p>
-            </div>
-            <div className="bg-background/50 rounded-xl p-6 border border-border/50">
-              <h3 className="text-xl font-semibold mb-2">Risk & Compliance</h3>
-              <p className="text-muted-foreground">
-                Proactive risk management and regulatory compliance
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Business Benefits */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <motion.section
+        className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Business Benefits
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                <TrendingUp className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">
-                  50%+ Cost & Time Reduction
-                </h3>
-                <p className="text-muted-foreground">
-                  Dramatically reduce the cost and effort required for AI pilots
-                  with pre-built accelerators
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Shield className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">
-                  50%+ Risk Reduction
-                </h3>
-                <p className="text-muted-foreground">
-                  Minimize pilot failure risk with proven ROI and business value
-                  demonstration frameworks
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pilot-as-Service Section */}
-      {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              Agentic AI Product Pilot-as-Service
+          <motion.div variants={itemVariants} className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Initial{" "}
+              <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+                Focus Areas
+              </span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Offshore Delivery for AI Startups
+              Starting with 20 high-impact use cases across key business
+              functions
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">
-                Challenges We Address
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-ai-purple mt-1 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    AI startups need enterprise pilots for license sales
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-ai-purple mt-1 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    Implementation teams required for license consumption
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-ai-purple mt-1 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    Pilots need people-heavy, hands-on services
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-ai-purple mt-1 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    Lack of on-demand specialized AI talent
-                  </p>
-                </div>
-              </div>
-            </div>
+          <motion.div
+            className="grid md:grid-cols-3 gap-8"
+            variants={containerVariants}
+          >
+            {[
+              {
+                title: "Finance & Accounting",
+                description: "Automated financial processes and reporting",
+                gradient: "from-green-500 to-emerald-600",
+              },
+              {
+                title: "Internal Auditing",
+                description:
+                  "Intelligent audit workflows and compliance checks",
+                gradient: "from-blue-500 to-cyan-600",
+              },
+              {
+                title: "Risk & Compliance",
+                description:
+                  "Proactive risk management and regulatory compliance",
+                gradient: "from-purple-500 to-pink-600",
+              },
+            ].map((area, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${area.gradient} opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl`}
+                  />
+                  <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
 
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">
-                Our Offshore Solution
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <ArrowRight className="h-5 w-5 text-ai-blue mt-1 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    Dedicated pre-vetted offshore delivery teams (India)
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <ArrowRight className="h-5 w-5 text-ai-blue mt-1 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    Enterprise lead generation through workshops and demos
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <ArrowRight className="h-5 w-5 text-ai-blue mt-1 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    5-8x cost advantage with top-tier offshore talent
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <ArrowRight className="h-5 w-5 text-ai-blue mt-1 flex-shrink-0" />
-                  <p className="text-muted-foreground">
-                    Proven experience from successful US Unicorn AI startup
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+                  <CardContent className="relative p-8 text-center">
+                    <h3 className="text-xl font-bold mb-4 group-hover:bg-gradient-to-r group-hover:from-ai-purple group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                      {area.title}
+                    </h3>
+                    <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                      {area.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </section> */}
+      </motion.section>
+
+      {/* Business Benefits */}
+      <motion.section
+        className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <motion.div variants={itemVariants} className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Business{" "}
+              <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+                Benefits
+              </span>
+            </h2>
+          </motion.div>
+
+          <motion.div
+            className="grid md:grid-cols-2 gap-8"
+            variants={containerVariants}
+          >
+            {[
+              {
+                icon: TrendingUp,
+                title: "50%+ Cost & Time Reduction",
+                description:
+                  "Dramatically reduce the cost and effort required for AI pilots with pre-built accelerators",
+                gradient: "from-green-500 to-emerald-600",
+              },
+              {
+                icon: Shield,
+                title: "50%+ Risk Reduction",
+                description:
+                  "Minimize pilot failure risk with proven ROI and business value demonstration frameworks",
+                gradient: "from-blue-500 to-cyan-600",
+              },
+            ].map((benefit, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${benefit.gradient} opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl`}
+                  />
+                  <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
+
+                  <CardContent className="relative p-8">
+                    <div className="flex items-start gap-6">
+                      <motion.div
+                        whileHover={{ scale: 1.1, rotate: 10 }}
+                        transition={{ duration: 0.3 }}
+                        className={`p-4 rounded-2xl bg-gradient-to-br ${benefit.gradient} shadow-lg flex-shrink-0`}
+                      >
+                        <benefit.icon className="h-8 w-8 text-white" />
+                      </motion.div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-ai-purple group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                          {benefit.title}
+                        </h3>
+                        <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                          {benefit.description}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.section>
 
       <EmailSubscription />
     </div>
