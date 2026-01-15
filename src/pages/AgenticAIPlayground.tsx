@@ -174,7 +174,7 @@ const AgenticAIPlayground = () => {
               <Sparkles className="w-4 h-4 text-ai-purple" />
             </motion.div>
             <span className="text-sm font-semibold uppercase tracking-wider bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
-              AI Learning Platform
+              Learn AI by building
             </span>
           </motion.div>
 
@@ -222,13 +222,17 @@ const AgenticAIPlayground = () => {
                 </CardHeader>
                 <CardContent className="relative space-y-4">
                   <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    The rapid progress in Artificial Intelligence is disrupting traditional models of Tech Services and business process management.
+                    The rapid progress in Artificial Intelligence is disrupting
+                    traditional models of Tech Services and business process
+                    management.
                   </p>
                   <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Enterprises & Tech SIs struggle to align their workforce to leverage & monetize AI effectively.
+                    Enterprises & Tech SIs struggle to align their workforce to
+                    leverage & monetize AI effectively.
                   </p>
                   <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Current AI talent transformation approaches using online courses & budget trainers lack real business impact.
+                    Current AI talent transformation approaches using online
+                    courses & budget trainers lack real business impact.
                   </p>
                 </CardContent>
               </Card>
@@ -252,13 +256,17 @@ const AgenticAIPlayground = () => {
                 </CardHeader>
                 <CardContent className="relative">
                   <p className="text-muted-foreground mb-4 group-hover:text-foreground/80 transition-colors duration-300">
-                    Our unique approach to high impact AI Talent Transformation is delivered via our{" "}
+                    Our unique approach to high impact AI Talent Transformation
+                    is delivered via our{" "}
                     <strong className="bg-gradient-to-r from-ai-cyan to-ai-blue bg-clip-text text-transparent">
                       CASH (Continuous, Accelerated, Scalable, Holistic) model
-                    </strong>, driven by our Agentic AI Playground approach.
+                    </strong>
+                    , driven by our Agentic AI Playground approach.
                   </p>
                   <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Our CASH model is customized with structured & measurable learning journeys for specific personas, including the latest AI tools and enterprise-grade infrastructure.
+                    Our CASH model is customized with structured & measurable
+                    learning journeys for specific personas, including the
+                    latest AI tools and enterprise-grade infrastructure.
                   </p>
                 </CardContent>
               </Card>
@@ -344,26 +352,76 @@ const AgenticAIPlayground = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
             variants={containerVariants}
           >
-            {/* Python & ML */}
+            {/* Agentic AI Architect */}
             <motion.div variants={itemVariants}>
               <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-ai-purple/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
                 <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
 
                 <CardContent className="relative p-6">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-ai-purple shadow-lg w-fit mb-4"
+                    className="p-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg w-fit mb-4"
                   >
-                    <Code className="h-6 w-6 text-white" />
+                    <Users className="h-6 w-6 text-white" />
                   </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-ai-purple group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Python & Machine Learning
+                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Agentic AI Architect
                   </h3>
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Core programming and ML fundamentals for AI development
+                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
+                    Design and architect enterprise-scale AI agent systems
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* Agentic AI Engineer */}
+            <motion.div variants={itemVariants}>
+              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-blue-500/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
+                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
+
+                <CardContent className="relative p-6">
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                    className="p-3 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-500 shadow-lg w-fit mb-4"
+                  >
+                    <Brain className="h-6 w-6 text-white" />
+                  </motion.div>
+                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-indigo-500 group-hover:to-blue-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Agentic AI Engineer
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
+                    Build and deploy production-ready AI agent applications
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            {/* AI Evals Engineer */}
+            <motion.div variants={itemVariants}>
+              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-green-500/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
+                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
+
+                <CardContent className="relative p-6">
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                    className="p-3 rounded-xl bg-gradient-to-br from-teal-500 to-green-500 shadow-lg w-fit mb-4"
+                  >
+                    <BarChart3 className="h-6 w-6 text-white" />
+                  </motion.div>
+                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-teal-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    AI Evals Engineer
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
+                    Evaluate and optimize AI model performance and quality
                   </p>
                 </CardContent>
               </Card>
@@ -394,6 +452,31 @@ const AgenticAIPlayground = () => {
               </Card>
             </motion.div>
 
+            {/* Agentic Coding Tools */}
+            <motion.div variants={itemVariants}>
+              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-ai-blue/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
+                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
+
+                <CardContent className="relative p-6">
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ duration: 0.3 }}
+                    className="p-3 rounded-xl bg-gradient-to-br from-green-500 to-ai-blue shadow-lg w-fit mb-4"
+                  >
+                    <Zap className="h-6 w-6 text-white" />
+                  </motion.div>
+                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-green-500 group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Agentic Coding Tools
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
+                    GitHub Copilot, Cursor, Google AI Studio
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
             {/* RAG Development */}
             <motion.div variants={itemVariants}>
               <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
@@ -419,26 +502,26 @@ const AgenticAIPlayground = () => {
               </Card>
             </motion.div>
 
-            {/* Agentic Coding Tools */}
+            {/* Python & ML */}
             <motion.div variants={itemVariants}>
               <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-ai-blue/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-ai-purple/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
                 <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
 
                 <CardContent className="relative p-6">
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-green-500 to-ai-blue shadow-lg w-fit mb-4"
+                    className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-ai-purple shadow-lg w-fit mb-4"
                   >
-                    <Zap className="h-6 w-6 text-white" />
+                    <Code className="h-6 w-6 text-white" />
                   </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-green-500 group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Agentic Coding Tools
+                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-ai-purple group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                    Python & Machine Learning
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
-                    GitHub Copilot, Cursor, Google AI Studio
+                  <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                    Core programming and ML fundamentals for AI development
                   </p>
                 </CardContent>
               </Card>
@@ -518,7 +601,10 @@ const AgenticAIPlayground = () => {
             variants={containerVariants}
           >
             {/* Large featured card - spans 2 columns, 2 rows */}
-            <motion.div variants={itemVariants} className="md:col-span-2 md:row-span-2">
+            <motion.div
+              variants={itemVariants}
+              className="md:col-span-2 md:row-span-2"
+            >
               <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
                 <div className="absolute inset-0 bg-gradient-to-br from-ai-purple/10 to-ai-blue/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
@@ -533,25 +619,12 @@ const AgenticAIPlayground = () => {
                     <Zap className="h-12 w-12 text-white" />
                   </motion.div>
                   <h3 className="text-2xl font-bold mb-4 group-hover:bg-gradient-to-r group-hover:from-ai-purple group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Continuous AI Upskilling
+                    AI Tech-Use Cases
                   </h3>
-                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-6 flex-1">
-                    Continuously right-skill employees on rapidly evolving AI technology with real-time updates and hands-on practice.
+                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 flex-1">
+                    Continuously right-skill employees on rapidly evolving AI
+                    tech-use cases
                   </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-sm text-ai-purple font-medium">
-                      <CheckCircle className="w-4 h-4" />
-                      <span>Real-time technology updates</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-ai-purple font-medium">
-                      <CheckCircle className="w-4 h-4" />
-                      <span>Hands-on practice environments</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-ai-purple font-medium">
-                      <CheckCircle className="w-4 h-4" />
-                      <span>Personalized learning paths</span>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -574,10 +647,10 @@ const AgenticAIPlayground = () => {
                     </motion.div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-ai-cyan group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        AI Skills Scoring & Analytics
+                        Dynamic AI Skill Score
                       </h3>
                       <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                        Continuously score AI skills with comprehensive assessments and detailed performance analytics.
+                        Establish dynamic AI native skill score for employees
                       </p>
                     </div>
                   </div>
@@ -601,10 +674,10 @@ const AgenticAIPlayground = () => {
                     <Users className="h-6 w-6 text-white" />
                   </motion.div>
                   <h3 className="text-lg font-bold mb-2 group-hover:bg-gradient-to-r group-hover:from-neural-pink group-hover:to-ai-purple group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Self-Paced Learning
+                    Learning Paths
                   </h3>
                   <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Flexible learning paths that avoid expensive instructor-led trainings.
+                    Monitor AI skill development journeys on our learning paths
                   </p>
                 </CardContent>
               </Card>
@@ -626,10 +699,11 @@ const AgenticAIPlayground = () => {
                     <Target className="h-6 w-6 text-white" />
                   </motion.div>
                   <h3 className="text-lg font-bold mb-2 group-hover:bg-gradient-to-r group-hover:from-green-500 group-hover:to-ai-cyan group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Cost Optimization
+                    Self-Paced Transformation
                   </h3>
                   <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Save direct and opportunity costs while improving ROI.
+                    Move from expensive instructor led trainings to self-paced
+                    practical skill transformation
                   </p>
                 </CardContent>
               </Card>
@@ -653,10 +727,11 @@ const AgenticAIPlayground = () => {
                     </motion.div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-ai-purple group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        Massive Scale Training
+                        ROI & Cost Optimization
                       </h3>
                       <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                        Scale to upskill thousands of employees simultaneously with cloud-based infrastructure and automated learning paths.
+                        Improve ROI & cost of AI Talent transformation
+                        initiatives
                       </p>
                     </div>
                   </div>
