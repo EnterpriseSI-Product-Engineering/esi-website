@@ -420,7 +420,7 @@ const AgenticAIPlayground = () => {
                     AI Tech-Use Cases
                   </h3>
                   <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 flex-1">
-                    Continuously right-skill employees on rapidly evolving AI
+                    Continuously assign right-skill employees on rapidly evolving AI
                     tech-use cases
                   </p>
                 </CardContent>
@@ -497,18 +497,17 @@ const AgenticAIPlayground = () => {
                     <Target className="h-6 w-6 text-white" />
                   </motion.div>
                   <h3 className="text-lg font-bold mb-2 group-hover:bg-gradient-to-r group-hover:from-green-500 group-hover:to-ai-cyan group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Self-Paced Transformation
-                  </h3>
+                    ROI & Cost Optimization</h3>
                   <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Move from expensive instructor led trainings to self-paced
-                    practical skill transformation
+                    Improve ROI & cost of AI Talent transformation
+                    initiatives
                   </p>
                 </CardContent>
               </Card>
             </motion.div>
 
             {/* Wide card - spans 2 columns */}
-            <motion.div variants={itemVariants} className="md:col-span-2">
+            <motion.div variants={itemVariants} className="md:col-span-4">
               <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-ai-purple/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
@@ -525,11 +524,13 @@ const AgenticAIPlayground = () => {
                     </motion.div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-ai-purple group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        ROI & Cost Optimization
+                        Self-Paced Transformation
                       </h3>
                       <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                        Improve ROI & cost of AI Talent transformation
-                        initiatives
+
+
+                        Move from expensive instructor led trainings to self-paced
+                        practical skill transformation
                       </p>
                     </div>
                   </div>
