@@ -39,7 +39,8 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center  px-6 overflow-hidden">
+      <section className="relative min-h-screen flex items-start justify-center px-6 pt-[100px] md:pt-[150px] overflow-hidden">
+
         {/* Floating Elements */}
         <motion.div
           variants={floatingVariants}
@@ -71,7 +72,7 @@ const Hero = () => {
             Accelerating journey towards <br />
           </motion.h1>
 
-          <div className=" mt-8 flex gap-2 items-center justify-center">
+          <div className="mt-8 py-8 flex gap-2 items-center justify-center">
             <span className="border p-2 px-4 rounded-full bg-blue-200">
               Enterprise SuperIntelligence
             </span>

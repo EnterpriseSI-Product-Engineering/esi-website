@@ -20,6 +20,19 @@ import {
   Lightbulb,
 } from "lucide-react";
 import EmailSubscription from "@/components/EmailSubscription";
+import ToolsTechnologies from "@/components/AIPlaygroundComponents/ToolsTechnologies";
+import LabOfferings from "@/components/AIPlaygroundComponents/LabOfferings";
+import { HowItWorksSection } from "@/components/AIPlaygroundComponents/HowItWorks";
+
+const aiTools = [
+  "openai", "anthropic", "gemini", "llama",
+  "aws-bedrock", "azure-ai-foundry", "vertex-ai",
+  "langflow", "n8n", "kore-ai", "galileo-ai",
+  "google-adk", "ms-agent-framework", "aws-strands",
+  "langgraph", "ms-copilot", "github-copilot",
+  "claude-code", "amazon-kiro", "amazon-q-dev",
+  "cursor", "replit", "google-ai-studio", "lovable"
+];
 
 const AgenticAIPlayground = () => {
   // Animation variants
@@ -71,20 +84,6 @@ const AgenticAIPlayground = () => {
   };
 
   const features = [
-    {
-      icon: Users,
-      title: "Learner Labs",
-      description:
-        "Access pre-defined labs with illustrated tutorials and step-by-step coding tasks using integrated tools and cloud AI infrastructure.",
-      gradient: "from-ai-purple to-ai-blue",
-    },
-    {
-      icon: Code,
-      title: "Builder Labs",
-      description:
-        "Build Agentic or RAG applications with full-stack development, testing, and deployment in sandbox environments.",
-      gradient: "from-ai-blue to-ai-cyan",
-    },
     {
       icon: Target,
       title: "AI Native Skill Score",
@@ -154,10 +153,12 @@ const AgenticAIPlayground = () => {
         style={{ animationDelay: "1.5s" }}
       />
 
-      <main className="container mx-auto px-4 py-16 relative z-10">
+      <main className="container mx-auto px-4 py-16 relative z-10 space-y-12">
+
+
         {/* Hero Section */}
         <motion.section
-          className="text-center mb-16 mt-20"
+          className="text-center mb-16 mt-6"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -195,84 +196,79 @@ const AgenticAIPlayground = () => {
           </motion.p>
         </motion.section>
 
-        {/* Problem & Solution */}
+        {/* Problem & Solution (moved up) */}
         <motion.section
-          className="mb-16"
+          className="mb-10 max-w-5xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 items-stretch">
             <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 to-orange-500/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardHeader className="relative">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 shadow-lg">
-                      <AlertTriangle className="w-6 h-6 text-white" />
+              <Card className="relative overflow-hidden border bg-background/60 rounded-2xl shadow-sm transition-transform duration-300 hover:translate-y-1 h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-border/10 to-transparent rounded-2xl" />
+                <CardHeader className="relative p-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-3 rounded-lg bg-red-100">
+                      <AlertTriangle className="w-5 h-5 text-red-600" />
                     </div>
-                    <CardTitle className="text-2xl group-hover:bg-gradient-to-r group-hover:from-red-500 group-hover:to-orange-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                      Problem Statement
-                    </CardTitle>
+                    <CardTitle className="text-xl">Problem Statement</CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent className="relative space-y-4">
-                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    The rapid progress in Artificial Intelligence is disrupting
-                    traditional models of Tech Services and business process
-                    management.
+                <CardContent className="relative p-6 space-y-3">
+                  <p className="text-muted-foreground">
+                    The rapid progress in Artificial Intelligence is disrupting traditional models of Tech Services and business process management.
                   </p>
-                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Enterprises & Tech SIs struggle to align their workforce to
-                    leverage & monetize AI effectively.
+                  <p className="text-muted-foreground">
+                    Enterprises & Tech SIs struggle to align their workforce to leverage & monetize AI effectively.
                   </p>
-                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Current AI talent transformation approaches using online
-                    courses & budget trainers lack real business impact.
+                  <p className="text-muted-foreground">
+                    Current AI talent transformation approaches using online courses & budget trainers lack real business impact.
                   </p>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-ai-cyan/10 to-ai-blue/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardHeader className="relative">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-ai-cyan to-ai-blue shadow-lg">
-                      <Lightbulb className="w-6 h-6 text-white" />
+              <Card className="relative overflow-hidden border bg-background/60 rounded-2xl shadow-sm transition-transform duration-300 hover:translate-y-1 h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-border/10 to-transparent rounded-2xl" />
+                <CardHeader className="relative p-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-3 rounded-lg bg-cyan-100">
+                      <Lightbulb className="w-5 h-5 text-cyan-700" />
                     </div>
-                    <CardTitle className="text-2xl group-hover:bg-gradient-to-r group-hover:from-ai-cyan group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                      Our Solution
-                    </CardTitle>
+                    <CardTitle className="text-xl">Our Solution</CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent className="relative">
-                  <p className="text-muted-foreground mb-4 group-hover:text-foreground/80 transition-colors duration-300">
-                    Our unique approach to high impact AI Talent Transformation
-                    is delivered via our{" "}
-                    <strong className="bg-gradient-to-r from-ai-cyan to-ai-blue bg-clip-text text-transparent">
-                      CASH (Continuous, Accelerated, Scalable, Holistic) model
-                    </strong>
-                    , driven by our Agentic AI Playground approach.
+                <CardContent className="relative p-6 space-y-3">
+                  <p className="text-muted-foreground">
+                    Our approach to high impact AI Talent Transformation is delivered via our <strong className="text-foreground font-semibold">CASH</strong> model (Continuous, Accelerated, Scalable, Holistic), driven by the Agentic AI Playground.
                   </p>
-                  <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Our CASH model is customized with structured & measurable
-                    learning journeys for specific personas, including the
-                    latest AI tools and enterprise-grade infrastructure.
+                  <p className="text-muted-foreground">
+                    Customized learning journeys, hands-on labs, and enterprise-grade infrastructure make progress measurable and practical.
                   </p>
                 </CardContent>
               </Card>
             </motion.div>
           </div>
         </motion.section>
+
+        {/* Labs Section - Learner Labs and Builder Labs */}
+        <motion.section
+          className="pt-[50px] pb-[20px] max-w-6xl mx-auto"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
+
+          <div className="space-y-6">
+            <LabOfferings itemVariants={itemVariants} />
+          </div>
+        </motion.section>
+
+        {/* Problem & Solution (moved) - removed original duplicate */}
 
         {/* How It Works */}
         <motion.section
@@ -291,49 +287,17 @@ const AgenticAIPlayground = () => {
             </h2>
           </motion.div>
 
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-            variants={containerVariants}
-          >
-            {features.map((feature, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full text-center">
-                  <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl`}
-                  />
-                  <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
+          <HowItWorksSection features={features} containerVariants={containerVariants} itemVariants={itemVariants} />
 
-                  <CardHeader className="relative">
-                    <motion.div
-                      className="mx-auto mb-4"
-                      whileHover={{ scale: 1.05, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div
-                        className={`p-4 rounded-2xl bg-gradient-to-br ${feature.gradient} shadow-lg group-hover:shadow-xl transition-all duration-300 w-fit mx-auto`}
-                      >
-                        <feature.icon className="h-8 w-8 text-white" />
-                      </div>
-                    </motion.div>
-                    <CardTitle className="text-xl group-hover:bg-gradient-to-r group-hover:from-ai-purple group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                      {feature.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="relative">
-                    <CardDescription className="text-center text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
+
         </motion.section>
 
-        {/* Technologies */}
+        {/* Tools & Technologies */}
+        <ToolsTechnologies />
+
+        {/* Our Learning Paths */}
         <motion.section
-          className="mb-16"
+          className="pb-[100px]"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -341,9 +305,9 @@ const AgenticAIPlayground = () => {
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Technologies &{" "}
+              Our AI{" "}
               <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
-                Tools
+                Learning Paths
               </span>
             </h2>
           </motion.div>
@@ -352,232 +316,66 @@ const AgenticAIPlayground = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
             variants={containerVariants}
           >
-            {/* Agentic AI Architect */}
-            <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
+            {[
+              {
+                title: "Agentic AI Architect",
+                desc: "Design scalable, secure, enterprise-grade agentic AI systems",
+                gradient: "from-purple-500 to-pink-500",
+                Icon: Users,
+              },
+              {
+                title: "Agentic AI Engineer",
+                desc: "Build and deploy production-ready AI agent applications",
+                gradient: "from-indigo-500 to-blue-500",
+                Icon: Brain,
+              },
+              {
+                title: "AI Evals Engineer",
+                desc: "Design evaluation frameworks for quality, safety, and alignment",
+                gradient: "from-teal-500 to-green-500",
+                Icon: BarChart3,
+              },
+              {
+                title: "AI-SDLC Engineer",
+                desc: "Operationalize AI across CI/CD, testing, monitoring, and governance",
+                gradient: "from-ai-purple to-ai-blue",
+                Icon: Code,
+              },
+              {
+                title: "AI Strategist",
+                desc: "Translate business goals into high-impact AI strategies",
+                gradient: "from-orange-500 to-ai-cyan",
+                Icon: Lightbulb,
+              },
+              {
+                title: "AI Business Consultant",
+                desc: "Drive ROI-driven AI adoption and transformation programs",
+                gradient: "from-green-500 to-ai-blue",
+                Icon: Target,
+              },
+            ].map(({ title, desc, gradient, Icon }) => (
+              <motion.div key={title} variants={itemVariants}>
+                <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:scale-[1.02] hover:-translate-y-2 transition-all duration-500 h-full">
+                  <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 rounded-xl" />
 
-                <CardContent className="relative p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg w-fit mb-4"
-                  >
-                    <Users className="h-6 w-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-purple-500 group-hover:to-pink-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Agentic AI Architect
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
-                    Design and architect enterprise-scale AI agent systems
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
+                  <CardContent className="relative p-6">
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                      className={`p-3 rounded-xl bg-gradient-to-br ${gradient} shadow-lg w-fit mb-4`}
+                    >
+                      <Icon className="h-6 w-6 text-white" />
+                    </motion.div>
 
-            {/* Agentic AI Engineer */}
-            <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-blue-500/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardContent className="relative p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-500 shadow-lg w-fit mb-4"
-                  >
-                    <Brain className="h-6 w-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-indigo-500 group-hover:to-blue-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Agentic AI Engineer
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
-                    Build and deploy production-ready AI agent applications
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* AI Evals Engineer */}
-            <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-green-500/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardContent className="relative p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-teal-500 to-green-500 shadow-lg w-fit mb-4"
-                  >
-                    <BarChart3 className="h-6 w-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-teal-500 group-hover:to-green-500 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    AI Evals Engineer
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
-                    Evaluate and optimize AI model performance and quality
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* AI Agent Development */}
-            <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-ai-purple/10 to-ai-blue/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardContent className="relative p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-ai-purple to-ai-blue shadow-lg w-fit mb-4"
-                  >
-                    <Brain className="h-6 w-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-ai-purple group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    AI Agent Development
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
-                    Google ADK, Microsoft Autogen, AWS Strands SDK
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Agentic Coding Tools */}
-            <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-ai-blue/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardContent className="relative p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-green-500 to-ai-blue shadow-lg w-fit mb-4"
-                  >
-                    <Zap className="h-6 w-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-green-500 group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Agentic Coding Tools
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
-                    GitHub Copilot, Cursor, Google AI Studio
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* RAG Development */}
-            <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-ai-cyan/10 to-neural-pink/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardContent className="relative p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-ai-cyan to-neural-pink shadow-lg w-fit mb-4"
-                  >
-                    <Target className="h-6 w-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-ai-cyan group-hover:to-neural-pink group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    RAG Development
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
-                    Llamaindex, Langchain frameworks
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Python & ML */}
-            <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-ai-purple/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardContent className="relative p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-ai-purple shadow-lg w-fit mb-4"
-                  >
-                    <Code className="h-6 w-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-ai-purple group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Python & Machine Learning
-                  </h3>
-                  <p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                    Core programming and ML fundamentals for AI development
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Cloud AI Services */}
-            <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-ai-cyan/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardContent className="relative p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-orange-500 to-ai-cyan shadow-lg w-fit mb-4"
-                  >
-                    <Cloud className="h-6 w-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-ai-cyan group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Cloud AI Services
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
-                    AWS Bedrock, Azure AI Foundry, GCP Vertex AI
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            {/* Context Engineering */}
-            <motion.div variants={itemVariants}>
-              <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                <div className="absolute inset-0 bg-gradient-to-br from-neural-pink/10 to-ai-purple/10 opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                <CardContent className="relative p-6">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ duration: 0.3 }}
-                    className="p-3 rounded-xl bg-gradient-to-br from-neural-pink to-ai-purple shadow-lg w-fit mb-4"
-                  >
-                    <Lightbulb className="h-6 w-6 text-white" />
-                  </motion.div>
-                  <h3 className="text-lg font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-neural-pink group-hover:to-ai-purple group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                    Context Engineering
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-2 group-hover:text-foreground/80 transition-colors duration-300">
-                    Advanced prompt engineering and context optimization
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
+                    <h3 className="text-lg font-bold mb-3">{title}</h3>
+                    <p className="text-sm text-muted-foreground">{desc}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.section>
+
 
         {/* Benefits - Bento Grid */}
         <motion.section
@@ -646,11 +444,11 @@ const AgenticAIPlayground = () => {
                       <BarChart3 className="h-8 w-8 text-white" />
                     </motion.div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-3 group-hover:bg-gradient-to-r group-hover:from-ai-cyan group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                        Dynamic AI Skill Score
+                      <h3 className="text-xl font-bold mb-3 transition-all duration-300">
+                        AI Skill Insights
                       </h3>
-                      <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                        Establish dynamic AI native skill score for employees
+                      <p className="text-muted-foreground transition-colors duration-300">
+                        Aggregate skill signals into actionable insights and recommended learning paths for teams.
                       </p>
                     </div>
                   </div>
