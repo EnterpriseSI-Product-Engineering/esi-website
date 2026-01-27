@@ -257,19 +257,21 @@ const AgenticAIPlayground = () => {
 
         {/* Labs Section - Learner Labs and Builder Labs */}
         <motion.section
-          className="pt-[50px] pb-[20px] max-w-6xl mx-auto"
+          className="pt-[50px] pb-[10px] max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
 
-          <div className="space-y-6">
+          <div className="space-y-3">
             <LabOfferings itemVariants={itemVariants} />
           </div>
         </motion.section>
 
-        <PlaygroundFeatures />
+        <div className="pb-[100px]">
+          <PlaygroundFeatures />
+        </div>
 
         {/* Problem & Solution (moved) - removed original duplicate */}
 
