@@ -135,6 +135,19 @@ function LearnerLabsSlide({ itemVariants }: { itemVariants: any }) {
             </div>
 
             <div>
+              <div className="absolute inset-x-0 top-32 h-[420px] -z-10 blur-3xl">
+  <motion.div
+    key={active}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 0.6 }}
+    exit={{ opacity: 0 }}
+    className={`h-full w-full ${
+      active === 0
+        ? "bg-gradient-to-r from-sky-200/50 via-blue-200/30 to-transparent"
+        : "bg-gradient-to-l from-amber-300/50 via-orange-200/30 to-transparent"
+    }`}
+  />
+</div>
               {/* Platform Images */}
               <AnimatePresence mode="wait">
                 <motion.img
