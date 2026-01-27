@@ -198,23 +198,22 @@ function BuilderLabsSlide({ itemVariants }: { itemVariants: any }) {
           </CardHeader>
           <CardContent className="relative py-8 flex items-center justify-center">
             <div className="text-center">
-              <div className="mb-4">
+              {/* <div className="mb-4">
                 <span className="inline-flex items-center px-4 py-2 rounded-full bg-muted/10 text-foreground font-semibold">
                   Coming Soon
                 </span>
-              </div>
+              </div> */}
               <p className="text-muted-foreground max-w-xl mx-auto mb-6">
-                Builder Labs will let teams prototype, test and deploy
+                Builder Labs lets teams prototype, test and deploy
                 agentic applications with CI support and one-click
-                sandbox deploys. Subscribe to be notified when it
-                launches.
+                sandbox deploys.
               </p>
               <div className="flex justify-center">
                 <button
                   onClick={scrollToBottom}
                   className="px-5 py-2 rounded-lg bg-muted text-foreground bg-orange-100 hover:bg-orange-200 transition"
                 >
-                  Notify me
+                  Learn More
                 </button>
               </div>
             </div>
