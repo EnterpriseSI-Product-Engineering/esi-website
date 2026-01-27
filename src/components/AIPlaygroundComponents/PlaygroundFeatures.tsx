@@ -65,11 +65,15 @@ const featureAreasData: FeatureArea[] = [
                 imagePlaceholder: "Learning Paths Dashboard",
             },
             {
-                name: "Integrated Jupyter Labs",
-                description: "Deep learning environments with Jupyter notebooks for hands-on experimentation.",
+                name: "Integrated Labs",
+                description: "Deep learning environments with technologies including Jupyter notebooks, VSCode, Cloud consoles and low-code/no-code environments for hands-on experimentation.",
                 features: [
                     "Pre-configured ML environments",
-                    "GPU-accelerated computing",
+                    "Cloud sandbox environments (AWS, Azure, and more...)",
+                    "Langflow AI workflows",
+                    "n8n automation builder",
+                    "VSCode for standalone development",
+                    "Cost-controlled resources",
                     "Collaborative notebooks",
                     "Version-controlled experiments",
                 ],
