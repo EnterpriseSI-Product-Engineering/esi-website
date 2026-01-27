@@ -11,11 +11,11 @@ import VscodeLogo from "@/assets/Logos/Visual_Studio_Code_logo.png";
 import LangflowLogo from "@/assets/Logos/Langflow_logo.png";
 
 const scrollToBottom = () => {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth",
-    });
-  };
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth",
+  });
+};
 
 function LabOfferings({ itemVariants }: { itemVariants: any }) {
   const [active, setActive] = useState(0);
@@ -24,7 +24,7 @@ function LabOfferings({ itemVariants }: { itemVariants: any }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % slides.length);
-    }, 5000); // 5s feels premium
+    }, 60 * 1000); // 5s feels premium
     return () => clearInterval(interval);
   }, []);
 
@@ -32,9 +32,9 @@ function LabOfferings({ itemVariants }: { itemVariants: any }) {
     <motion.section className="relative mb-24">
       {/* Header */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2">Labs</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-2">Key Product Features</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Hands-on learning sandboxed environments and curated builder experiences.
+          Now every employee will have their own AI sandbox environment with new scenarios added every month & skill development measured with innovative scoring methods.
         </p>
       </div>
 
@@ -46,8 +46,8 @@ function LabOfferings({ itemVariants }: { itemVariants: any }) {
           animate={{ opacity: 0.7 }}
           exit={{ opacity: 0 }}
           className={`h-full w-full ${active === 0
-              ? "bg-gradient-to-r from-sky-200/60 via-blue-200/40 to-transparent"
-              : "bg-gradient-to-l from-amber-300/60 via-orange-200/40 to-transparent"
+            ? "bg-gradient-to-r from-sky-200/60 via-blue-200/40 to-transparent"
+            : "bg-gradient-to-l from-amber-300/60 via-orange-200/40 to-transparent"
             }`}
         />
       </div>
@@ -123,12 +123,11 @@ function LearnerLabsSlide({ itemVariants }: { itemVariants: any }) {
                 <div>
                   <CardTitle className="text-2xl">Learner Labs</CardTitle>
                   <CardDescription className="text-muted-foreground">
-                    Practical, instructor-curated labs with integrated
-                    tooling to accelerate learning by doing.
+                    Practical, guided/ instruction based labs with tech/ business scenario, bundled with AI tool, Cloud & AI Infra (models, memory, etc) . Perfect for self-paced learning of application of new AI technologies/ concepts. Each lab takes 30-120 mins to complete.
                   </CardDescription>
                 </div>
               </div>
-              <div className="text-sm text-muted-foreground">Free · Self-paced</div>
+              {/* <div className="text-sm text-muted-foreground">Free · Self-paced</div> */}
             </div>
           </CardHeader>
           <CardContent className="relative justify-between">
