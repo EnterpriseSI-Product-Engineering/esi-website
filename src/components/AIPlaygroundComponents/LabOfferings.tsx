@@ -24,7 +24,7 @@ function LabOfferings({ itemVariants }: { itemVariants: any }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % slides.length);
-    }, 60 * 1000); // 5s feels premium
+    }, 30 * 1000); // 60s feels premium
     return () => clearInterval(interval);
   }, []);
 
