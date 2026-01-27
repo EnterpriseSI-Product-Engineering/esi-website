@@ -85,7 +85,7 @@ function LearnerLabsSlide({ itemVariants }: { itemVariants: any }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setActive((prev) => (prev + 1) % slides.length);
-    }, 30 * 1000); // 60s feels premium
+    }, 3 * 1000); // 60s feels premium
     return () => clearInterval(interval);
   }, []);
 
