@@ -239,7 +239,9 @@ const AgenticAIPlayground = () => {
                     <div className="p-3 rounded-lg bg-cyan-100">
                       <Lightbulb className="w-5 h-5 text-cyan-700" />
                     </div>
-                    <CardTitle className="text-xl">Our Solution</CardTitle>
+                    <CardTitle className="text-xl">Our 
+                      Solution
+                    </CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="relative p-6 space-y-3">

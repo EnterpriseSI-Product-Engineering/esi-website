@@ -437,7 +437,8 @@ export const PlaygroundFeatures = () => {
             <div className="max-w-7xl mx-auto">
                 <motion.div variants={itemVariants} className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-esi-primary">
-                        AI Builder Playground
+                        AI {""}
+                        <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">Builder Playground</span>
                     </h2>
                     <p className="text-xl text-muted-foreground">
                         Comprehensive learning and administration platform for AI skill development
