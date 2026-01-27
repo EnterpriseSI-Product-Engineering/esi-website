@@ -23,6 +23,7 @@ import EmailSubscription from "@/components/EmailSubscription";
 import ToolsTechnologies from "@/components/AIPlaygroundComponents/ToolsTechnologies";
 import LabOfferings from "@/components/AIPlaygroundComponents/LabOfferings";
 import { HowItWorksSection } from "@/components/AIPlaygroundComponents/HowItWorks";
+import PlaygroundFeatures from "@/components/AIPlaygroundComponents/PlaygroundFeatures";
 
 const aiTools = [
   "openai", "anthropic", "gemini", "llama",
@@ -267,6 +268,8 @@ const AgenticAIPlayground = () => {
             <LabOfferings itemVariants={itemVariants} />
           </div>
         </motion.section>
+
+        <PlaygroundFeatures />
 
         {/* Problem & Solution (moved) - removed original duplicate */}
 

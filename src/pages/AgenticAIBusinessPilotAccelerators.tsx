@@ -18,6 +18,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import EmailSubscription from "@/components/EmailSubscription";
+import FocusAreas from "@/components/AIPilotAcceleratorsComponents/FocusAreas";
 
 const AgenticAIBusinessPilotAccelerators = () => {
   // Animation variants
@@ -319,72 +320,7 @@ const AgenticAIBusinessPilotAccelerators = () => {
       </motion.section>
 
       {/* Focus Areas */}
-      <motion.section
-        className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Initial{" "}
-              <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
-                Focus Areas
-              </span>
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Starting with 20 high-impact use cases across key business
-              functions
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="grid md:grid-cols-3 gap-8"
-            variants={containerVariants}
-          >
-            {[
-              {
-                title: "Finance & Accounting",
-                description: "Automated financial processes and reporting",
-                gradient: "from-green-500 to-emerald-600",
-              },
-              {
-                title: "Internal Auditing",
-                description:
-                  "Intelligent audit workflows and compliance checks",
-                gradient: "from-blue-500 to-cyan-600",
-              },
-              {
-                title: "Risk & Compliance",
-                description:
-                  "Proactive risk management and regulatory compliance",
-                gradient: "from-purple-500 to-pink-600",
-              },
-            ].map((area, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-border/20 via-border/10 to-transparent rounded-xl" />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${area.gradient} opacity-0 group-hover:opacity-20 transition-all duration-500 rounded-xl`}
-                  />
-                  <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
-
-                  <CardContent className="relative p-8 text-center">
-                    <h3 className="text-xl font-bold mb-4 group-hover:bg-gradient-to-r group-hover:from-ai-purple group-hover:to-ai-blue group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                      {area.title}
-                    </h3>
-                    <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-                      {area.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
+      <FocusAreas />
 
       {/* Business Benefits */}
       <motion.section
