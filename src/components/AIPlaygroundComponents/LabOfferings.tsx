@@ -8,9 +8,12 @@ import AwsLogo from "@/assets/Logos/Amazon_Web_Services_Logo.png";
 import VscodeLogo from "@/assets/Logos/Visual_Studio_Code_logo.png";
 import LangflowLogo from "@/assets/Logos/Langflow_logo.png";
 
-import JupyterScreen from "../../assets/Playground/Labs/Jupyter.png"
-import AWSScreen from "../../assets/Playground/Labs/AWS.png"
-import Langflow from "../../assets/Playground/Labs/Langflow.png"
+import JupyterScreen from "../../assets/Playground/Labs/Learner/Jupyter.png"
+import AWSScreen from "../../assets/Playground/Labs/Learner/AWS.png"
+import Langflow from "../../assets/Playground/Labs/Learner/Langflow.png"
+
+import BuilderCardImage from "../../assets/Playground/Labs/Builder/BuilderCard.jpeg"
+import BuilderLabsImage from "../../assets/Playground/Labs/Builder/BuilderLabs.jpeg"
 
 const scrollToBottom = () => {
   window.scrollTo({
@@ -19,7 +22,7 @@ const scrollToBottom = () => {
   });
 };
 
-const slides = [
+const learnerSlides = [
   {
     id: 0,
     image: JupyterScreen,
@@ -36,6 +39,19 @@ const slides = [
     label: "Visual Agent & Flow Builder",
   },
 ];
+
+const builderSlides = [
+  {
+    id:0,
+    image: BuilderCardImage,
+    label: "Builder-labs Card Image"
+  },
+  {
+    id:1,
+    image: BuilderLabsImage,
+    label: "Builder-labs Screen Image"
+  },
+]
 
 function LabOfferings({ itemVariants }: { itemVariants: any }) {
 
@@ -84,7 +100,7 @@ function LearnerLabsSlide({ itemVariants }: { itemVariants: any }) {
   // Auto rotate
   useEffect(() => {
     const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % slides.length);
+      setActive((prev) => (prev + 1) % learnerSlides.length);
     }, 3 * 1000); // 60s feels premium
     return () => clearInterval(interval);
   }, []);
@@ -136,24 +152,23 @@ function LearnerLabsSlide({ itemVariants }: { itemVariants: any }) {
 
             <div>
               <div className="absolute inset-x-0 top-32 h-[420px] -z-10 blur-3xl">
-  <motion.div
-    key={active}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 0.6 }}
-    exit={{ opacity: 0 }}
-    className={`h-full w-full ${
-      active === 0
-        ? "bg-gradient-to-r from-sky-200/50 via-blue-200/30 to-transparent"
-        : "bg-gradient-to-l from-amber-300/50 via-orange-200/30 to-transparent"
-    }`}
-  />
-</div>
+                <motion.div
+                  key={active}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.6 }}
+                  exit={{ opacity: 0 }}
+                  className={`h-full w-full ${active === 0
+                    ? "bg-gradient-to-r from-sky-200/50 via-blue-200/30 to-transparent"
+                    : "bg-gradient-to-l from-amber-300/50 via-orange-200/30 to-transparent"
+                    }`}
+                />
+              </div>
               {/* Platform Images */}
               <AnimatePresence mode="wait">
                 <motion.img
                   key={active}
-                  src={slides[active].image}
-                  alt={slides[active].label}
+                  src={learnerSlides[active].image}
+                  alt={learnerSlides[active].label}
                   initial={{ opacity: 0, y: 12, scale: 0.98 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: -12, scale: 0.98 }}
@@ -167,13 +182,13 @@ function LearnerLabsSlide({ itemVariants }: { itemVariants: any }) {
 
               {/* Indicators */}
               <div className="mt-6 flex justify-center gap-2">
-                {slides.map((slide, index) => (
+                {learnerSlides.map((slide, index) => (
                   <button
                     key={slide.id}
                     onClick={() => setActive(index)}
                     className={`h-2 w-2 rounded-full transition-all duration-300 ${active === index
-                        ? "bg-primary scale-125"
-                        : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                      ? "bg-primary scale-125"
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
                       }`}
                     aria-label={`Go to ${slide.label}`}
                   />
@@ -202,6 +217,15 @@ function LearnerLabsSlide({ itemVariants }: { itemVariants: any }) {
 }
 
 function BuilderLabsSlide({ itemVariants }: { itemVariants: any }) {
+  const [active, setActive] = useState(0);
+
+  // Auto rotate
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive((prev) => (prev + 1) % builderSlides.length);
+    }, 3 * 1000); // 60s feels premium
+    return () => clearInterval(interval);
+  }, []);
   return (
     <Card
       className={`relative overflow-hidden rounded-2xl border 
@@ -224,26 +248,65 @@ function BuilderLabsSlide({ itemVariants }: { itemVariants: any }) {
                 <div>
                   <CardTitle className="text-2xl">Builder Labs</CardTitle>
                   <CardDescription className="text-muted-foreground">
-                    Full-stack builder environments for agents and RAG
-                    apps. Ever increasing list of curated projects & CI/CD flows.
+                    AI Agent & RAG Builder Environment with AI Infra & deployment options and problem stmt/ business use cases - Accelerate your AI Architect/ Builder skill development by designing , developing & deploying.
                   </CardDescription>
                 </div>
               </div>
               {/* <div className="text-sm text-foreground/80 font-semibold">Coming Soon</div> */}
             </div>
           </CardHeader>
-          <CardContent className="relative py-8 flex items-center justify-center">
-            <div className="text-center">
-              {/* <div className="mb-4">
-                <span className="inline-flex items-center px-4 py-2 rounded-full bg-muted/10 text-foreground font-semibold">
-                  Coming Soon
-                </span>
-              </div> */}
-              <p className="text-muted-foreground max-w-xl mx-auto mb-6">
+          <CardContent className="relative py-8 items-center justify-center">
+            <div>
+              <div className="absolute inset-x-0 top-32 h-[420px] -z-10 blur-3xl">
+                <motion.div
+                  key={active}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.6 }}
+                  exit={{ opacity: 0 }}
+                  className={`h-full w-full ${active === 0
+                    ? "bg-gradient-to-r from-sky-200/50 via-blue-200/30 to-transparent"
+                    : "bg-gradient-to-l from-amber-300/50 via-orange-200/30 to-transparent"
+                    }`}
+                />
+              </div>
+              {/* Platform Images */}
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={active}
+                  src={builderSlides[active].image}
+                  alt={builderSlides[active].label}
+                  initial={{ opacity: 0, y: 12, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -12, scale: 0.98 }}
+                  transition={{
+                    duration: 0.6,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                  }}
+                  className="w-full max-h-[560px] object-contain rounded-xl border bg-background/50 p-3"
+                />
+              </AnimatePresence>
+
+              {/* Indicators */}
+              <div className="mt-6 flex justify-center gap-2">
+                {builderSlides.map((slide, index) => (
+                  <button
+                    key={slide.id}
+                    onClick={() => setActive(index)}
+                    className={`h-2 w-2 rounded-full transition-all duration-300 ${active === index
+                      ? "bg-primary scale-125"
+                      : "bg-muted-foreground/30 hover:bg-muted-foreground/60"
+                      }`}
+                    aria-label={`Go to ${slide.label}`}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="mt-6 flex items-center justify-between">
+              <div className="text-sm text-muted-foreground max-w-2xl">
                 Builder Labs lets teams prototype, test and deploy
                 agentic applications with CI support and one-click
                 sandbox deploys.
-              </p>
+              </div>
               <div className="flex justify-center">
                 <button
                   onClick={scrollToBottom}
