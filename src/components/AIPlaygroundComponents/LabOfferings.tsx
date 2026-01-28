@@ -248,7 +248,7 @@ function BuilderLabsSlide({ itemVariants }: { itemVariants: any }) {
                 <div>
                   <CardTitle className="text-2xl">Builder Labs</CardTitle>
                   <CardDescription className="text-muted-foreground">
-                    AI Agent & RAG Builder Environment with AI Infra & deployment options and problem stmt/ business use cases - Accelerate your AI Architect/ Builder skill development by designing , developing & deploying.
+                    AI Agent & RAG Builder Environment with AI Infra & deployment options and problem statement/business use cases - Accelerate your AI Architect/ Builder skill development by designing , developing & deploying.
                   </CardDescription>
                 </div>
               </div>

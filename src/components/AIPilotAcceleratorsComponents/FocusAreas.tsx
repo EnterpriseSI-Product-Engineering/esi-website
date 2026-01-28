@@ -76,6 +76,21 @@ const focusAreasData: FocusArea[] = [
                 imageSource: TimsheetDashboard,
                 imagePlaceholder: "Expense Management View",
             },
+            {
+                name: "Expense Reimbursement Copilot",
+                description: "AI-driven expense report handling, regulatory monitoring and compliance gap identification against expense policies.",
+                features: [
+                    "AI-powered regulatory monitoring",
+                    "Integration with regulation policy and statement of work",
+                    "AI-driven compliance check and analysis",
+                    "Regulatory change tracking",
+                    "Human-in-the-loop validation",
+                    "Compliance gap identification",
+                    "Action item generation",
+                ],
+                imageSource: AIExpense,
+                imagePlaceholder: "Regulatory Monitoring Interface",
+            },
         ],
     },
     {
@@ -145,21 +160,7 @@ const focusAreasData: FocusArea[] = [
                 imageSource: VatAgent,
                 imagePlaceholder: "Risk Assessment Dashboard",
             },
-            {
-                name: "Expense Reimbursement Copilot",
-                description: "AI-driven expense report handling, regulatory monitoring and compliance gap identification against expense policies.",
-                features: [
-                    "AI-powered regulatory monitoring",
-                    "Integration with regulation policy and statement of work",
-                    "AI-driven compliance check and analysis",
-                    "Regulatory change tracking",
-                    "Human-in-the-loop validation",
-                    "Compliance gap identification",
-                    "Action item generation",
-                ],
-                imageSource: AIExpense,
-                imagePlaceholder: "Regulatory Monitoring Interface",
-            },
+
             // {
             //     name: "Policy Management Copilot",
             //     description: "Manages policy lifecycle from creation through attestation and compliance.",
@@ -304,6 +305,19 @@ const CopilotCarousel = ({ copilots, areaKey }: CopilotCarouselProps) => {
 
     const styles = getAreaStyles(areaKey);
 
+    useEffect(() => {
+        if (!emblaApi) return;
+
+        const autoScroll = setInterval(() => {
+            emblaApi.scrollNext();
+        }, 5000); // 5 seconds
+
+        return () => {
+            clearInterval(autoScroll);
+        };
+    }, [emblaApi]);
+
+
     return (
         <div className="relative">
             <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
@@ -383,8 +397,8 @@ const CopilotCarousel = ({ copilots, areaKey }: CopilotCarouselProps) => {
                         key={index}
                         onClick={() => scrollTo(index)}
                         className={`w-2 h-2 rounded-full transition-all duration-300 ${styles.bg} ${index === selectedIndex
-                                ? "opacity-100 scale-125"
-                                : "opacity-30 hover:opacity-60"
+                            ? "opacity-100 scale-125"
+                            : "opacity-30 hover:opacity-60"
                             }`}
                         aria-label={`Go to copilot ${index + 1}`}
                     />
@@ -395,11 +409,14 @@ const CopilotCarousel = ({ copilots, areaKey }: CopilotCarouselProps) => {
 };
 
 export const FocusAreas = () => {
-    const [selectedArea, setSelectedArea] = useState<FocusAreaKey | null>(null);
+    // const [selectedArea, setSelectedArea] = useState<FocusAreaKey | null>(null);
+    const [selectedArea, setSelectedArea] = useState<FocusAreaKey>("finance");
 
     const handleAreaClick = (key: FocusAreaKey) => {
         setSelectedArea(selectedArea === key ? null : key);
     };
+
+
 
     return (
         <motion.section
@@ -412,7 +429,8 @@ export const FocusAreas = () => {
             <div className="max-w-7xl mx-auto">
                 <motion.div variants={itemVariants} className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-esi-primary">
-                        Initial Focus Areas
+                        Key {""}
+                        <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">Domains</span>
                     </h2>
                     <p className="text-xl text-muted-foreground">
                         Starting with 20 high-impact use cases across key business functions
@@ -432,8 +450,8 @@ export const FocusAreas = () => {
                                 <Card
                                     onClick={() => handleAreaClick(area.key)}
                                     className={`group relative overflow-hidden cursor-pointer transition-all duration-300 h-full ${isSelected
-                                            ? `${styles.bg} border-2 ${styles.border} shadow-lg`
-                                            : "bg-card border hover:shadow-md hover:-translate-y-1"
+                                        ? `${styles.bg} border-2 ${styles.border} shadow-lg`
+                                        : "bg-card border hover:shadow-md hover:-translate-y-1"
                                         }`}
                                 >
                                     <CardContent className="relative p-8 text-center">

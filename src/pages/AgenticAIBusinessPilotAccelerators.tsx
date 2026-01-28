@@ -265,7 +265,7 @@ const AgenticAIBusinessPilotAccelerators = () => {
             {[
               {
                 icon: Rocket,
-                title: "Pre-built Production Apps",
+                title: "Pre-built Production Grade Apps",
                 description:
                   "Production-grade Agentic AI apps addressing top 5-6 high-value business use cases for specific functions and industries.",
                 gradient: "from-ai-purple to-ai-blue",
