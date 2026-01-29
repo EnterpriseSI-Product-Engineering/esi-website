@@ -35,51 +35,51 @@ interface FeatureArea {
 }
 
 const featureAreasData: FeatureArea[] = [
-    {
-        key: "learner",
-        title: "Learner",
-        description: "Comprehensive learning experience with hands-on labs and progress tracking",
-        features: [
-            {
-                name: "Enterprise Onboarding & Login",
-                description: "Seamless enterprise authentication with SSO integration and personalized onboarding flows.",
-                features: [
-                    "Single Sign-On (SSO) integration",
-                    "Role-based access control",
-                    "Personalized welcome experience",
-                    "Multi-tenant support",
-                ],
-                imageSource: LoginPage,
-                imagePlaceholder: "Enterprise Onboarding Interface",
-            },
-            {
-                name: "Dedicated Learning Paths",
-                description: "Curated learning journeys tailored to skill levels and career goals.",
-                features: [
-                    "Skill-based path recommendations",
-                    "Progressive difficulty levels",
-                    "Milestone achievements",
-                    "Certification tracking",
-                ],
-                imageSource: LearningPath,
-                imagePlaceholder: "Learning Paths Dashboard",
-            },
-            {
-                name: "Integrated Labs",
-                description: "Deep learning environments with technologies including Jupyter notebooks, VSCode, Cloud consoles and low-code/no-code environments for hands-on experimentation.",
-                features: [
-                    "Pre-configured ML environments",
-                    "Cloud sandbox environments (AWS, Azure, and more...)",
-                    "Langflow AI workflows",
-                    "n8n automation builder",
-                    "VSCode for standalone development",
-                    "Cost-controlled resources",
-                    "Collaborative notebooks",
-                    "Version-controlled experiments",
-                ],
-                imageSource: IntegratedLabs,
-                imagePlaceholder: "Jupyter Labs Interface",
-            },
+    // {
+    //     key: "learner",
+    //     title: "Learner",
+    //     description: "Comprehensive learning experience with hands-on labs and progress tracking",
+    //     features: [
+    //         {
+    //             name: "Enterprise Onboarding & Login",
+    //             description: "Seamless enterprise authentication with SSO integration and personalized onboarding flows.",
+    //             features: [
+    //                 "Single Sign-On (SSO) integration",
+    //                 "Role-based access control",
+    //                 "Personalized welcome experience",
+    //                 "Multi-tenant support",
+    //             ],
+    //             imageSource: LoginPage,
+    //             imagePlaceholder: "Enterprise Onboarding Interface",
+    //         },
+    //         {
+    //             name: "Dedicated Learning Paths",
+    //             description: "Curated learning journeys tailored to skill levels and career goals.",
+    //             features: [
+    //                 "Skill-based path recommendations",
+    //                 "Progressive difficulty levels",
+    //                 "Milestone achievements",
+    //                 "Certification tracking",
+    //             ],
+    //             imageSource: LearningPath,
+    //             imagePlaceholder: "Learning Paths Dashboard",
+    //         },
+    //         {
+    //             name: "Integrated Labs",
+    //             description: "Deep learning environments with technologies including Jupyter notebooks, VSCode, Cloud consoles and low-code/no-code environments for hands-on experimentation.",
+    //             features: [
+    //                 "Pre-configured ML environments",
+    //                 "Cloud sandbox environments (AWS, Azure, and more...)",
+    //                 "Langflow AI workflows",
+    //                 "n8n automation builder",
+    //                 "VSCode for standalone development",
+    //                 "Cost-controlled resources",
+    //                 "Collaborative notebooks",
+    //                 "Version-controlled experiments",
+    //             ],
+    //             imageSource: IntegratedLabs,
+    //             imagePlaceholder: "Jupyter Labs Interface",
+    //         },
             // {
             //     name: "Cloud Console Access",
             //     description: "Direct access to major cloud platforms for real-world cloud lab experiences.",
@@ -103,32 +103,32 @@ const featureAreasData: FeatureArea[] = [
             //     ],
             //     imagePlaceholder: "Low-Code Lab Interface",
             // },
-            {
-                name: "Assessment & Evaluation",
-                description: "Comprehensive assessment mechanisms for scoring and skill evaluation.",
-                features: [
-                    "Automated code evaluation",
-                    "Project-based assessments",
-                    "Peer review system",
-                    "Skill competency scoring",
-                ],
-                imageSource: Assessment,
-                imagePlaceholder: "Assessment Dashboard",
-            },
-            {
-                name: "User Profile & Analytics",
-                description: "Detailed user profiles with progress tracking and learning analytics.",
-                features: [
-                    "Learning progress dashboard",
-                    "Skill radar visualization",
-                    "Time spent analytics",
-                    "Achievement badges",
-                ],
-                imageSource: UserProfileAndAnalystics,
-                imagePlaceholder: "User Profile View",
-            },
-        ],
-    },
+    //         {
+    //             name: "Assessment & Evaluation",
+    //             description: "Comprehensive assessment mechanisms for scoring and skill evaluation.",
+    //             features: [
+    //                 "Automated code evaluation",
+    //                 "Project-based assessments",
+    //                 "Peer review system",
+    //                 "Skill competency scoring",
+    //             ],
+    //             imageSource: Assessment,
+    //             imagePlaceholder: "Assessment Dashboard",
+    //         },
+    //         {
+    //             name: "User Profile & Analytics",
+    //             description: "Detailed user profiles with progress tracking and learning analytics.",
+    //             features: [
+    //                 "Learning progress dashboard",
+    //                 "Skill radar visualization",
+    //                 "Time spent analytics",
+    //                 "Achievement badges",
+    //             ],
+    //             imageSource: UserProfileAndAnalystics,
+    //             imagePlaceholder: "User Profile View",
+    //         },
+    //     ],
+    // },
     {
         key: "admin",
         title: "Admin",

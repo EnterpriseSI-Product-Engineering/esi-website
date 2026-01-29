@@ -267,15 +267,9 @@ const AgenticAIPlayground = () => {
         >
 
           <div className="space-y-3">
-            <LabOfferings itemVariants={itemVariants} />
+            <LabOfferings features={features} containerVariants={containerVariants} itemVariants={itemVariants} />
           </div>
         </motion.section>
-
-        <div className="pb-[100px]">
-          <PlaygroundFeatures />
-        </div>
-
-        {/* Problem & Solution (moved) - removed original duplicate */}
 
         {/* How It Works */}
         <motion.section
@@ -294,7 +288,7 @@ const AgenticAIPlayground = () => {
             </h2>
           </motion.div>
 
-          <HowItWorksSection features={features} containerVariants={containerVariants} itemVariants={itemVariants} />
+          <HowItWorksSection containerVariants={containerVariants} itemVariants={itemVariants} />
 
 
         </motion.section>

@@ -20,14 +20,14 @@ import Strands from "@/assets/Logos/Strands_Agents_Logo.png";
 import LangGraph from "@/assets/Logos/Langgraph_Logo.png";
 import Langflow from "@/assets/Logos/Langflow_logo.png";
 import N8n from "@/assets/Logos/N8n_logo.png";
-import KoreAI from "@/assets/Logos/Koreai_Logo.png";
+// import KoreAI from "@/assets/Logos/Koreai_Logo.png";
 import Galileo from "@/assets/Logos/Galileo_Logo.jpg";
 
 // Dev & Productivity Tools
 import GithubCopilot from "@/assets/Logos/GitHub_Copilot_logo.png";
-import MS365Copilot from "@/assets/Logos/Microsoft365_Copilot_logo.png";
-import GoogleAIStudio from "@/assets/Logos/Google_AI_Studio.png";
-import Lovable from "@/assets/Logos/Lovable_Logo.png";
+// import MS365Copilot from "@/assets/Logos/Microsoft365_Copilot_logo.png";
+// import GoogleAIStudio from "@/assets/Logos/Google_AI_Studio.png";
+// import Lovable from "@/assets/Logos/Lovable_Logo.png";
 import VSCode from "@/assets/Logos/Visual_Studio_Code_logo.png";
 import Jupyter from "@/assets/Logos/Jupyter_logo.png";
 
@@ -53,20 +53,17 @@ const aiToolsRows = [
     { name: "Vertex AI", src: VertexAI },
     { name: "Google ADK", src: GoogleADK },
     { name: "Microsoft Agent Framework", src: MSAgentFramework },
-    { name: "Strands Agents SDK", src: Strands },
-    { name: "LangGraph", src: LangGraph },
+
   ],
 
   // Row 3 — Dev, Automation & Ops
   [
     { name: "Langflow", src: Langflow },
     { name: "n8n", src: N8n },
-    { name: "Kore.ai", src: KoreAI },
     { name: "Galileo AI", src: Galileo },
     { name: "GitHub Copilot", src: GithubCopilot },
-    { name: "Microsoft Copilot", src: MS365Copilot },
-    { name: "Google AI Studio", src: GoogleAIStudio },
-    { name: "Lovable.dev", src: Lovable },
+    { name: "Strands Agents SDK", src: Strands },
+    { name: "LangGraph", src: LangGraph },
   ],
 ];
 
