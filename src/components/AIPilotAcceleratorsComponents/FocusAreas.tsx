@@ -367,7 +367,6 @@ const CopilotCarousel = ({ copilots, areaKey }: CopilotCarouselProps) => {
                                         </div>
                                     )}
                                 </div>
-
                             </div>
                         </div>
                     ))}
@@ -403,6 +402,16 @@ const CopilotCarousel = ({ copilots, areaKey }: CopilotCarouselProps) => {
                         aria-label={`Go to copilot ${index + 1}`}
                     />
                 ))}
+            </div>
+
+            {/* Learn More Button */}
+            <div className="absolute bottom-6 right-6">
+                <button
+                    onClick={() => window.location.href = "https://master.d1jvuujmp5rpat.amplifyapp.com/"}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium text-white shadow-md hover:shadow-lg transition-all duration-300 ${styles.bg}`}
+                >
+                    Learn More
+                </button>
             </div>
         </div>
     );
