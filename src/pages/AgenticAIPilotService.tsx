@@ -12,7 +12,6 @@ import {
   Globe,
   Zap
 } from "lucide-react";
-import EmailSubscription from "@/components/EmailSubscription";
 
 const AgenticAIPilotService = () => {
   // Animation variants

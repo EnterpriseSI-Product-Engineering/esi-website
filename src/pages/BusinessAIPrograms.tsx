@@ -13,7 +13,6 @@ import {
   BookOpen,
   TrendingUp
 } from "lucide-react";
-import EmailSubscription from "@/components/EmailSubscription";
 
 const BusinessAIPrograms = () => {
   // Animation variants
@@ -333,8 +332,6 @@ const BusinessAIPrograms = () => {
             ))}
           </motion.div>
         </motion.section>
-
-        <EmailSubscription page="solutions" />
       </main>
     </div>
   );

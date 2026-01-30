@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import EmailSubscription from "@/components/EmailSubscription";
 import FocusAreas from "@/components/AIPilotAcceleratorsComponents/FocusAreas";
 
 const AgenticAIBusinessPilotAccelerators = () => {
@@ -394,7 +393,88 @@ const AgenticAIBusinessPilotAccelerators = () => {
         </div>
       </motion.section>
 
-      <EmailSubscription />
+     
+
+      {/* CTA Section - Learn More */}
+      <motion.section
+        className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
+        <div className="max-w-4xl mx-auto">
+          <motion.div variants={itemVariants}>
+            <Card className="group relative overflow-hidden border bg-gradient-to-br from-background/80 to-muted/30 backdrop-blur-sm hover:from-background hover:to-muted/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-r from-ai-purple/20 via-ai-blue/20 to-ai-cyan/20 opacity-0 group-hover:opacity-40 transition-all duration-500 rounded-xl" />
+              <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
+              
+              <CardContent className="relative p-12">
+                <div className="text-center space-y-6">
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                    className="inline-block"
+                  >
+                    <Lightbulb className="w-12 h-12 text-ai-purple" />
+                  </motion.div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-3xl font-bold bg-gradient-to-r from-ai-purple via-ai-blue to-ai-cyan bg-clip-text text-transparent group-hover:drop-shadow-lg transition-all duration-300">
+                      Ready to Transform Your Business?
+                    </h3>
+                    <p className="text-lg text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+                      To learn more about our Business Role & process workflow based AI Copilots & Agents,{" "}
+                      <motion.a
+                        href="https://master.d1jvuujmp5rpat.amplifyapp.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-ai-purple font-semibold hover:text-ai-blue transition-colors duration-300"
+                        whileHover={{ x: 5 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        click here
+                        <motion.div
+                          animate={{ x: [0, 4, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
+                        >
+                          <ArrowRight className="w-4 h-4" />
+                        </motion.div>
+                      </motion.a>
+                    </p>
+                  </div>
+
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <Button
+                      asChild
+                      className="bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-blue hover:to-ai-cyan text-white font-semibold px-8 py-6 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      <a
+                        href="https://master.d1jvuujmp5rpat.amplifyapp.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        Explore Our Solutions
+                        <motion.div
+                          animate={{ x: [0, 4, 0] }}
+                          transition={{ duration: 1.5, repeat: Infinity }}
+                        >
+                          <ArrowRight className="w-5 h-5" />
+                        </motion.div>
+                      </a>
+                    </Button>
+                  </motion.div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </motion.section>
+
     </div>
   );
 };

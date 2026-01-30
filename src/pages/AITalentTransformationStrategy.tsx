@@ -20,7 +20,6 @@ import {
   TrendingUp,
   Settings,
 } from "lucide-react";
-import EmailSubscription from "@/components/EmailSubscription";
 
 const AITalentTransformationStrategy = () => {
   // Animation variants
@@ -412,8 +411,6 @@ const AITalentTransformationStrategy = () => {
             </motion.div>
           </motion.div>
         </motion.section>
-
-        <EmailSubscription page="solutions" />
       </main>
     </div>
   );

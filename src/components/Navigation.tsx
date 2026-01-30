@@ -173,7 +173,7 @@ const Navigation = () => {
               </DropdownMenu>
             </div>
           </div>
-          <a href="#email-subscription" className="hidden md:block">
+          <button onClick={() => window.dispatchEvent(new Event('floating-widget:open'))} className="hidden md:block">
             <Button
               size="lg"
               className="group relative bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white px-8 py-6 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -189,7 +189,7 @@ const Navigation = () => {
               </span>
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/20 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Button>
-          </a>
+          </button>
 
           {/* Mobile menu button */}
           <div className="md:hidden">

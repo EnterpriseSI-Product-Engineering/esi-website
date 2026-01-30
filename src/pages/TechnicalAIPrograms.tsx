@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Users, Zap, BookOpen } from "lucide-react";
-import EmailSubscription from "@/components/EmailSubscription";
 
 const TechnicalAIPrograms = () => {
   const programs = [
@@ -181,8 +180,6 @@ const TechnicalAIPrograms = () => {
             ))}
           </div>
         </section>
-
-        <EmailSubscription page="solutions" />
       </main>
     </div>
   );

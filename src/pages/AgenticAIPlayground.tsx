@@ -19,7 +19,6 @@ import {
   AlertTriangle,
   Lightbulb,
 } from "lucide-react";
-import EmailSubscription from "@/components/EmailSubscription";
 import ToolsTechnologies from "@/components/AIPlaygroundComponents/ToolsTechnologies";
 import LabOfferings from "@/components/AIPlaygroundComponents/LabOfferings";
 import { HowItWorksSection } from "@/components/AIPlaygroundComponents/HowItWorks";
@@ -541,7 +540,7 @@ const AgenticAIPlayground = () => {
           </motion.div>
         </motion.section>
 
-        <EmailSubscription />
+        {/* <EmailSubscription /> */}
       </main>
     </div>
   );

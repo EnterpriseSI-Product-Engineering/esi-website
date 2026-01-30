@@ -9,7 +9,6 @@ import {
   Lightbulb,
   Award,
 } from "lucide-react";
-import EmailSubscription from "@/components/EmailSubscription";
 import { AbhiroopImage } from "@/assets";
 import { Link } from "react-router-dom";
 
@@ -311,9 +310,6 @@ const About = () => {
           </motion.div>
         </div>
       </motion.section>
-
-      {/* Email Subscription */}
-      <EmailSubscription />
     </div>
   );
 };

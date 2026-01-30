@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import FeaturesGrid from "./components/FeaturesGrid";
-import EmailSubscription from "./components/EmailSubscription";
+import FloatingEmailWidget from "./components/FloatingEmailWidget";
 import NotFound from "./pages/NotFound";
 import Product from "./pages/Product";
 import Solutions from "./pages/Solutions";
@@ -24,6 +24,7 @@ const Layout = () => (
     <main>
       <Outlet />
     </main>
+    <FloatingEmailWidget />
   </div>
 );
 
@@ -44,7 +45,6 @@ const Index = () => (
       </motion.div>
     </AuroraBackground>
     <FeaturesGrid />
-    <EmailSubscription />
   </>
 );
 
