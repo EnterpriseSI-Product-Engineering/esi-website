@@ -453,7 +453,7 @@ const AgenticAIBusinessPilotAccelerators = () => {
                       className="bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-blue hover:to-ai-cyan text-white font-semibold px-8 py-6 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       <a
-                        href="https://master.d1jvuujmp5rpat.amplifyapp.com/"
+                        href="https://agents.enterprisesi.co"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
