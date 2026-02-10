@@ -12,6 +12,7 @@ import {
   Briefcase,
   Code,
   Settings,
+  CornerDownRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -60,25 +61,16 @@ const Navigation = () => {
               </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="relative group flex items-center gap-1 px-4 py-2 rounded-lg hover:bg-ai-purple/5 transition-all duration-300">
+                  <Button
+                    variant="ghost"
+                    className="relative group flex items-center gap-1 px-4 py-2 rounded-lg hover:bg-ai-purple/5 transition-all duration-300"
+                  >
                     <span className="relative z-10">Products</span>
                     <ChevronDown className="h-4 w-4 group-hover:text-ai-purple transition-colors" />
                     <div className="absolute inset-0 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="ml-[220px] mt-2 p-6 space-y-4 bg-background/95 backdrop-blur-xl border border-border/50 shadow-2xl rounded-xl min-w-[380px]">
-                  {/* Platform Overview */}
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="border-b border-border/70"
-                  >
-                    <div className="flex items-center gap-2 text-sm font-medium bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent mb-3">
-                      <Sparkles className="w-4 h-4 text-ai-purple" />
-                      Agentic AI Acceleration Platform
-                    </div>
-                  </motion.div>
-
+                <DropdownMenuContent className="ml-[220px] mt-2 p-2 space-y-4 bg-background/95 backdrop-blur-xl border border-border/50 shadow-2xl rounded-xl min-w-[380px]">
                   {/* Product Components */}
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -86,12 +78,29 @@ const Navigation = () => {
                     transition={{ delay: 0.1 }}
                   >
                     <div className="space-y-2">
+                      <Link to="/product">
+                        <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
+                          <Rocket className="mr-3 w-5 h-5 group-hover:text-ai-purple transition-colors" />
+                          <div className="flex flex-col">
+                            <span className="group-hover:text-ai-purple transition-colors font-semibold">
+                              Agentic AI Acceleration Platform
+                            </span>
+                            <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">
+                              Comprehensive AI Development Platform
+                            </span>
+                          </div>
+                        </DropdownMenuItem>
+                      </Link>
                       <Link to="/product/agentic-ai-builder-playground">
                         <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
                           <Gamepad2 className="mr-3 w-5 h-5 group-hover:text-ai-purple transition-colors" />
                           <div className="flex flex-col">
-                            <span className="group-hover:text-ai-purple transition-colors font-semibold">Agentic AI Builder Playground</span>
-                            <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">Interactive Development Environment</span>
+                            <span className="group-hover:text-ai-purple transition-colors font-semibold">
+                              Agentic AI Builder Playground
+                            </span>
+                            <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">
+                              Interactive Development Environment
+                            </span>
                           </div>
                         </DropdownMenuItem>
                       </Link>
@@ -99,8 +108,12 @@ const Navigation = () => {
                         <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
                           <Rocket className="mr-3 w-5 h-5 group-hover:text-ai-purple transition-colors" />
                           <div className="flex flex-col">
-                            <span className="group-hover:text-ai-purple transition-colors font-semibold">Agentic AI Business Pilot Accelerators</span>
-                            <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">Ready-to-Deploy Business Solutions</span>
+                            <span className="group-hover:text-ai-purple transition-colors font-semibold">
+                              Agentic AI Business Pilot Accelerators
+                            </span>
+                            <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">
+                              Ready-to-Deploy Business Solutions
+                            </span>
                           </div>
                         </DropdownMenuItem>
                       </Link>
@@ -110,7 +123,10 @@ const Navigation = () => {
               </DropdownMenu>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" className="relative group flex items-center gap-1 px-4 py-2 rounded-lg hover:bg-ai-purple/5 transition-all duration-300">
+                  <Button
+                    variant="ghost"
+                    className="relative group flex items-center gap-1 px-4 py-2 rounded-lg hover:bg-ai-purple/5 transition-all duration-300"
+                  >
                     <span className="relative z-10">Solutions</span>
                     <ChevronDown className="h-4 w-4 group-hover:text-ai-purple transition-colors" />
                     <div className="absolute inset-0 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -118,25 +134,25 @@ const Navigation = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="ml-[350px] mt-2 p-6 space-y-4 bg-background/95 backdrop-blur-xl border border-border/50 shadow-2xl rounded-xl min-w-[420px]">
                   {/* Primary Service */}
-                  <motion.div
+                  {/* <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="border-b border-border/70 pb-4"
                   >
-                    <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground mb-2">
-                      <Sparkles className="w-4 h-4 text-ai-purple" />
-                      Primary Service
-                    </div>
                     <Link to="/solutions/agentic-ai-product-pilot-as-service">
                       <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
                         <Settings className="mr-3 w-5 h-5 group-hover:text-ai-purple transition-colors" />
                         <div className="flex flex-col">
-                          <span className="group-hover:text-ai-purple transition-colors font-semibold">Agentic AI Product Pilot-as-Service</span>
-                          <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">Offshore Delivery</span>
+                          <span className="group-hover:text-ai-purple transition-colors font-semibold">
+                            Agentic AI Product Pilot-as-Service
+                          </span>
+                          <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">
+                            Offshore Delivery
+                          </span>
                         </div>
                       </DropdownMenuItem>
                     </Link>
-                  </motion.div>
+                  </motion.div> */}
 
                   {/* Employee Enablement */}
                   <motion.div
@@ -152,19 +168,25 @@ const Navigation = () => {
                       <Link to="/solutions/ai-talent-transformation-strategy">
                         <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer">
                           <Users className="mr-3 w-4 h-4 group-hover:text-ai-purple transition-colors" />
-                          <span className="group-hover:text-ai-purple transition-colors">AI Talent Transformation Strategy</span>
+                          <span className="group-hover:text-ai-purple transition-colors">
+                            AI Talent Transformation Strategy
+                          </span>
                         </DropdownMenuItem>
                       </Link>
                       <Link to="/solutions/business-ai-programs">
                         <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer">
                           <Briefcase className="mr-3 w-4 h-4 group-hover:text-ai-purple transition-colors" />
-                          <span className="group-hover:text-ai-purple transition-colors">Business AI Programs</span>
+                          <span className="group-hover:text-ai-purple transition-colors">
+                            Business AI Workshops
+                          </span>
                         </DropdownMenuItem>
                       </Link>
                       <Link to="/solutions/technical-ai-programs">
                         <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer">
                           <Code className="mr-3 w-4 h-4 group-hover:text-ai-purple transition-colors" />
-                          <span className="group-hover:text-ai-purple transition-colors">Technical AI Programs</span>
+                          <span className="group-hover:text-ai-purple transition-colors">
+                            Technical AI Workshops
+                          </span>
                         </DropdownMenuItem>
                       </Link>
                     </div>
@@ -173,7 +195,12 @@ const Navigation = () => {
               </DropdownMenu>
             </div>
           </div>
-          <button onClick={() => window.dispatchEvent(new Event('floating-widget:open'))} className="hidden md:block">
+          <button
+            onClick={() =>
+              window.dispatchEvent(new Event("floating-widget:open"))
+            }
+            className="hidden md:block"
+          >
             <Button
               size="lg"
               className="group relative bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white px-8 py-6 text-lg font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -182,7 +209,11 @@ const Navigation = () => {
                 Contact Us
                 <motion.div
                   animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                 >
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </motion.div>
@@ -305,7 +336,7 @@ const Navigation = () => {
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
-                    Business AI Programs
+                    Business AI Workshops
                   </Link>
                   <Link
                     to="/solutions/technical-ai-programs"
@@ -313,7 +344,7 @@ const Navigation = () => {
                     className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
                   >
                     <CornerDownRight className="mr-3" />
-                    Technical AI Programs
+                    Technical AI Workshops
                   </Link>
                 </div>
               )}

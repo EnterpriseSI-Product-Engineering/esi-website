@@ -93,7 +93,7 @@ const TechnicalAIPrograms = () => {
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-ai-purple via-ai-blue to-ai-cyan bg-clip-text text-transparent">
-              Technical AI Programs
+              Technical AI Workshops
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">

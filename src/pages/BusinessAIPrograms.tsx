@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
-  Zap, 
-  CheckCircle, 
-  Users, 
-  Brain, 
-  Layers, 
+import {
+  Zap,
+  CheckCircle,
+  Users,
+  Brain,
+  Layers,
   Sparkles,
   Clock,
   Target,
   Award,
   BookOpen,
-  TrendingUp
+  TrendingUp,
 } from "lucide-react";
 
 const BusinessAIPrograms = () => {
@@ -75,15 +75,18 @@ const BusinessAIPrograms = () => {
     {
       sno: 2,
       program: "Generative and Agentic AI for All Business Practitioners",
-      personas: "All profiles – middle and junior level – non tech/ business domains",
+      personas:
+        "All profiles – middle and junior level – non tech/ business domains",
       duration: "16 hrs",
       gradient: "from-ai-blue to-ai-cyan",
       icon: Target,
     },
     {
       sno: 3,
-      program: "Generative and Agentic AI for Finance & Accounting, Auditing Practitioners",
-      personas: "VP Finance, Financial Controller, Director- FP&A, Sr Analyst/ Consultant",
+      program:
+        "Generative and Agentic AI for Finance & Accounting, Auditing Practitioners",
+      personas:
+        "VP Finance, Financial Controller, Director- FP&A, Sr Analyst/ Consultant",
       duration: "8 hrs",
       gradient: "from-ai-cyan to-neural-pink",
       icon: TrendingUp,
@@ -91,7 +94,8 @@ const BusinessAIPrograms = () => {
     {
       sno: 4,
       program: "Generative and Agentic AI for Supply Chain Practitioners",
-      personas: "VP Supply Chain, Supply Chain Managers, Supply Chain Analysts/ Consultants",
+      personas:
+        "VP Supply Chain, Supply Chain Managers, Supply Chain Analysts/ Consultants",
       duration: "8 hrs",
       gradient: "from-neural-pink to-ai-purple",
       icon: Layers,
@@ -99,7 +103,8 @@ const BusinessAIPrograms = () => {
     {
       sno: 5,
       program: "Generative and Agentic AI for HR Practitioners",
-      personas: "VP HR, Director HR, HR Business partners, Payroll SMEs, Recruiters",
+      personas:
+        "VP HR, Director HR, HR Business partners, Payroll SMEs, Recruiters",
       duration: "8 hrs",
       gradient: "from-ai-purple to-ai-blue",
       icon: Users,
@@ -117,25 +122,29 @@ const BusinessAIPrograms = () => {
   const usps = [
     {
       title: "Research-Based Content",
-      description: "Content is well researched, with monthly updates to keep it latest.",
+      description:
+        "Content is well researched, with monthly updates to keep it latest.",
       icon: BookOpen,
       gradient: "from-ai-purple to-ai-blue",
     },
     {
       title: "Domain Expertise",
-      description: "Experience in AI Consulting, pilots, and domain expertise embedded into programs.",
+      description:
+        "Experience in AI Consulting, pilots, and domain expertise embedded into programs.",
       icon: Brain,
       gradient: "from-ai-blue to-ai-cyan",
     },
     {
       title: "Expert Instructors",
-      description: "Mentors/Instructors are experts in AI, Enterprise Apps, and business domains.",
+      description:
+        "Mentors/Instructors are experts in AI, Enterprise Apps, and business domains.",
       icon: Award,
       gradient: "from-ai-cyan to-neural-pink",
     },
     {
       title: "Hands-on Learning",
-      description: "Plenty of demos and hands-on labs for practical exposure and better retention.",
+      description:
+        "Plenty of demos and hands-on labs for practical exposure and better retention.",
       icon: Zap,
       gradient: "from-neural-pink to-ai-purple",
     },
@@ -206,16 +215,17 @@ const BusinessAIPrograms = () => {
             className="text-4xl md:text-6xl font-bold mb-6"
           >
             <span className="bg-gradient-to-r from-ai-purple via-ai-blue to-ai-cyan bg-clip-text text-transparent">
-              Business AI Programs
+              Business AI Workshops
             </span>
           </motion.h1>
           <motion.p
             variants={itemVariants}
             className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed"
           >
-            We have pioneered AI Enablement workshops and skilling programs, training thousands of 
-            senior executives and leaders across Fortune 2000 enterprises on Generative and Agentic AI 
-            over the last 2.5 years.
+            We have pioneered AI Enablement workshops and skilling programs,
+            training thousands of senior executives and leaders across Fortune
+            2000 enterprises on Generative and Agentic AI over the last 2.5
+            years.
           </motion.p>
         </motion.section>
 
