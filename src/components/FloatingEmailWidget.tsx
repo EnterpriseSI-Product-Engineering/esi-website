@@ -105,7 +105,7 @@ const FloatingEmailWidget = () => {
       formSubmitData.append("_template", "table");
 
       // TODO : update the email here
-      await fetch("https://formsubmit.co/YOUR_EMAIL@example.com", {
+      await fetch("https://formsubmit.co/abhiroop@enterprisesi.co", {
         method: "POST",
         body: formSubmitData,
       });

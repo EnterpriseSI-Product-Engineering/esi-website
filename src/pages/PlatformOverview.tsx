@@ -241,7 +241,7 @@ const PlatformOverview = () => {
 
                     <CardContent className="relative p-4 md:p-8">
                       <p className="text-sm md:text-base text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-3">
-                        Proven solution to continuously develop AI talent at
+                        No Proven solution to continuously develop AI talent at
                         scale via hands-on / practical approach
                       </p>
                       <p className="text-sm md:text-base text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-6">
@@ -278,7 +278,7 @@ const PlatformOverview = () => {
 
                     <CardContent className="relative p-4 md:p-8">
                       <p className="text-sm md:text-base text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-3">
-                        Proven solution to finding right AI use cases,
+                        No Proven solution to finding right AI use cases,
                         accelerate/ improve pilots & pilot-to-production
                         journeys (on factors- cost, efforts, success
                         probability)
