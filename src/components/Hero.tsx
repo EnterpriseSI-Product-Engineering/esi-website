@@ -39,8 +39,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-start justify-center px-6 pt-[100px] md:pt-[150px] overflow-hidden">
-
+      <section className="relative min-h-screen flex items-start justify-center px-4 md:px-6 pt-[100px] md:pt-[150px] overflow-x-hidden">
         {/* Floating Elements */}
         <motion.div
           variants={floatingVariants}
@@ -72,21 +71,21 @@ const Hero = () => {
             Accelerating journey towards <br />
           </motion.h1>
 
-          <div className="mt-8 py-8 flex gap-2 items-center justify-center">
-            <span className="border p-2 px-4 rounded-full bg-blue-200">
+          <div className="mt-4 md:mt-8 py-4 md:py-8 flex flex-wrap gap-2 items-center justify-center">
+            <span className="border p-2 px-3 md:px-4 rounded-full bg-blue-200 text-sm md:text-base">
               Enterprise SuperIntelligence
             </span>
-            <span className="border p-2  px-4 rounded-full bg-blue-200">
+            <span className="border p-2 px-3 md:px-4 rounded-full bg-blue-200 text-sm md:text-base">
               Agentic Business processes
             </span>
-            <span className="border p-2  px-4 rounded-full bg-blue-200">
+            <span className="border p-2 px-3 md:px-4 rounded-full bg-blue-200 text-sm md:text-base">
               Human-in-control
             </span>
           </div>
 
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-muted-foreground mb-10 mt-4 max-w-4xl mx-auto leading-relaxed"
+            className="text-base md:text-lg lg:text-xl text-muted-foreground mb-10 mt-4 max-w-4xl mx-auto leading-relaxed px-2"
           >
             Our Agentic AI Acceleration platform provides AI Accelerators &
             Playgrounds helping Enterprises embrace Artificial General

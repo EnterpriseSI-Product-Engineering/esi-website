@@ -13,6 +13,7 @@ import {
   Code,
   Settings,
   Zap,
+  CornerDownRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -243,26 +244,26 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden transition-all duration-200">
-          <div className="px-2 pt-2 pb-3 space-y-2 sm:px-3 bg-background border-t border-border">
+        <div className="md:hidden transition-all duration-200 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background border-t border-border">
             <Link
               to="/"
               onClick={handleCloseMenu}
-              className="block text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-base font-medium"
+              className="block text-foreground hover:text-ai-purple hover:bg-ai-purple/5 px-3 py-2 rounded-md text-base font-medium transition-colors"
             >
               Home
             </Link>
             <Link
               to="/about"
               onClick={handleCloseMenu}
-              className="block text-foreground hover:text-ai-purple px-3 py-2 rounded-md text-base font-medium"
+              className="block text-foreground hover:text-ai-purple hover:bg-ai-purple/5 px-3 py-2 rounded-md text-base font-medium transition-colors"
             >
               About
             </Link>
             {/* Products Collapsible */}
-            <div className="px-3 py-2">
+            <div>
               <button
-                className="w-full text-left flex justify-between items-center text-sm font-medium text-muted-foreground mb-2 focus:outline-none"
+                className="w-full text-left flex justify-between items-center text-base font-medium text-foreground hover:text-ai-purple hover:bg-ai-purple/5 px-3 py-2 rounded-md transition-colors"
                 onClick={() => setProductsOpen(!productsOpen)}
                 aria-expanded={productsOpen}
               >
@@ -274,33 +275,37 @@ const Navigation = () => {
                 />
               </button>
               {productsOpen && (
-                <div className="pl-4 space-y-1">
-                  <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
+                <div className="pl-6 pr-3 space-y-1 mt-1">
+                  <Link
+                    to="/product"
+                    onClick={handleCloseMenu}
+                    className="block text-foreground hover:text-ai-purple hover:bg-ai-purple/5 py-2 px-2 rounded text-sm transition-colors"
+                  >
                     Agentic AI Acceleration Platform
-                  </span>
+                  </Link>
                   <Link
                     to="/product/agentic-ai-builder-playground"
                     onClick={handleCloseMenu}
-                    className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
+                    className="flex items-center text-foreground hover:text-ai-purple hover:bg-ai-purple/5 py-2 px-2 rounded text-sm transition-colors"
                   >
-                    <CornerDownRight className="mr-3" />
-                    Agentic AI Builder Playground
+                    <CornerDownRight className="mr-2 h-3 w-3 flex-shrink-0" />
+                    <span className="break-words">Agentic AI Builder Playground</span>
                   </Link>
                   <Link
                     to="/product/agentic-ai-business-pilot-accelerators"
                     onClick={handleCloseMenu}
-                    className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
+                    className="flex items-center text-foreground hover:text-ai-purple hover:bg-ai-purple/5 py-2 px-2 rounded text-sm transition-colors"
                   >
-                    <CornerDownRight className="mr-3" />
-                    Agentic AI Business Pilot Accelerators
+                    <CornerDownRight className="mr-2 h-3 w-3 flex-shrink-0" />
+                    <span className="break-words">Agentic AI Business Pilot Accelerators</span>
                   </Link>
                 </div>
               )}
             </div>
             {/* Solutions Collapsible */}
-            <div className="px-3 py-2">
+            <div>
               <button
-                className="w-full text-left flex justify-between items-center text-sm font-medium text-muted-foreground mb-2 focus:outline-none"
+                className="w-full text-left flex justify-between items-center text-base font-medium text-foreground hover:text-ai-purple hover:bg-ai-purple/5 px-3 py-2 rounded-md transition-colors"
                 onClick={() => setSolutionsOpen(!solutionsOpen)}
                 aria-expanded={solutionsOpen}
               >
@@ -312,51 +317,47 @@ const Navigation = () => {
                 />
               </button>
               {solutionsOpen && (
-                <div className="pl-4 space-y-1">
-                  <Link
-                    to="/solutions/agentic-ai-product-pilot-as-service"
-                    onClick={handleCloseMenu}
-                  >
-                    <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
-                      Agentic AI Product Pilot-as-service - Offshore Delivery
-                    </span>
-                  </Link>
-                  <span className="block text-foreground hover:text-ai-purple py-1 text-sm">
-                    AI Enablement for your Employees
-                  </span>
+                <div className="pl-6 pr-3 space-y-1 mt-1">
+                  <div className="text-xs font-semibold text-ai-purple mb-2 px-2">AI Enablement</div>
                   <Link
                     to="/solutions/ai-talent-transformation-strategy"
                     onClick={handleCloseMenu}
-                    className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
+                    className="flex items-center text-foreground hover:text-ai-purple hover:bg-ai-purple/5 py-2 px-2 rounded text-sm transition-colors"
                   >
-                    <CornerDownRight className="mr-3" />
-                    AI Talent Transformation Strategy
+                    <CornerDownRight className="mr-2 h-3 w-3 flex-shrink-0" />
+                    <span className="break-words">AI Talent Transformation Strategy</span>
                   </Link>
                   <Link
                     to="/solutions/business-ai-programs"
                     onClick={handleCloseMenu}
-                    className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
+                    className="flex items-center text-foreground hover:text-ai-purple hover:bg-ai-purple/5 py-2 px-2 rounded text-sm transition-colors"
                   >
-                    <CornerDownRight className="mr-3" />
-                    Business AI Workshops
+                    <CornerDownRight className="mr-2 h-3 w-3 flex-shrink-0" />
+                    <span className="break-words">Business AI Workshops</span>
                   </Link>
                   <Link
                     to="/solutions/technical-ai-programs"
                     onClick={handleCloseMenu}
-                    className="flex items-center text-foreground hover:text-ai-purple py-1 text-sm"
+                    className="flex items-center text-foreground hover:text-ai-purple hover:bg-ai-purple/5 py-2 px-2 rounded text-sm transition-colors"
                   >
-                    <CornerDownRight className="mr-3" />
-                    Technical AI Workshops
+                    <CornerDownRight className="mr-2 h-3 w-3 flex-shrink-0" />
+                    <span className="break-words">Technical AI Workshops</span>
                   </Link>
                 </div>
               )}
             </div>
-            {/* <a href="#email-subscription" onClick={handleCloseMenu}>
-              <Button className="w-full mt-3 bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white py-3 text-center text-lg font-medium">
+            <button
+              onClick={() => {
+                handleCloseMenu();
+                window.dispatchEvent(new Event("floating-widget:open"));
+              }}
+              className="w-full mt-2"
+            >
+              <Button className="w-full bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white py-3 text-center font-medium">
                 Contact Us
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </a> */}
+            </button>
           </div>
         </div>
       )}

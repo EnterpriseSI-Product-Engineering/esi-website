@@ -63,7 +63,7 @@ const PlatformOverview = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-x-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -100,7 +100,7 @@ const PlatformOverview = () => {
 
       {/* Hero Section */}
       <motion.section
-        className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"
+        className="pt-24 md:pt-32 pb-12 md:pb-16 px-4 sm:px-6 lg:px-8 relative z-10"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -108,7 +108,7 @@ const PlatformOverview = () => {
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-gradient-to-r from-secondary/80 to-secondary/60 border border-border/50 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center gap-2 px-4 py-2 mb-6 md:mb-8 rounded-full bg-gradient-to-r from-secondary/80 to-secondary/60 border border-border/50 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <motion.div
               animate={{ rotate: 360 }}
@@ -116,14 +116,14 @@ const PlatformOverview = () => {
             >
               <Sparkles className="w-4 h-4 text-ai-purple" />
             </motion.div>
-            <span className="text-sm font-semibold uppercase tracking-wider bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+            <span className="text-xs md:text-sm font-semibold uppercase tracking-wider bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
               Platform Overview
             </span>
           </motion.div>
 
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-bold mb-6"
+            className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 px-2"
           >
             Overview of Our{" "}
             <span className="bg-gradient-to-r from-ai-purple via-ai-blue to-ai-cyan bg-clip-text text-transparent">
@@ -133,9 +133,9 @@ const PlatformOverview = () => {
 
           <motion.div
             variants={itemVariants}
-            className="max-w-4xl mx-auto mb-12"
+            className="max-w-4xl mx-auto mb-8 md:mb-12 px-2"
           >
-            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               EnterpriseSI is building a ground breaking agentic AI acceleration
               platform that enables fortune 2000 enterprises in improving AI
               adoption & value realization at scale using our playground & pilot
@@ -147,15 +147,18 @@ const PlatformOverview = () => {
 
       {/* How We Support Section */}
       <motion.section
-        className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"
+        className="py-12 md:py-16 px-4 sm:px-6 lg:px-8 relative z-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
         <div className="max-w-7xl mx-auto">
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <motion.div
+            variants={itemVariants}
+            className="text-center mb-8 md:mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 px-2">
               How We Support{" "}
               <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
                 Agentic AI Accelerators
@@ -164,27 +167,26 @@ const PlatformOverview = () => {
           </motion.div>
 
           {/* Mindmap */}
-          <motion.div variants={itemVariants} className="mb-16">
+          <motion.div variants={itemVariants} className="mb-12 md:mb-16">
             <div className="max-w-5xl mx-auto">
               {/* Top Level - Problem Statements */}
-              <div className="flex justify-center mb-8">
-                <Card className="relative overflow-hidden border-2 border-ai-purple/30 bg-gradient-to-br from-ai-purple/10 to-ai-blue/10 backdrop-blur-sm">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-center bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
+              <div className="flex justify-center mb-6 md:mb-8">
+                <Card className="relative overflow-hidden border-2 border-ai-purple/30 bg-gradient-to-br from-ai-purple/10 to-ai-blue/10 backdrop-blur-sm w-full max-w-md">
+                  <CardContent className="p-4 md:p-6">
+                    <h3 className="text-base md:text-xl font-bold text-center bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
                       Problem Statements We Address
                     </h3>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Connecting Lines */}
-              <div className="flex justify-center mb-8">
+              {/* Connecting Lines - Hidden on mobile */}
+              <div className="hidden md:flex justify-center mb-8">
                 <div className="relative w-full max-w-2xl h-20">
                   <svg
                     className="w-full h-full"
                     preserveAspectRatio="xMidYMid meet"
                   >
-                    {/* Vertical line down */}
                     <line
                       x1="50%"
                       y1="0"
@@ -194,7 +196,6 @@ const PlatformOverview = () => {
                       strokeWidth="2"
                       className="text-ai-purple/40"
                     />
-                    {/* Horizontal line */}
                     <line
                       x1="25%"
                       y1="40%"
@@ -204,7 +205,6 @@ const PlatformOverview = () => {
                       strokeWidth="2"
                       className="text-ai-purple/40"
                     />
-                    {/* Left branch down */}
                     <line
                       x1="25%"
                       y1="40%"
@@ -214,7 +214,6 @@ const PlatformOverview = () => {
                       strokeWidth="2"
                       className="text-ai-purple/40"
                     />
-                    {/* Right branch down */}
                     <line
                       x1="75%"
                       y1="40%"
@@ -229,7 +228,7 @@ const PlatformOverview = () => {
               </div>
 
               {/* Two Branches */}
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                 {/* PR1 - Left Branch */}
                 <motion.div
                   variants={itemVariants}
@@ -240,18 +239,25 @@ const PlatformOverview = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-ai-purple/10 to-ai-blue/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl" />
                     <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
 
-                    <CardContent className="relative p-8">
-                      <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-3">
-                        Proven solution to continuously develop AI talent at scale via hands-on / practical approach
+                    <CardContent className="relative p-4 md:p-8">
+                      <p className="text-sm md:text-base text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-3">
+                        Proven solution to continuously develop AI talent at
+                        scale via hands-on / practical approach
                       </p>
-                      <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-6">
-                        CASH (Continuous, Accelerated, Scalable & Holistic) model of AI Talent Transformation deployed via learner & builder labs, continuous skill scoring & usage analytics.
+                      <p className="text-sm md:text-base text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-6">
+                        CASH (Continuous, Accelerated, Scalable & Holistic)
+                        model of AI Talent Transformation deployed via learner &
+                        builder labs, continuous skill scoring & usage
+                        analytics.
                       </p>
                       <Button
                         asChild
-                        className="bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-blue hover:to-ai-purple text-white"
+                        className="bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-blue hover:to-ai-purple text-white w-full md:w-auto"
                       >
-                        <Link to="/product/agentic-ai-builder-playground" className="flex items-center gap-2">
+                        <Link
+                          to="/product/agentic-ai-builder-playground"
+                          className="flex items-center justify-center gap-2"
+                        >
                           Our Solution
                           <ArrowRight className="w-4 h-4" />
                         </Link>
@@ -270,21 +276,30 @@ const PlatformOverview = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-ai-cyan/10 to-ai-blue/10 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl" />
                     <div className="absolute inset-[1px] bg-gradient-to-br from-background/90 to-background/70 backdrop-blur-xl rounded-xl" />
 
-                    <CardContent className="relative p-8">
-                      <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-3">
-                        Proven solution to finding right AI use cases, accelerate/ improve pilots & pilot-to-production journeys (on factors- cost, efforts, success probability)
+                    <CardContent className="relative p-4 md:p-8">
+                      <p className="text-sm md:text-base text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-3">
+                        Proven solution to finding right AI use cases,
+                        accelerate/ improve pilots & pilot-to-production
+                        journeys (on factors- cost, efforts, success
+                        probability)
                       </p>
-                      <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-3">
-                        Production grade Agentic AI Use Case Pilot & Pilot-to-Implementation accelerators reducing cost, efforts & failure rate of AI pilots & implementations.
+                      <p className="text-sm md:text-base text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-3">
+                        Production grade Agentic AI Use Case Pilot &
+                        Pilot-to-Implementation accelerators reducing cost,
+                        efforts & failure rate of AI pilots & implementations.
                       </p>
-                      <p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-6">
-                        With AI Governance, Risk mgt & Safety leading practices baked-in.
+                      <p className="text-sm md:text-base text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300 mb-6">
+                        With AI Governance, Risk mgt & Safety leading practices
+                        baked-in.
                       </p>
                       <Button
                         asChild
-                        className="bg-gradient-to-r from-ai-cyan to-ai-blue hover:from-ai-blue hover:to-ai-cyan text-white"
+                        className="bg-gradient-to-r from-ai-cyan to-ai-blue hover:from-ai-blue hover:to-ai-cyan text-white w-full md:w-auto"
                       >
-                        <Link to="/product/agentic-ai-business-pilot-accelerators" className="flex items-center gap-2">
+                        <Link
+                          to="/product/agentic-ai-business-pilot-accelerators"
+                          className="flex items-center justify-center gap-2"
+                        >
                           Our Solution
                           <ArrowRight className="w-4 h-4" />
                         </Link>
