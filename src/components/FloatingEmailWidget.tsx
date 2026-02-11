@@ -4,64 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Mail, ArrowRight, Check, X, Sparkles } from "lucide-react";
+import { Mail, ArrowRight, Check, X, Sparkles, Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
-const countryCodes = [
-  { code: "+1", country: "United States" },
-  { code: "+44", country: "United Kingdom" },
-  { code: "+91", country: "India" },
-  { code: "+49", country: "Germany" },
-  { code: "+33", country: "France" },
-  { code: "+86", country: "China" },
-  { code: "+81", country: "Japan" },
-  { code: "+61", country: "Australia" },
-  { code: "+64", country: "New Zealand" },
-  { code: "+65", country: "Singapore" },
-  { code: "+82", country: "South Korea" },
-  { code: "+852", country: "Hong Kong" },
-  { code: "+971", country: "United Arab Emirates" },
-  { code: "+966", country: "Saudi Arabia" },
-  { code: "+34", country: "Spain" },
-  { code: "+39", country: "Italy" },
-  { code: "+31", country: "Netherlands" },
-  { code: "+47", country: "Norway" },
-  { code: "+46", country: "Sweden" },
-  { code: "+45", country: "Denmark" },
-  { code: "+358", country: "Finland" },
-  { code: "+48", country: "Poland" },
-  { code: "+43", country: "Austria" },
-  { code: "+41", country: "Switzerland" },
-  { code: "+32", country: "Belgium" },
-  { code: "+353", country: "Ireland" },
-  { code: "+351", country: "Portugal" },
-  { code: "+30", country: "Greece" },
-  { code: "+972", country: "Israel" },
-  { code: "+55", country: "Brazil" },
-  { code: "+52", country: "Mexico" },
-  { code: "+54", country: "Argentina" },
-  { code: "+56", country: "Chile" },
-  { code: "+57", country: "Colombia" },
-  { code: "+27", country: "South Africa" },
-  { code: "+60", country: "Malaysia" },
-  { code: "+62", country: "Indonesia" },
-  { code: "+63", country: "Philippines" },
-  { code: "+66", country: "Thailand" },
-  { code: "+84", country: "Vietnam" },
-];
 
 const FloatingEmailWidget = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [email, setEmail] = useState("");
   const [showFullForm, setShowFullForm] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -80,25 +31,43 @@ const FloatingEmailWidget = () => {
       setIsOpen(true);
       // Scroll widget into view
       setTimeout(() => {
-        const widget = document.querySelector('[data-floating-widget]');
+        const widget = document.querySelector("[data-floating-widget]");
         if (widget) {
-          widget.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          widget.scrollIntoView({ behavior: "smooth", block: "nearest" });
         }
       }, 100);
     };
 
-    window.addEventListener('floating-widget:open', handleContactUsClick as EventListener);
-    return () => window.removeEventListener('floating-widget:open', handleContactUsClick as EventListener);
+    window.addEventListener(
+      "floating-widget:open",
+      handleContactUsClick as EventListener,
+    );
+    return () =>
+      window.removeEventListener(
+        "floating-widget:open",
+        handleContactUsClick as EventListener,
+      );
   }, []);
 
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      setShowFullForm(true);
+
+    // Email validation regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email || !emailRegex.test(email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
     }
+
+    setShowFullForm(true);
   };
 
-  const handleFullFormSubmit = (e: React.FormEvent) => {
+  const handleFullFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     const requiredFields = [
@@ -120,30 +89,60 @@ const FloatingEmailWidget = () => {
       return;
     }
 
-    setIsSubmitted(true);
-    toast({
-      title: "Successfully Subscribed!",
-      description:
-        "Thank you for your interest. We'll keep you updated on our platform.",
-    });
+    setIsLoading(true);
 
-    // Reset after 3 seconds
-    setTimeout(() => {
-      setIsOpen(false);
-      setShowFullForm(false);
-      setIsSubmitted(false);
-      setEmail("");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        company: "",
-        designation: "",
-        city: "",
-        country: "",
-        countryCode: "+1",
-        phone: "",
+    // Submit to FormSubmit
+    try {
+      const formSubmitData = new FormData();
+      formSubmitData.append("email", email);
+      formSubmitData.append("firstName", formData.firstName);
+      formSubmitData.append("lastName", formData.lastName);
+      formSubmitData.append("company", formData.company);
+      formSubmitData.append("designation", formData.designation);
+      formSubmitData.append("city", formData.city);
+      formSubmitData.append("country", formData.country);
+      formSubmitData.append("_subject", "New Demo Request - EnterpriseSI");
+      formSubmitData.append("_template", "table");
+
+      // TODO : update the email here
+      await fetch("https://formsubmit.co/YOUR_EMAIL@example.com", {
+        method: "POST",
+        body: formSubmitData,
       });
-    }, 3000);
+
+      setIsLoading(false);
+      setIsSubmitted(true);
+      toast({
+        title: "Demo Request Submitted",
+        description:
+          "Thank you for your interest. Our team will contact you shortly to schedule your demo.",
+      });
+
+      // Reset after 3 seconds
+      setTimeout(() => {
+        setIsOpen(false);
+        setShowFullForm(false);
+        setIsSubmitted(false);
+        setEmail("");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          company: "",
+          designation: "",
+          city: "",
+          country: "",
+          countryCode: "+1",
+          phone: "",
+        });
+      }, 3000);
+    } catch (error) {
+      setIsLoading(false);
+      toast({
+        title: "Submission Failed",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -232,7 +231,7 @@ const FloatingEmailWidget = () => {
                 {!isSubmitted ? (
                   <>
                     <div className="flex items-center gap-2 mb-2">
-                      <motion.div
+                      {/* <motion.div
                         animate={{ rotate: 360 }}
                         transition={{
                           duration: 8,
@@ -243,13 +242,13 @@ const FloatingEmailWidget = () => {
                         <Sparkles className="w-4 h-4 text-ai-purple" />
                       </motion.div>
                       <span className="text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
-                        Stay Updated
-                      </span>
+                        Get Started
+                      </span> */}
                     </div>
                     <CardTitle className="text-lg">
-                      Book a{" "}
+                      Schedule Your{" "}
                       <span className="bg-gradient-to-r from-ai-purple to-ai-blue bg-clip-text text-transparent">
-                        Demo
+                        Personalized Demo
                       </span>
                     </CardTitle>
                   </>
@@ -270,9 +269,10 @@ const FloatingEmailWidget = () => {
                         </div>
                       </div>
                     </motion.div>
-                    <h3 className="font-semibold mb-2">Thank You!</h3>
+                    <h3 className="font-semibold mb-2">Request Received</h3>
                     <p className="text-sm text-muted-foreground">
-                      We'll be in touch soon with demo details.
+                      Our team will contact you within 24 hours to schedule your
+                      personalized demo.
                     </p>
                   </motion.div>
                 ) : !showFullForm ? (
@@ -283,14 +283,15 @@ const FloatingEmailWidget = () => {
                     animate={{ opacity: 1 }}
                   >
                     <p className="text-sm text-muted-foreground">
-                      Get a personalized demo of our Agentic AI platform
+                      Experience how our Agentic AI Acceleration Platform can
+                      transform your enterprise operations.
                     </p>
                     <div className="flex flex-col gap-3">
                       <div className="flex items-center gap-2 p-3 bg-gradient-to-r from-ai-purple/10 to-ai-blue/10 rounded-lg">
                         <Mail className="text-ai-purple w-5 h-5 shrink-0" />
                         <Input
                           type="email"
-                          placeholder="Your email"
+                          placeholder="Business email address"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           className="border-0 bg-transparent text-sm placeholder:text-muted-foreground focus-visible:ring-0"
@@ -301,7 +302,7 @@ const FloatingEmailWidget = () => {
                         type="submit"
                         className="w-full bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white text-sm font-medium"
                       >
-                        Continue
+                        Request Demo
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </Button>
                     </div>
@@ -314,7 +315,8 @@ const FloatingEmailWidget = () => {
                     animate={{ opacity: 1, y: 0 }}
                   >
                     <p className="text-sm text-muted-foreground">
-                      Complete your details to schedule a demo
+                      Please provide your information and our solutions team
+                      will reach out to you.
                     </p>
 
                     <div className="grid grid-cols-2 gap-3">
@@ -365,7 +367,7 @@ const FloatingEmailWidget = () => {
 
                     <div>
                       <Label htmlFor="designation" className="text-xs">
-                        Designation/Role *
+                        Job Title *
                       </Label>
                       <Input
                         id="designation"
@@ -412,10 +414,20 @@ const FloatingEmailWidget = () => {
                     <div className="pt-2">
                       <Button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white text-sm font-medium h-9"
+                        disabled={isLoading}
+                        className="w-full bg-gradient-to-r from-ai-purple to-ai-blue hover:from-ai-purple/90 hover:to-ai-blue/90 text-white text-sm font-medium h-9 disabled:opacity-50"
                       >
-                        Submit & Schedule Demo
-                        <ArrowRight className="ml-2 w-4 h-4" />
+                        {isLoading ? (
+                          <>
+                            <Loader2 className="mr-2 w-4 h-4 animate-spin" />
+                            Submitting...
+                          </>
+                        ) : (
+                          <>
+                            Submit Request
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                          </>
+                        )}
                       </Button>
                     </div>
                   </motion.form>

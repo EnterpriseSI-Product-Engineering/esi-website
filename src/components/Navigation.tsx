@@ -12,7 +12,7 @@ import {
   Briefcase,
   Code,
   Settings,
-  CornerDownRight,
+  Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -91,32 +91,34 @@ const Navigation = () => {
                           </div>
                         </DropdownMenuItem>
                       </Link>
-                      <Link to="/product/agentic-ai-builder-playground">
-                        <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
-                          <Gamepad2 className="mr-3 w-5 h-5 group-hover:text-ai-purple transition-colors" />
-                          <div className="flex flex-col">
-                            <span className="group-hover:text-ai-purple transition-colors font-semibold">
-                              Agentic AI Builder Playground
-                            </span>
-                            <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">
-                              Interactive Development Environment
-                            </span>
-                          </div>
-                        </DropdownMenuItem>
-                      </Link>
-                      <Link to="/product/agentic-ai-business-pilot-accelerators">
-                        <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
-                          <Rocket className="mr-3 w-5 h-5 group-hover:text-ai-purple transition-colors" />
-                          <div className="flex flex-col">
-                            <span className="group-hover:text-ai-purple transition-colors font-semibold">
-                              Agentic AI Business Pilot Accelerators
-                            </span>
-                            <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">
-                              Ready-to-Deploy Business Solutions
-                            </span>
-                          </div>
-                        </DropdownMenuItem>
-                      </Link>
+                      <div className="ml-8 space-y-2">
+                        <Link to="/product/agentic-ai-builder-playground">
+                          <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
+                            <Gamepad2 className="mr-3 w-4 h-4 group-hover:text-ai-purple transition-colors" />
+                            <div className="flex flex-col">
+                              <span className="group-hover:text-ai-purple transition-colors font-medium text-sm">
+                                Agentic AI Builder Playground
+                              </span>
+                              <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">
+                                Interactive Development Environment
+                              </span>
+                            </div>
+                          </DropdownMenuItem>
+                        </Link>
+                        <Link to="/product/agentic-ai-business-pilot-accelerators">
+                          <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-gradient-to-r hover:from-ai-purple/10 hover:to-ai-blue/10 transition-all duration-300 cursor-pointer border border-transparent hover:border-ai-purple/20">
+                            <Zap className="mr-3 w-4 h-4 group-hover:text-ai-purple transition-colors" />
+                            <div className="flex flex-col">
+                              <span className="group-hover:text-ai-purple transition-colors font-medium text-sm">
+                                Agentic AI Business Pilot Accelerators
+                              </span>
+                              <span className="text-xs text-muted-foreground group-hover:text-ai-purple/70">
+                                Ready-to-Deploy Business Solutions
+                              </span>
+                            </div>
+                          </DropdownMenuItem>
+                        </Link>
+                      </div>
                     </div>
                   </motion.div>
                 </DropdownMenuContent>
