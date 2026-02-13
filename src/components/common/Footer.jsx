@@ -12,27 +12,42 @@ const defaultSections = [
     title: "Products",
     links: [
       // { name: "Agentic AI Acceleration Platform", href: "/product" },
-      { name: "AI Builder Playground", href: "/product/agentic-ai-builder-playground" },
-      { name: "AI Business Pilot Accelerators", href: "/product/agentic-ai-business-pilot-accelerators" },
+      {
+        name: "AI Builder Playground",
+        href: "/product/agentic-ai-builder-playground",
+      },
+      {
+        name: "AI Business Pilot Accelerators",
+        href: "/product/agentic-ai-business-pilot-accelerators",
+      },
     ],
   },
   {
     title: "Solutions",
     links: [
-      { name: "AI Talent Transformation Strategy", href: "/solutions/ai-talent-transformation-strategy" },
-      { name: "Business AI Workshops", href: "/solutions/business-ai-programs" },
-      { name: "Technical AI Workshops", href: "/solutions/technical-ai-programs" },
+      {
+        name: "AI Talent Transformation Strategy",
+        href: "/solutions/ai-talent-transformation-strategy",
+      },
+      {
+        name: "Business AI Workshops",
+        href: "/solutions/business-ai-programs",
+      },
+      {
+        name: "Technical AI Workshops",
+        href: "/solutions/technical-ai-programs",
+      },
     ],
   },
 ];
 
 const defaultSocialLinks = [
-  { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
-  { icon: <FaFacebook className="size-5" />, href: "#", label: "Facebook" },
+  // { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
+  // { icon: <FaFacebook className="size-5" />, href: "#", label: "Facebook" },
   { icon: <FaTwitter className="size-5" />, href: "#", label: "Twitter" },
   {
     icon: <FaLinkedin className="size-5" />,
-    href: "#",
+    href: "https://www.linkedin.com/company/enterprisesi",
     label: "LinkedIn",
   },
 ];
@@ -50,7 +65,7 @@ const Footer = ({
   },
 
   sections = defaultSections,
-  description = "Ground floor, WeWork Embassy One, 8, Bellary Rd, Dena Bank Colony, Ganganagar, Bengaluru, Karnataka 560032",
+  // description = "Ground floor, WeWork Embassy One, 8, Bellary Rd, Dena Bank Colony, Ganganagar, Bengaluru, Karnataka 560032",
   socialLinks = defaultSocialLinks,
   copyright = `© ${new Date().getFullYear()} EnterpriseSI. All rights reserved.`,
   legalLinks = defaultLegalLinks,
@@ -72,9 +87,9 @@ const Footer = ({
                 {logo.title}
               </h2>
             </div>
-            <p className="max-w-full lg:max-w-[70%] text-sm text-muted-foreground">
+            {/* <p className="max-w-full lg:max-w-[70%] text-sm text-muted-foreground">
               {description}
-            </p>
+            </p> */}
             <ul className="flex items-center space-x-6 text-muted-foreground">
               {socialLinks.map((social, idx) => (
                 <li key={idx} className="font-medium hover:text-primary">
