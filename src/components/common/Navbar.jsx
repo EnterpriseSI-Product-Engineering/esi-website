@@ -212,7 +212,7 @@ const Navbar = () => {
           <Link to="/demo">
             <LiquidButton size={"lg"}>Book a demo</LiquidButton>
           </Link>
-          <Link to="https://lab.enterprisesi.co" target="_blank">
+          {/* <Link to="https://lab.enterprisesi.co" target="_blank">
             <button className="group relative cursor-pointer inline-flex h-[42px] items-center justify-center rounded-full bg-neutral-900 py-1 pl-6 pr-14 font-medium text-neutral-50">
               <span className="z-10 pr-2">Log In</span>
               <div className="absolute right-1 inline-flex size-8 items-center justify-end rounded-full bg-neutral-700 transition-[width] group-hover:w-[calc(100%-8px)]">
@@ -235,7 +235,7 @@ const Navbar = () => {
                 </div>
               </div>
             </button>
-          </Link>
+          </Link> */}
         </div>
 
         {/* mobile menu */}
