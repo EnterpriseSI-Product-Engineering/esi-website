@@ -21,8 +21,6 @@ import {
   Builder2,
   Builder3,
   LabsManagement,
-  LangflowLogo,
-  N8NLogo,
   UserProfileOverview,
   UsersManagement,
   Visualization,
@@ -32,6 +30,8 @@ import { useState, useEffect } from "react";
 import AWSScreenshot from "../assets/labs/learner/AWS.png";
 import JupyterScreenshot from "../assets/labs/learner/Jupyter.png";
 import LangflowScreenshot from "../assets/labs/learner/Langflow.png";
+import LangflowLogo from "../assets/logos/Langflow_logo.png";
+import N8NLogo from "../assets/logos/N8n_logo.png";
 
 const learnerSlides = [
   { id: 1, image: AWSScreenshot, label: "AWS Lab" },

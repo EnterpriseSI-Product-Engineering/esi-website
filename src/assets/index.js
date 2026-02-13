@@ -15,9 +15,6 @@ import AbhiroopImg from "./abhiroop.jpg";
 
 import LabsVector from "./labs/Labs.svg";
 
-import LangflowLogo from "./logos/Langflow_logo.png";
-import N8NLogo from "./logos/N8n_logo.png";
-
 import AWSScreenshot from "./labs/learner/AWS.png";
 import JupyterScreenshot from "./labs/learner/Jupyter.png";
 import LangflowScreenshot from "./labs/learner/Langflow.png";
@@ -58,11 +55,9 @@ export const TEAMS = {
 };
 
 export {
-  LangflowLogo,
   AWSScreenshot,
   JupyterScreenshot,
   LangflowScreenshot,
-  N8NLogo,
   AbhiroopImg,
   KloudstacLogo,
   VSCodeLogo,
