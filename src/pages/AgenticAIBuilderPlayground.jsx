@@ -30,8 +30,11 @@ import { useState, useEffect } from "react";
 import AWSScreenshot from "../assets/labs/learner/AWS.png";
 import JupyterScreenshot from "../assets/labs/learner/Jupyter.png";
 import LangflowScreenshot from "../assets/labs/learner/Langflow.png";
-import LangflowLogo from "../assets/logos/Langflow_logo.png";
-import N8NLogo from "../assets/logos/N8n_logo.png";
+
+// Logo URLs
+const LangflowLogo =
+  "https://substackcdn.com/image/fetch/$s_!Irsm!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0660f5f0-61ef-41e7-8a42-b941af2b1c84_1362x402.png";
+const N8NLogo = "https://n8n.io/brandguidelines/logo-dark.svg";
 
 const learnerSlides = [
   { id: 1, image: AWSScreenshot, label: "AWS Lab" },
@@ -219,7 +222,11 @@ const AgenticAIBuilderPlayground = () => {
                 />
               </div>
               <div className="flex items-center justify-center p-3 md:p-4 bg-neutral-50 rounded-xl md:rounded-2xl border border-neutral-200 hover:shadow-md transition-all duration-300 hover:scale-105">
-                <img src={N8NLogo} alt="n8n" className="h-8 md:h-10 object-contain" />
+                <img
+                  src={N8NLogo}
+                  alt="n8n"
+                  className="h-8 md:h-10 object-contain"
+                />
               </div>
             </div>
 
@@ -663,13 +670,20 @@ const AgenticAIBuilderPlayground = () => {
               Icon: Target,
             },
           ].map(({ title, desc, Icon }) => (
-            <GradientCard key={title} className="group h-full hover:border-[#9333ea]/30 transition-all duration-300 rounded-xl">
+            <GradientCard
+              key={title}
+              className="group h-full hover:border-[#9333ea]/30 transition-all duration-300 rounded-xl"
+            >
               <div className="h-full flex flex-col gap-4 p-6">
                 <div className="inline-flex p-2.5 rounded-lg border bg-[#9333ea]/10 border-[#9333ea]/20 w-fit">
                   <Icon className="w-5 h-5 text-[#9333ea]" strokeWidth={2} />
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-900">{title}</h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">{desc}</p>
+                <h3 className="text-lg font-semibold text-neutral-900">
+                  {title}
+                </h3>
+                <p className="text-sm text-neutral-600 leading-relaxed">
+                  {desc}
+                </p>
               </div>
             </GradientCard>
           ))}
