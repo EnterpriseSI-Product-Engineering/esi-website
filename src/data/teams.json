@@ -1,0 +1,55 @@
+{
+  "founders": [
+    {
+      "name": "Abhiroop Roy",
+      "title": "Co-Founder & CEO",
+      "description": "Ex. CTO/founder in 5 startups, 19 yrs in software products, 8+ yrs as architect in AWS and GCP.",
+      "profileImageUrl": "",
+      "linkedinUrl": "https://www.linkedin.com/in/abhiroop-roy-bb89092/"
+    }
+  ],
+  "engineers": [
+    {
+      "name": "Abhishek Kumar",
+      "title": "Backend & Platform Engineer",
+      "description": " I keep the code flowing and the servers happy.",
+      "profileImageUrl": "https://genailabs.blob.core.windows.net/website-kloudstac/teams/abhishek.jpg?sp=r&st=2025-08-05T06:15:42Z&se=2028-07-01T14:30:42Z&sv=2024-11-04&sr=b&sig=YbfD%2BlwZZiiPE5nEiCnnYydfwPDQ78%2FaPw7T2OIkP5g%3D",
+      "linkedinUrl": "https://www.linkedin.com/in/abhishek-kumar-929a17200/"
+    },
+    {
+      "name": "Raj Aryan",
+      "title": "Backend & AI Engineer",
+      "description": "Specializes in AI that scales, clouds that behave, code that actually ships, and training humans to outsmart their own creations.",
+      "profileImageUrl": "https://genailabs.blob.core.windows.net/website-kloudstac/teams/raj.jpg?sp=r&st=2025-08-05T06:17:36Z&se=2029-02-01T14:32:36Z&sv=2024-11-04&sr=b&sig=%2BvnAJA13rnSylQlG3IrBRdcbAqwPyfBX%2Fo2UH2frps8%3D",
+      "linkedinUrl": "https://www.linkedin.com/in/mrrsr/"
+    },
+    {
+      "name": "Tushar Kashyap",
+      "title": "Full Stack & AI Engineer",
+      "description": "Develops full stack AI platforms to automate workflows and drive impact; researches and publishes in Web3 technologies.",
+      "profileImageUrl": "https://genailabs.blob.core.windows.net/website-kloudstac/teams/tushar-kashyap.jpg?sp=r&st=2025-08-05T06:18:01Z&se=2028-02-01T14:33:01Z&sv=2024-11-04&sr=b&sig=xn1O0VqYkLOMVP1VGqNkhYeUA9tSZj%2BKljkym3hiGxw%3D",
+      "linkedinUrl": "https://www.linkedin.com/in/tushar-kashyap-28b79a218/"
+    },
+    {
+      "name": "Tushar Sahu",
+      "title": "Frontend & Platform Engineer",
+      "description": "Develops high-performance, maintainable frontend SaaS and cloud solutions with clean code and AI for impactful, future-ready results.",
+      "profileImageUrl": "https://genailabs.blob.core.windows.net/website-kloudstac/teams/tushar-sahu.jpg?sp=r&st=2025-08-05T06:18:38Z&se=2027-03-01T14:33:38Z&sv=2024-11-04&sr=b&sig=dL3VRGfK8sLHhyq46VTy5FfK2PJ2H0BgExoWOCQAJ7M%3D",
+      "linkedinUrl": "https://www.linkedin.com/in/tusharsahu-rgh"
+    },
+    {
+      "name": "Ilmah Abdi",
+      "title": "AI Engineer",
+      "description": "Engineers systems that turn data into decisions and models into muscle.",
+      "profileImageUrl": "https://genailabs.blob.core.windows.net/website-kloudstac/teams/ilmah.jpg?sp=r&st=2025-08-05T06:16:16Z&se=2027-12-01T14:31:16Z&sv=2024-11-04&sr=b&sig=ClbShDum%2FTn2HZ3bH6%2FOIzLKTes8GrQAjjx3GtTU2Aw%3D",
+      "linkedinUrl": "https://www.linkedin.com/in/ilmahabdi/"
+    },
+    {
+      "name": "Kaveri",
+      "title": "Testing Engineer",
+      "description": "Ensures high-quality software through manual, automation, and AI-driven testing; builds intelligent agents to future-proof QA workflows.",
+      "profileImageUrl": "https://genailabs.blob.core.windows.net/website-kloudstac/teams/kaveri.jpg?sp=r&st=2025-08-05T06:47:21Z&se=2026-12-01T15:02:21Z&sv=2024-11-04&sr=b&sig=9risCmEIrX7TLcdY3F02jCQa9rqhp9DqWvxBdmvlOSM%3D",
+      "linkedinUrl": "https://www.linkedin.com/in/kaveri-honnareddy-630ab026a/"
+    }
+  ]
+}
