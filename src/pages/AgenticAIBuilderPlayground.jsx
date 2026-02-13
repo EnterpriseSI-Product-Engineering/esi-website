@@ -24,17 +24,36 @@ import {
   UserProfileOverview,
   UsersManagement,
   Visualization,
+  OpenAILogo,
+  ClaudeAILogo,
+  ClaudeCodeLogo,
+  GoogleGeminiLogo,
+  MetaLogo,
+  VisualStudioCodeLogo,
+  JupyterLogo,
+  GoogleAIStudioLogo,
+  AmazonWebServicesLogo,
+  AWSBedrockLogo,
+  AzureFoundryLogo,
+  VertexAILogo,
+  GoogleADKLogo,
+  MicrosoftAgentFrameworkLogo,
+  Microsoft365CopilotLogo,
+  LangflowLogo,
+  N8nLogo,
+  GalileoLogo,
+  GitHubCopilotLogo,
+  StrandsAgentsLogo,
+  LanggraphLogo,
+  KoreaiLogo,
+  LovableLogo,
 } from "../assets";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import { useState, useEffect } from "react";
 import AWSScreenshot from "../assets/labs/learner/AWS.png";
 import JupyterScreenshot from "../assets/labs/learner/Jupyter.png";
 import LangflowScreenshot from "../assets/labs/learner/Langflow.png";
-
-// Logo URLs
-const LangflowLogo =
-  "https://substackcdn.com/image/fetch/$s_!Irsm!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0660f5f0-61ef-41e7-8a42-b941af2b1c84_1362x402.png";
-const N8NLogo = "https://n8n.io/brandguidelines/logo-dark.svg";
+import { Link } from "react-router";
 
 const learnerSlides = [
   { id: 1, image: AWSScreenshot, label: "AWS Lab" },
@@ -223,7 +242,7 @@ const AgenticAIBuilderPlayground = () => {
               </div>
               <div className="flex items-center justify-center p-3 md:p-4 bg-neutral-50 rounded-xl md:rounded-2xl border border-neutral-200 hover:shadow-md transition-all duration-300 hover:scale-105">
                 <img
-                  src={N8NLogo}
+                  src={N8nLogo}
                   alt="n8n"
                   className="h-8 md:h-10 object-contain"
                 />
@@ -269,9 +288,11 @@ const AgenticAIBuilderPlayground = () => {
                 and cloud credits to provision small sandbox resources.
                 Beautifully designed for clarity and focus.
               </p>
-              <LiquidButton size={"lg"} className=" rounded-xs">
-                Explore Labs
-              </LiquidButton>
+              <a href="#labs">
+                <LiquidButton className=" rounded-xs">
+                  Explore Labs
+                </LiquidButton>
+              </a>
             </div>
           </div>
         </GradientCard>
@@ -519,7 +540,7 @@ const AgenticAIBuilderPlayground = () => {
 
       {/* AI Tools & Technologies Marquee Section */}
       <div className="max-w-full mx-auto mt-16 md:mt-32 mb-12 md:mb-20 overflow-hidden">
-        <div className="text-center mb-8 md:mb-12 px-4">
+        <div className="text-center mb-x8 md:mb-12 px-4">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
             AI Tools & Technologies
           </h2>
@@ -536,25 +557,23 @@ const AgenticAIBuilderPlayground = () => {
               {[...Array(2)].map((_, setIndex) => (
                 <div key={setIndex} className="flex gap-6 flex-shrink-0">
                   {[
-                    "OpenAI_Logo",
-                    "Claude_AI_logo",
-                    "Claude_Code_Logo",
-                    "Google_Gemini_logo",
-                    "Meta-Logo",
-                    "Visual_Studio_Code_logo",
-                    "Jupyter_logo",
-                  ].map((name, idx) => (
+                    OpenAILogo,
+                    ClaudeAILogo,
+                    ClaudeCodeLogo,
+                    GoogleGeminiLogo,
+                    MetaLogo,
+                    VisualStudioCodeLogo,
+                    JupyterLogo,
+                    GoogleAIStudioLogo,
+                  ].map((logo, idx) => (
                     <div
                       key={idx}
                       className="h-24 w-40 flex-shrink-0 flex items-center justify-center bg-white border-2 border-neutral-200 rounded-xl hover:border-[#1569a9]/40 hover:shadow-lg transition-all duration-300"
                     >
                       <img
-                        src={`/assets/Logos/${name}.png`}
-                        alt={name}
+                        src={logo}
+                        alt="AI Tool Logo"
                         className="max-h-14 max-w-[130px] object-contain opacity-70 hover:opacity-100 transition-opacity"
-                        onError={(e) => {
-                          e.target.style.display = "none";
-                        }}
                       />
                     </div>
                   ))}
@@ -569,24 +588,22 @@ const AgenticAIBuilderPlayground = () => {
               {[...Array(2)].map((_, setIndex) => (
                 <div key={setIndex} className="flex gap-6 flex-shrink-0">
                   {[
-                    "Amazon_Web_Services_Logo",
-                    "AWS_Bedrock_Logo",
-                    "Azure_Foundry_Logo",
-                    "VertexAI_Logo",
-                    "Google_ADK_Logo",
-                    "Microsoft-Agent-Framework_Logo",
-                  ].map((name, idx) => (
+                    AmazonWebServicesLogo,
+                    AWSBedrockLogo,
+                    AzureFoundryLogo,
+                    VertexAILogo,
+                    GoogleADKLogo,
+                    MicrosoftAgentFrameworkLogo,
+                    Microsoft365CopilotLogo,
+                  ].map((logo, idx) => (
                     <div
                       key={idx}
                       className="h-24 w-40 flex-shrink-0 flex items-center justify-center bg-white border-2 border-neutral-200 rounded-xl hover:border-[#1569a9]/40 hover:shadow-lg transition-all duration-300"
                     >
                       <img
-                        src={`/assets/Logos/${name}.png`}
-                        alt={name}
+                        src={logo}
+                        alt="AI Tool Logo"
                         className="max-h-14 max-w-[130px] object-contain opacity-70 hover:opacity-100 transition-opacity"
-                        onError={(e) => {
-                          e.target.style.display = "none";
-                        }}
                       />
                     </div>
                   ))}
@@ -601,24 +618,23 @@ const AgenticAIBuilderPlayground = () => {
               {[...Array(2)].map((_, setIndex) => (
                 <div key={setIndex} className="flex gap-6 flex-shrink-0">
                   {[
-                    "Langflow_logo",
-                    "N8n_logo",
-                    "Galileo_Logo",
-                    "GitHub_Copilot_logo",
-                    "Strands_Agents_Logo",
-                    "Langgraph_Logo",
-                  ].map((name, idx) => (
+                    LangflowLogo,
+                    N8nLogo,
+                    GalileoLogo,
+                    GitHubCopilotLogo,
+                    StrandsAgentsLogo,
+                    LanggraphLogo,
+                    KoreaiLogo,
+                    LovableLogo,
+                  ].map((logo, idx) => (
                     <div
                       key={idx}
                       className="h-24 w-40 flex-shrink-0 flex items-center justify-center bg-white border-2 border-neutral-200 rounded-xl hover:border-[#1569a9]/40 hover:shadow-lg transition-all duration-300"
                     >
                       <img
-                        src={`/assets/Logos/${name}.png`}
-                        alt={name}
+                        src={logo}
+                        alt="AI Tool Logo"
                         className="max-h-14 max-w-[130px] object-contain opacity-70 hover:opacity-100 transition-opacity"
-                        onError={(e) => {
-                          e.target.style.display = "none";
-                        }}
                       />
                     </div>
                   ))}
@@ -630,7 +646,10 @@ const AgenticAIBuilderPlayground = () => {
       </div>
 
       {/* AI Learning Paths Section */}
-      <div className="max-w-6xl mx-auto mt-16 md:mt-32 mb-12 md:mb-20">
+      <div
+        id="labs"
+        className="max-w-6xl mx-auto mt-16 md:mt-32 mb-12 md:mb-20"
+      >
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
             Our AI Learning Paths

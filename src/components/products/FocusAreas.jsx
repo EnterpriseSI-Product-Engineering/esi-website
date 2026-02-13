@@ -206,7 +206,7 @@ const CopilotCarousel = ({ copilots, areaKey }) => {
   const styles = getAreaStyles();
 
   return (
-    <div className="relative">
+    <div className="relative pointer-events-auto">
       <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
         <div className="flex">
           {copilots.map((copilot, index) => (
@@ -261,15 +261,17 @@ const CopilotCarousel = ({ copilots, areaKey }) => {
 
       <button
         onClick={scrollPrev}
-        className={`absolute -left-4 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full border ${styles.border} ${styles.bgLight} flex items-center justify-center hover:opacity-100 transition-all duration-300 opacity-50`}
+        className={`absolute -left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border ${styles.border} bg-white flex items-center justify-center hover:${styles.bgLight} transition-all duration-300 shadow-md z-10`}
+        aria-label="Previous"
       >
-        <ChevronLeft className={`w-4 h-4 ${styles.text}`} />
+        <ChevronLeft className={`w-5 h-5 ${styles.text}`} />
       </button>
       <button
         onClick={scrollNext}
-        className={`absolute -right-4 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full border ${styles.border} ${styles.bgLight} flex items-center justify-center hover:opacity-100 transition-all duration-300 opacity-50`}
+        className={`absolute -right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full border ${styles.border} bg-white flex items-center justify-center hover:${styles.bgLight} transition-all duration-300 shadow-md z-10`}
+        aria-label="Next"
       >
-        <ChevronRight className={`w-4 h-4 ${styles.text}`} />
+        <ChevronRight className={`w-5 h-5 ${styles.text}`} />
       </button>
 
       <div className="flex justify-center gap-2 mt-6">
@@ -282,22 +284,9 @@ const CopilotCarousel = ({ copilots, areaKey }) => {
                 ? "opacity-100 scale-125"
                 : "opacity-30 hover:opacity-60"
             }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
-
-      <div className="absolute bottom-6 right-6">
-        <button
-          onClick={() =>
-            window.open(
-              "https://master.d1jvuujmp5rpat.amplifyapp.com/",
-              "_blank",
-            )
-          }
-          className={`px-4 py-2 rounded-lg text-sm font-medium text-white shadow-md hover:shadow-lg transition-all duration-300 ${styles.bg}`}
-        >
-          Learn More
-        </button>
       </div>
     </div>
   );
@@ -315,7 +304,10 @@ const FocusAreas = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-            Key <span className="bg-gradient-to-r from-[#1569a9] to-[#0d5a8f] bg-clip-text text-transparent">Domains</span>
+            Key{" "}
+            <span className="bg-gradient-to-r from-[#1569a9] to-[#0d5a8f] bg-clip-text text-transparent">
+              Domains
+            </span>
           </h2>
           <p className="text-xl text-neutral-600">
             Starting with 20 high-impact use cases across key business functions
@@ -345,9 +337,7 @@ const FocusAreas = () => {
                     >
                       {area.title}
                     </h3>
-                    <p className="text-neutral-600">
-                      {area.description}
-                    </p>
+                    <p className="text-neutral-600">{area.description}</p>
                   </div>
                 </GradientCard>
               </div>
@@ -362,14 +352,12 @@ const FocusAreas = () => {
               if (!area) return null;
 
               return (
-                <GradientCard className="rounded-2xl border-2 border-[#1569a9]/20 bg-[#1569a9]/5">
-                  <div className="p-4">
-                    <CopilotCarousel
-                      copilots={area.copilots}
-                      areaKey={selectedArea}
-                    />
-                  </div>
-                </GradientCard>
+                <div className="rounded-2xl border-2 border-[#1569a9]/20 bg-[#1569a9]/5 p-4">
+                  <CopilotCarousel
+                    copilots={area.copilots}
+                    areaKey={selectedArea}
+                  />
+                </div>
               );
             })()}
           </div>

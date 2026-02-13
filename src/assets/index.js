@@ -30,6 +30,32 @@ import LabsManagement from "./labs/admin/LabsManagement.png";
 import AssessmentsManagement from "./labs/admin/AssessmentsManagement.png";
 import Visualization from "./labs/admin/Visualization.png";
 
+// Logos
+import AmazonWebServicesLogo from "./logos/Amazon_Web_Services_Logo.png";
+import AWSBedrockLogo from "./logos/AWS_Bedrock_Logo.png";
+import AzureFoundryLogo from "./logos/Azure_Foundry_Logo.png";
+import ClaudeAILogo from "./logos/Claude_AI_logo.png";
+import ClaudeCodeLogo from "./logos/Claude_Code_Logo.png";
+import GalileoLogo from "./logos/Galileo_Logo.jpg";
+import GitHubCopilotLogo from "./logos/GitHub_Copilot_logo.png";
+import GoogleADKLogo from "./logos/Google_ADK_Logo.jpg";
+import GoogleAIStudioLogo from "./logos/Google_AI_Studio.png";
+import GoogleGeminiLogo from "./logos/Google_Gemini_logo.png";
+import JupyterLogo from "./logos/Jupyter_logo.png";
+import KoreaiLogo from "./logos/Koreai_Logo.png";
+import LangflowLogo from "./logos/Langflow_logo1.png";
+import LanggraphLogo from "./logos/Langgraph_Logo.png";
+import LovableLogo from "./logos/Lovable_Logo.png";
+import MetaLogo from "./logos/Meta-Logo.png";
+import MicrosoftAgentFrameworkLogo from "./logos/Microsoft-Agent-Framework_Logo.jpg";
+import Microsoft365CopilotLogo from "./logos/Microsoft365_Copilot_logo.png";
+import N8nLogo from "./logos/N8n_logo1.png";
+import OpenAILogo from "./logos/OpenAI_Logo.png";
+import StrandsAgentsLogo from "./logos/Strands_Agents_Logo.png";
+import VertexAILogo from "./logos/VertexAI_Logo.png";
+import VisualStudioCodeLogo from "./logos/Visual_Studio_Code_logo.png";
+
+
 export const IMGS = {
   STABOT:
     "https://genailabs.blob.core.windows.net/website-kloudstac/stacbot/avatar-model.png?sp=r&st=2025-08-05T05:51:03Z&se=2028-10-01T14:06:03Z&sv=2024-11-04&sr=b&sig=f0g%2FvCPWrdXLeH6mUbNlB7PArzjSq0dn5uvlkQtbS80%3D",
@@ -80,4 +106,27 @@ export {
   LabsManagement,
   AssessmentsManagement,
   Visualization,
+  AmazonWebServicesLogo,
+  AWSBedrockLogo,
+  AzureFoundryLogo,
+  ClaudeAILogo,
+  ClaudeCodeLogo,
+  GalileoLogo,
+  GitHubCopilotLogo,
+  GoogleADKLogo,
+  GoogleAIStudioLogo,
+  GoogleGeminiLogo,
+  JupyterLogo,
+  KoreaiLogo,
+  LangflowLogo,
+  LanggraphLogo,
+  LovableLogo,
+  MetaLogo,
+  MicrosoftAgentFrameworkLogo,
+  Microsoft365CopilotLogo,
+  N8nLogo,
+  OpenAILogo,
+  StrandsAgentsLogo,
+  VertexAILogo,
+  VisualStudioCodeLogo,
 };

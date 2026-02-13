@@ -259,10 +259,10 @@ const Navbar = () => {
               <Link to="/product" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm">
                 Agentic AI Acceleration Platform
               </Link>
-              <Link to="/product/agentic-ai-builder-playground" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm">
+              <Link to="/product/agentic-ai-builder-playground" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm ml-5">
                 AI Builder Playground
               </Link>
-              <Link to="/product/agentic-ai-business-pilot-accelerators" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm">
+              <Link to="/product/agentic-ai-business-pilot-accelerators" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm ml-5">
                 AI Business Pilot Accelerators
               </Link>
             </div>
