@@ -76,29 +76,31 @@ const Footer = ({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between">
           <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
             {/* Logo */}
-            <div className="flex items-center gap-1 lg:justify-start">
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                title={logo.title}
-                className="h-8"
-              />
-              <h2 className="text-2xl mt-1 leading-0 font-semibold text-esi-primary">
-                {logo.title}
-              </h2>
+            <div className=" space-y-7">
+              <div className="flex items-center gap-1 lg:justify-start">
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  title={logo.title}
+                  className="h-8"
+                />
+                <h2 className="text-2xl mt-1 leading-0 font-semibold text-esi-primary">
+                  {logo.title}
+                </h2>
+              </div>
+              <ul className="flex items-center space-x-6 text-muted-foreground">
+                {socialLinks.map((social, idx) => (
+                  <li key={idx} className="font-medium hover:text-primary">
+                    <a href={social.href} aria-label={social.label}>
+                      {social.icon}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
             {/* <p className="max-w-full lg:max-w-[70%] text-sm text-muted-foreground">
               {description}
             </p> */}
-            <ul className="flex items-center space-x-6 text-muted-foreground">
-              {socialLinks.map((social, idx) => (
-                <li key={idx} className="font-medium hover:text-primary">
-                  <a href={social.href} aria-label={social.label}>
-                    {social.icon}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div className="grid w-full gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:gap-20">
