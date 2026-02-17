@@ -34,9 +34,9 @@ const Product = () => {
       </p>
 
       <div className="mt-16 md:mt-32 relative">
-        <h1 className="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-20">
+        {/* <h1 className="text-3xl md:text-5xl font-bold text-center mb-12 md:mb-20">
           How We Support Agentic AI Accelerators
-        </h1>
+        </h1> */}
 
         <div className="relative max-w-5xl mx-auto">
           {/* Parent Node */}
