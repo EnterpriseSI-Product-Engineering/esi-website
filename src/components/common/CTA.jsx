@@ -13,8 +13,8 @@ export default function CTA() {
 
   return (
     <section className={cn("group relative overflow-hidden py-16 px-4 sm:py-24 md:py-32")}>
-      <div className="relative z-10 mx-auto flex max-w-container flex-col items-center gap-4 text-center sm:gap-6 md:gap-8">
-        <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl animate-appear px-4">
+      <div className="relative h-10 z-10 mx-auto flex max-w-container flex-col items-center gap-4 text-center sm:gap-6 md:gap-8">
+        {/* <h2 className="text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl animate-appear px-4">
           Experience the Future - Live
         </h2>
         <Button
@@ -24,7 +24,7 @@ export default function CTA() {
           asChild
         >
           <Link to={"/demo"}>Schedule a demo</Link>
-        </Button>
+        </Button> */}
       </div>
       <div className="absolute left-0 top-0 h-full w-full translate-y-[1rem] opacity-80 transition-all duration-500 ease-in-out group-hover:translate-y-[-2rem] group-hover:opacity-100">
         <Glow variant="bottom" className="animate-appear-zoom delay-300" />
