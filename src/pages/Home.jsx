@@ -13,13 +13,13 @@ const Home = () => {
   return (
     <div className="container mx-auto">
       <Hero />
-      <Vision />
-      <Features />
-      <div className="flex items-center justify-center">
+      {/* <Vision /> */}
+      {/* <Features /> */}
+      {/* <div className="flex items-center justify-center">
         <Link to="/product">
           <LiquidButton size={"lg"}>Explore our Products</LiquidButton>
         </Link>
-      </div>
+      </div> */}
       {/* <WhatWeOffer /> */}
       {/* <VideShowCase /> */}
       {/* <EveryThingInOnePlatform /> */}
