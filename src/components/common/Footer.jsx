@@ -1,62 +1,7 @@
 import { Linkedin } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-const defaultSections = [
-  {
-    title: "Company",
-    links: [
-      { name: "Home", href: "/" },
-      { name: "About Us", href: "/about-us" },
-    ],
-  },
-  {
-    title: "Products",
-    links: [
-      // { name: "Agentic AI Acceleration Platform", href: "/product" },
-      {
-        name: "AI Builder Playground",
-        href: "/product/agentic-ai-builder-playground",
-      },
-      {
-        name: "AI Business Pilot Accelerators",
-        href: "/product/agentic-ai-business-pilot-accelerators",
-      },
-    ],
-  },
-  {
-    title: "Solutions",
-    links: [
-      {
-        name: "AI Talent Transformation Strategy",
-        href: "/solutions/ai-talent-transformation-strategy",
-      },
-      {
-        name: "Business AI Workshops",
-        href: "/solutions/business-ai-programs",
-      },
-      {
-        name: "Technical AI Workshops",
-        href: "/solutions/technical-ai-programs",
-      },
-    ],
-  },
-];
 
-const defaultSocialLinks = [
-  // { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
-  // { icon: <FaFacebook className="size-5" />, href: "#", label: "Facebook" },
-  { icon: <FaTwitter className="size-5" />, href: "#", label: "Twitter" },
-  {
-    icon: <FaLinkedin className="size-5" />,
-    href: "https://www.linkedin.com/company/enterprisesi",
-    label: "LinkedIn",
-  },
-];
-
-const defaultLegalLinks = [
-  { name: "Terms and Conditions", href: "#" },
-  { name: "Privacy Policy", href: "#" },
-];
 
 const GROUPS = [
   {
@@ -101,8 +46,8 @@ const GROUPS = [
 const Footer = () => {
   return (
     <footer className="footer border-t border-ploy-border-primary bg-ploy-background-secondary">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.25fr_2fr]">
+      <div className="mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14 lg:px-8 lg:py-16">
+        <div className="grid gap-8 md:grid-cols-[1.25fr_2fr] lg:grid-cols-[1.25fr_2fr] lg:gap-12">
           <div>
             <a
               href="/"
@@ -118,23 +63,25 @@ const Footer = () => {
                 EnterpriseSI
               </span>
             </a>
-            <p className="mt-5 max-w-sm text-sm leading-6 text-ploy-text-secondary">
+            <p className="mt-4 max-w-sm text-sm leading-6 text-ploy-text-secondary md:mt-5">
               Agentic AI accelerators, secure builder playgrounds, and talent
               transformation for enterprise adoption.
             </p>
             <a
               href="https://www.linkedin.com/company/enterprisesi"
               aria-label="EnterpriseSI on LinkedIn"
-              className="mt-6 inline-flex rounded-button border border-ploy-border-primary p-2.5 text-ploy-text-secondary hover:text-ploy-text-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex rounded-button border border-ploy-border-primary p-2.5 text-ploy-text-secondary hover:text-ploy-text-primary md:mt-6"
             >
               <Linkedin size={18} />
             </a>
           </div>
-          <div className="grid gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:gap-8">
             {GROUPS.map((group) => (
               <div key={group.title}>
                 <h3 className="text-sm font-semibold">{group.title}</h3>
-                <ul className="mt-5 space-y-3">
+                <ul className="mt-4 space-y-3 md:mt-5">
                   {group.links.map(([label, href]) => (
                     <li key={label}>
                       <a
@@ -150,7 +97,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="mt-14 flex flex-col justify-between gap-3 border-t border-ploy-border-primary pt-7 text-xs text-ploy-text-secondary sm:flex-row">
+        <div className="mt-8 flex flex-col justify-between gap-3 border-t border-ploy-border-primary pt-5 text-xs text-ploy-text-secondary md:mt-12 md:flex-row md:pt-7">
           <p>© {new Date().getFullYear()} EnterpriseSI. All rights reserved.</p>
           <p>Enterprise AI, with humans in control.</p>
         </div>
