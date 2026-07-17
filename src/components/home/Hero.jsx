@@ -14,6 +14,7 @@ import {
   Workflow,
   Check,
 } from "lucide-react";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
@@ -26,6 +27,25 @@ const Hero = () => {
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] leading-tight sm:leading-tight md:leading-tight lg:leading-[50px] font-bold text-white/70">
           Implementation outcomes with Agentic Business Acceleration Platform.
         </p>
+
+        <div className=" flex gap-2 mt-10 items-center justify-center ">
+          <Link to="/product">
+            <LiquidButton size={"lg"} className="w-full sm:w-auto md:w-auto text-white">
+              <span className="flex items-center justify-center gap-1">
+                <span>Explore platform</span>
+                <ArrowRight size={16} aria-hidden="true" />
+              </span>
+            </LiquidButton>
+          </Link>
+          <Link to="/demo">
+            <LiquidButton size={"lg"} className="w-full sm:w-auto md:w-auto text-white">
+              <span className="flex items-center justify-center gap-1">
+                <span>Book a demo</span>
+                <ArrowRight size={16} aria-hidden="true" />
+              </span>
+            </LiquidButton>
+          </Link>
+        </div>
       </section>
       {/* Hero silk */}
       <div className=" w-full h-full">
