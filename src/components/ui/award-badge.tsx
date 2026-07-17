@@ -10,14 +10,15 @@ const identityMatrix =
   "0, 0, 1, 0, " +
   "0, 0, 0, 1";
 
-const maxRotate = 0.15;
-const minRotate = -0.15;
+const maxRotate = 0.1;
+const minRotate = -0.1;
 const maxScale = 1;
-const minScale = 0.98;
+const minScale = 0.99;
 
 export const AwardBadge = ({ text = "Agentic Business Acceleration Platform" }: AwardBadgeProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [matrix, setMatrix] = useState(identityMatrix);
+  const [isHovered, setIsHovered] = useState(false);
 
   const getDimensions = () => {
     const rect = ref.current?.getBoundingClientRect();
@@ -45,14 +46,16 @@ export const AwardBadge = ({ text = "Agentic Business Acceleration Platform" }: 
 
   const handleMouseLeave = () => {
     setMatrix(identityMatrix);
+    setIsHovered(false);
   };
 
   return (
     <div
       ref={ref}
-      className="border border-white/30 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full w-max mx-auto cursor-pointer"
+      className="w-max border border-white/20 bg-white/5 backdrop-blur-md rounded-full px-5 py-2 cursor-pointer"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onMouseEnter={() => setIsHovered(true)}
     >
       <div
         style={{
@@ -61,7 +64,7 @@ export const AwardBadge = ({ text = "Agentic Business Acceleration Platform" }: 
           transition: "transform 150ms ease-out"
         }}
       >
-        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white/90 whitespace-nowrap">
+        <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white/80 whitespace-nowrap transition-all duration-300 ${isHovered ? 'text-white scale-105' : ''}`}>
           {text}.
         </p>
       </div>

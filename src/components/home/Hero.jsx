@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
-import { AwardBadge } from "@/components/ui/award-badge";
+import TrueFocus from "@/components/ui/true-focus";
 import ThreeAnimation from "../common/HeroAnimation";
 import Silk from "../Silk";
 import {
@@ -28,7 +28,7 @@ const Hero = () => {
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] leading-tight sm:leading-tight md:leading-tight lg:leading-[50px] font-bold text-white/70">
           Implementation outcomes with
         </p>
-        <AwardBadge text="Agentic Business Acceleration Platform" />
+        <TrueFocus text="Agentic Business Acceleration Platform" />
 
         <div className=" flex gap-2 mt-10 items-center justify-center ">
           <Link to="/product">
