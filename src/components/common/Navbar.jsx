@@ -18,16 +18,30 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const { pathname } = useLocation();
   const [isProductOpen, setIsProductOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const isHomePage = pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > window.innerHeight);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-white/20 w-full px-4 sm:px-6 lg:px-8 mx-auto mt-2 sm:mt-4 md:mt-5 rounded-full">
-      <div className="container mx-auto py-4 flex items-center justify-between px-4 md:px-0">
+    <div
+      className={`fixed top-0 left-0 right-0 z-50 ${isHomePage && !scrolled ? "bg-white/20" : "bg-white"} md:w-5xl md:px-4 mx-4 sm:px-6 lg:px-8 md:mx-auto mt-2 sm:mt-4 md:mt-5 rounded-full`}
+    >
+      <div className="container mx-auto md:py-4 py-2 flex items-center justify-between px-4 md:px-0">
         {/* logo */}
         <div>
           <Link to={"/"}>
@@ -239,8 +253,15 @@ const Navbar = () => {
         </div>
 
         {/* mobile menu */}
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden p-2">
-          {isMobileMenuOpen ? <X className="w-6 h-6 text-esi-primary" /> : <Menu className="w-6 h-6 text-esi-primary" />}
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden p-2"
+        >
+          {isMobileMenuOpen ? (
+            <X className="w-6 h-6 text-esi-primary" />
+          ) : (
+            <Menu className="w-6 h-6 text-esi-primary" />
+          )}
         </button>
       </div>
 
@@ -248,45 +269,83 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-white md:hidden  pt-10">
           <div className="container mx-auto px-4 py-4">
-            <button 
-              onClick={() => setIsMobileMenuOpen(false)} 
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
               className="absolute top-6 right-4 p-2"
             >
               <X className="w-6 h-6 text-esi-primary" />
             </button>
-            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-xl font-medium border-b border-neutral-100">
+            <Link
+              to="/"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-3 text-xl font-medium border-b border-neutral-100"
+            >
               Home
             </Link>
-            <Link to="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-xl font-medium border-b border-neutral-100">
+            <Link
+              to="/about-us"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block py-3 text-xl font-medium border-b border-neutral-100"
+            >
               About Us
             </Link>
             <div className=" border-b border-neutral-100 pb-4">
-              <div className="py-2 text-lg font-semibold text-esi-primary">Products</div>
-              <Link to="/product" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-3 text-base">
+              <div className="py-2 text-lg font-semibold text-esi-primary">
+                Products
+              </div>
+              <Link
+                to="/product"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block pl-4 py-3 text-base"
+              >
                 Agentic AI Acceleration Platform
               </Link>
-              <Link to="/product/agentic-ai-builder-playground" onClick={() => setIsMobileMenuOpen(false)} className="block pl-8 py-2 text-base text-neutral-600">
+              <Link
+                to="/product/agentic-ai-builder-playground"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block pl-8 py-2 text-base text-neutral-600"
+              >
                 AI Builder Playground
               </Link>
-              <Link to="/product/agentic-ai-business-pilot-accelerators" onClick={() => setIsMobileMenuOpen(false)} className="block pl-8 py-2 text-base text-neutral-600">
+              <Link
+                to="/product/agentic-ai-business-pilot-accelerators"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block pl-8 py-2 text-base text-neutral-600"
+              >
                 AI Business Pilot Accelerators
               </Link>
             </div>
             <div className=" border-b border-neutral-100 pb-4">
-              <div className="py-2 text-lg font-semibold text-esi-primary">Solutions</div>
-              <Link to="/solutions/ai-talent-transformation-strategy" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-3 text-base">
+              <div className="py-2 text-lg font-semibold text-esi-primary">
+                Solutions
+              </div>
+              <Link
+                to="/solutions/ai-talent-transformation-strategy"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block pl-4 py-3 text-base"
+              >
                 AI Talent Transformation Strategy
               </Link>
-              <Link to="/solutions/business-ai-programs" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-3 text-base">
+              <Link
+                to="/solutions/business-ai-programs"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block pl-4 py-3 text-base"
+              >
                 Business AI Workshops
               </Link>
-              <Link to="/solutions/technical-ai-programs" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-3 text-base">
+              <Link
+                to="/solutions/technical-ai-programs"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block pl-4 py-3 text-base"
+              >
                 Technical AI Workshops
               </Link>
             </div>
             <div className="pt-4">
               <Link to="/demo" onClick={() => setIsMobileMenuOpen(false)}>
-                <LiquidButton size="lg" className="w-full">Book a demo</LiquidButton>
+                <LiquidButton size="lg" className="w-full">
+                  Book a demo
+                </LiquidButton>
               </Link>
             </div>
           </div>
