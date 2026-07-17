@@ -19,7 +19,7 @@ export default function CTA() {
         "group relative overflow-hidden py-12 px-4 sm:py-16 md:py-20 lg:py-24 ",
       )}
     >
-      <div className="relative z-10 mx-auto w-full max-w-container px-4 sm:px-6 flex flex-col gap-4 sm:gap-6">
+      <div className="relative z-10 mx-auto w-full px-4 sm:px-6 max-w-4xl flex flex-col gap-4 sm:gap-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 w-full max-w-4xl text-center md:text-left">
           <div className="flex-1">
             <h3 className="max-w-2xl text-balance font-heading text-xl sm:text-2xl md:text-3xl lg:text-4xl">
