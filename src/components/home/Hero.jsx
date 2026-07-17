@@ -26,7 +26,7 @@ const Hero = () => {
           Scale your Forward Deployed AI Engineering.
         </p>
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] leading-tight sm:leading-tight md:leading-tight lg:leading-[50px] font-bold text-white/70">
-          Implementation outcomes with
+          Implementation outcomes with our
         </p>
         <TrueFocus text="Agentic Business Acceleration Platform" />
 
