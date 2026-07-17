@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
+import TrueFocus from "@/components/ui/true-focus";
 import ThreeAnimation from "../common/HeroAnimation";
 import Silk from "../Silk";
 import {
@@ -25,12 +26,16 @@ const Hero = () => {
           Scale your Forward Deployed AI Engineering.
         </p>
         <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] leading-tight sm:leading-tight md:leading-tight lg:leading-[50px] font-bold text-white/70">
-          Implementation outcomes with Agentic Business Acceleration Platform.
+          Implementation outcomes with
         </p>
+        <TrueFocus text="Agentic Business Acceleration Platform" />
 
         <div className=" flex gap-2 mt-10 items-center justify-center ">
           <Link to="/product">
-            <LiquidButton size={"lg"} className="w-full sm:w-auto md:w-auto text-white">
+            <LiquidButton
+              size={"lg"}
+              className="w-full sm:w-auto md:w-auto text-white"
+            >
               <span className="flex items-center justify-center gap-1">
                 <span>Explore platform</span>
                 <ArrowRight size={16} aria-hidden="true" />
@@ -38,7 +43,10 @@ const Hero = () => {
             </LiquidButton>
           </Link>
           <Link to="/demo">
-            <LiquidButton size={"lg"} className="w-full sm:w-auto md:w-auto text-white">
+            <LiquidButton
+              size={"lg"}
+              className="w-full sm:w-auto md:w-auto text-white"
+            >
               <span className="flex items-center justify-center gap-1">
                 <span>Book a demo</span>
                 <ArrowRight size={16} aria-hidden="true" />
