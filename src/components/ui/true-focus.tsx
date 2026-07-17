@@ -7,7 +7,7 @@ const TrueFocus = ({
 }) => {
   return (
     <div className="relative inline-block">
-      <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white/90">
+      <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white/90 bg-white/20 px-3">
         {text}
       </span>
       
@@ -17,10 +17,10 @@ const TrueFocus = ({
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         style={{
-          top: "-12px",
-          left: "-12px",
-          right: "-12px",
-          bottom: "-12px"
+          top: "-11px",
+          left: "-3px",
+          right: "-3px",
+          bottom: "-10px"
         }}
       >
         <span
