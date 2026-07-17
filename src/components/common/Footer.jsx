@@ -1,119 +1,95 @@
+import { Linkedin } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 
-const defaultSections = [
+
+
+const GROUPS = [
   {
     title: "Company",
     links: [
-      { name: "Home", href: "/" },
-      { name: "About Us", href: "/about-us" },
+      ["Home", "/"],
+      ["About us", "https://enterprisesi.co/about-us"],
     ],
   },
   {
     title: "Products",
     links: [
-      // { name: "Agentic AI Acceleration Platform", href: "/product" },
-      {
-        name: "AI Builder Playground",
-        href: "/product/agentic-ai-builder-playground",
-      },
-      {
-        name: "AI Business Pilot Accelerators",
-        href: "/product/agentic-ai-business-pilot-accelerators",
-      },
+      [
+        "AI Builder Playground",
+        "https://enterprisesi.co/product/agentic-ai-builder-playground",
+      ],
+      [
+        "Business Pilot Accelerators",
+        "https://enterprisesi.co/product/agentic-ai-business-pilot-accelerators",
+      ],
     ],
   },
   {
     title: "Solutions",
     links: [
-      {
-        name: "AI Talent Transformation Strategy",
-        href: "/solutions/ai-talent-transformation-strategy",
-      },
-      {
-        name: "Business AI Workshops",
-        href: "/solutions/business-ai-programs",
-      },
-      {
-        name: "Technical AI Workshops",
-        href: "/solutions/technical-ai-programs",
-      },
+      [
+        "AI Talent Strategy",
+        "https://enterprisesi.co/solutions/ai-talent-transformation-strategy",
+      ],
+      [
+        "Business AI Programs",
+        "https://enterprisesi.co/solutions/business-ai-programs",
+      ],
+      [
+        "Technical AI Programs",
+        "https://enterprisesi.co/solutions/technical-ai-programs",
+      ],
     ],
   },
 ];
 
-const defaultSocialLinks = [
-  // { icon: <FaInstagram className="size-5" />, href: "#", label: "Instagram" },
-  // { icon: <FaFacebook className="size-5" />, href: "#", label: "Facebook" },
-  { icon: <FaTwitter className="size-5" />, href: "#", label: "Twitter" },
-  {
-    icon: <FaLinkedin className="size-5" />,
-    href: "https://www.linkedin.com/company/enterprisesi",
-    label: "LinkedIn",
-  },
-];
-
-const defaultLegalLinks = [
-  { name: "Terms and Conditions", href: "#" },
-  { name: "Privacy Policy", href: "#" },
-];
-
-const Footer = ({
-  logo = {
-    src: "/logo/android-chrome-512x512.png",
-    alt: "logo",
-    title: "EnterpriseSI",
-  },
-
-  sections = defaultSections,
-  // description = "Ground floor, WeWork Embassy One, 8, Bellary Rd, Dena Bank Colony, Ganganagar, Bengaluru, Karnataka 560032",
-  socialLinks = defaultSocialLinks,
-  copyright = `© ${new Date().getFullYear()} EnterpriseSI. All rights reserved.`,
-  legalLinks = defaultLegalLinks,
-}) => {
+const Footer = () => {
   return (
-    <section className="pt-12 px-4">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-between">
-          <div className="flex w-full flex-col justify-between gap-6 lg:items-start">
-            {/* Logo */}
-            <div className=" space-y-7">
-              <div className="flex items-center gap-1 lg:justify-start">
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  title={logo.title}
-                  className="h-8"
-                />
-                <h2 className="text-2xl mt-1 leading-0 font-semibold text-esi-primary">
-                  {logo.title}
-                </h2>
-              </div>
-              <ul className="flex items-center space-x-6 text-muted-foreground">
-                {socialLinks.map((social, idx) => (
-                  <li key={idx} className="font-medium hover:text-primary">
-                    <a href={social.href} aria-label={social.label}>
-                      {social.icon}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {/* <p className="max-w-full lg:max-w-[70%] text-sm text-muted-foreground">
-              {description}
-            </p> */}
+    <footer className="footer border-t border-ploy-border-primary bg-ploy-background-secondary">
+      <div className="mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14 lg:px-8 lg:py-16">
+        <div className="grid gap-8 md:grid-cols-[1.25fr_2fr] lg:grid-cols-[1.25fr_2fr] lg:gap-12">
+          <div>
+            <a
+              href="/"
+              className="flex items-center gap-2"
+              aria-label="EnterpriseSI home"
+            >
+              <img
+                src="/logo/android-chrome-512x512.png"
+                alt=""
+                className="h-8 w-8"
+              />
+              <span className="font-heading text-xl font-semibold">
+                EnterpriseSI
+              </span>
+            </a>
+            <p className="mt-4 max-w-sm text-sm leading-6 text-ploy-text-secondary md:mt-5">
+              Agentic AI accelerators, secure builder playgrounds, and talent
+              transformation for enterprise adoption.
+            </p>
+            <a
+              href="https://www.linkedin.com/company/enterprisesi"
+              aria-label="EnterpriseSI on LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex rounded-button border border-ploy-border-primary p-2.5 text-ploy-text-secondary hover:text-ploy-text-primary md:mt-6"
+            >
+              <Linkedin size={18} />
+            </a>
           </div>
-
-          <div className="grid w-full gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:gap-20">
-            {sections.map((section, sectionIdx) => (
-              <div key={sectionIdx}>
-                <h3 className="mb-4 font-bold">{section.title}</h3>
-                <ul className="space-y-3 text-sm text-muted-foreground flex flex-col gap-4">
-                  {section.links.map((link, linkIdx) => (
-                    <li
-                      key={linkIdx}
-                      className="font-medium hover:text-primary"
-                    >
-                      <a href={link.href}>{link.name}</a>
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:gap-8">
+            {GROUPS.map((group) => (
+              <div key={group.title}>
+                <h3 className="text-sm font-semibold">{group.title}</h3>
+                <ul className="mt-4 space-y-3 md:mt-5">
+                  {group.links.map(([label, href]) => (
+                    <li key={label}>
+                      <a
+                        href={href}
+                        className="text-sm text-ploy-text-secondary transition-colors hover:text-ploy-text-primary"
+                      >
+                        {label}
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -121,18 +97,12 @@ const Footer = ({
             ))}
           </div>
         </div>
-        <div className="mt-8 flex flex-col justify-between gap-4 border-t py-8 text-xs font-medium text-muted-foreground md:flex-row md:items-center md:text-left">
-          <p className="order-2 lg:order-1">{copyright}</p>
-          <ul className="order-1 flex flex-col gap-2 md:order-2 md:flex-row">
-            {legalLinks.map((link, idx) => (
-              <li key={idx} className="hover:text-primary">
-                <a href={link.href}> {link.name}</a>
-              </li>
-            ))}
-          </ul>
+        <div className="mt-8 flex flex-col justify-between gap-3 border-t border-ploy-border-primary pt-5 text-xs text-ploy-text-secondary md:mt-12 md:flex-row md:pt-7">
+          <p>© {new Date().getFullYear()} EnterpriseSI. All rights reserved.</p>
+          <p>Enterprise AI, with humans in control.</p>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 

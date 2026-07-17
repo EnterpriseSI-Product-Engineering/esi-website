@@ -2,64 +2,41 @@ import { cn } from "@/lib/utils";
 import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import ThreeAnimation from "../common/HeroAnimation";
-// import { Link } from "react-router";
+import Silk from "../Silk";
+import {
+  ArrowRight,
+  BarChart3,
+  Code2,
+  Lightbulb,
+  ShieldCheck,
+  TrendingUp,
+  Users,
+  Workflow,
+  Check,
+} from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen max-h-dvh flex flex-col items-center justify-center ">
-      <ThreeAnimation />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background z-[-5]" />
-      {/* <div className="z-10 flex md:hidden  items-center justify-center">
-        <div
-          className={cn(
-            "group rounded-full border mb-6 bg-white  text-xs text-green-500/30 transition-all ease-in dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",
-          )}
-        >
-          <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            <span>Introducing Kloudstac</span>
-          </AnimatedShinyText>
-        </div>
-      </div> */}
-      {/* <div className="z-10 md:flex hidden mt-20  items-center justify-center">
-        <div
-          className={cn(
-            "group rounded-full border mb-6 bg-white  text-xs text-green-500/30 transition-all ease-in dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800",
-          )}
-        >
-          <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-            <span>
-              Powering the Future: The World&apos;s First Agentic AI Accelerator
-              Platform
-            </span>
-          </AnimatedShinyText>
-        </div>
-      </div> */}
-      <h1 className="text-[32px] capitalize md:text-[72px] lg:text-[75px] font-bold leading-tight md:leading-[80px] text-center text-[#0A1C2F]">
-        Accelerating journey towards
-      </h1>
-      <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
-        <LiquidButton size={"lg"}>Enterprise SuperIntelligence</LiquidButton>
-        <LiquidButton size={"lg"}>Agentic Business processes</LiquidButton>
-        <LiquidButton size={"lg"}>Human-in-control</LiquidButton>
-      </div>{" "}
-      {/* <p className="text-center text-md max-w-[80%] md:text-2xl text-neutral-600 dark:text-neutral-400 lg:max-w-3xl mx-auto mt-4">
-        Explore, learn, and build on the world&apos;s first end-to-end Agentic
-        accelerator platform—designed to take ideas from lab prototypes to
-        production-grade deployments seamlessly.hands-on Agentic learning,
-        secure infrastructure, and low-code solutions.
-      </p> */}
-      {/* <div className="flex items-center justify-center mt-8 gap-4">
-        <Link to="/labs">
-          <LiquidButton size={window.innerWidth < 768 ? "lg" : "xxl"}>
-            Explore Labs
-          </LiquidButton>
-        </Link>
-        <Link to="/demo">
-          <LiquidButton size={window.innerWidth < 768 ? "lg" : "xxl"}>
-            Book a demo
-          </LiquidButton>
-        </Link>
-      </div> */}
+    <div className="min-h-screen h-screen relative w-full ">
+      {/* new hero */}
+      <section className="absolute top-1/2 left-1/2 z-10 w-full max-w-5xl -translate-x-1/2 -translate-y-1/2 px-4 text-center">
+        <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] leading-tight sm:leading-tight md:leading-tight lg:leading-[50px] font-bold text-white/70">
+          Scale your Forward Deployed AI Engineering.
+        </p>
+        <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[45px] leading-tight sm:leading-tight md:leading-tight lg:leading-[50px] font-bold text-white/70">
+          Implementation outcomes with Agentic Business Acceleration Platform.
+        </p>
+      </section>
+      {/* Hero silk */}
+      <div className=" w-full h-full">
+        <Silk
+          speed={5}
+          scale={1}
+          color="#7B7481"
+          noiseIntensity={1.5}
+          rotation={0}
+        />
+      </div>
     </div>
   );
 };

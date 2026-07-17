@@ -26,8 +26,8 @@ const Navbar = () => {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <div className="border-b fixed top-0 left-0 right-0 z-50 bg-white ">
-      <div className="container mx-auto  py-5 flex items-center justify-between px-4 md:px-0">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-white/20 w-full px-4 sm:px-6 lg:px-8 mx-auto mt-2 sm:mt-4 md:mt-5 rounded-full">
+      <div className="container mx-auto py-4 flex items-center justify-between px-4 md:px-0">
         {/* logo */}
         <div>
           <Link to={"/"}>
@@ -36,9 +36,9 @@ const Navbar = () => {
                 src={"/logo/android-chrome-512x512.png"}
                 alt={"logo"}
                 title={"EnterpriseSI Logo"}
-                className="h-10"
+                className="h-8 sm:h-10"
               />
-              <h2 className="text-3xl mt-1 leading-0 font-semibold text-esi-primary">
+              <h2 className="text-xl sm:text-2xl md:text-3xl mt-1 leading-0 font-semibold text-esi-primary">
                 EnterpriseSI
               </h2>
             </div>
@@ -239,48 +239,56 @@ const Navbar = () => {
         </div>
 
         {/* mobile menu */}
-        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden">
-          {isMobileMenuOpen ? <X className="text-esi-primary" /> : <Menu className="text-esi-primary" />}
+        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="md:hidden p-2">
+          {isMobileMenuOpen ? <X className="w-6 h-6 text-esi-primary" /> : <Menu className="w-6 h-6 text-esi-primary" />}
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="container mx-auto px-4 py-4 space-y-4">
-            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-lg font-medium">
+        <div className="fixed inset-0 z-40 bg-white md:hidden  pt-10">
+          <div className="container mx-auto px-4 py-4">
+            <button 
+              onClick={() => setIsMobileMenuOpen(false)} 
+              className="absolute top-6 right-4 p-2"
+            >
+              <X className="w-6 h-6 text-esi-primary" />
+            </button>
+            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-xl font-medium border-b border-neutral-100">
               Home
             </Link>
-            <Link to="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 text-lg font-medium">
+            <Link to="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="block py-3 text-xl font-medium border-b border-neutral-100">
               About Us
             </Link>
-            <div className="space-y-2">
-              <div className="py-2 text-lg font-medium">Products</div>
-              <Link to="/product" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm">
+            <div className=" border-b border-neutral-100 pb-4">
+              <div className="py-2 text-lg font-semibold text-esi-primary">Products</div>
+              <Link to="/product" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-3 text-base">
                 Agentic AI Acceleration Platform
               </Link>
-              <Link to="/product/agentic-ai-builder-playground" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm ml-5">
+              <Link to="/product/agentic-ai-builder-playground" onClick={() => setIsMobileMenuOpen(false)} className="block pl-8 py-2 text-base text-neutral-600">
                 AI Builder Playground
               </Link>
-              <Link to="/product/agentic-ai-business-pilot-accelerators" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm ml-5">
+              <Link to="/product/agentic-ai-business-pilot-accelerators" onClick={() => setIsMobileMenuOpen(false)} className="block pl-8 py-2 text-base text-neutral-600">
                 AI Business Pilot Accelerators
               </Link>
             </div>
-            <div className="space-y-2">
-              <div className="py-2 text-lg font-medium">Solutions</div>
-              <Link to="/solutions/ai-talent-transformation-strategy" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm">
+            <div className=" border-b border-neutral-100 pb-4">
+              <div className="py-2 text-lg font-semibold text-esi-primary">Solutions</div>
+              <Link to="/solutions/ai-talent-transformation-strategy" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-3 text-base">
                 AI Talent Transformation Strategy
               </Link>
-              <Link to="/solutions/business-ai-programs" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm">
+              <Link to="/solutions/business-ai-programs" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-3 text-base">
                 Business AI Workshops
               </Link>
-              <Link to="/solutions/technical-ai-programs" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-2 text-sm">
+              <Link to="/solutions/technical-ai-programs" onClick={() => setIsMobileMenuOpen(false)} className="block pl-4 py-3 text-base">
                 Technical AI Workshops
               </Link>
             </div>
-            <Link to="/demo" onClick={() => setIsMobileMenuOpen(false)}>
-              <LiquidButton size="lg" className="w-full">Book a demo</LiquidButton>
-            </Link>
+            <div className="pt-4">
+              <Link to="/demo" onClick={() => setIsMobileMenuOpen(false)}>
+                <LiquidButton size="lg" className="w-full">Book a demo</LiquidButton>
+              </Link>
+            </div>
           </div>
         </div>
       )}
