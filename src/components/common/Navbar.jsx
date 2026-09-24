@@ -10,6 +10,7 @@ import {
   Briefcase,
   Code,
   X,
+  BookOpen,
 } from "lucide-react";
 import { Link, useLocation } from "react-router";
 import {
@@ -18,12 +19,28 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+const useHoverDropdown = () => {
+  const [open, setOpen] = useState(false);
+  const closeTimeoutRef = useRef(null);
+
+  const openMenu = () => {
+    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+    setOpen(true);
+  };
+  const closeMenu = () => {
+    closeTimeoutRef.current = setTimeout(() => setOpen(false), 150);
+  };
+
+  return { open, setOpen, openMenu, closeMenu };
+};
 
 const Navbar = () => {
   const { pathname } = useLocation();
-  const [isProductOpen, setIsProductOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const productMenu = useHoverDropdown();
+  const solutionsMenu = useHoverDropdown();
+  const thoughtLeadershipMenu = useHoverDropdown();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -39,7 +56,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 z-50 ${isHomePage && !scrolled ? "bg-white/20 " : "bg-white"} md:w-5xl md:px-4 mx-4 sm:px-6 lg:px-8 md:mx-auto mt-2 sm:mt-4 md:mt-5 rounded-full`}
+      className={`fixed top-0 left-0 right-0 z-50 ${isHomePage && !scrolled ? "bg-white/20 " : "bg-white"} md:w-7xl md:px-6 mx-4 sm:px-6 lg:px-8 md:mx-auto mt-2 sm:mt-4 md:mt-5 rounded-full`}
     >
       <div className="container mx-auto md:py-4 py-2 flex items-center justify-between px-4 md:px-0">
         {/* logo */}
@@ -62,17 +79,7 @@ const Navbar = () => {
         <div
           className={`hidden md:block ${isHomePage && !scrolled ? "text-white" : "text-neutral-900"}`}
         >
-          <ul className="flex items-center gap-8 text-lg font-medium ">
-            <li>
-              <Link
-                to="/"
-                className={`pb-1 border-b-2 ${
-                  pathname === "/" ? "border-white" : "border-transparent"
-                }`}
-              >
-                Home
-              </Link>
-            </li>
+          <ul className="flex items-center gap-6 text-base font-medium whitespace-nowrap">
             <li>
               <Link
                 to="/about-us"
@@ -85,10 +92,14 @@ const Navbar = () => {
                 About Us
               </Link>
             </li>
-            <li>
+            <li
+              onMouseEnter={productMenu.openMenu}
+              onMouseLeave={productMenu.closeMenu}
+            >
               <DropdownMenu
-                open={isProductOpen}
-                onOpenChange={setIsProductOpen}
+                modal={false}
+                open={productMenu.open}
+                onOpenChange={productMenu.setOpen}
               >
                 <DropdownMenuTrigger
                   className={` border-b-2 outline-none cursor-pointer flex items-center gap-1 ${
@@ -97,10 +108,14 @@ const Navbar = () => {
                       : "border-transparent"
                   }`}
                 >
-                  Products
+                  Platform
                   <ChevronDown className="w-4 h-4" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-[450px] p-6 shadow-xl border-neutral-200">
+                <DropdownMenuContent
+                  onMouseEnter={productMenu.openMenu}
+                  onMouseLeave={productMenu.closeMenu}
+                  className="w-[450px] p-6 shadow-xl border-neutral-200"
+                >
                   <div className="space-y-3">
                     <Link to="/product">
                       <DropdownMenuItem className="group text-md p-5 rounded-xl hover:bg-gradient-to-r hover:from-[#1569a9]/5 hover:to-[#1569a9]/10 transition-all duration-300 cursor-pointer border border-neutral-100 hover:border-[#1569a9]/30 hover:shadow-md">
@@ -162,10 +177,14 @@ const Navbar = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             </li>
-            <li>
+            <li
+              onMouseEnter={solutionsMenu.openMenu}
+              onMouseLeave={solutionsMenu.closeMenu}
+            >
               <DropdownMenu
-                open={isSolutionsOpen}
-                onOpenChange={setIsSolutionsOpen}
+                modal={false}
+                open={solutionsMenu.open}
+                onOpenChange={solutionsMenu.setOpen}
               >
                 <DropdownMenuTrigger
                   className={`border-b-2 outline-none cursor-pointer flex items-center gap-1 ${
@@ -174,10 +193,14 @@ const Navbar = () => {
                       : "border-transparent"
                   }`}
                 >
-                  Solutions
+                  AI Acceleration
                   <ChevronDown className="w-4 h-4" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-[400px] p-6 shadow-xl border-neutral-200">
+                <DropdownMenuContent
+                  onMouseEnter={solutionsMenu.openMenu}
+                  onMouseLeave={solutionsMenu.closeMenu}
+                  className="w-[400px] p-6 shadow-xl border-neutral-200"
+                >
                   <div className="flex items-center gap-2 text-sm font-medium text-[#1569a9] mb-3">
                     <Sparkles className="w-4 h-4 text-[#1569a9]" />
                     AI Enablement for your Employees
@@ -211,6 +234,47 @@ const Navbar = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             </li>
+            <li
+              onMouseEnter={thoughtLeadershipMenu.openMenu}
+              onMouseLeave={thoughtLeadershipMenu.closeMenu}
+            >
+              <DropdownMenu
+                modal={false}
+                open={thoughtLeadershipMenu.open}
+                onOpenChange={thoughtLeadershipMenu.setOpen}
+              >
+                <DropdownMenuTrigger
+                  className={`border-b-2 outline-none cursor-pointer flex items-center gap-1 ${
+                    pathname.startsWith("/thought-leadership")
+                      ? "border-black"
+                      : "border-transparent"
+                  }`}
+                >
+                  Thought Leadership
+                  <ChevronDown className="w-4 h-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent
+                  onMouseEnter={thoughtLeadershipMenu.openMenu}
+                  onMouseLeave={thoughtLeadershipMenu.closeMenu}
+                  className="w-[400px] p-6 shadow-xl border-neutral-200"
+                >
+                  <div className="flex items-center gap-2 text-sm font-medium text-[#1569a9] mb-3">
+                    <Sparkles className="w-4 h-4 text-[#1569a9]" />
+                    Resources
+                  </div>
+                  <div className="space-y-2">
+                    <Link to="/thought-leadership/blogs">
+                      <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
+                        <BookOpen className="mr-3 w-4 h-4 text-[#1569a9]" />
+                        <span className="text-neutral-900 font-medium">
+                          Blogs
+                        </span>
+                      </DropdownMenuItem>
+                    </Link>
+                  </div>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </li>
             {/* <li>
               <Link
                 to="/team"
@@ -226,7 +290,12 @@ const Navbar = () => {
         {/* action button */}
         <div className="md:flex items-center gap-4 hidden">
           <Link to="/demo">
-            <LiquidButton size={"lg"} className="text-white">Book a demo</LiquidButton>
+            <LiquidButton
+              size={"lg"}
+              className={isHomePage && !scrolled ? "text-white" : "text-neutral-900"}
+            >
+              Book a demo
+            </LiquidButton>
           </Link>
         </div>
 
@@ -254,13 +323,6 @@ const Navbar = () => {
               <X className="w-6 h-6 text-esi-primary" />
             </button>
             <Link
-              to="/"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block py-3 text-xl font-medium border-b border-neutral-100"
-            >
-              Home
-            </Link>
-            <Link
               to="/about-us"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block py-3 text-xl font-medium border-b border-neutral-100"
@@ -269,7 +331,7 @@ const Navbar = () => {
             </Link>
             <div className=" border-b border-neutral-100 pb-4">
               <div className="py-2 text-lg font-semibold text-esi-primary">
-                Products
+                Platforms
               </div>
               <Link
                 to="/product"
@@ -317,6 +379,21 @@ const Navbar = () => {
                 className="block pl-4 py-3 text-base"
               >
                 Technical AI Workshops
+              </Link>
+            </div>
+            <div className=" border-b border-neutral-100 pb-4">
+              <div className="py-2 text-lg font-semibold text-esi-primary">
+                Thought Leadership
+              </div>
+              <div className="pl-4 py-1 text-sm font-medium text-neutral-500">
+                Resources
+              </div>
+              <Link
+                to="/thought-leadership/blogs"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block pl-4 py-3 text-base"
+              >
+                Blogs
               </Link>
             </div>
             <div className="pt-4">

@@ -14,6 +14,8 @@ import AgenticAIBusinessPilotAccelerators from "./pages/AgenticAIBusinessPilotAc
 import AITalentTransformationStrategy from "./pages/AITalentTransformationStrategy";
 import BusinessAIPrograms from "./pages/BusinessAIPrograms";
 import TechnicalAIPrograms from "./pages/TechnicalAIPrograms";
+import Blogs from "./pages/Blogs";
+import BlogPost from "./pages/BlogPost";
 const App = () => {
   return (
     <Router>
@@ -31,6 +33,8 @@ const App = () => {
           <Route path="/solutions/ai-talent-transformation-strategy" element={<AITalentTransformationStrategy />} />
           <Route path="/solutions/business-ai-programs" element={<BusinessAIPrograms />} />
           <Route path="/solutions/technical-ai-programs" element={<TechnicalAIPrograms />} />
+          <Route path="/thought-leadership/blogs" element={<Blogs />} />
+          <Route path="/thought-leadership/blogs/:slug" element={<BlogPost />} />
           {/* demo page */}
           <Route path="/demo" element={<Demo />} />
         </Routes>
