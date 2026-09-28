@@ -230,6 +230,14 @@ const Navbar = () => {
                         </span>
                       </DropdownMenuItem>
                     </Link>
+                    <Link to="/solutions/ai-technical-programs">
+                      <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
+                        <BookOpen className="mr-3 w-4 h-4 text-[#1569a9]" />
+                        <span className="text-neutral-900 font-medium">
+                          AI Technical Programs
+                        </span>
+                      </DropdownMenuItem>
+                    </Link>
                   </div>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -379,6 +387,13 @@ const Navbar = () => {
                 className="block pl-4 py-3 text-base"
               >
                 Technical AI Workshops
+              </Link>
+              <Link
+                to="/solutions/ai-technical-programs"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block pl-4 py-3 text-base"
+              >
+                AI Technical Programs
               </Link>
             </div>
             <div className=" border-b border-neutral-100 pb-4">
