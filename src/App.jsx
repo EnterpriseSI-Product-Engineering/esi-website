@@ -13,7 +13,9 @@ import AgenticAIBuilderPlayground from "./pages/AgenticAIBuilderPlayground";
 import AgenticAIBusinessPilotAccelerators from "./pages/AgenticAIBusinessPilotAccelerators";
 import AITalentTransformationStrategy from "./pages/AITalentTransformationStrategy";
 import BusinessAIPrograms from "./pages/BusinessAIPrograms";
-import TechnicalAIPrograms from "./pages/TechnicalAIPrograms";
+
+import AITechnicalPrograms from "./pages/AITechnicalPrograms";
+import AIForwardDeployedArchitect from "./pages/AIForwardDeployedArchitect";
 import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
 const App = () => {
@@ -32,7 +34,9 @@ const App = () => {
           <Route path="/product/agentic-ai-business-pilot-accelerators" element={<AgenticAIBusinessPilotAccelerators />} />
           <Route path="/solutions/ai-talent-transformation-strategy" element={<AITalentTransformationStrategy />} />
           <Route path="/solutions/business-ai-programs" element={<BusinessAIPrograms />} />
-          <Route path="/solutions/technical-ai-programs" element={<TechnicalAIPrograms />} />
+
+          <Route path="/solutions/ai-technical-programs" element={<AITechnicalPrograms />} />
+          <Route path="/solutions/ai-forward-deployed-architect" element={<AIForwardDeployedArchitect />} />
           <Route path="/thought-leadership/blogs" element={<Blogs />} />
           <Route path="/thought-leadership/blogs/:slug" element={<BlogPost />} />
           {/* demo page */}

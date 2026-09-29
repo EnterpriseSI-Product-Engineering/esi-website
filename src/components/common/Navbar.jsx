@@ -218,15 +218,16 @@ const Navbar = () => {
                       <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
                         <Briefcase className="mr-3 w-4 h-4 text-[#1569a9]" />
                         <span className="text-neutral-900 font-medium">
-                          Business AI Workshops
+                          Business AI Programs
                         </span>
                       </DropdownMenuItem>
                     </Link>
-                    <Link to="/solutions/technical-ai-programs">
+
+                    <Link to="/solutions/ai-technical-programs">
                       <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
-                        <Code className="mr-3 w-4 h-4 text-[#1569a9]" />
+                        <BookOpen className="mr-3 w-4 h-4 text-[#1569a9]" />
                         <span className="text-neutral-900 font-medium">
-                          Technical AI Workshops
+                          AI Technical Programs
                         </span>
                       </DropdownMenuItem>
                     </Link>
@@ -331,7 +332,7 @@ const Navbar = () => {
             </Link>
             <div className=" border-b border-neutral-100 pb-4">
               <div className="py-2 text-lg font-semibold text-esi-primary">
-                Platforms
+                Platform
               </div>
               <Link
                 to="/product"
@@ -357,7 +358,7 @@ const Navbar = () => {
             </div>
             <div className=" border-b border-neutral-100 pb-4">
               <div className="py-2 text-lg font-semibold text-esi-primary">
-                Solutions
+                AI Acceleration
               </div>
               <Link
                 to="/solutions/ai-talent-transformation-strategy"
@@ -371,14 +372,15 @@ const Navbar = () => {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-4 py-3 text-base"
               >
-                Business AI Workshops
+                Business AI Programs
               </Link>
+
               <Link
-                to="/solutions/technical-ai-programs"
+                to="/solutions/ai-technical-programs"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-4 py-3 text-base"
               >
-                Technical AI Workshops
+                AI Technical Programs
               </Link>
             </div>
             <div className=" border-b border-neutral-100 pb-4">

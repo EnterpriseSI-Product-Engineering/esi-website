@@ -103,7 +103,7 @@ const BlogPost = () => {
   }
 
   return (
-    <div className="container mx-auto py-32">
+    <div className="container mx-auto px-4 py-32">
       <div className="max-w-3xl mx-auto mt-20">
         <Link
           to="/thought-leadership/blogs"
