@@ -102,7 +102,7 @@ const BusinessAIPrograms = () => {
 
         {/* Heading */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          <span>Business AI Workshops</span>
+          <span>Business AI Programs</span>
         </h1>
 
         {/* Description */}
