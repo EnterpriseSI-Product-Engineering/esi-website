@@ -46,7 +46,7 @@ const GROUPS = [
 const Footer = () => {
   return (
     <footer className="footer border-t border-ploy-border-primary bg-ploy-background-secondary">
-      <div className="mx-auto max-w-7xl px-4 py-10 md:px-6 md:py-14 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-7xl px-4 pt-10 pb-6 md:px-6 md:pt-14 md:pb-8 lg:px-8 lg:pt-16 lg:pb-8">
         <div className="grid gap-8 md:grid-cols-[1.25fr_2fr] lg:grid-cols-[1.25fr_2fr] lg:gap-12">
           <div>
             <a
@@ -97,9 +97,11 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="mt-8 flex flex-col justify-between gap-3 border-t border-ploy-border-primary pt-5 text-xs text-ploy-text-secondary md:mt-12 md:flex-row md:pt-7">
-          <p>© {new Date().getFullYear()} EnterpriseSI. All rights reserved.</p>
-          <p>Enterprise AI, with humans in control.</p>
+        <div className="mt-4 border-t border-ploy-border-primary pt-3 text-xs text-ploy-text-secondary md:mt-6 md:pt-4 text-center pb-0">
+          <p>© 2025-{new Date().getFullYear()} EnterpriseSI, a brand of Intelligent Systems Private Limited. All rights reserved.</p>
+          <p className="mt-1.5 text-[11px] opacity-60">
+            CIN: U62090KA2025PTC210049 &nbsp;|&nbsp; MSME: UDYAM-KR-03-0632473 &nbsp;|&nbsp; GSTIN: 29AAICI4872M1ZT
+          </p>
         </div>
       </div>
     </footer>
