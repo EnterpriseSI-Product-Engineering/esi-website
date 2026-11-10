@@ -11,6 +11,7 @@ import {
   Code,
   X,
   BookOpen,
+  Lightbulb,
 } from "lucide-react";
 import { Link, useLocation } from "react-router";
 import {
@@ -272,6 +273,14 @@ const Navbar = () => {
                         </span>
                       </DropdownMenuItem>
                     </Link>
+                    <Link to="/thought-leadership/product-innovation">
+                      <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
+                        <Lightbulb className="mr-3 w-4 h-4 text-[#1569a9]" />
+                        <span className="text-neutral-900 font-medium">
+                          Product Innovations
+                        </span>
+                      </DropdownMenuItem>
+                    </Link>
                   </div>
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -396,6 +405,13 @@ const Navbar = () => {
                 className="block pl-4 py-3 text-base"
               >
                 Blogs
+              </Link>
+              <Link
+                to="/thought-leadership/product-innovation"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block pl-4 py-3 text-base"
+              >
+                Product Innovations
               </Link>
             </div>
             <div className="pt-4">
