@@ -1,5 +1,4 @@
 import { Link } from "react-router";
-import { Lightbulb, ArrowRight } from "lucide-react";
 import { GradientCard } from "@/components/ui/animatedcard";
 import { motion as Motion } from "framer-motion";
 
@@ -20,6 +19,9 @@ const innovations = [
     category: "Executive Workshop",
     gradient: "from-purple-600 to-indigo-500",
     hoverGradient: "group-hover:from-purple-600 group-hover:to-indigo-500",
+    description:
+      "A 20 hrs program designed to augment skills of client-facing tech and business roles working with AI, sharpening the consulting mindset needed for delivering AI-native products and services.",
+    link: "/thought-leadership/product-innovation/ai-fde-consulting-mindset-workshop",
   },
   {
     id: 3,
@@ -27,6 +29,9 @@ const innovations = [
     category: "Strategy Workshop",
     gradient: "from-emerald-600 to-teal-500",
     hoverGradient: "group-hover:from-emerald-600 group-hover:to-teal-500",
+    description:
+      "A 24 hrs program designed to augment skills of client-facing AI Deployment Strategists, bridging client expectations and technical AI solutions to align outcomes with business goal realization.",
+    link: "/thought-leadership/product-innovation/ai-deployment-strategist-workshop",
   },
   {
     id: 4,
@@ -34,6 +39,9 @@ const innovations = [
     category: "Specialized Programs",
     gradient: "from-amber-500 to-orange-600",
     hoverGradient: "group-hover:from-amber-500 group-hover:to-orange-600",
+    description:
+      "Domain and tech stack specific AI Forward Deployed Engineer programs (80 hrs and 60 hrs) delivering hands-on AI labs, assessment tests, and capstone projects via our Agentic AI Playground.",
+    link: "/thought-leadership/product-innovation/ai-fde-programs-industry-function-tech-stack",
   },
   {
     id: 5,
@@ -41,6 +49,9 @@ const innovations = [
     category: "Engineering Factory",
     gradient: "from-rose-500 to-pink-600",
     hoverGradient: "group-hover:from-rose-500 group-hover:to-pink-600",
+    description:
+      "A scalable talent factory model delivering continuous hands-on practice labs on agent development lifecycles, keeping workforce skills perennially project-ready amid rapid AI shifts.",
+    link: "/thought-leadership/product-innovation/ai-forward-deployed-engineer-factory",
   },
   {
     id: 6,
@@ -48,6 +59,9 @@ const innovations = [
     category: "Advisory & Strategy",
     gradient: "from-violet-600 to-fuchsia-500",
     hoverGradient: "group-hover:from-violet-600 group-hover:to-fuchsia-500",
+    description:
+      "An advisory service for GCCs and IT services enterprises to assess workforce AI readiness, map talent into maturity tiers, and develop structured learning pathways via hands-on labs and sandboxes.",
+    link: "/thought-leadership/product-innovation/employee-ai-capability-assessment-advisory",
   },
   {
     id: 7,
@@ -55,6 +69,9 @@ const innovations = [
     category: "Domain Deepdive",
     gradient: "from-cyan-600 to-blue-500",
     hoverGradient: "group-hover:from-cyan-600 group-hover:to-blue-500",
+    description:
+      "A specialized learning series across 12 core industry and functional domains, paired with continuous scenario-based assessments on the Agentic AI Playground platform.",
+    link: "/thought-leadership/product-innovation/domain-deepdive-ai-software-engineers",
   },
   {
     id: 8,
@@ -62,6 +79,9 @@ const innovations = [
     category: "Academy Toolkit",
     gradient: "from-teal-600 to-emerald-500",
     hoverGradient: "group-hover:from-teal-600 group-hover:to-emerald-500",
+    description:
+      "An all-in-the-box toolkit enabling enterprises to build in-house AI training capabilities, a 100+ trainer pool, monthly updated curriculums, and continuous practice labs for a sustainable talent factory.",
+    link: "/thought-leadership/product-innovation/ai-fde-academy-toolkit-talent-factory",
   },
   {
     id: 9,
@@ -69,6 +89,9 @@ const innovations = [
     category: "Webinar Series",
     gradient: "from-indigo-600 to-purple-500",
     hoverGradient: "group-hover:from-indigo-600 group-hover:to-purple-500",
+    description:
+      "A monthly 2-hr webinar series for continuous AI skilling of engineering, product, and strategy teams with live demos, deep dives, and subsequent hands-on labs in our Playground.",
+    link: "/thought-leadership/product-innovation/aitech-webinar-series",
   },
   {
     id: 10,
@@ -76,6 +99,9 @@ const innovations = [
     category: "Managed Sandboxes",
     gradient: "from-orange-500 to-amber-600",
     hoverGradient: "group-hover:from-orange-500 group-hover:to-amber-600",
+    description:
+      "Industrialized virtual sandboxes pre-configured with agent harnesses, MCP servers, and vertical copilots to prototype agentic workflows in weeks without 12-month internal IT delays.",
+    link: "/thought-leadership/product-innovation/managed-agentic-sandboxes-experimentation-prototyping",
   },
   {
     id: 11,
@@ -83,6 +109,9 @@ const innovations = [
     category: "Scaled Skilling",
     gradient: "from-fuchsia-600 to-pink-500",
     hoverGradient: "group-hover:from-fuchsia-600 group-hover:to-pink-500",
+    description:
+      "A platform-driven digital-first model to skill thousands of tech and business employees on AI with continuous hands-on labs, scoring, and analytics with little to no human trainer dependencies.",
+    link: "/thought-leadership/product-innovation/ai-skilling-at-scale-without-human-trainers",
   },
   {
     id: 12,
@@ -90,6 +119,9 @@ const innovations = [
     category: "Executive AI Coaching",
     gradient: "from-sky-600 to-indigo-600",
     hoverGradient: "group-hover:from-sky-600 group-hover:to-indigo-600",
+    description:
+      "On-demand retainer coaching pod providing up to 10 battle-tested AI SMEs—from CAIOs to Agent Harness Engineers—to accelerate leadership upskilling, RFP solutioning, and executive execution.",
+    link: "/thought-leadership/product-innovation/ai-coach-smes-in-a-box-service",
   },
 ];
 
@@ -109,9 +141,8 @@ const ProductInnovation = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="max-w-5xl mx-auto text-center mb-16 mt-20"
       >
-        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <Lightbulb className="w-4 h-4 text-[#1569a9]" />
-          <span className="text-sm font-semibold text-[#1569a9] uppercase tracking-wider">
+        <div className="inline-flex items-center px-4 py-1.5 mb-8 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
+          <span className="text-xs font-semibold text-[#1569a9] uppercase tracking-wider">
             Thought Leadership
           </span>
         </div>
@@ -140,8 +171,8 @@ const ProductInnovation = () => {
                       {item.category}
                     </span>
                     {item.link && (
-                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-[#1569a9] group-hover:translate-x-1 transition-transform">
-                        Explore <ArrowRight className="w-3.5 h-3.5" />
+                      <span className="inline-flex items-center text-xs font-semibold text-[#1569a9] group-hover:translate-x-1 transition-transform">
+                        Explore &rarr;
                       </span>
                     )}
                   </div>
