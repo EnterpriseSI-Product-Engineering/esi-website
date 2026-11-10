@@ -1,4 +1,5 @@
-import { Lightbulb } from "lucide-react";
+import { Link } from "react-router";
+import { Lightbulb, ArrowRight } from "lucide-react";
 import { GradientCard } from "@/components/ui/animatedcard";
 import { motion as Motion } from "framer-motion";
 
@@ -9,6 +10,9 @@ const innovations = [
     category: "Platform Architecture",
     gradient: "from-blue-600 to-cyan-500",
     hoverGradient: "group-hover:from-blue-600 group-hover:to-cyan-500",
+    description:
+      "EnterpriseSI is building a groundbreaking agentic AI acceleration platform that enables Fortune 2000 enterprises in improving AI adoption & value realization at scale using our playground & pilot accelerators.",
+    link: "/thought-leadership/product-innovation/agentic-business-acceleration-platform",
   },
   {
     id: 2,
@@ -118,39 +122,67 @@ const ProductInnovation = () => {
       </Motion.div>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {innovations.map((item, index) => (
-          <Motion.div
-            key={item.id}
-            initial={getSlideInitial(index)}
-            whileInView={{ opacity: 1, y: 0, x: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{
-              duration: 0.6,
-              delay: (index % 3) * 0.12,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="h-full"
-          >
-            <GradientCard className="group h-full transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 rounded-xl">
+        {innovations.map((item, index) => {
+          const cardBody = (
+            <GradientCard
+              className={`group h-full transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 rounded-xl ${
+                item.link
+                  ? "cursor-pointer ring-1 ring-[#1569a9]/20 hover:ring-[#1569a9]/50 hover:shadow-lg"
+                  : ""
+              }`}
+            >
               <div className="p-6 flex flex-col justify-between h-full min-h-[170px]">
                 <div>
-                  <div className="flex items-center gap-2 mb-4">
+                  <div className="flex items-center justify-between gap-2 mb-4">
                     <span
                       className={`text-xs font-semibold uppercase tracking-wider bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent`}
                     >
                       {item.category}
                     </span>
+                    {item.link && (
+                      <span className="inline-flex items-center gap-1 text-xs font-semibold text-[#1569a9] group-hover:translate-x-1 transition-transform">
+                        Explore <ArrowRight className="w-3.5 h-3.5" />
+                      </span>
+                    )}
                   </div>
                   <h3
                     className={`text-lg font-semibold text-neutral-900 group-hover:bg-gradient-to-r ${item.hoverGradient} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-snug`}
                   >
                     {item.title}
                   </h3>
+                  {item.description && (
+                    <p className="mt-3 text-sm text-neutral-600 leading-relaxed group-hover:text-neutral-700 transition-colors">
+                      {item.description}
+                    </p>
+                  )}
                 </div>
               </div>
             </GradientCard>
-          </Motion.div>
-        ))}
+          );
+
+          return (
+            <Motion.div
+              key={item.id}
+              initial={getSlideInitial(index)}
+              whileInView={{ opacity: 1, y: 0, x: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{
+                duration: 0.6,
+                delay: (index % 3) * 0.12,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="h-full"
+            >
+              {item.link ? (
+                <Link to={item.link} className="block h-full">
+                  {cardBody}
+                </Link>
+              ) : (
+                cardBody
+              )}
+            </Motion.div>
+          );
+        })}
       </div>
     </div>
   );

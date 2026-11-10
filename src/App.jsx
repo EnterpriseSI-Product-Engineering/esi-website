@@ -19,6 +19,7 @@ import AIForwardDeployedArchitect from "./pages/AIForwardDeployedArchitect";
 import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
 import ProductInnovation from "./pages/ProductInnovation";
+import AgenticBusinessAccelerationPlatform from "./pages/AgenticBusinessAccelerationPlatform";
 
 const App = () => {
   return (
@@ -42,6 +43,9 @@ const App = () => {
           <Route path="/thought-leadership/blogs" element={<Blogs />} />
           <Route path="/thought-leadership/blogs/:slug" element={<BlogPost />} />
           <Route path="/thought-leadership/product-innovation" element={<ProductInnovation />} />
+          <Route path="/thought-leadership/product-innovations" element={<ProductInnovation />} />
+          <Route path="/thought-leadership/product-innovation/agentic-business-acceleration-platform" element={<AgenticBusinessAccelerationPlatform />} />
+          <Route path="/thought-leadership/product-innovations/agentic-business-acceleration-platform" element={<AgenticBusinessAccelerationPlatform />} />
           {/* demo page */}
           <Route path="/demo" element={<Demo />} />
         </Routes>
