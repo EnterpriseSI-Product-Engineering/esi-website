@@ -1,4 +1,4 @@
-import { Lightbulb, Sparkles } from "lucide-react";
+import { Lightbulb } from "lucide-react";
 import { GradientCard } from "@/components/ui/animatedcard";
 import { motion as Motion } from "framer-motion";
 
@@ -9,8 +9,6 @@ const innovations = [
     category: "Platform Architecture",
     gradient: "from-blue-600 to-cyan-500",
     hoverGradient: "group-hover:from-blue-600 group-hover:to-cyan-500",
-    badgeClass: "bg-blue-50 text-blue-700 border-blue-200",
-    accentColor: "text-blue-600",
   },
   {
     id: 2,
@@ -18,8 +16,6 @@ const innovations = [
     category: "Executive Workshop",
     gradient: "from-purple-600 to-indigo-500",
     hoverGradient: "group-hover:from-purple-600 group-hover:to-indigo-500",
-    badgeClass: "bg-purple-50 text-purple-700 border-purple-200",
-    accentColor: "text-purple-600",
   },
   {
     id: 3,
@@ -27,8 +23,6 @@ const innovations = [
     category: "Strategy Workshop",
     gradient: "from-emerald-600 to-teal-500",
     hoverGradient: "group-hover:from-emerald-600 group-hover:to-teal-500",
-    badgeClass: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    accentColor: "text-emerald-600",
   },
   {
     id: 4,
@@ -36,8 +30,6 @@ const innovations = [
     category: "Specialized Programs",
     gradient: "from-amber-500 to-orange-600",
     hoverGradient: "group-hover:from-amber-500 group-hover:to-orange-600",
-    badgeClass: "bg-amber-50 text-amber-700 border-amber-200",
-    accentColor: "text-amber-600",
   },
   {
     id: 5,
@@ -45,8 +37,6 @@ const innovations = [
     category: "Engineering Factory",
     gradient: "from-rose-500 to-pink-600",
     hoverGradient: "group-hover:from-rose-500 group-hover:to-pink-600",
-    badgeClass: "bg-rose-50 text-rose-700 border-rose-200",
-    accentColor: "text-rose-600",
   },
   {
     id: 6,
@@ -54,8 +44,6 @@ const innovations = [
     category: "Advisory & Strategy",
     gradient: "from-violet-600 to-fuchsia-500",
     hoverGradient: "group-hover:from-violet-600 group-hover:to-fuchsia-500",
-    badgeClass: "bg-violet-50 text-violet-700 border-violet-200",
-    accentColor: "text-violet-600",
   },
   {
     id: 7,
@@ -63,8 +51,6 @@ const innovations = [
     category: "Domain Deepdive",
     gradient: "from-cyan-600 to-blue-500",
     hoverGradient: "group-hover:from-cyan-600 group-hover:to-blue-500",
-    badgeClass: "bg-cyan-50 text-cyan-700 border-cyan-200",
-    accentColor: "text-cyan-600",
   },
   {
     id: 8,
@@ -72,8 +58,6 @@ const innovations = [
     category: "Academy Toolkit",
     gradient: "from-teal-600 to-emerald-500",
     hoverGradient: "group-hover:from-teal-600 group-hover:to-emerald-500",
-    badgeClass: "bg-teal-50 text-teal-700 border-teal-200",
-    accentColor: "text-teal-600",
   },
   {
     id: 9,
@@ -81,8 +65,6 @@ const innovations = [
     category: "Webinar Series",
     gradient: "from-indigo-600 to-purple-500",
     hoverGradient: "group-hover:from-indigo-600 group-hover:to-purple-500",
-    badgeClass: "bg-indigo-50 text-indigo-700 border-indigo-200",
-    accentColor: "text-indigo-600",
   },
   {
     id: 10,
@@ -90,8 +72,6 @@ const innovations = [
     category: "Managed Sandboxes",
     gradient: "from-orange-500 to-amber-600",
     hoverGradient: "group-hover:from-orange-500 group-hover:to-amber-600",
-    badgeClass: "bg-orange-50 text-orange-700 border-orange-200",
-    accentColor: "text-orange-600",
   },
   {
     id: 11,
@@ -99,8 +79,6 @@ const innovations = [
     category: "Scaled Skilling",
     gradient: "from-fuchsia-600 to-pink-500",
     hoverGradient: "group-hover:from-fuchsia-600 group-hover:to-pink-500",
-    badgeClass: "bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200",
-    accentColor: "text-fuchsia-600",
   },
   {
     id: 12,
@@ -108,8 +86,6 @@ const innovations = [
     category: "Executive AI Coaching",
     gradient: "from-sky-600 to-indigo-600",
     hoverGradient: "group-hover:from-sky-600 group-hover:to-indigo-600",
-    badgeClass: "bg-sky-50 text-sky-700 border-sky-200",
-    accentColor: "text-sky-600",
   },
 ];
 
@@ -156,9 +132,9 @@ const ProductInnovation = () => {
             className="h-full"
           >
             <GradientCard className="group h-full transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 rounded-xl">
-              <div className="p-6 flex flex-col justify-between h-full min-h-[220px]">
+              <div className="p-6 flex flex-col justify-between h-full min-h-[170px]">
                 <div>
-                  <div className="flex items-center justify-between gap-2 mb-4">
+                  <div className="flex items-center gap-2 mb-4">
                     <span
                       className={`text-xs font-semibold uppercase tracking-wider bg-gradient-to-r ${item.gradient} bg-clip-text text-transparent`}
                     >
@@ -170,19 +146,6 @@ const ProductInnovation = () => {
                   >
                     {item.title}
                   </h3>
-                </div>
-                <div className="mt-5 pt-3 border-t border-neutral-100 flex items-center justify-between">
-                  <span
-                    className={`inline-flex items-center gap-1.5 text-xs font-medium ${item.accentColor}`}
-                  >
-                    <Sparkles className="w-3.5 h-3.5" />
-                    Innovation
-                  </span>
-                  <span
-                    className={`text-[11px] font-medium px-2.5 py-0.5 rounded-full border ${item.badgeClass}`}
-                  >
-                    Active
-                  </span>
                 </div>
               </div>
             </GradientCard>
