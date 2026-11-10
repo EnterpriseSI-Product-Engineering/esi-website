@@ -18,6 +18,8 @@ import AITechnicalPrograms from "./pages/AITechnicalPrograms";
 import AIForwardDeployedArchitect from "./pages/AIForwardDeployedArchitect";
 import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
+import ProductInnovation from "./pages/ProductInnovation";
+
 const App = () => {
   return (
     <Router>
@@ -39,6 +41,7 @@ const App = () => {
           <Route path="/solutions/ai-forward-deployed-architect" element={<AIForwardDeployedArchitect />} />
           <Route path="/thought-leadership/blogs" element={<Blogs />} />
           <Route path="/thought-leadership/blogs/:slug" element={<BlogPost />} />
+          <Route path="/thought-leadership/product-innovation" element={<ProductInnovation />} />
           {/* demo page */}
           <Route path="/demo" element={<Demo />} />
         </Routes>
