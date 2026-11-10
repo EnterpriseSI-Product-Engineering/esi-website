@@ -5,151 +5,165 @@ const supportedIndustries = [
   "Insurance",
   "Healthcare",
   "CPG & Industrial Products",
-  "Life Sciences / Pharma",
+  "Life Sciences/ Pharma",
   "Oil & Gas",
 ];
 
 const supportedFunctions = [
   "Finance & Accounting",
-  "Supply Chain",
-  "CX (Marketing, Service, Sales, Commerce)",
+  "Supply chain",
+  "CX - Marketing, service, sales, commerce",
   "Auditing, Risk & Compliance",
-];
-
-const harnessCapabilities = [
-  "Pre-configured core application backends",
-  "Agent harness with MCP Servers and tools",
-  "Long-term agentic memory and context graphs",
-  "Pre-developed Agentic Business Copilots (Vertical AI Agent Harnesses)",
-  "Ontologies and graph engineering testbeds",
-  "Rapid evaluation of new agentic frameworks on real-world as-is and to-be processes",
 ];
 
 const ManagedAgenticSandboxesRelease = () => {
   return (
-    <div className="container mx-auto px-4 py-32">
-      <div className="max-w-3xl mx-auto mt-20">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-28">
+      <div className="max-w-3xl mx-auto mt-4 sm:mt-8 md:mt-12">
         {/* Back Link */}
         <Link
           to="/thought-leadership/product-innovations"
-          className="inline-flex items-center text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
 
-        {/* Category Badge */}
-        <div className="inline-flex items-center px-4 py-1.5 mb-6 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <span className="text-xs font-semibold text-[#1569a9] uppercase tracking-wider">
-            Managed Sandboxes &bull; Applied AI v1.1
-          </span>
-        </div>
-
         {/* Title */}
-        <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 leading-tight">
-          Managed Agentic Sandboxes (custom) for Experimentation &amp; Prototyping Agentic Business Systems - Post Skilling Applied AI
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-6 sm:mb-8 leading-tight break-words">
+          Managed Agentic Sandboxes (custom) for Experimentation &amp; prototyping Agentic Business Systems - Post Skilling Applied AI
         </h1>
 
-        {/* Date / Metadata */}
-        <div className="text-sm text-neutral-500 mb-10 pb-8 border-b border-neutral-200">
-          10th Nov 2026
-        </div>
-
         {/* Content Body */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-10 mb-4">
-            Release Overview
-          </h2>
-          <p className="text-neutral-600 leading-relaxed mb-4">
-            EnterpriseSI (EnterpriseSuperIntelligence) is announcing the v1.1 release of our Managed Agentic Sandbox for Enterprises, enabling teams to experiment and prototype with emerging AI/Agentic AI technologies and specialized AI infrastructure options.
-          </p>
-          <p className="text-neutral-600 leading-relaxed mb-6">
-            Our industrialized AI Sandboxes help enterprises simulate and experience agentic operations across specific industry verticals and core business functions, quickly demonstrating &ldquo;The Art of the Possible&rdquo; to executive stakeholders and accelerating business cases for pilot funding.
+        <div className="text-justify text-base sm:text-lg">
+          {/* Announcement Intro */}
+          <p className="text-neutral-700 text-base sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8">
+            Announcing the new release of one of our most innovative product offering, that&apos;s in high demand with our Enterprise customers. Our Managed Agentic Sandboxes opens up immense potential for learning how to apply agentic ai technologies to real business problems/ use cases in a non production setup.
           </p>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-4">
-            The Bottleneck of Internal Sandboxes
-          </h2>
-          <div className="border-l-4 border-amber-600 pl-5 py-2 my-4 mb-8">
-            <p className="text-neutral-700 leading-relaxed text-sm md:text-base">
-              Building internal sandboxes for AI experimentation and prototyping traditionally requires months of multi-departmental approvals and infrastructure setup, creating delays of over 12 months before achieving initial proof-of-value. EnterpriseSI provides zero-setup, turnkey access in days.
+          {/* v1.1 Release Card */}
+          <div className="border-l-4 border-[#1569a9] bg-[#1569a9]/5 rounded-r-xl p-5 sm:p-6 mb-8 sm:mb-10">
+            <div className="text-xs font-bold text-[#1569a9] uppercase tracking-wider mb-2">
+              Release Announcement
+            </div>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900 mb-2 sm:mb-3">
+              v1.1 Release of our Managed Agentic Sandbox for Enterprises
+            </h2>
+            <p className="text-neutral-700 text-sm sm:text-base md:text-lg leading-relaxed">
+              EnterpriseSI (EnterpriseSuperIntelligence) is announcing the v1.1 release of our Managed Agentic Sandbox for Enterprises, enabling them to experiment and prototype with new AI/ Agentic AI technologies and AI Infra options.
             </p>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-4">
-            Supported Verticals &amp; Functional Domains
-          </h2>
-          <h4 className="text-sm font-semibold text-neutral-800 uppercase tracking-wider mb-2">
-            Target Industries
-          </h4>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {supportedIndustries.map((ind, index) => (
-              <span
-                key={index}
-                className="text-sm font-medium text-[#1569a9] bg-[#1569a9]/5 border border-[#1569a9]/20 px-3 py-1 rounded-full"
-              >
-                {ind}
-              </span>
-            ))}
+          {/* Industrialized AI Sandboxes & Target Verticals Grid */}
+          <div className="my-8 sm:my-10">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-900 mb-3">
+              Industrialized AI Sandboxes
+            </h2>
+            <p className="text-neutral-600 text-base sm:text-lg leading-relaxed mb-6">
+              Our Industrialized AI Sandboxes help enterprises simulate/ experience agentic operations for specific Industries and business functions:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-6">
+              {/* Industries Box */}
+              <div className="p-5 sm:p-6 rounded-xl border border-neutral-200 bg-white shadow-2xs">
+                <h3 className="text-xs font-bold text-[#1569a9] uppercase tracking-wider mb-3 sm:mb-4 pb-2 border-b border-neutral-100">
+                  Specific Industries
+                </h3>
+                <ul className="space-y-2">
+                  {supportedIndustries.map((ind, index) => (
+                    <li key={index} className="text-neutral-800 text-sm sm:text-base flex items-start">
+                      <span className="text-[#1569a9] font-semibold mr-2.5">&bull;</span>
+                      <span>{ind}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Business Functions Box */}
+              <div className="p-5 sm:p-6 rounded-xl border border-neutral-200 bg-white shadow-2xs">
+                <h3 className="text-xs font-bold text-[#1569a9] uppercase tracking-wider mb-3 sm:mb-4 pb-2 border-b border-neutral-100">
+                  Business Functions
+                </h3>
+                <ul className="space-y-2">
+                  {supportedFunctions.map((fn, index) => (
+                    <li key={index} className="text-neutral-800 text-sm sm:text-base flex items-start">
+                      <span className="text-[#1569a9] font-semibold mr-2.5">&bull;</span>
+                      <span>{fn}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Art of the Possible Text */}
+            <p className="text-neutral-700 text-base sm:text-lg leading-relaxed my-4 sm:my-6">
+              leveraging the latest and most popular AI Technologies on the most high potential business use cases/ problem statements, quickly enabling them to showcase &ldquo;The Art of the Possible&rdquo; for Agentic Business Transformation to various stakeholders. This further accelerates the business case for funding pilot/ implementation.
+            </p>
           </div>
 
-          <h4 className="text-sm font-semibold text-neutral-800 uppercase tracking-wider mb-2">
-            Business Functions
-          </h4>
-          <div className="flex flex-wrap gap-2 mb-8">
-            {supportedFunctions.map((fn, index) => (
-              <span
-                key={index}
-                className="text-sm font-medium text-neutral-700 bg-neutral-100 border border-neutral-200 px-3 py-1 rounded-full"
-              >
-                {fn}
-              </span>
-            ))}
+          {/* Bottleneck Callout */}
+          <div className="border-l-4 border-amber-500 bg-amber-500/5 rounded-r-xl p-5 sm:p-6 my-8 sm:my-10">
+            <div className="text-xs font-bold text-amber-800 uppercase tracking-wider mb-2">
+              The Enterprise Challenge
+            </div>
+            <p className="text-neutral-800 text-sm sm:text-base md:text-lg leading-relaxed">
+              Building Internal Sandboxes for AI experimentation &amp; prototyping takes a long time and multiple approvals at various levels, creating delays of over 12 months at times on AI proof-of-value.
+            </p>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-4">
-            Turnkey Agent Harness Architecture
-          </h2>
-          <p className="text-neutral-600 leading-relaxed mb-4">
-            We provide AI-enabled core application backends with agent harnesses comprising tools, MCP Servers, agent skills, long-term memory, and pre-developed Agentic Business Copilots for quickly testing agentic to-be processes against real-world as-is workflows:
-          </p>
-          <ul className="pl-6 space-y-3 mb-8 text-neutral-600 leading-relaxed list-disc">
-            {harnessCapabilities.map((cap, index) => (
-              <li key={index} className="pl-1">
-                {cap}
-              </li>
-            ))}
-          </ul>
+          {/* Turnkey Architecture & Capabilities */}
+          <div className="my-8 sm:my-10 p-5 sm:p-8 rounded-2xl border border-neutral-200 bg-neutral-50/70">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900 mb-3 sm:mb-4">
+              Turnkey Backend &amp; Agent Harness
+            </h2>
+            <p className="text-neutral-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4">
+              We provide AI enabled core application backends with agent harness comprising tools, MCP Servers, agent skills, long term agentic memory, pre-developed Agentic Business Copilots (these are our Vertical AI Agent Harnesses for test drive) for quickly designing &amp; testing agentic to-be processes, replicating real world as-is processes.
+            </p>
+            <div className="pt-4 border-t border-neutral-200/80">
+              <p className="text-neutral-600 text-sm sm:text-base leading-relaxed">
+                Technologies like new agentic frameworks, context graphs &amp; ontologies/ graph engineering, agent skills, agentic memory, etc can be quickly tried out on real world like use cases/ scenarios.
+              </p>
+            </div>
+          </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-4">
-            Enterprise Track Record
-          </h2>
-          <p className="text-neutral-600 leading-relaxed mb-6">
-            The customizable sandboxes have been deployed and validated across multiple enterprise clients, including a global bank, a healthcare provider, an F&amp;A services enterprise, and a fintech software organization moving from initial validation to multi-phase deployments.
-          </p>
+          {/* Customer Validation */}
+          <div className="border-l-4 border-emerald-600 bg-emerald-500/5 rounded-r-xl p-5 sm:p-6 my-8 sm:my-10">
+            <div className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-2">
+              Customer Validation
+            </div>
+            <p className="text-neutral-800 text-sm sm:text-base md:text-lg leading-relaxed">
+              The customizable sandboxes have been used by multiple customers including a bank, a healthcare company, a F&amp;A services company, a Fintech services company (few are still ongoing - moving from phase 1 to 2).
+            </p>
+          </div>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-6 my-8">
-            <p className="text-neutral-700 leading-relaxed mb-4">
-              If you are from an IT services organization looking to build project-ready AI Deployment Strategists or an enterprise looking to deploy production AI, contact us to schedule a sandbox demo:
+          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+            <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
+              If you are from an IT Services organization looking to build deployment/ project ready AI Deployment Strategists OR domain Enterprise looking to deploy AI in production, kindly contact us for a demo cum discussion:
             </p>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
-              <a
-                href="mailto:bd@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline"
-              >
-                bd@enterprisesi.co
-              </a>
-              <a
-                href="mailto:abhiroop@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline"
-              >
-                abhiroop@enterprisesi.co
-              </a>
-            </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
+            <a
+              href="mailto:abhiroop@enterprisesi.co"
+              className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+            >
+              abhiroop@enterprisesi.co
+            </a>
+            <a
+              href="mailto:bd@enterprisesi.co"
+              className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+            >
+              bd@enterprisesi.co
+            </a>
+            <a
+              href="mailto:sales@enterprisesi.co"
+              className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+            >
+              sales@enterprisesi.co
+            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
   );
 };
 
