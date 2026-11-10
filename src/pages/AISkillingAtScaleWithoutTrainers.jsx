@@ -1,98 +1,70 @@
 import { Link } from "react-router";
 
-const learningPathElements = [
-  "Guided hands-on cloud labs covering modern agentic workflows and AI tools",
-  "Illustrated study notes and concise concept videos",
-  "Standardized assessments, automated evaluation, and skill scoring",
-  "Dedicated sandbox environments for real-world experimentation and prototyping",
-  "Real-time analytics, progress tracking, and usage reports accessible to Talent Management and leadership",
-];
-
 const AISkillingAtScaleWithoutTrainers = () => {
   return (
-    <div className="container mx-auto px-4 py-32">
-      <div className="max-w-3xl mx-auto mt-20">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-28">
+      <div className="max-w-3xl mx-auto mt-4 sm:mt-8 md:mt-12">
         {/* Back Link */}
         <Link
           to="/thought-leadership/product-innovations"
-          className="inline-flex items-center text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
 
-        {/* Category Badge */}
-        <div className="inline-flex items-center px-4 py-1.5 mb-6 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <span className="text-xs font-semibold text-[#1569a9] uppercase tracking-wider">
-            Scaled Skilling &bull; AI Talent Factory
-          </span>
-        </div>
-
         {/* Title */}
-        <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 leading-tight">
-          AI Skilling at Scale for Tech &amp; Business Employees w/o Need for Human Trainers
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-6 sm:mb-8 leading-tight break-words">
+          AI Skilling at scale for Tech &amp; Business Employees w/o need for human trainers
         </h1>
 
-        {/* Date / Metadata */}
-        <div className="text-sm text-neutral-500 mb-10 pb-8 border-b border-neutral-200">
-          10th Nov 2026
-        </div>
-
         {/* Content Body */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-10 mb-4">
-            Transforming Enterprise AI Skilling
+        <div className="text-justify text-base sm:text-lg">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 mt-8 sm:mt-10 md:mt-12 mb-3 sm:mb-4">
+            High Impact AI Talent Factory
           </h2>
-          <p className="text-neutral-600 leading-relaxed mb-4">
-            EnterpriseSI&apos;s Agentic AI Playground platform enables enterprises to build a high-impact, highly differentiated AI Talent Factory by skilling tech and business employees on AI, at scale, with continuous hands-on learning, assessments, evaluation, and scoring &mdash; with little to no requirement for human trainers.
+          <p className="text-neutral-600 text-base sm:text-lg leading-relaxed mb-6">
+            EnterpriseSI&apos;s Agentic AI Playground platform now enables Enterprises to build high impact, highly differentiated AI Talent Factory by skilling their tech and business employees on AI, at scale, with continuous hands-on learning, assessments/ evaluation &amp; scoring and with no or very low requirement for Human Trainers.
           </p>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-4">
-            The Human Trainer Bottleneck
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 mt-8 sm:mt-10 md:mt-12 mb-3 sm:mb-4">
+            Solving the Human Trainer Challenge
           </h2>
-          <div className="border-l-4 border-[#1569a9] pl-5 py-2 my-4 mb-8">
-            <p className="text-neutral-700 leading-relaxed text-sm md:text-base">
-              Finding or building dozens of external human trainers possessing deep, hands-on expertise in the newest AI technologies is nearly impossible in today&apos;s rapidly evolving market. EnterpriseSI solves this scarcity with an automated, platform-driven model.
+          <div className="border-l-4 border-[#1569a9] pl-4 sm:pl-5 py-2 my-4 mb-8">
+            <p className="text-neutral-700 text-sm sm:text-base md:text-lg leading-relaxed">
+              Finding or building scores of human trainers with great depth &amp; expertise in the newest AI Technologies is like finding a needle in a pond. We are taking this challenge head-on with our Platform driven approach.
             </p>
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-4">
-            Digital-First Guided Learning Paths
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 mt-8 sm:mt-10 md:mt-12 mb-3 sm:mb-4">
+            Digital-First Structured Learning Paths
           </h2>
-          <p className="text-neutral-600 leading-relaxed mb-4">
-            We enable a digital-first skilling process via structured, self-paced learning paths with monthly milestones across:
-          </p>
-          <ul className="pl-6 space-y-3 mb-8 text-neutral-600 leading-relaxed list-disc">
-            {learningPathElements.map((el, index) => (
-              <li key={index} className="pl-1">
-                {el}
-              </li>
-            ))}
-          </ul>
-
-          <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-4">
-            Continuous Measurement &amp; Reporting
-          </h2>
-          <p className="text-neutral-600 leading-relaxed mb-6">
-            Instead of passive attendance metrics, leadership gains access to granular capability benchmarks, hands-on lab completion verification, and real-time skill scores by employee and business unit.
+          <p className="text-neutral-600 text-base sm:text-lg leading-relaxed mb-8">
+            We enable a first-of-its-kind digital first skilling process via our structured, guided learning paths with monthly tasks on labs, study notes &amp; short videos, assessments, sandbox prototyping and analytics/ usage report and scores made available to Talent management team/ management.
           </p>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-6 my-8">
-            <p className="text-neutral-700 leading-relaxed mb-4">
-              To discuss how our platform-driven AI Talent Factory system operates or schedule a live platform demo, contact us at:
+          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+            <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
+              For a demo cum discussion on how our platform driven AI Talent Factory system works, DM me or email us at:
             </p>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
+              <a
+                href="mailto:abhiroop@enterprisesi.co"
+                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+              >
+                abhiroop@enterprisesi.co
+              </a>
               <a
                 href="mailto:bd@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline"
+                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
               >
                 bd@enterprisesi.co
               </a>
               <a
-                href="mailto:abhiroop@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline"
+                href="mailto:sales@enterprisesi.co"
+                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
               >
-                abhiroop@enterprisesi.co
+                sales@enterprisesi.co
               </a>
             </div>
           </div>

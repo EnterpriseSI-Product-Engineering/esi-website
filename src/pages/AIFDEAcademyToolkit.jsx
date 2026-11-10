@@ -39,49 +39,37 @@ const keyQuestions = [
 
 const AIFDEAcademyToolkit = () => {
   return (
-    <div className="container mx-auto px-4 py-32">
-      <div className="max-w-3xl mx-auto mt-20">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pt-28 sm:pb-20 md:pt-36 md:pb-28">
+      <div className="max-w-3xl mx-auto mt-4 sm:mt-8 md:mt-12">
         {/* Back Link */}
         <Link
           to="/thought-leadership/product-innovations"
-          className="inline-flex items-center text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
 
-        {/* Category Badge */}
-        <div className="inline-flex items-center px-4 py-1.5 mb-6 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <span className="text-xs font-semibold text-[#1569a9] uppercase tracking-wider">
-            Academy Toolkit &bull; Talent Factory
-          </span>
-        </div>
-
         {/* Title */}
-        <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6 leading-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-neutral-900 mb-6 sm:mb-8 leading-tight break-words">
           AI Forward Deployed Engineering Academy Toolkit for AI Talent Factory
         </h1>
 
-        {/* Date / Metadata */}
-        <div className="text-sm text-neutral-500 mb-10 pb-8 border-b border-neutral-200">
-          10th Nov 2026
-        </div>
-
         {/* Content Body */}
-        <div>
+        <div className="text-justify text-base sm:text-lg">
           <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-10 mb-4">
             Service Launch
           </h2>
-          <p className="text-neutral-600 leading-relaxed mb-4">
+          <p className="text-neutral-600 leading-relaxed mb-4 text-base sm:text-lg">
             EnterpriseSI is launching our new platform-based service: <span className="font-semibold text-neutral-900">AI Forward Deployed Engineering Academy Toolkit</span> for enterprises looking to build AI-native, AI-first engineering capabilities &mdash; tailored for IT Services Organizations and GCCs of global multinationals across BFSI, CPG, Oil &amp; Gas, Life Sciences, Healthcare, and beyond.
           </p>
 
           <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-4">
             What Challenges It Addresses
           </h2>
-          <p className="text-neutral-600 leading-relaxed mb-4">
+          <p className="text-neutral-600 leading-relaxed mb-4 text-base sm:text-lg">
             The traditional multi-decade approach of hiring external trainers to instruct employees in small classroom batches fails in an era of rapid AI disruption. With the capability and pace of AI reshaping entire industries, the demand for AI Forward Deployed Engineers far outstrips the scarce supply of external trainers with real-world agent implementation experience.
           </p>
-          <p className="text-neutral-600 leading-relaxed mb-6">
+          <p className="text-neutral-600 leading-relaxed mb-6 text-base sm:text-lg">
             Furthermore, generic training curriculums fail to address the complex engineering and non-technical consulting skills required on actual enterprise AI deployments.
           </p>
 
@@ -95,7 +83,7 @@ const AIFDEAcademyToolkit = () => {
                 key={index}
                 className="border-l-4 border-[#1569a9] pl-5 py-2"
               >
-                <p className="text-neutral-800 font-medium leading-relaxed text-sm md:text-base">
+                <p className="text-neutral-800 font-medium leading-relaxed text-base sm:text-lg">
                   {q}
                 </p>
               </div>
@@ -105,10 +93,10 @@ const AIFDEAcademyToolkit = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-4">
             Our Solution: The In-House AI Talent Factory
           </h2>
-          <p className="text-neutral-600 leading-relaxed mb-4">
+          <p className="text-neutral-600 leading-relaxed mb-4 text-base sm:text-lg">
             Enterprises need to build self-sustaining in-house AI training capabilities &mdash; human-led and augmented by a continuous hands-on labs and experimentation sandbox approach. This platform-driven model ensures the highest ROI and accelerates talent development.
           </p>
-          <p className="text-neutral-600 leading-relaxed mb-4">
+          <p className="text-neutral-600 leading-relaxed mb-4 text-base sm:text-lg">
             EnterpriseSI&apos;s platform provides an uninterrupted supply of practice labs covering critical topics across the agent development lifecycle:
           </p>
           <div className="flex flex-wrap gap-2 mb-8">
@@ -134,7 +122,7 @@ const AIFDEAcademyToolkit = () => {
                 <h4 className="text-base font-bold text-neutral-900 mb-1.5">
                   {feat.title}
                 </h4>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
                   {feat.desc}
                 </p>
               </div>
@@ -142,22 +130,28 @@ const AIFDEAcademyToolkit = () => {
           </div>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-6 my-8">
-            <p className="text-neutral-700 leading-relaxed mb-4">
+          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+            <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
               If you are an enterprise looking to build an internal AI FDE Academy and in-house pool of AI FDE trainers (capable of leading 5&ndash;6 distinct AI training tracks), contact us to discuss the toolkit and schedule a demo:
             </p>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
+              <a
+                href="mailto:abhiroop@enterprisesi.co"
+                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+              >
+                abhiroop@enterprisesi.co
+              </a>
               <a
                 href="mailto:bd@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline"
+                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
               >
                 bd@enterprisesi.co
               </a>
               <a
-                href="mailto:abhiroop@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline"
+                href="mailto:sales@enterprisesi.co"
+                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
               >
-                abhiroop@enterprisesi.co
+                sales@enterprisesi.co
               </a>
             </div>
           </div>
