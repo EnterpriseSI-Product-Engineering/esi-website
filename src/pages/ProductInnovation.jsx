@@ -164,9 +164,6 @@ const ProductInnovation = () => {
                     >
                       {item.category}
                     </span>
-                    <span className="text-xs font-mono text-neutral-400 font-medium">
-                      #{String(index + 1).padStart(2, "0")}
-                    </span>
                   </div>
                   <h3
                     className={`text-lg font-semibold text-neutral-900 group-hover:bg-gradient-to-r ${item.hoverGradient} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-snug`}
@@ -179,7 +176,7 @@ const ProductInnovation = () => {
                     className={`inline-flex items-center gap-1.5 text-xs font-medium ${item.accentColor}`}
                   >
                     <Sparkles className="w-3.5 h-3.5" />
-                    Innovation #{index + 1}
+                    Innovation
                   </span>
                   <span
                     className={`text-[11px] font-medium px-2.5 py-0.5 rounded-full border ${item.badgeClass}`}
