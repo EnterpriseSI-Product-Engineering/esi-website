@@ -1,13 +1,15 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Glow } from "@/components/ui/glow";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router";
-import { useLocation } from "react-router";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import { ArrowRight } from "lucide-react";
 
 export default function CTA() {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
 
   if (pathname === "/demo") {
     return null;
@@ -30,7 +32,7 @@ export default function CTA() {
             </p>
           </div>
           <div className="w-full sm:w-auto md:w-auto shrink-0">
-            <Link to="/demo">
+            <Link href="/demo">
               <LiquidButton size={"lg"} className="w-full sm:w-auto md:w-auto">
                 <span className="flex items-center justify-center gap-1">
                   <span>Book a demo</span>

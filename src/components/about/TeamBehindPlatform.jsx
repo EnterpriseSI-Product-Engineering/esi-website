@@ -1,7 +1,9 @@
+"use client";
+
 import { useState } from "react";
 import { Tabs } from "@/components/ui/vercel-tabs";
 import { Linkedin } from "lucide-react";
-import { Link } from "react-router";
+import Link from "next/link";
 import Teams from "@/data/teams.json";
 import { AbhiroopImg } from "@/assets";
 
@@ -37,7 +39,7 @@ const foundersContent = ({ founders }) => {
             successfully delivered 35+ AI projects. He has also founded and
             built 3 AI startups over the last decade.
           </p>
-          <Link to={founder.linkedinUrl} target="_blank">
+          <Link href={founder.linkedinUrl} target="_blank">
             <Linkedin
               strokeWidth={1.5}
               className="text-blue-500 cursor-pointer"
@@ -66,7 +68,7 @@ const foundersContent = ({ founders }) => {
 //             <span className="-mb-1 text-xs">( {founder.title} ) </span>
 //           </div>
 //           <p className="mb-3 mt-3">{founder.description}</p>
-//           <Link to={founder.linkedinUrl} target="_blank">
+//           <Link href={founder.linkedinUrl} target="_blank">
 //             <Linkedin
 //               strokeWidth={1.5}
 //               className="text-blue-500 cursor-pointer"

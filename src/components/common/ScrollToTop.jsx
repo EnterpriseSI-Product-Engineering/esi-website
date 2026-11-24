@@ -1,5 +1,7 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleArrowUp } from "lucide-react";
 import {
@@ -9,7 +11,7 @@ import {
 } from "@/components/ui/tooltip";
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
 
   // Function to scroll smoothly to top

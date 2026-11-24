@@ -1,3 +1,5 @@
+"use client";
+
 import useMouse from "@/hooks/usemouse";
 import { cn } from "@/lib/utils";
 

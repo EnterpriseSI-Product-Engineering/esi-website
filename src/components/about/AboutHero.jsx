@@ -1,5 +1,5 @@
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
-import { Link } from "react-router";
+import Link from "next/link";
 
 const AboutHero = () => {
   return (

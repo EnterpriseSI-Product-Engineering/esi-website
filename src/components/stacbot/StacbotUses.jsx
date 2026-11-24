@@ -64,25 +64,23 @@ const Icons = {
       viewBox="0 0 44 51"
       version="2.0"
       xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      xmlns:figma="http://www.figma.com/figma/ns"
     >
       <title>Group.svg</title>
       <desc>Created using Figma 0.90</desc>
-      <g id="Canvas" transform="translate(-1640 -2453)" figma:type="canvas">
-        <g id="Group" style={{ mixBlendMode: "normal" }} figma:type="group">
-          <g id="Group" style={{ mixBlendMode: "normal" }} figma:type="group">
-            <g id="Group" style={{ mixBlendMode: "normal" }} figma:type="group">
-              <g id="g" style={{ mixBlendMode: "normal" }} figma:type="group">
+      <g id="Canvas" transform="translate(-1640 -2453)">
+        <g id="Group" style={{ mixBlendMode: "normal" }}>
+          <g id="Group" style={{ mixBlendMode: "normal" }}>
+            <g id="Group" style={{ mixBlendMode: "normal" }}>
+              <g id="g" style={{ mixBlendMode: "normal" }}>
                 <g
                   id="path"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="group"
+                 
                 >
                   <g
                     id="path9 fill"
                     style={{ mixBlendMode: "normal" }}
-                    figma:type="vector"
+                   
                   >
                     <use
                       xlinkHref="#path0_fill"
@@ -95,12 +93,12 @@ const Icons = {
                 <g
                   id="path"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="group"
+                 
                 >
                   <g
                     id="path10 fill"
                     style={{ mixBlendMode: "normal" }}
-                    figma:type="vector"
+                   
                   >
                     <use
                       xlinkHref="#path1_fill"
@@ -113,12 +111,12 @@ const Icons = {
                 <g
                   id="path"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="group"
+                 
                 >
                   <g
                     id="path11 fill"
                     style={{ mixBlendMode: "normal" }}
-                    figma:type="vector"
+                   
                   >
                     <use
                       xlinkHref="#path2_fill"
@@ -131,12 +129,12 @@ const Icons = {
                 <g
                   id="path"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="group"
+                 
                 >
                   <g
                     id="path12 fill"
                     style={{ mixBlendMode: "normal" }}
-                    figma:type="vector"
+                   
                   >
                     <use
                       xlinkHref="#path3_fill"
@@ -149,12 +147,12 @@ const Icons = {
                 <g
                   id="path"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="group"
+                 
                 >
                   <g
                     id="path13 fill"
                     style={{ mixBlendMode: "normal" }}
-                    figma:type="vector"
+                   
                   >
                     <use
                       xlinkHref="#path4_fill"
@@ -167,12 +165,12 @@ const Icons = {
                 <g
                   id="path"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="group"
+                 
                 >
                   <g
                     id="path14 fill"
                     style={{ mixBlendMode: "normal" }}
-                    figma:type="vector"
+                   
                   >
                     <use
                       xlinkHref="#path5_fill"
@@ -185,12 +183,12 @@ const Icons = {
                 <g
                   id="path"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="group"
+                 
                 >
                   <g
                     id="path15 fill"
                     style={{ mixBlendMode: "normal" }}
-                    figma:type="vector"
+                   
                   >
                     <use
                       xlinkHref="#path6_fill"
@@ -202,16 +200,16 @@ const Icons = {
                 </g>
               </g>
             </g>
-            <g id="g" style={{ mixBlendMode: "normal" }} figma:type="group">
+            <g id="g" style={{ mixBlendMode: "normal" }}>
               <g
                 id="path"
                 style={{ mixBlendMode: "normal" }}
-                figma:type="group"
+               
               >
                 <g
                   id="path16 fill"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="vector"
+                 
                 >
                   <use
                     xlinkHref="#path7_fill"
@@ -224,12 +222,12 @@ const Icons = {
               <g
                 id="path"
                 style={{ mixBlendMode: "normal" }}
-                figma:type="group"
+               
               >
                 <g
                   id="path17 fill"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="vector"
+                 
                 >
                   <use
                     xlinkHref="#path8_fill"
@@ -242,12 +240,12 @@ const Icons = {
               <g
                 id="path"
                 style={{ mixBlendMode: "normal" }}
-                figma:type="group"
+               
               >
                 <g
                   id="path18 fill"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="vector"
+                 
                 >
                   <use
                     xlinkHref="#path9_fill"
@@ -260,12 +258,12 @@ const Icons = {
               <g
                 id="path"
                 style={{ mixBlendMode: "normal" }}
-                figma:type="group"
+               
               >
                 <g
                   id="path19 fill"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="vector"
+                 
                 >
                   <use
                     xlinkHref="#path10_fill"
@@ -278,12 +276,12 @@ const Icons = {
               <g
                 id="path"
                 style={{ mixBlendMode: "normal" }}
-                figma:type="group"
+               
               >
                 <g
                   id="path20 fill"
                   style={{ mixBlendMode: "normal" }}
-                  figma:type="vector"
+                 
                 >
                   <use
                     xlinkHref="#path11_fill"

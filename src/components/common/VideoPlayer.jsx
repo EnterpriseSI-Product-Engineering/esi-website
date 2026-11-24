@@ -1,3 +1,5 @@
+"use client";
+
 import { useVideoPlayer } from "@/hooks/useVideoPlayer";
 const VideoPlayer = ({ url }) => {
   const { videoRef, playing, play, pause } = useVideoPlayer();

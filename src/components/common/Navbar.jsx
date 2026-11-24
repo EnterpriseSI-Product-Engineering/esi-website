@@ -1,3 +1,5 @@
+"use client";
+
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import {
   Menu,
@@ -13,7 +15,8 @@ import {
   BookOpen,
   Lightbulb,
 } from "lucide-react";
-import { Link, useLocation } from "react-router";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -38,7 +41,7 @@ const useHoverDropdown = () => {
 };
 
 const Navbar = () => {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
   const productMenu = useHoverDropdown();
   const solutionsMenu = useHoverDropdown();
   const thoughtLeadershipMenu = useHoverDropdown();
@@ -62,7 +65,7 @@ const Navbar = () => {
       <div className="container mx-auto md:py-4 py-2 flex items-center justify-between px-4 md:px-0">
         {/* logo */}
         <div>
-          <Link to={"/"}>
+          <Link href={"/"}>
             <div className="flex items-center gap-1 lg:justify-start">
               <img
                 src={"/logo/android-chrome-512x512.png"}
@@ -83,7 +86,7 @@ const Navbar = () => {
           <ul className="flex items-center gap-6 text-base font-medium whitespace-nowrap">
             <li>
               <Link
-                to="/about-us"
+                href="/about-us"
                 className={`pb-1 border-b-2 ${
                   pathname === "/about-us"
                     ? "border-white"
@@ -118,7 +121,7 @@ const Navbar = () => {
                   className="w-[450px] p-6 shadow-xl border-neutral-200"
                 >
                   <div className="space-y-3">
-                    <Link to="/product">
+                    <Link href="/product">
                       <DropdownMenuItem className="group text-md p-5 rounded-xl hover:bg-gradient-to-r hover:from-[#1569a9]/5 hover:to-[#1569a9]/10 transition-all duration-300 cursor-pointer border border-neutral-100 hover:border-[#1569a9]/30 hover:shadow-md">
                         <div className="flex items-start gap-4 w-full">
                           <div className="p-2 rounded-lg bg-[#1569a9]/10 group-hover:bg-[#1569a9]/20 transition-colors">
@@ -137,7 +140,7 @@ const Navbar = () => {
                     </Link>
                     <div className="relative pl-4 ml-6 space-y-2">
                       <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-neutral-200" />
-                      <Link to="/product/agentic-ai-builder-playground">
+                      <Link href="/product/agentic-ai-builder-playground">
                         <div className="relative">
                           <div className="absolute left-[-16px] top-[20px] w-4 h-0.5 bg-neutral-200" />
                           <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
@@ -155,7 +158,7 @@ const Navbar = () => {
                           </DropdownMenuItem>
                         </div>
                       </Link>
-                      <Link to="/product/agentic-ai-business-pilot-accelerators">
+                      <Link href="/product/agentic-ai-business-pilot-accelerators">
                         <div className="relative">
                           <div className="absolute left-[-16px] top-[20px] w-4 h-0.5 bg-neutral-200" />
                           <DropdownMenuItem className="group text-md p-4 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
@@ -207,7 +210,7 @@ const Navbar = () => {
                     AI Enablement for your Employees
                   </div>
                   <div className="space-y-2">
-                    <Link to="/solutions/ai-talent-transformation-strategy">
+                    <Link href="/solutions/ai-talent-transformation-strategy">
                       <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
                         <Users className="mr-3 w-4 h-4 text-[#1569a9]" />
                         <span className="text-neutral-900 font-medium">
@@ -215,7 +218,7 @@ const Navbar = () => {
                         </span>
                       </DropdownMenuItem>
                     </Link>
-                    <Link to="/solutions/business-ai-programs">
+                    <Link href="/solutions/business-ai-programs">
                       <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
                         <Briefcase className="mr-3 w-4 h-4 text-[#1569a9]" />
                         <span className="text-neutral-900 font-medium">
@@ -224,7 +227,7 @@ const Navbar = () => {
                       </DropdownMenuItem>
                     </Link>
 
-                    <Link to="/solutions/ai-technical-programs">
+                    <Link href="/solutions/ai-technical-programs">
                       <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
                         <BookOpen className="mr-3 w-4 h-4 text-[#1569a9]" />
                         <span className="text-neutral-900 font-medium">
@@ -265,7 +268,7 @@ const Navbar = () => {
                     Resources
                   </div>
                   <div className="space-y-2">
-                    <Link to="/thought-leadership/blogs">
+                    <Link href="/thought-leadership/blogs">
                       <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
                         <BookOpen className="mr-3 w-4 h-4 text-[#1569a9]" />
                         <span className="text-neutral-900 font-medium">
@@ -273,7 +276,7 @@ const Navbar = () => {
                         </span>
                       </DropdownMenuItem>
                     </Link>
-                    <Link to="/thought-leadership/product-innovation">
+                    <Link href="/thought-leadership/product-innovation">
                       <DropdownMenuItem className="group text-md p-3 rounded-lg hover:bg-[#1569a9]/5 transition-all duration-300 cursor-pointer border border-transparent hover:border-[#1569a9]/20">
                         <Lightbulb className="mr-3 w-4 h-4 text-[#1569a9]" />
                         <span className="text-neutral-900 font-medium">
@@ -287,7 +290,7 @@ const Navbar = () => {
             </li>
             {/* <li>
               <Link
-                to="/team"
+                href="/team"
                 className={`pb-1 border-b-2 ${
                   pathname === "/team" ? "border-black" : "border-transparent"
                 }`}
@@ -299,7 +302,7 @@ const Navbar = () => {
         </div>
         {/* action button */}
         <div className="md:flex items-center gap-4 hidden">
-          <Link to="/demo">
+          <Link href="/demo">
             <LiquidButton
               size={"lg"}
               className={isHomePage && !scrolled ? "text-white" : "text-neutral-900"}
@@ -333,7 +336,7 @@ const Navbar = () => {
               <X className="w-6 h-6 text-esi-primary" />
             </button>
             <Link
-              to="/about-us"
+              href="/about-us"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block py-3 text-xl font-medium border-b border-neutral-100"
             >
@@ -344,21 +347,21 @@ const Navbar = () => {
                 Platform
               </div>
               <Link
-                to="/product"
+                href="/product"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-4 py-3 text-base"
               >
                 Agentic AI Acceleration Platform
               </Link>
               <Link
-                to="/product/agentic-ai-builder-playground"
+                href="/product/agentic-ai-builder-playground"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-8 py-2 text-base text-neutral-600"
               >
                 AI Builder Playground
               </Link>
               <Link
-                to="/product/agentic-ai-business-pilot-accelerators"
+                href="/product/agentic-ai-business-pilot-accelerators"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-8 py-2 text-base text-neutral-600"
               >
@@ -370,14 +373,14 @@ const Navbar = () => {
                 AI Acceleration
               </div>
               <Link
-                to="/solutions/ai-talent-transformation-strategy"
+                href="/solutions/ai-talent-transformation-strategy"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-4 py-3 text-base"
               >
                 AI Talent Transformation Strategy
               </Link>
               <Link
-                to="/solutions/business-ai-programs"
+                href="/solutions/business-ai-programs"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-4 py-3 text-base"
               >
@@ -385,7 +388,7 @@ const Navbar = () => {
               </Link>
 
               <Link
-                to="/solutions/ai-technical-programs"
+                href="/solutions/ai-technical-programs"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-4 py-3 text-base"
               >
@@ -400,14 +403,14 @@ const Navbar = () => {
                 Resources
               </div>
               <Link
-                to="/thought-leadership/blogs"
+                href="/thought-leadership/blogs"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-4 py-3 text-base"
               >
                 Blogs
               </Link>
               <Link
-                to="/thought-leadership/product-innovation"
+                href="/thought-leadership/product-innovation"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block pl-4 py-3 text-base"
               >
@@ -415,7 +418,7 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="pt-4">
-              <Link to="/demo" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link href="/demo" onClick={() => setIsMobileMenuOpen(false)}>
                 <LiquidButton size="lg" className="w-full">
                   Book a demo
                 </LiquidButton>
