@@ -7,7 +7,7 @@ import Link from "next/link";
 import Teams from "@/data/teams.json";
 import { AbhiroopImg } from "@/assets";
 
-console.log(Teams);
+
 
 // const tabs = [
 //   { id: "founders", label: "Founders" },

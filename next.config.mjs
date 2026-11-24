@@ -4,6 +4,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    optimizePackageImports: [
+      "lucide-react",
+      "react-icons",
+      "framer-motion",
+      "motion",
+      "@radix-ui/react-icons",
+    ],
+  },
   async redirects() {
     return [
       {

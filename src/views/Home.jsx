@@ -1,14 +1,6 @@
 "use client";
 
-import EveryThingInOnePlatform from "../components/home/EveryThingInOnePlatform";
-import Stacbot from "../components/home/Stacbot";
-import WhoIsItFor from "../components/home/WhoIsItFor";
-import WhatWeOffer from "../components/home/WhatWeOffer";
 import Hero from "../components/home/Hero";
-import VideShowCase from "../components/home/VideoShowCase";
-import Vision from "../components/home/Vision";
-import Features from "../components/home/Features";
-import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import Link from "next/link";
 import { motion } from "motion/react";
 
