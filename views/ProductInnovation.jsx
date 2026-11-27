@@ -89,13 +89,6 @@ const innovations = [
     hoverGradient: "group-hover:from-sky-600 group-hover:to-indigo-600",
     link: "/thought-leadership/product-innovation/ai-coach-smes-in-a-box-service",
   },
-  {
-    id: 13,
-    title: "Workforce Transformation for an AI-Native Enterprise Reset",
-    gradient: "from-indigo-600 to-cyan-500",
-    hoverGradient: "group-hover:from-indigo-600 group-hover:to-cyan-500",
-    link: "/thought-leadership/product-innovation/workforce-transformation-ai-native-enterprise-reset",
-  },
 ];
 
 const getSlideInitial = (index) => {
