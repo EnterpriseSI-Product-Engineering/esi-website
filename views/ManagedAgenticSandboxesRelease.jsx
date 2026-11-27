@@ -23,7 +23,7 @@ const ManagedAgenticSandboxesRelease = () => {
         {/* Back Link */}
         <Link
           href="/thought-leadership/product-innovation"
-          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#047857] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
@@ -41,8 +41,8 @@ const ManagedAgenticSandboxesRelease = () => {
           </p>
 
           {/* v1.1 Release Card */}
-          <div className="border-l-4 border-[#1569a9] bg-[#1569a9]/5 rounded-r-xl p-5 sm:p-6 mb-8 sm:mb-10">
-            <div className="text-xs font-bold text-[#1569a9] uppercase tracking-wider mb-2">
+          <div className="border-l-4 border-[#047857] bg-[#047857]/5 rounded-r-xl p-5 sm:p-6 mb-8 sm:mb-10">
+            <div className="text-xs font-bold text-[#047857] uppercase tracking-wider mb-2">
               Release Announcement
             </div>
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900 mb-2 sm:mb-3">
@@ -65,13 +65,13 @@ const ManagedAgenticSandboxesRelease = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-6">
               {/* Industries Box */}
               <div className="p-5 sm:p-6 rounded-xl border border-neutral-200 bg-white shadow-2xs">
-                <h3 className="text-xs font-bold text-[#1569a9] uppercase tracking-wider mb-3 sm:mb-4 pb-2 border-b border-neutral-100">
+                <h3 className="text-xs font-bold text-[#047857] uppercase tracking-wider mb-3 sm:mb-4 pb-2 border-b border-neutral-100">
                   Specific Industries
                 </h3>
                 <ul className="space-y-2">
                   {supportedIndustries.map((ind, index) => (
                     <li key={index} className="text-neutral-800 text-sm sm:text-base flex items-start">
-                      <span className="text-[#1569a9] font-semibold mr-2.5">&bull;</span>
+                      <span className="text-[#047857] font-semibold mr-2.5">&bull;</span>
                       <span>{ind}</span>
                     </li>
                   ))}
@@ -80,13 +80,13 @@ const ManagedAgenticSandboxesRelease = () => {
 
               {/* Business Functions Box */}
               <div className="p-5 sm:p-6 rounded-xl border border-neutral-200 bg-white shadow-2xs">
-                <h3 className="text-xs font-bold text-[#1569a9] uppercase tracking-wider mb-3 sm:mb-4 pb-2 border-b border-neutral-100">
+                <h3 className="text-xs font-bold text-[#047857] uppercase tracking-wider mb-3 sm:mb-4 pb-2 border-b border-neutral-100">
                   Business Functions
                 </h3>
                 <ul className="space-y-2">
                   {supportedFunctions.map((fn, index) => (
                     <li key={index} className="text-neutral-800 text-sm sm:text-base flex items-start">
-                      <span className="text-[#1569a9] font-semibold mr-2.5">&bull;</span>
+                      <span className="text-[#047857] font-semibold mr-2.5">&bull;</span>
                       <span>{fn}</span>
                     </li>
                   ))}
@@ -136,26 +136,26 @@ const ManagedAgenticSandboxesRelease = () => {
           </div>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+          <div className="rounded-xl bg-[#047857]/5 border border-[#047857]/20 p-5 sm:p-6 my-8">
             <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
               If you are from an IT Services organization looking to build deployment/ project ready AI Deployment Strategists OR domain Enterprise looking to deploy AI in production, kindly contact us for a demo cum discussion:
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
             <a
               href="mailto:abhiroop@enterprisesi.co"
-              className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+              className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
             >
               abhiroop@enterprisesi.co
             </a>
             <a
               href="mailto:bd@enterprisesi.co"
-              className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+              className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
             >
               bd@enterprisesi.co
             </a>
             <a
               href="mailto:sales@enterprisesi.co"
-              className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+              className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
             >
               sales@enterprisesi.co
             </a>

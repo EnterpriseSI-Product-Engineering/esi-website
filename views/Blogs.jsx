@@ -7,9 +7,9 @@ const Blogs = () => {
   return (
     <div className="container mx-auto px-4 py-32">
       <div className="max-w-5xl mx-auto text-center mb-16 mt-20">
-        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <Sparkles className="w-4 h-4 text-[#1569a9]" />
-          <span className="text-sm font-semibold text-[#1569a9] uppercase tracking-wider">
+        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#047857]/5 border border-[#047857]/20">
+          <Sparkles className="w-4 h-4 text-[#047857]" />
+          <span className="text-sm font-semibold text-[#047857] uppercase tracking-wider">
             Thought Leadership
           </span>
         </div>
@@ -31,7 +31,7 @@ const Blogs = () => {
                     {post.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-neutral-900 mb-3 line-clamp-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#1569a9] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                <h3 className="text-xl font-semibold text-neutral-900 mb-3 line-clamp-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#047857] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                   {post.title}
                 </h3>
                 <p className="text-sm text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300 flex-1 line-clamp-4">
@@ -42,7 +42,7 @@ const Blogs = () => {
                     <Calendar className="w-3.5 h-3.5" />
                     {post.date}
                   </div>
-                  <ArrowRight className="w-4 h-4 text-[#1569a9] transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4 text-[#047857] transition-transform duration-300 group-hover:translate-x-1" />
                 </div>
               </div>
             </GradientCard>

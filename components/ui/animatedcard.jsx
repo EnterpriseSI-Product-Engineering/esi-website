@@ -30,7 +30,7 @@ export const GradientCard = ({ circleSize = 400, className, children }) => {
           left: `${mouse.elementX}px`,
           top: `${mouse.elementY}px`,
           background:
-            "linear-gradient(135deg, #3BC4F2, #7A69F9,#F26378,#F5833F)",
+            "linear-gradient(135deg, #34d399, #7A69F9,#F26378,#F5833F)",
         }}
       />
 

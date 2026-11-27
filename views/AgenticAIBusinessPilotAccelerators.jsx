@@ -196,13 +196,13 @@ const AgenticAIBusinessPilotAccelerators = () => {
             return (
               <GradientCard
                 key={index}
-                className="group h-full hover:border-[#1569a9]/30 transition-all duration-300 rounded-xl"
+                className="group h-full hover:border-[#047857]/30 transition-all duration-300 rounded-xl"
               >
                 <div className="p-4 md:p-6 h-full flex flex-col gap-3 md:gap-4">
                   <div className="flex items-start gap-3 md:gap-4">
-                    <div className="inline-flex p-2 md:p-2.5 rounded-lg border bg-[#1569a9]/10 border-[#1569a9]/20">
+                    <div className="inline-flex p-2 md:p-2.5 rounded-lg border bg-[#047857]/10 border-[#047857]/20">
                       <Icon
-                        className="w-4 h-4 md:w-5 md:h-5 text-[#1569a9]"
+                        className="w-4 h-4 md:w-5 md:h-5 text-[#047857]"
                         strokeWidth={2}
                       />
                     </div>
@@ -224,10 +224,10 @@ const AgenticAIBusinessPilotAccelerators = () => {
 
       {/* CTA Section */}
       <div className="max-w-4xl mx-auto py-12 md:py-16">
-        <GradientCard className="group hover:border-[#1569a9]/30 transition-all duration-300 rounded-xl">
+        <GradientCard className="group hover:border-[#047857]/30 transition-all duration-300 rounded-xl">
           <div className="text-center space-y-4 md:space-y-6 py-8 md:py-12 px-4 md:px-6">
             <div className="inline-block">
-              <Lightbulb className="w-10 h-10 md:w-12 md:h-12 text-[#1569a9]" />
+              <Lightbulb className="w-10 h-10 md:w-12 md:h-12 text-[#047857]" />
             </div>
 
             <div className="space-y-3 md:space-y-4">
@@ -241,7 +241,7 @@ const AgenticAIBusinessPilotAccelerators = () => {
                   href="https://master.d1jvuujmp5rpat.amplifyapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#1569a9] font-semibold hover:text-[#0d5a8f] transition-colors duration-300"
+                  className="inline-flex items-center gap-2 text-[#047857] font-semibold hover:text-[#065f46] transition-colors duration-300"
                 >
                   click here
                   <ArrowRight className="w-4 h-4" />
@@ -253,7 +253,7 @@ const AgenticAIBusinessPilotAccelerators = () => {
               href="https://agents.enterprisesi.co"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#1569a9] to-[#0d5a8f] hover:opacity-90 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#047857] to-[#065f46] hover:opacity-90 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-lg font-medium transition-all duration-300 shadow-md hover:shadow-lg"
             >
               Explore Our Solutions
               <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />

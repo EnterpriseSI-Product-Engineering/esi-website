@@ -7,7 +7,7 @@ export const blogs = [
       "How EnterpriseSI's Agentic AI Builder Playground helps Banking, Financial Services, Insurance and Fintech enterprises build an AI native, AI first workforce and move towards autonomous business process management.",
     date: "24th Sep 2026",
     category: "Agentic AI",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     content: [
       {
         type: "heading",

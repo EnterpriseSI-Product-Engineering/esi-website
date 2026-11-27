@@ -6,7 +6,7 @@ const agendas = [
     title: "Learn",
     highlight: "Agentic AI Playground & Skilling Programs",
     desc: "Via our Agentic AI Playground & Skilling programs.",
-    badge: "bg-blue-100 text-blue-800",
+    badge: "bg-emerald-100 text-emerald-800",
   },
   {
     step: "2",
@@ -35,7 +35,7 @@ const enterprisePoints = [
   {
     goal: "Start / accelerate your AI Talent Transformation journey",
     text: 'Our "Learn" solutions may be a good start point.',
-    borderColor: "border-[#1569a9]",
+    borderColor: "border-[#047857]",
   },
   {
     goal: "Improve AI skills of employees trained with self learning video courses and Instructor led trainings",
@@ -72,7 +72,7 @@ const AgenticBusinessAccelerationPlatform = () => {
         {/* Back Link */}
         <Link
           href="/thought-leadership/product-innovation"
-          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#047857] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
@@ -115,7 +115,7 @@ const AgenticBusinessAccelerationPlatform = () => {
           {/* Simple Diagram */}
           <div className="my-8 p-4 sm:p-6 rounded-2xl bg-neutral-50 border border-neutral-200">
             <div className="flex items-center justify-between mb-4 sm:mb-6 pb-3 border-b border-neutral-200">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#1569a9]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#047857]">
                 Transformation Loop Diagram
               </span>
               <span className="text-xs text-neutral-500 font-medium">
@@ -138,7 +138,7 @@ const AgenticBusinessAccelerationPlatform = () => {
                     <h3 className="text-sm sm:text-base font-bold text-neutral-900 mb-1">
                       {item.title}
                     </h3>
-                    <p className="text-xs font-medium text-[#1569a9] mb-2">
+                    <p className="text-xs font-medium text-[#047857] mb-2">
                       {item.highlight}
                     </p>
                     <p className="text-xs text-neutral-600 leading-relaxed">
@@ -189,7 +189,7 @@ const AgenticBusinessAccelerationPlatform = () => {
             {industries.map((ind) => (
               <span
                 key={ind}
-                className="text-xs sm:text-sm font-medium text-[#1569a9] bg-[#1569a9]/5 border border-[#1569a9]/20 px-2.5 py-1 sm:px-3 rounded-full"
+                className="text-xs sm:text-sm font-medium text-[#047857] bg-[#047857]/5 border border-[#047857]/20 px-2.5 py-1 sm:px-3 rounded-full"
               >
                 {ind}
               </span>
@@ -197,26 +197,26 @@ const AgenticBusinessAccelerationPlatform = () => {
           </div>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+          <div className="rounded-xl bg-[#047857]/5 border border-[#047857]/20 p-5 sm:p-6 my-8">
             <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
               If you are an organization belonging to sectors like Banking &amp; Financial Services, Insurance, Healthcare, CPG/ FMCG, Oil &amp; Gas, Pharma/ Life Sciences, Professional Services (IT/ Business Consulting), others and want to learn more on how our platform driven scalable AI Acceleration loop can fit into your AI initiatives, please DM or email us to setup a demo cum discussion:
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
               <a
                 href="mailto:abhiroop@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 abhiroop@enterprisesi.co
               </a>
               <a
                 href="mailto:bd@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 bd@enterprisesi.co
               </a>
               <a
                 href="mailto:sales@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 sales@enterprisesi.co
               </a>

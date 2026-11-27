@@ -105,16 +105,16 @@ const AgenticAIBuilderPlayground = () => {
   return (
     <div className="container mx-auto py-20 md:py-32 px-4 mt-20 md:mt-0">
       <div className="max-w-5xl mx-auto text-center">
-        <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 mb-6 md:mb-8 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <Sparkles className="w-4 h-4 text-[#1569a9]" />
-          <span className="text-xs md:text-sm font-semibold text-[#1569a9]">
+        <div className="inline-flex items-center gap-2 px-4 md:px-5 py-2 mb-6 md:mb-8 rounded-full bg-[#047857]/5 border border-[#047857]/20">
+          <Sparkles className="w-4 h-4 text-[#047857]" />
+          <span className="text-xs md:text-sm font-semibold text-[#047857]">
             LEARN AI BY BUILDING
           </span>
         </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">
           <span className="block text-neutral-900">Agentic AI Builder</span>
-          <span className="block -mt-2 bg-gradient-to-r from-[#1569a9] to-[#0d5a8f] bg-clip-text text-transparent">
+          <span className="block -mt-2 bg-gradient-to-r from-[#047857] to-[#065f46] bg-clip-text text-transparent">
             Playground
           </span>
         </h1>
@@ -161,8 +161,8 @@ const AgenticAIBuilderPlayground = () => {
           <GradientCard className=" rounded-xl transition-all duration-300">
             <div className="p-4 md:p-6">
               <div className="flex items-start gap-3 md:gap-4 mb-4">
-                <div className="p-2 md:p-3 rounded-lg bg-[#1569a9]/10 border border-[#1569a9]/20">
-                  <Lightbulb className="w-5 h-5 md:w-6 md:h-6 text-[#1569a9]" />
+                <div className="p-2 md:p-3 rounded-lg bg-[#047857]/10 border border-[#047857]/20">
+                  <Lightbulb className="w-5 h-5 md:w-6 md:h-6 text-[#047857]" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-semibold text-neutral-900">
                   Our Solution
@@ -194,7 +194,7 @@ const AgenticAIBuilderPlayground = () => {
         <GradientCard className="rounded-2xl overflow-hidden">
           <div className="p-4 md:p-8">
             <div className="flex flex-col md:flex-row items-start gap-4 mb-6">
-              <div className="p-2 md:p-3 rounded-xl bg-gradient-to-br from-[#1569a9] to-[#0d5a8f] shadow-lg">
+              <div className="p-2 md:p-3 rounded-xl bg-gradient-to-br from-[#047857] to-[#065f46] shadow-lg">
                 <Users className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
               <div>
@@ -273,7 +273,7 @@ const AgenticAIBuilderPlayground = () => {
                     onClick={() => setActiveSlide(index)}
                     className={`h-2 w-2 rounded-full transition-all duration-300 ${
                       activeSlide === index
-                        ? "bg-[#1569a9] scale-125"
+                        ? "bg-[#047857] scale-125"
                         : "bg-neutral-400 hover:bg-neutral-600"
                     }`}
                     aria-label={`Go to ${slide.label}`}
@@ -304,8 +304,8 @@ const AgenticAIBuilderPlayground = () => {
         <GradientCard className="rounded-2xl overflow-hidden">
           <div className="p-4 md:p-8">
             <div className="flex flex-col md:flex-row items-start gap-4 mb-6">
-              <div className="p-2 md:p-3 rounded-xl bg-cyan-50 border border-cyan-200">
-                <Code2 className="w-5 h-5 md:w-6 md:h-6 text-cyan-700" />
+              <div className="p-2 md:p-3 rounded-xl bg-teal-50 border border-teal-200">
+                <Code2 className="w-5 h-5 md:w-6 md:h-6 text-teal-700" />
               </div>
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-2">
@@ -343,7 +343,7 @@ const AgenticAIBuilderPlayground = () => {
                     onClick={() => setActiveBuilderSlide(index)}
                     className={`h-2 w-2 rounded-full transition-all duration-300 ${
                       activeBuilderSlide === index
-                        ? "bg-cyan-600 scale-125"
+                        ? "bg-teal-600 scale-125"
                         : "bg-neutral-400 hover:bg-neutral-600"
                     }`}
                     aria-label={`Go to ${slide.label}`}
@@ -446,7 +446,7 @@ const AgenticAIBuilderPlayground = () => {
 
         <div className="relative">
           {/* Connecting Line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#1569a9] via-purple-500 to-green-500 opacity-20 -translate-x-1/2" />
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#047857] via-purple-500 to-green-500 opacity-20 -translate-x-1/2" />
 
           <div className="space-y-12 md:space-y-16 relative">
             {[
@@ -455,7 +455,7 @@ const AgenticAIBuilderPlayground = () => {
                 title: "Subscription",
                 description:
                   "Enterprise buys Playground subscription for fixed no of seats",
-                color: "#1569a9",
+                color: "#047857",
               },
               {
                 icon: UserPlus,
@@ -469,7 +469,7 @@ const AgenticAIBuilderPlayground = () => {
                 title: "Assignment",
                 description:
                   "Users assigned new learner & builder labs, assessments in their learning paths, every month",
-                color: "#06b6d4",
+                color: "#10b981",
               },
               {
                 icon: BarChart2,
@@ -569,7 +569,7 @@ const AgenticAIBuilderPlayground = () => {
                   ].map((logo, idx) => (
                     <div
                       key={idx}
-                      className="h-24 w-40 flex-shrink-0 flex items-center justify-center bg-white border-2 border-neutral-200 rounded-xl hover:border-[#1569a9]/40 hover:shadow-lg transition-all duration-300"
+                      className="h-24 w-40 flex-shrink-0 flex items-center justify-center bg-white border-2 border-neutral-200 rounded-xl hover:border-[#047857]/40 hover:shadow-lg transition-all duration-300"
                     >
                       <img
                         src={logo?.src || logo}
@@ -599,7 +599,7 @@ const AgenticAIBuilderPlayground = () => {
                   ].map((logo, idx) => (
                     <div
                       key={idx}
-                      className="h-24 w-40 flex-shrink-0 flex items-center justify-center bg-white border-2 border-neutral-200 rounded-xl hover:border-[#1569a9]/40 hover:shadow-lg transition-all duration-300"
+                      className="h-24 w-40 flex-shrink-0 flex items-center justify-center bg-white border-2 border-neutral-200 rounded-xl hover:border-[#047857]/40 hover:shadow-lg transition-all duration-300"
                     >
                       <img
                         src={logo?.src || logo}
@@ -630,7 +630,7 @@ const AgenticAIBuilderPlayground = () => {
                   ].map((logo, idx) => (
                     <div
                       key={idx}
-                      className="h-24 w-40 flex-shrink-0 flex items-center justify-center bg-white border-2 border-neutral-200 rounded-xl hover:border-[#1569a9]/40 hover:shadow-lg transition-all duration-300"
+                      className="h-24 w-40 flex-shrink-0 flex items-center justify-center bg-white border-2 border-neutral-200 rounded-xl hover:border-[#047857]/40 hover:shadow-lg transition-all duration-300"
                     >
                       <img
                         src={logo?.src || logo}

@@ -19,7 +19,7 @@ const programs = [
     personas: "AI Forward Deployed Engineers, Solution Architects, Technical Leads, Enterprise Architects",
     duration: "80 hrs",
     href: "/solutions/ai-forward-deployed-architect",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     icon: Cpu,
   },
   {
@@ -28,7 +28,7 @@ const programs = [
     personas: "CTO, Head of Engineering, Practice Leader, SVP, VP, AVP, Sr. Director, Director",
     duration: "24 hrs",
     href: "#",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     icon: Users,
   },
   {
@@ -37,7 +37,7 @@ const programs = [
     personas: "AWS SMEs, AI Architects, ML Engineers, Data Scientists",
     duration: "40 hrs",
     href: "#",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
     icon: Cloud,
   },
   {
@@ -46,7 +46,7 @@ const programs = [
     personas: "GCP SMEs, AI Architects, ML Engineers, Data Scientists",
     duration: "40 hrs",
     href: "#",
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
     icon: Cloud,
   },
   {
@@ -64,7 +64,7 @@ const programs = [
     personas: "AI Architects, Sr Developers, ML Engineers, Data Scientists",
     duration: "24 hrs",
     href: "#",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     icon: Cpu,
   },
   {
@@ -73,7 +73,7 @@ const programs = [
     personas: "AI Architects, Sr Developers, ML Engineers, Data Scientists",
     duration: "24 hrs",
     href: "#",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
     icon: Cpu,
   },
   {
@@ -82,7 +82,7 @@ const programs = [
     personas: "AI Architects, Sr Developers, ML Engineers, Data Scientists",
     duration: "24 hrs",
     href: "#",
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
     icon: Cpu,
   },
   {
@@ -100,7 +100,7 @@ const programs = [
     personas: "Software Testing Practice Lead, Pre-sales Consultants, Sr Testers, PMs, Delivery Leads",
     duration: "45 hrs",
     href: "#",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     icon: Code,
   },
   {
@@ -109,7 +109,7 @@ const programs = [
     personas: "Architects, Sr Developers, Pre-sales Consultants, Project Managers, Delivery Leads",
     duration: "40 hrs",
     href: "#",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
     icon: Code,
   },
   {
@@ -118,7 +118,7 @@ const programs = [
     personas: "AI Forward Deployed Engineers, BFSI Domain SMEs, Solution Architects",
     duration: "To be announced",
     href: "#",
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
     icon: Cpu,
   },
   {
@@ -136,7 +136,7 @@ const programs = [
     personas: "AI Forward Deployed Engineers, Retail/CPG Domain SMEs, Solution Architects",
     duration: "To be announced",
     href: "#",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     icon: Cpu,
   },
   {
@@ -145,7 +145,7 @@ const programs = [
     personas: "AI Forward Deployed Engineers, Energy Domain SMEs, Solution Architects",
     duration: "To be announced",
     href: "#",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
     icon: Cpu,
   },
   {
@@ -154,7 +154,7 @@ const programs = [
     personas: "AI Forward Deployed Engineers, Pharma Domain SMEs, Solution Architects",
     duration: "To be announced",
     href: "#",
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
     icon: Cpu,
   },
   {
@@ -172,7 +172,7 @@ const programs = [
     personas: "AI Forward Deployed Engineers, GCP Architects, Solution Architects",
     duration: "To be announced",
     href: "#",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     icon: Cloud,
   },
   {
@@ -181,7 +181,7 @@ const programs = [
     personas: "AI Forward Deployed Engineers, Azure Architects, Solution Architects",
     duration: "To be announced",
     href: "#",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
     icon: Cloud,
   },
   {
@@ -190,7 +190,7 @@ const programs = [
     personas: "AI Forward Deployed Engineers, ML Engineers, Solution Architects",
     duration: "To be announced",
     href: "#",
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
     icon: Cpu,
   },
   {
@@ -208,7 +208,7 @@ const programs = [
     personas: "Compliance Officers, Risk Managers, Security Architects",
     duration: "To be announced",
     href: "#",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     icon: Shield,
   },
   {
@@ -217,7 +217,7 @@ const programs = [
     personas: "CXOs, VP of Strategy, Innovation Leaders, Directors",
     duration: "To be announced",
     href: "#",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
     icon: Users,
   },
 ];
@@ -228,21 +228,21 @@ const usps = [
     description:
       "Content is well researched, with monthly updates to ensure the latest tools, models, and practices are included.",
     icon: BookOpen,
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
   },
   {
     title: "Real-World Expertise",
     description:
       "Real-world consulting experience in AI pilots and domain projects gives our programs a clear competitive edge.",
     icon: Cpu,
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
   },
   {
     title: "Seasoned Instructors",
     description:
       "Mentors/Instructors are seasoned professionals in AI, Enterprise Applications, and technical domains.",
     icon: Users,
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
   },
   {
     title: "Hands-On Experience",
@@ -257,9 +257,9 @@ const AITechnicalPrograms = () => {
   return (
     <div className="container mx-auto px-4 py-32">
       <div className="max-w-5xl mx-auto text-center mb-20 mt-20">
-        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
+        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#047857]/5 border border-[#047857]/20">
           <BookOpen className="h-5 w-5 text-esi-primary" />
-          <span className="text-sm font-semibold text-[#1569a9] uppercase tracking-wider">
+          <span className="text-sm font-semibold text-[#047857] uppercase tracking-wider">
             Professional AI Training
           </span>
         </div>
@@ -306,11 +306,11 @@ const AITechnicalPrograms = () => {
                       <span>{program.duration}</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#1569a9] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-lg font-semibold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#047857] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     {program.name}
                   </h3>
                   <div className="flex items-start gap-2">
-                    <Users className="w-4 h-4 text-[#06b6d4] mt-1 flex-shrink-0" />
+                    <Users className="w-4 h-4 text-[#10b981] mt-1 flex-shrink-0" />
                     <p className="text-sm text-neutral-600 leading-relaxed">
                       {program.personas}
                     </p>
@@ -337,7 +337,7 @@ const AITechnicalPrograms = () => {
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             Why Choose Our{" "}
-            <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
               Programs
             </span>
           </h2>
@@ -363,7 +363,7 @@ const AITechnicalPrograms = () => {
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#1569a9] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                      <h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#047857] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                         {usp.title}
                       </h3>
                       <p className="text-neutral-600 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">

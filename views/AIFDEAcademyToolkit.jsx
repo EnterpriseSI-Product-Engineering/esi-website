@@ -44,7 +44,7 @@ const AIFDEAcademyToolkit = () => {
         {/* Back Link */}
         <Link
           href="/thought-leadership/product-innovation"
-          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#047857] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
@@ -81,7 +81,7 @@ const AIFDEAcademyToolkit = () => {
             {keyQuestions.map((q, index) => (
               <div
                 key={index}
-                className="border-l-4 border-[#1569a9] pl-5 py-2"
+                className="border-l-4 border-[#047857] pl-5 py-2"
               >
                 <p className="text-neutral-800 font-medium leading-relaxed text-base sm:text-lg">
                   {q}
@@ -103,7 +103,7 @@ const AIFDEAcademyToolkit = () => {
             {coreTopics.map((topic, index) => (
               <span
                 key={index}
-                className="text-sm font-medium text-[#1569a9] bg-[#1569a9]/5 border border-[#1569a9]/20 px-3 py-1 rounded-full"
+                className="text-sm font-medium text-[#047857] bg-[#047857]/5 border border-[#047857]/20 px-3 py-1 rounded-full"
               >
                 {topic}
               </span>
@@ -130,26 +130,26 @@ const AIFDEAcademyToolkit = () => {
           </div>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+          <div className="rounded-xl bg-[#047857]/5 border border-[#047857]/20 p-5 sm:p-6 my-8">
             <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
               If you are an enterprise looking to build an internal AI FDE Academy and in-house pool of AI FDE trainers (capable of leading 5&ndash;6 distinct AI training tracks), contact us to discuss the toolkit and schedule a demo:
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
               <a
                 href="mailto:abhiroop@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 abhiroop@enterprisesi.co
               </a>
               <a
                 href="mailto:bd@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 bd@enterprisesi.co
               </a>
               <a
                 href="mailto:sales@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 sales@enterprisesi.co
               </a>

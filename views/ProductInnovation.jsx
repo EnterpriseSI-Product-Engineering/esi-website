@@ -8,15 +8,15 @@ const innovations = [
   {
     id: 1,
     title: 'Agentic Business Acceleration Platform & our platform driven "AI Native Enterprise" Transformation Loop',
-    gradient: "from-blue-600 to-cyan-500",
-    hoverGradient: "group-hover:from-blue-600 group-hover:to-cyan-500",
+    gradient: "from-emerald-600 to-teal-500",
+    hoverGradient: "group-hover:from-emerald-600 group-hover:to-teal-500",
     link: "/thought-leadership/product-innovation/agentic-business-acceleration-platform",
   },
   {
     id: 2,
     title: "AI FDE (Forward Deployed Engineering) Consulting Mindset - Workshop – 20 hrs",
-    gradient: "from-purple-600 to-indigo-500",
-    hoverGradient: "group-hover:from-purple-600 group-hover:to-indigo-500",
+    gradient: "from-purple-600 to-green-500",
+    hoverGradient: "group-hover:from-purple-600 group-hover:to-green-500",
     link: "/thought-leadership/product-innovation/ai-fde-consulting-mindset-workshop",
   },
   {
@@ -50,8 +50,8 @@ const innovations = [
   {
     id: 7,
     title: "Domain (Industries, Business Functions) Deepdive for AI & Software Engineers",
-    gradient: "from-cyan-600 to-blue-500",
-    hoverGradient: "group-hover:from-cyan-600 group-hover:to-blue-500",
+    gradient: "from-teal-600 to-emerald-500",
+    hoverGradient: "group-hover:from-teal-600 group-hover:to-emerald-500",
     link: "/thought-leadership/product-innovation/domain-deepdive-ai-software-engineers",
   },
   {
@@ -64,8 +64,8 @@ const innovations = [
   {
     id: 9,
     title: "AITech Webinar Series",
-    gradient: "from-indigo-600 to-purple-500",
-    hoverGradient: "group-hover:from-indigo-600 group-hover:to-purple-500",
+    gradient: "from-green-600 to-purple-500",
+    hoverGradient: "group-hover:from-green-600 group-hover:to-purple-500",
     link: "/thought-leadership/product-innovation/aitech-webinar-series",
   },
   {
@@ -85,15 +85,15 @@ const innovations = [
   {
     id: 12,
     title: "AI Coach (10 AI SMEs-in-a-box) service for Sr leaders & mid level managers",
-    gradient: "from-sky-600 to-indigo-600",
-    hoverGradient: "group-hover:from-sky-600 group-hover:to-indigo-600",
+    gradient: "from-emerald-600 to-green-600",
+    hoverGradient: "group-hover:from-emerald-600 group-hover:to-green-600",
     link: "/thought-leadership/product-innovation/ai-coach-smes-in-a-box-service",
   },
   {
     id: 13,
     title: "Workforce Transformation for an AI-Native Enterprise Reset",
-    gradient: "from-indigo-600 to-cyan-500",
-    hoverGradient: "group-hover:from-indigo-600 group-hover:to-cyan-500",
+    gradient: "from-green-600 to-teal-500",
+    hoverGradient: "group-hover:from-green-600 group-hover:to-teal-500",
     link: "/thought-leadership/product-innovation/workforce-transformation-ai-native-enterprise-reset",
   },
 ];
@@ -114,8 +114,8 @@ const ProductInnovation = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="max-w-5xl mx-auto text-center mb-10 sm:mb-14 md:mb-16 mt-6 sm:mt-12 md:mt-16"
       >
-        <div className="inline-flex items-center px-3.5 py-1 sm:px-4 sm:py-1.5 mb-6 sm:mb-8 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <span className="text-xs font-semibold text-[#1569a9] uppercase tracking-wider">
+        <div className="inline-flex items-center px-3.5 py-1 sm:px-4 sm:py-1.5 mb-6 sm:mb-8 rounded-full bg-[#047857]/5 border border-[#047857]/20">
+          <span className="text-xs font-semibold text-[#047857] uppercase tracking-wider">
             Thought Leadership
           </span>
         </div>
@@ -131,7 +131,7 @@ const ProductInnovation = () => {
             <GradientCard
               className={`group h-full transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 rounded-xl ${
                 item.link
-                  ? "cursor-pointer ring-1 ring-[#1569a9]/20 hover:ring-[#1569a9]/50 hover:shadow-lg"
+                  ? "cursor-pointer ring-1 ring-[#047857]/20 hover:ring-[#047857]/50 hover:shadow-lg"
                   : ""
               }`}
             >
@@ -143,7 +143,7 @@ const ProductInnovation = () => {
                 </h3>
                 {item.link && (
                   <div className="pt-4 sm:pt-6 flex items-center justify-end">
-                    <span className="inline-flex items-center text-xs font-semibold text-[#1569a9] group-hover:translate-x-1 transition-transform">
+                    <span className="inline-flex items-center text-xs font-semibold text-[#047857] group-hover:translate-x-1 transition-transform">
                       Explore &rarr;
                     </span>
                   </div>

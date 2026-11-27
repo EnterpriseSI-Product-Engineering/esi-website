@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const webinarTopics = [
+export const webinarTopics = [
   "Air-gapped AI - The next chapter in 2027 for deployable & safe AI Infrastructure",
   "Architecting AI Agents with Decision AI / SystemOne models like Jev from TypesafeAI (with business use cases, demos)",
   "Demystifying Deep Neural Networks for Software Engineers",
@@ -15,7 +15,7 @@ const webinarTopics = [
   "Context Engineering for AI Agents (2-part series)",
 ];
 
-const targetRoles = [
+export const targetRoles = [
   "Software Engineers & Technical Architects",
   "AI Forward Deployed Engineers",
   "AI Deployment Strategists",
@@ -30,7 +30,7 @@ const AITechWebinarSeries = () => {
         {/* Back Link */}
         <Link
           href="/thought-leadership/product-innovation"
-          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#047857] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
@@ -59,7 +59,7 @@ const AITechWebinarSeries = () => {
             {targetRoles.map((role, index) => (
               <span
                 key={index}
-                className="text-xs sm:text-sm font-medium text-[#1569a9] bg-[#1569a9]/5 border border-[#1569a9]/20 px-2.5 py-1 sm:px-3 rounded-full"
+                className="text-xs sm:text-sm font-medium text-[#047857] bg-[#047857]/5 border border-[#047857]/20 px-2.5 py-1 sm:px-3 rounded-full"
               >
                 {role}
               </span>
@@ -80,33 +80,33 @@ const AITechWebinarSeries = () => {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 mt-8 sm:mt-10 md:mt-12 mb-3 sm:mb-4">
             Hands-on Sandbox &amp; Lab Continuity
           </h2>
-          <div className="border-l-4 border-[#1569a9] pl-4 sm:pl-5 py-2 my-4 mb-8">
+          <div className="border-l-4 border-[#047857] pl-4 sm:pl-5 py-2 my-4 mb-8">
             <p className="text-neutral-700 text-sm sm:text-base md:text-lg leading-relaxed">
               Topics introduced via these webinars can subsequently be learnt hands-on by employees via hands-on AI labs and sandbox, as part of our Agentic AI Playground.
             </p>
           </div>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+          <div className="rounded-xl bg-[#047857]/5 border border-[#047857]/20 p-5 sm:p-6 my-8">
             <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
               If you are from an IT services organization looking to build project-ready AI teams or an enterprise aiming to deploy AI into production, contact us or share this with your Chief Learning Officer, Head of AI, CTO, or L&amp;D team:
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
               <a
                 href="mailto:abhiroop@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 abhiroop@enterprisesi.co
               </a>
               <a
                 href="mailto:bd@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 bd@enterprisesi.co
               </a>
               <a
                 href="mailto:sales@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 sales@enterprisesi.co
               </a>

@@ -285,7 +285,7 @@ const CpuArchitecture = ({
         </mask>
         {/* Gradients */}
         <radialGradient id="cpu-blue-grad" fx="1">
-          <stop offset="0%" stopColor="#00E8ED" />
+          <stop offset="0%" stopColor="#34d399" />
           <stop offset="50%" stopColor="#08F" />
           <stop offset="100%" stopColor="transparent" />
         </radialGradient>
@@ -312,7 +312,7 @@ const CpuArchitecture = ({
           <stop offset="100%" stopColor="transparent" />
         </radialGradient>
         <radialGradient id="cpu-cyan-grad" fx="1">
-          <stop offset="0%" stopColor="#06b6d4" />
+          <stop offset="0%" stopColor="#10b981" />
           <stop offset="100%" stopColor="transparent" />
         </radialGradient>
         <radialGradient id="cpu-rose-grad" fx="1">

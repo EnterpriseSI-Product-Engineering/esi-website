@@ -11,7 +11,7 @@ import { ArrowRight } from "lucide-react";
 export default function CTA() {
   const pathname = usePathname();
 
-  if (pathname === "/demo") {
+  if (pathname === "/demo" || pathname === "/") {
     return null;
   }
 

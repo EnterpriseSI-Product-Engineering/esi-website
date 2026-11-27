@@ -7,7 +7,7 @@ const programs = [
     program: "Generative and Agentic AI for Sr Business Leaders",
     personas: "CEO, CFO, COO, SVP, VP, AVP, Sr Director, Director levels",
     duration: "16 hrs",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     icon: Users,
   },
   {
@@ -16,7 +16,7 @@ const programs = [
     personas:
       "All profiles – middle and junior level – non tech/ business domains",
     duration: "16 hrs",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
     icon: Target,
   },
   {
@@ -26,7 +26,7 @@ const programs = [
     personas:
       "VP Finance, Financial Controller, Director- FP&A, Sr Analyst/ Consultant",
     duration: "8 hrs",
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
     icon: TrendingUp,
   },
   {
@@ -44,7 +44,7 @@ const programs = [
     personas:
       "VP HR, Director HR, HR Business partners, Payroll SMEs, Recruiters",
     duration: "8 hrs",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
     icon: Users,
   },
   {
@@ -52,7 +52,7 @@ const programs = [
     program: "Generative and Agentic AI for Customer Service Practitioners",
     personas: "Customer Service Organization- Sr and mid-level associates",
     duration: "8 hrs",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
     icon: CheckCircle,
   },
 ];
@@ -63,21 +63,21 @@ const usps = [
     description:
       "Content is well researched, with monthly updates to keep it latest.",
     icon: BookOpen,
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
   },
   {
     title: "Domain Expertise",
     description:
       "Experience in AI Consulting, pilots, and domain expertise embedded into programs.",
     icon: Brain,
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
   },
   {
     title: "Expert Instructors",
     description:
       "Mentors/Instructors are experts in AI, Enterprise Apps, and business domains.",
     icon: Award,
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
   },
   {
     title: "Hands-on Learning",
@@ -93,7 +93,7 @@ const BusinessAIPrograms = () => {
     <div className="container mx-auto px-4 py-32">
       <div className="max-w-5xl mx-auto text-center mb-16 mt-20">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
+        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#047857]/5 border border-[#047857]/20">
           <Sparkles className="w-4 h-4 text-esi-primary" />
           <span className="text-sm font-semibold text-esi-primary uppercase tracking-wider">
             AI Training Programs
@@ -118,7 +118,7 @@ const BusinessAIPrograms = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
             Our Most Popular{" "}
-            <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
               Programs
             </span>
           </h2>
@@ -144,7 +144,7 @@ const BusinessAIPrograms = () => {
                       <span>{program.duration}</span>
                     </div>
                   </div>
-                  <h3 className="text-lg font-semibold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#1569a9] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-lg font-semibold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#047857] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     {program.program}
                   </h3>
                   <p className="text-sm text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300">
@@ -162,7 +162,7 @@ const BusinessAIPrograms = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
             Why Choose Our{" "}
-            <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
               Programs
             </span>
           </h2>
@@ -184,7 +184,7 @@ const BusinessAIPrograms = () => {
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#1569a9] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                      <h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#047857] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                         {usp.title}
                       </h3>
                       <p className="text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300">

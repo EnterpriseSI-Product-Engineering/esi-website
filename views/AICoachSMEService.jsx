@@ -56,7 +56,7 @@ const AICoachSMEService = () => {
         {/* Back Link */}
         <Link
           href="/thought-leadership/product-innovation"
-          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#047857] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
@@ -70,7 +70,7 @@ const AICoachSMEService = () => {
         <div className="text-justify text-base sm:text-lg">
           {/* Part 1 */}
           <div className="mb-10 sm:mb-12">
-            <div className="text-xs font-bold text-[#1569a9] uppercase tracking-wider mb-2">
+            <div className="text-xs font-bold text-[#047857] uppercase tracking-wider mb-2">
               Part 1
             </div>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 mb-3 sm:mb-4">
@@ -93,7 +93,7 @@ const AICoachSMEService = () => {
               <ul className="space-y-2">
                 {personaList.map((persona, index) => (
                   <li key={index} className="text-neutral-700 text-sm sm:text-base md:text-lg flex items-start">
-                    <span className="text-[#1569a9] font-semibold mr-2.5 sm:mr-3">&bull;</span>
+                    <span className="text-[#047857] font-semibold mr-2.5 sm:mr-3">&bull;</span>
                     <span>{persona}</span>
                   </li>
                 ))}
@@ -114,7 +114,7 @@ const AICoachSMEService = () => {
 
           {/* Part 2 */}
           <div className="pt-8 border-t border-neutral-200 mb-10 sm:mb-12">
-            <div className="text-xs font-bold text-[#1569a9] uppercase tracking-wider mb-2">
+            <div className="text-xs font-bold text-[#047857] uppercase tracking-wider mb-2">
               Part 2
             </div>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 mb-4 sm:mb-6">
@@ -136,7 +136,7 @@ const AICoachSMEService = () => {
             </p>
             <div className="space-y-4 mb-8">
               {achievements.map((item, index) => (
-                <div key={index} className="border-l-4 border-[#1569a9] pl-4 sm:pl-5 py-2">
+                <div key={index} className="border-l-4 border-[#047857] pl-4 sm:pl-5 py-2">
                   <h4 className="font-bold text-neutral-900 text-sm sm:text-base uppercase tracking-wide mb-1">
                     {item.org}
                   </h4>
@@ -175,26 +175,26 @@ const AICoachSMEService = () => {
           </div>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+          <div className="rounded-xl bg-[#047857]/5 border border-[#047857]/20 p-5 sm:p-6 my-8">
             <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
               To learn about our comprehensive list of more than 50 line items where we support organizations via our AI Coach-as-a-service model and for a demo cum discussion also covering your custom requirements, please contact us at:
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
               <a
                 href="mailto:bd@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 bd@enterprisesi.co
               </a>
               <a
                 href="mailto:abhiroop@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 abhiroop@enterprisesi.co
               </a>
               <a
                 href="mailto:sales@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 sales@enterprisesi.co
               </a>

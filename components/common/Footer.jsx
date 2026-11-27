@@ -54,7 +54,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="footer border-t border-ploy-border-primary bg-ploy-background-secondary">
+    <footer className="footer border-t border-neutral-300/80 bg-[#f8fafc]">
       <div className="mx-auto max-w-7xl px-4 pt-10 pb-6 md:px-6 md:pt-14 md:pb-8 lg:px-8 lg:pt-16 lg:pb-8">
         <div className="grid gap-8 md:grid-cols-[1.25fr_2fr] lg:grid-cols-[1.25fr_2fr] lg:gap-12">
           <div>

@@ -27,7 +27,7 @@ const WorkforceTransformationAINativeEnterpriseReset = () => {
         {/* Back Link */}
         <Link
           href="/thought-leadership/product-innovation"
-          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#047857] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
@@ -40,10 +40,10 @@ const WorkforceTransformationAINativeEnterpriseReset = () => {
         {/* Content Body */}
         <div className="text-justify text-base sm:text-lg">
           {/* Announcement Card */}
-          <div className="border-l-4 border-[#1569a9] bg-[#1569a9]/5 rounded-r-xl p-5 sm:p-6 mb-8 sm:mb-10">
+          <div className="border-l-4 border-[#047857] bg-[#047857]/5 rounded-r-xl p-5 sm:p-6 mb-8 sm:mb-10">
             <p className="text-neutral-800 text-base sm:text-lg md:text-xl font-medium leading-relaxed mb-3">
               EnterpriseSI is officially launching our new platform-driven advisory-to-execution service line:{" "}
-              <span className="text-[#1569a9] font-bold block sm:inline mt-1 sm:mt-0">
+              <span className="text-[#047857] font-bold block sm:inline mt-1 sm:mt-0">
                 Workforce Transformation for an AI-Native Enterprise Reset
               </span>
             </p>
@@ -63,7 +63,7 @@ const WorkforceTransformationAINativeEnterpriseReset = () => {
                   key={index}
                   className="flex items-start text-neutral-800 text-base sm:text-lg leading-relaxed"
                 >
-                  <span className="text-[#1569a9] font-bold mr-3 text-lg leading-snug">
+                  <span className="text-[#047857] font-bold mr-3 text-lg leading-snug">
                     &bull;
                   </span>
                   <span>{item}</span>
@@ -83,7 +83,7 @@ const WorkforceTransformationAINativeEnterpriseReset = () => {
                   key={index}
                   className="flex items-start text-neutral-800 text-base sm:text-lg leading-relaxed"
                 >
-                  <span className="text-[#1569a9] font-bold mr-3 text-lg leading-snug">
+                  <span className="text-[#047857] font-bold mr-3 text-lg leading-snug">
                     &bull;
                   </span>
                   <span>{item}</span>
@@ -106,20 +106,20 @@ const WorkforceTransformationAINativeEnterpriseReset = () => {
           </div>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+          <div className="rounded-xl bg-[#047857]/5 border border-[#047857]/20 p-5 sm:p-6 my-8">
             <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
               For a demo cum discussion of our highly differentiated Workforce Transformation service, DM Abhiroop Roy or email:
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
               <a
                 href="mailto:abhiroop@enterprisesi.co"
-                className="text-[#1569a9] font-semibold hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-semibold hover:underline break-all sm:break-normal"
               >
                 abhiroop@enterprisesi.co
               </a>
               <a
                 href="mailto:bd@enterprisesi.co"
-                className="text-[#1569a9] font-semibold hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-semibold hover:underline break-all sm:break-normal"
               >
                 bd@enterprisesi.co
               </a>

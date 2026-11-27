@@ -159,10 +159,10 @@ const focusAreasData = [
 
 const getAreaStyles = () => {
   return {
-    border: "border-[#1569a9]",
-    bg: "bg-[#1569a9]",
-    bgLight: "bg-[#1569a9]/5",
-    text: "text-[#1569a9]",
+    border: "border-[#047857]",
+    bg: "bg-[#047857]",
+    bgLight: "bg-[#047857]/5",
+    text: "text-[#047857]",
   };
 };
 
@@ -217,7 +217,7 @@ const CopilotCarousel = ({ copilots, areaKey }) => {
             <div key={index} className="flex-[0_0_100%] min-w-0 px-2">
               <div className="grid md:grid-cols-2 gap-4 p-8">
                 <div className="space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#1569a9]">
+                  <h3 className="text-2xl md:text-3xl font-bold text-[#047857]">
                     {copilot.name}
                   </h3>
                   <p className="text-neutral-600 text-lg">
@@ -309,7 +309,7 @@ const FocusAreas = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
             Key{" "}
-            <span className="bg-gradient-to-r from-[#1569a9] to-[#0d5a8f] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#047857] to-[#065f46] bg-clip-text text-transparent">
               Domains
             </span>
           </h2>
@@ -327,16 +327,16 @@ const FocusAreas = () => {
                 <GradientCard
                   className={`group cursor-pointer transition-all duration-300 h-full rounded-xl ${
                     isSelected
-                      ? "border-2 border-[#1569a9] shadow-lg bg-[#1569a9]/5"
-                      : "hover:shadow-md hover:-translate-y-1 hover:border-[#1569a9]/30"
+                      ? "border-2 border-[#047857] shadow-lg bg-[#047857]/5"
+                      : "hover:shadow-md hover:-translate-y-1 hover:border-[#047857]/30"
                   }`}
                 >
                   <div className="p-8 text-center">
                     <h3
                       className={`text-xl font-bold mb-4 transition-colors duration-300 ${
                         isSelected
-                          ? "text-[#1569a9]"
-                          : "text-neutral-900 group-hover:text-[#1569a9]"
+                          ? "text-[#047857]"
+                          : "text-neutral-900 group-hover:text-[#047857]"
                       }`}
                     >
                       {area.title}
@@ -356,7 +356,7 @@ const FocusAreas = () => {
               if (!area) return null;
 
               return (
-                <div className="rounded-2xl border-2 border-[#1569a9]/20 bg-[#1569a9]/5 p-4">
+                <div className="rounded-2xl border-2 border-[#047857]/20 bg-[#047857]/5 p-4">
                   <CopilotCarousel
                     copilots={area.copilots}
                     areaKey={selectedArea}

@@ -26,7 +26,7 @@ const AIFDEProgramsSpecializations = () => {
         {/* Back Link */}
         <Link
           href="/thought-leadership/product-innovation"
-          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-6 sm:mb-8"
+          className="inline-flex items-center text-xs sm:text-sm font-medium text-neutral-500 hover:text-[#047857] transition-colors mb-6 sm:mb-8"
         >
           &larr; Back to Product Innovations
         </Link>
@@ -52,7 +52,7 @@ const AIFDEProgramsSpecializations = () => {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 mt-8 sm:mt-10 md:mt-12 mb-2">
             80 hrs Programs: Domain &amp; Business Function Specializations
           </h2>
-          <p className="text-sm sm:text-base font-medium text-[#1569a9] mb-4">
+          <p className="text-sm sm:text-base font-medium text-[#047857] mb-4">
             With 40 hands-on AI labs &amp; 8 Assessment Tests delivered via our Agentic AI Playground platform:
           </p>
           <ol className="pl-6 space-y-3 mb-6 text-neutral-600 text-base sm:text-lg leading-relaxed list-decimal">
@@ -63,7 +63,7 @@ const AIFDEProgramsSpecializations = () => {
             ))}
           </ol>
 
-          <div className="border-l-4 border-[#1569a9] pl-5 py-2 my-4 mb-10">
+          <div className="border-l-4 border-[#047857] pl-5 py-2 my-4 mb-10">
             <p className="text-neutral-700 leading-relaxed text-base sm:text-lg">
               <span className="font-semibold text-neutral-900">Capstone Projects:</span> Two capstone projects &mdash; E2E Agent Design, development, deployment, testing &mdash; 10 hrs each (additional 20 hrs).
             </p>
@@ -73,7 +73,7 @@ const AIFDEProgramsSpecializations = () => {
           <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mt-12 mb-2">
             60 hrs Programs: Tech Stack Specializations
           </h2>
-          <p className="text-sm sm:text-base font-medium text-[#1569a9] mb-4">
+          <p className="text-sm sm:text-base font-medium text-[#047857] mb-4">
             With 20 hands-on AI labs &amp; 4 Assessment Tests delivered via our Agentic AI Playground platform:
           </p>
           <ol start={10} className="pl-6 space-y-3 mb-6 text-neutral-600 text-base sm:text-lg leading-relaxed list-decimal">
@@ -99,26 +99,26 @@ const AIFDEProgramsSpecializations = () => {
           </p>
 
           {/* Contact Block */}
-          <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-5 sm:p-6 my-8">
+          <div className="rounded-xl bg-[#047857]/5 border border-[#047857]/20 p-5 sm:p-6 my-8">
             <p className="text-neutral-700 text-base sm:text-lg leading-relaxed mb-4">
               To discuss curriculum details, corporate cohort pricing, or customized labs for your organization, please contact us at:
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-base sm:text-lg">
               <a
                 href="mailto:abhiroop@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 abhiroop@enterprisesi.co
               </a>
               <a
                 href="mailto:bd@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 bd@enterprisesi.co
               </a>
               <a
                 href="mailto:sales@enterprisesi.co"
-                className="text-[#1569a9] font-medium hover:underline break-all sm:break-normal"
+                className="text-[#047857] font-medium hover:underline break-all sm:break-normal"
               >
                 sales@enterprisesi.co
               </a>

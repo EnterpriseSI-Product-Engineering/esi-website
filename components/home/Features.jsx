@@ -69,7 +69,7 @@ const Features = () => {
           return (
             <GradientCard key={index} className="border rounded-md h-full">
               <div className="p-6 flex flex-col h-full">
-                <Icon className="w-10 h-10 mb-4 text-[#1569a9]" />
+                <Icon className="w-10 h-10 mb-4 text-[#047857]" />
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400">
                   {feature.description}

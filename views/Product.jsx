@@ -41,9 +41,9 @@ const Product = () => {
         <div className="relative max-w-5xl mx-auto">
           {/* Parent Node */}
           <div className="flex justify-center mb-8 md:mb-16">
-            <div className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 rounded-xl border-2 border-[#1569a9]/40 bg-[#1569a9]/5 shadow-lg">
-              {/* <Rocket className="w-6 h-6 text-[#1569a9]" /> */}
-              <p className="text-base md:text-lg font-semibold text-[#1569a9] text-center">
+            <div className="inline-flex items-center gap-3 px-6 md:px-8 py-3 md:py-4 rounded-xl border-2 border-[#047857]/40 bg-[#047857]/5 shadow-lg">
+              {/* <Rocket className="w-6 h-6 text-[#047857]" /> */}
+              <p className="text-base md:text-lg font-semibold text-[#047857] text-center">
                 Problem Statements We Address
               </p>
             </div>
@@ -59,7 +59,7 @@ const Product = () => {
               y1="0"
               x2="50%"
               y2="40"
-              stroke="#1569a9"
+              stroke="#047857"
               strokeWidth="2"
               strokeDasharray="4 4"
             />
@@ -68,7 +68,7 @@ const Product = () => {
               y1="40"
               x2="70%"
               y2="40"
-              stroke="#1569a9"
+              stroke="#047857"
               strokeWidth="2"
               strokeDasharray="4 4"
             />
@@ -77,7 +77,7 @@ const Product = () => {
               y1="40"
               x2="30%"
               y2="80"
-              stroke="#1569a9"
+              stroke="#047857"
               strokeWidth="2"
               strokeDasharray="4 4"
             />
@@ -86,7 +86,7 @@ const Product = () => {
               y1="40"
               x2="70%"
               y2="80"
-              stroke="#1569a9"
+              stroke="#047857"
               strokeWidth="2"
               strokeDasharray="4 4"
             />
@@ -99,17 +99,17 @@ const Product = () => {
               return (
                 <div
                   key={index}
-                  className="group h-full border-2 border-neutral-200 rounded-xl p-6 hover:border-[#1569a9]/40 hover:shadow-xl transition-all duration-300 bg-white flex flex-col"
+                  className="group h-full border-2 border-neutral-200 rounded-xl p-6 hover:border-[#047857]/40 hover:shadow-xl transition-all duration-300 bg-white flex flex-col"
                 >
                   <div className="flex items-start gap-3 md:gap-4 mb-4">
-                    <div className="p-2 md:p-3 rounded-lg bg-[#1569a9]/10 border border-[#1569a9]/20">
-                      <Icon className="w-5 h-5 md:w-6 md:h-6 text-[#1569a9]" />
+                    <div className="p-2 md:p-3 rounded-lg bg-[#047857]/10 border border-[#047857]/20">
+                      <Icon className="w-5 h-5 md:w-6 md:h-6 text-[#047857]" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg md:text-xl font-semibold text-neutral-900 mb-1">
                         {feature.title}
                       </h3>
-                      <p className="text-xs md:text-sm text-[#1569a9] font-medium">
+                      <p className="text-xs md:text-sm text-[#047857] font-medium">
                         {feature.description}
                       </p>
                     </div>
@@ -141,7 +141,7 @@ const Product = () => {
                   </div>
 
                   <Link href={feature.link} className="block mt-4">
-                    <button className="w-full cursor-pointer px-4 py-2.5 bg-[#1569a9] hover:bg-[#1569a9]/90 text-white rounded-lg text-sm md:text-base font-medium transition-all duration-300 flex items-center justify-center gap-2">
+                    <button className="w-full cursor-pointer px-4 py-2.5 bg-[#047857] hover:bg-[#047857]/90 text-white rounded-lg text-sm md:text-base font-medium transition-all duration-300 flex items-center justify-center gap-2">
                       <span className="hidden sm:inline">Explore {feature.title}</span>
                       <span className="sm:hidden">Explore</span>
                       <ArrowRight className="w-4 h-4" />

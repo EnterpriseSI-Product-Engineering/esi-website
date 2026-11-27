@@ -45,7 +45,7 @@ const ContentBlock = ({ block }) => {
     }
     case "feature":
       return (
-        <div className="border-l-4 border-[#1569a9] pl-5 py-1 mb-6">
+        <div className="border-l-4 border-[#047857] pl-5 py-1 mb-6">
           <h4 className="text-lg font-semibold text-neutral-900 mb-1">
             {block.title}
           </h4>
@@ -58,7 +58,7 @@ const ContentBlock = ({ block }) => {
           {block.items.map((tag, index) => (
             <span
               key={index}
-              className="text-sm font-medium text-[#1569a9] bg-[#1569a9]/5 border border-[#1569a9]/20 px-3 py-1 rounded-full"
+              className="text-sm font-medium text-[#047857] bg-[#047857]/5 border border-[#047857]/20 px-3 py-1 rounded-full"
             >
               {tag}
             </span>
@@ -67,14 +67,14 @@ const ContentBlock = ({ block }) => {
       );
     case "contact":
       return (
-        <div className="rounded-xl bg-[#1569a9]/5 border border-[#1569a9]/20 p-6 my-8">
+        <div className="rounded-xl bg-[#047857]/5 border border-[#047857]/20 p-6 my-8">
           <p className="text-neutral-700 leading-relaxed mb-4">{block.text}</p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {block.emails?.map((email) => (
               <a
                 key={email}
                 href={`mailto:${email}`}
-                className="inline-flex items-center gap-2 text-[#1569a9] font-medium hover:underline"
+                className="inline-flex items-center gap-2 text-[#047857] font-medium hover:underline"
               >
                 <Mail className="w-4 h-4" />
                 {email}
@@ -83,7 +83,7 @@ const ContentBlock = ({ block }) => {
             {block.phone && (
               <a
                 href={`tel:${block.phone.replace(/\s+/g, "")}`}
-                className="inline-flex items-center gap-2 text-[#1569a9] font-medium hover:underline"
+                className="inline-flex items-center gap-2 text-[#047857] font-medium hover:underline"
               >
                 <Phone className="w-4 h-4" />
                 {block.phone}
@@ -111,15 +111,15 @@ const BlogPost = ({ slug: propSlug }) => {
       <div className="max-w-3xl mx-auto mt-20">
         <Link
           href="/thought-leadership/blogs"
-          className="inline-flex items-center gap-2 text-sm font-medium text-neutral-500 hover:text-[#1569a9] transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-sm font-medium text-neutral-500 hover:text-[#047857] transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Blogs
         </Link>
 
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <Sparkles className="w-3.5 h-3.5 text-[#1569a9]" />
-          <span className="text-xs font-semibold text-[#1569a9] uppercase tracking-wider">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-[#047857]/5 border border-[#047857]/20">
+          <Sparkles className="w-3.5 h-3.5 text-[#047857]" />
+          <span className="text-xs font-semibold text-[#047857] uppercase tracking-wider">
             {post.category}
           </span>
         </div>

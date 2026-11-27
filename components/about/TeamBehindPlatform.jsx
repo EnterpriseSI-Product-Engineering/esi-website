@@ -42,7 +42,7 @@ const foundersContent = ({ founders }) => {
           <Link href={founder.linkedinUrl} target="_blank">
             <Linkedin
               strokeWidth={1.5}
-              className="text-blue-500 cursor-pointer"
+              className="text-emerald-500 cursor-pointer"
             />
           </Link>
         </div>
@@ -71,7 +71,7 @@ const foundersContent = ({ founders }) => {
 //           <Link href={founder.linkedinUrl} target="_blank">
 //             <Linkedin
 //               strokeWidth={1.5}
-//               className="text-blue-500 cursor-pointer"
+//               className="text-emerald-500 cursor-pointer"
 //             />
 //           </Link>
 //         </div>

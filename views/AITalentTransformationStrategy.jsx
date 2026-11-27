@@ -9,21 +9,21 @@ const areas = [
     title: "AI Native Scoring & Measurement",
     description:
       "Building AI native scoring & measurement for your organization across key employee categories",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
   },
   {
     icon: Users,
     title: "Learning Paths & Journeys",
     description:
       "Building Learning paths and Journeys for key employee personas for outcome driven AI Skill development.",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
   },
   {
     icon: BarChart3,
     title: "Competency & KRA Mapping",
     description:
       "Mapping learning journeys to competency development goals/ KRAs with metrics data",
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
   },
 ];
 
@@ -40,9 +40,9 @@ const AITalentTransformationStrategy = () => {
     <div className="container mx-auto px-4 py-32">
       <div className="max-w-5xl mx-auto text-center mb-16 mt-20">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <Sparkles className="w-4 h-4 text-[#1569a9]" />
-          <span className="text-sm font-semibold text-[#1569a9] uppercase tracking-wider">
+        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#047857]/5 border border-[#047857]/20">
+          <Sparkles className="w-4 h-4 text-[#047857]" />
+          <span className="text-sm font-semibold text-[#047857] uppercase tracking-wider">
             Talent Transformation
           </span>
         </div>
@@ -94,17 +94,17 @@ const AITalentTransformationStrategy = () => {
           <GradientCard className="group h-full transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 rounded-xl">
             <div className="p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-xl bg-gradient-to-br from-[#06b6d4] to-[#1569a9] shadow-lg">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-[#10b981] to-[#047857] shadow-lg">
                   <Lightbulb className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-neutral-900 group-hover:bg-gradient-to-r group-hover:from-[#06b6d4] group-hover:to-[#1569a9] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                <h3 className="text-2xl font-semibold text-neutral-900 group-hover:bg-gradient-to-r group-hover:from-[#10b981] group-hover:to-[#047857] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                   Our Approach
                 </h3>
               </div>
               <div className="space-y-4">
                 <p className="text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300">
                   We leverage our proprietary{" "}
-                  <strong className="bg-gradient-to-r from-[#06b6d4] to-[#1569a9] bg-clip-text text-transparent">
+                  <strong className="bg-gradient-to-r from-[#10b981] to-[#047857] bg-clip-text text-transparent">
                     CASH model
                   </strong>{" "}
                   (Continuous, Accelerated, Scalable, Holistic) to deliver
@@ -126,7 +126,7 @@ const AITalentTransformationStrategy = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
             Areas Where We Can{" "}
-            <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
               Support
             </span>
           </h2>
@@ -148,7 +148,7 @@ const AITalentTransformationStrategy = () => {
                       <Icon className="h-8 w-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#1569a9] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#047857] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                     {area.title}
                   </h3>
                   <p className="text-sm text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300">
@@ -166,7 +166,7 @@ const AITalentTransformationStrategy = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
             Why Choose Our{" "}
-            <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
               Strategy
             </span>
           </h2>
@@ -180,7 +180,7 @@ const AITalentTransformationStrategy = () => {
             >
               <div className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="p-2 rounded-lg bg-gradient-to-br from-[#9333ea] to-[#1569a9] shadow-lg flex-shrink-0">
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-[#9333ea] to-[#047857] shadow-lg flex-shrink-0">
                     <Zap className="h-5 w-5 text-white" />
                   </div>
                   <p className="text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300">
@@ -198,10 +198,10 @@ const AITalentTransformationStrategy = () => {
         <div className="grid md:grid-cols-2 gap-8">
           <GradientCard className="group h-full transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 rounded-xl">
             <div className="p-8 text-center">
-              <div className="p-4 rounded-2xl bg-gradient-to-br from-[#9333ea] to-[#1569a9] shadow-lg w-fit mx-auto mb-4">
+              <div className="p-4 rounded-2xl bg-gradient-to-br from-[#9333ea] to-[#047857] shadow-lg w-fit mx-auto mb-4">
                 <Settings className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#1569a9] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#047857] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 CASH Model Implementation
               </h3>
               <p className="text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300">
@@ -212,10 +212,10 @@ const AITalentTransformationStrategy = () => {
 
           <GradientCard className="group h-full transition-all duration-300 hover:scale-[1.02] hover:-translate-y-2 rounded-xl">
             <div className="p-8 text-center">
-              <div className="p-4 rounded-2xl bg-gradient-to-br from-[#06b6d4] to-[#ec4899] shadow-lg w-fit mx-auto mb-4">
+              <div className="p-4 rounded-2xl bg-gradient-to-br from-[#10b981] to-[#ec4899] shadow-lg w-fit mx-auto mb-4">
                 <TrendingUp className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#06b6d4] group-hover:to-[#ec4899] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+              <h3 className="text-xl font-bold text-neutral-900 mb-3 group-hover:bg-gradient-to-r group-hover:from-[#10b981] group-hover:to-[#ec4899] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                 Complete Execution Support
               </h3>
               <p className="text-neutral-600 group-hover:text-neutral-700 transition-colors duration-300">

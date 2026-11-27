@@ -91,17 +91,17 @@ const outcomes = [
   {
     icon: Target,
     text: "Understand the E2E Agent Development Lifecycle — from use case discovery, design, development, testing to deployment and post-production operations & optimization",
-    gradient: "from-[#9333ea] to-[#1569a9]",
+    gradient: "from-[#9333ea] to-[#047857]",
   },
   {
     icon: Code,
     text: "Build AI Agents (multi-agent systems) and RAG Apps hands-on with production-grade architecture",
-    gradient: "from-[#1569a9] to-[#06b6d4]",
+    gradient: "from-[#047857] to-[#10b981]",
   },
   {
     icon: Shield,
     text: "Apply key architectural principles and practices across specific technical topics including governance, security and evaluation",
-    gradient: "from-[#06b6d4] to-[#ec4899]",
+    gradient: "from-[#10b981] to-[#ec4899]",
   },
   {
     icon: Rocket,
@@ -141,7 +141,7 @@ const StageAccordion = ({ stage }) => {
         aria-expanded={open}
       >
         <div className="flex items-center gap-4">
-          <span className="flex-shrink-0 px-3 py-1 rounded-full bg-[#1569a9] flex items-center justify-center text-white text-xs font-bold uppercase tracking-wider">
+          <span className="flex-shrink-0 px-3 py-1 rounded-full bg-[#047857] flex items-center justify-center text-white text-xs font-bold uppercase tracking-wider">
             {stage.stage}
           </span>
           <span className="font-semibold text-neutral-900 text-lg">
@@ -165,7 +165,7 @@ const StageAccordion = ({ stage }) => {
         <div className="px-6 pb-6 pt-2 border-t border-neutral-100 bg-neutral-50/50">
           <div className="grid md:grid-cols-2 gap-8 mt-4">
             <div>
-              <p className="text-xs font-bold text-[#1569a9] uppercase tracking-wider mb-2">
+              <p className="text-xs font-bold text-[#047857] uppercase tracking-wider mb-2">
                 Core Domain
               </p>
               <p className="text-sm text-neutral-700 leading-relaxed">
@@ -214,16 +214,16 @@ const AIForwardDeployedArchitect = () => {
     <div className="container mx-auto px-4 py-20 md:py-32 relative">
       {/* ── Hero ── */}
       <div className="max-w-5xl mx-auto text-center mb-16 mt-16 md:mt-20">
-        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#1569a9]/5 border border-[#1569a9]/20">
-          <Cpu className="w-4 h-4 text-[#1569a9]" />
-          <span className="text-sm font-semibold text-[#1569a9] uppercase tracking-wider">
+        <div className="inline-flex items-center gap-2 px-5 py-2 mb-8 rounded-full bg-[#047857]/5 border border-[#047857]/20">
+          <Cpu className="w-4 h-4 text-[#047857]" />
+          <span className="text-sm font-semibold text-[#047857] uppercase tracking-wider">
             AI Technical Program
           </span>
         </div>
 
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-neutral-950 leading-tight">
           AI Forward Deployed{" "}
-          <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
             Architect
           </span>
         </h1>
@@ -245,8 +245,8 @@ const AIForwardDeployedArchitect = () => {
                 className="group rounded-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="p-4 text-center">
-                  <Icon className="w-5 h-5 text-[#1569a9] mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
-                  <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+                  <Icon className="w-5 h-5 text-[#047857] mx-auto mb-2 group-hover:scale-110 transition-transform duration-300" />
+                  <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
                     {stat.value}
                   </p>
                   <p className="text-xs text-neutral-500 mt-1 font-medium">{stat.label}</p>
@@ -262,7 +262,7 @@ const AIForwardDeployedArchitect = () => {
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             Intended{" "}
-            <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
               Outcomes
             </span>
           </h2>
@@ -297,7 +297,7 @@ const AIForwardDeployedArchitect = () => {
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             The 80-Hour{" "}
-            <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
               Transformation Journey
             </span>
           </h2>
@@ -317,7 +317,7 @@ const AIForwardDeployedArchitect = () => {
       <div className="max-w-4xl mx-auto mb-16 md:mb-20 text-center">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="inline-flex items-center justify-center gap-2 rounded-xl bg-white border border-[#1569a9]/20 text-[#1569a9] px-6 py-4 font-semibold shadow-sm hover:shadow-md hover:bg-neutral-50 transition-all duration-300"
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-white border border-[#047857]/20 text-[#047857] px-6 py-4 font-semibold shadow-sm hover:shadow-md hover:bg-neutral-50 transition-all duration-300"
         >
           <Download className="w-5 h-5" />
           Download Detailed Curriculum
@@ -329,7 +329,7 @@ const AIForwardDeployedArchitect = () => {
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             Tools &{" "}
-            <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
               Technologies
             </span>
           </h2>
@@ -344,7 +344,7 @@ const AIForwardDeployedArchitect = () => {
               {toolsHighlight.map((tool, i) => (
                 <span
                   key={i}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-neutral-200 text-sm font-medium text-neutral-700 shadow-sm hover:border-[#1569a9]/40 hover:text-[#1569a9] hover:shadow-md transition-all duration-200"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-neutral-200 text-sm font-medium text-neutral-700 shadow-sm hover:border-[#047857]/40 hover:text-[#047857] hover:shadow-md transition-all duration-200"
                 >
                   <Star className="w-3 h-3 text-[#9333ea]" />
                   {tool}
@@ -360,7 +360,7 @@ const AIForwardDeployedArchitect = () => {
         <div className="text-center mb-10 md:mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
             Why This{" "}
-            <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
               Program
             </span>
           </h2>
@@ -370,21 +370,21 @@ const AIForwardDeployedArchitect = () => {
           {[
             {
               icon: BookOpen,
-              gradient: "from-[#9333ea] to-[#1569a9]",
+              gradient: "from-[#9333ea] to-[#047857]",
               title: "Research-Based, Monthly Updated Content",
               description:
                 "Program content is continuously updated each month to reflect the latest tools, models, and industry practices — ensuring you learn what's relevant today.",
             },
             {
               icon: Rocket,
-              gradient: "from-[#1569a9] to-[#06b6d4]",
+              gradient: "from-[#047857] to-[#10b981]",
               title: "Real-World Consulting Experience",
               description:
                 "Instructors bring hands-on experience from AI pilot delivery and enterprise implementations, giving you practical insights that go beyond theory.",
             },
             {
               icon: Users,
-              gradient: "from-[#06b6d4] to-[#ec4899]",
+              gradient: "from-[#10b981] to-[#ec4899]",
               title: "Seasoned Expert Instructors",
               description:
                 "Learn from professionals with deep expertise in AI, enterprise applications, cloud platforms, and business consulting — the same skills you'll need on the job.",
@@ -411,7 +411,7 @@ const AIForwardDeployedArchitect = () => {
                       <Icon className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#1569a9] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+                      <h3 className="text-lg font-bold text-neutral-900 mb-2 group-hover:bg-gradient-to-r group-hover:from-[#9333ea] group-hover:to-[#047857] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
                         {usp.title}
                       </h3>
                       <p className="text-neutral-600 leading-relaxed group-hover:text-neutral-700 transition-colors duration-300">
@@ -431,13 +431,13 @@ const AIForwardDeployedArchitect = () => {
         <GradientCard className="group rounded-2xl transition-all duration-300">
           <div className="p-8 md:p-12 text-center">
             <div
-              className={`p-4 rounded-2xl bg-gradient-to-br from-[#9333ea] to-[#1569a9] shadow-lg w-fit mx-auto mb-6 group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}
+              className={`p-4 rounded-2xl bg-gradient-to-br from-[#9333ea] to-[#047857] shadow-lg w-fit mx-auto mb-6 group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}
             >
               <Rocket className="h-10 w-10 text-white" />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-4">
               Ready to Become an{" "}
-              <span className="bg-gradient-to-r from-[#9333ea] to-[#1569a9] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#9333ea] to-[#047857] bg-clip-text text-transparent">
                 AI Forward Deployed Architect?
               </span>
             </h3>
@@ -448,7 +448,7 @@ const AIForwardDeployedArchitect = () => {
             </p>
             <a
               href="mailto:info@enterprisesi.com?subject=AI Forward Deployed Architect Program Enquiry"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#9333ea] to-[#1569a9] px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#9333ea] to-[#047857] px-8 py-4 text-base font-semibold text-white shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300"
             >
               Enquire Now
               <ArrowRight className="h-5 w-5" />
@@ -465,7 +465,7 @@ const AIForwardDeployedArchitect = () => {
             onClick={() => setIsModalOpen(false)}
           ></div>
           <div className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
-            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#9333ea] to-[#1569a9]"></div>
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#9333ea] to-[#047857]"></div>
             
             <button 
               onClick={() => setIsModalOpen(false)}
@@ -476,7 +476,7 @@ const AIForwardDeployedArchitect = () => {
 
             <div className="p-8">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-[#1569a9]/10 rounded-xl text-[#1569a9]">
+                <div className="p-3 bg-[#047857]/10 rounded-xl text-[#047857]">
                   <Download className="w-6 h-6" />
                 </div>
                 <div>
@@ -498,7 +498,7 @@ const AIForwardDeployedArchitect = () => {
                     <input
                       type="email"
                       required
-                      className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#1569a9] focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#047857] focus:border-transparent outline-none transition-all"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -509,7 +509,7 @@ const AIForwardDeployedArchitect = () => {
                     <input
                       type="tel"
                       required
-                      className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#1569a9] focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#047857] focus:border-transparent outline-none transition-all"
                       placeholder="+1 (555) 000-0000"
                     />
                   </div>
@@ -522,7 +522,7 @@ const AIForwardDeployedArchitect = () => {
                   <input
                     type="url"
                     required
-                    className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#1569a9] focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#047857] focus:border-transparent outline-none transition-all"
                     placeholder="https://linkedin.com/in/username"
                   />
                 </div>
@@ -534,7 +534,7 @@ const AIForwardDeployedArchitect = () => {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#1569a9] focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#047857] focus:border-transparent outline-none transition-all"
                     placeholder="Company Name"
                   />
                 </div>
@@ -547,7 +547,7 @@ const AIForwardDeployedArchitect = () => {
                     <input
                       type="text"
                       required
-                      className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#1569a9] focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#047857] focus:border-transparent outline-none transition-all"
                       placeholder="New York"
                     />
                   </div>
@@ -558,7 +558,7 @@ const AIForwardDeployedArchitect = () => {
                     <input
                       type="text"
                       required
-                      className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#1569a9] focus:border-transparent outline-none transition-all"
+                      className="w-full px-4 py-2.5 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-[#047857] focus:border-transparent outline-none transition-all"
                       placeholder="United States"
                     />
                   </div>
@@ -567,7 +567,7 @@ const AIForwardDeployedArchitect = () => {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#1569a9] to-[#06b6d4] px-6 py-3.5 text-base font-semibold text-white shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
+                    className="w-full flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#047857] to-[#10b981] px-6 py-3.5 text-base font-semibold text-white shadow-md hover:shadow-lg hover:opacity-90 transition-all duration-300"
                   >
                     Download Curriculum Document <Download className="w-4 h-4" />
                   </button>

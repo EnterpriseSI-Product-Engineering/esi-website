@@ -77,26 +77,26 @@ const ThreeAnimation = () => {
         <directionalLight
           position={[-10, -10, -5]}
           intensity={0.5}
-          color="#1e7fc9"
+          color="#059669"
         />
 
         <AnimatedSphere
           position={[-2, 0, 0]}
-          color="#1569a9"
+          color="#047857"
           speed={0.5}
           distort={0.4}
           size={0.8}
         />
         <AnimatedSphere
           position={[2, -0.5, -2]}
-          color="#0d5a8f"
+          color="#065f46"
           speed={0.3}
           distort={0.3}
           size={0.6}
         />
         <AnimatedTorus
           position={[1.5, 0.5, -1]}
-          color="#1e7fc9"
+          color="#059669"
           speed={0.2}
           size={0.7}
         />

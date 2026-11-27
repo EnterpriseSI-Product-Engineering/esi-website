@@ -1,0 +1,452 @@
+{
+  "operator": {
+    "totalHours": 40,
+    "outcomes": [
+      "Learners understand how current generation of AI works, how it can disrupt business & societal practices, processes & careers and how to prepare for a AI driven future",
+      "Learners understand in particular about how to work with AI Agents, security, governance & risk aspects and how to make Agents work for business (incl best fit use cases)",
+      "Learners understand how to find new use cases and create a TO-BE Agentic process design for these use cases",
+      "Learners will understand how to sell and deliver / implement AI products & solutions"
+    ],
+    "highlights": [
+      "Around 20 demos, including video, tool, prompting and agent demos",
+      "2 to 3 hours of Q&A and doubt clearing",
+      "Exercises, AI use case ideation and spec writing",
+      "Labs on prompt engineering and building AI Agents without code"
+    ],
+    "stages": [
+      {
+        "modules": [
+          {
+            "title": "Artificial General Intelligence (AGI)/ Generative AI (GenAI) with Foundation Models (FMs)",
+            "hours": 3,
+            "topics": [
+              "Artificial Intelligence and Machine Learning",
+              "Natural Language Processing",
+              "Business AI Framework - Finding business use cases for GenAI / AGI application",
+              "Use cases for specific industries and horizontals - Machine Learning, Natural Language processing",
+              "Pre-trained LLMs & Multimodal LLMs",
+              "LLM Mechanics: Tokenization, Context Window, Embeddings, Token generation"
+            ]
+          },
+          {
+            "title": "Working with LLMs",
+            "hours": 10,
+            "topics": [
+              "Artificial General Intelligence vs Classic ML",
+              "Use cases for specific industries and horizontals - Generative AI, Agentic AI",
+              "Zero shot, one shot, few shot prompting / Prompt Engineering",
+              "Meta prompting with examples",
+              "Lab: Advanced Prompt Engineering",
+              "Fine-tuning LLMs for business needs & Domain adapted LLMs",
+              "Retrieval Augmented Generation (RAG) for knowledge / information querying / availability (static & dynamic, real time)",
+              "AI Copilots & Chatbots",
+              "AI Wrappers and how General AI Agents like Manus AI works",
+              "Agents using browser, controlling local computer",
+              "Deep research using Agents",
+              "Reasoning in AI Agents and use of Reasoning models",
+              "Agentic AI/AI Agents, Agentic Workflows: Reflection, Tool Use, Planning, Multi-agent Collaboration",
+              "AI Infrastructure for Generative AI / Foundation Models & AI Agents: Planning, Economics",
+              "Building and using Knowledge Graphs and GraphRAG with LLMs",
+              "Text-to-SQL for conversational analytics and interacting with databases, with LLMs",
+              "Building AI Agents without code - Demo",
+              "Evaluation and performance benchmarking - LLMs on various tasks, AI Agents and RAG apps",
+              "LLM & AI Agent Cost / Pricing",
+              "Artificial General & Super Intelligence & the new Robotics Revolution powered by Foundation models"
+            ]
+          },
+          {
+            "title": "AI Agents / Agentic AI",
+            "hours": 15,
+            "topics": [
+              "Deepdive into AI Agent Design patterns with demos and hands-on labs - Reflection, Tool Use, Planning, Multi-agent Collaboration",
+              "Agentic Memory: Semantic, Episodic, Procedural",
+              "Model context protocol (MCP) Servers and its applications for data & process Integrations with Agents",
+              "Agentic Document Workflows (ADW)",
+              "Agentic Object Detection",
+              "Evaluation agents and self-adapting evaluations",
+              "Lab: Building business apps using Vibe Coding",
+              "Generating high quality synthetic data with agentic pipelines",
+              "Lessons learnt on Enterprise AI Agent deployments at scale",
+              "Creating ROI from Enterprise AI Agent Implementation",
+              "Agentic AI use cases for Product and application development",
+              "Agentic RAG",
+              "Demo: AI Copilot for Internal Auditors",
+              "Demo: AI Copilot for Accountants",
+              "Demo: AI Copilot for Insurance Brokers / Sales",
+              "Demo: Product info & guided discovery chatbot",
+              "Walkthrough: Building a ITSM Agent",
+              "Working with AI on local laptop - controlling browser, keystrokes and mouseclicks",
+              "Spreadsheet AI - MS Excel, Google Office Suite, Quadratic",
+              "Lab: Build AI Agent and RAG App without coding",
+              "Lab: AI Agent use case discovery & detailing (spec writing)"
+            ]
+          },
+          {
+            "title": "Responsible AI & AI Regulations",
+            "hours": 2,
+            "topics": [
+              "AI Ethics, Risk & Governance via Responsible AI framework and AI Safety via Guardrails",
+              "AI Regulations: EU AI Act, California AI Bill, others",
+              "AI Risk Management",
+              "Constitutional AI and Sovereign AI"
+            ]
+          },
+          {
+            "title": "Deepdive into AI Use cases",
+            "hours": 5,
+            "topics": [
+              "Generative and Agentic AI in Banking & Financial Services",
+              "Generative and Agentic AI in Insurance",
+              "Generative and Agentic AI in Retail & Ecommerce",
+              "Generative and Agentic AI in IT Service Management",
+              "Generative and Agentic AI in Media & Entertainment",
+              "Generative and Agentic AI in Finance & Accounting, Auditing",
+              "Generative and Agentic AI in Supply Chain & Manufacturing",
+              "Generative and Agentic AI in Marketing & Sales",
+              "Generative and Agentic AI in Customer Service",
+              "Generative and Agentic AI in HR"
+            ]
+          },
+          {
+            "title": "Selling & delivering AI Products & Solutions",
+            "hours": 5,
+            "topics": [
+              "Roles & Responsibilities - AI Implementation / Lifecycle projects (AI FDE, Deployment Strategist, etc)",
+              "Analyzing FDE JDs from OpenAI, Anthropic, Google, Microsoft, AWS, Palantir",
+              "AI Consulting mindset: Various Hats, One hat at a time, Switching Hats",
+              "Insights on AI Strategy, Solutions, Delivery from McKinsey, BCG, Bain, Gartner, IDC, Forrester, Big 4s, CBInsights, Others",
+              "AI frameworks from top 5 Strategy consulting firms, Harvard/MIT/Stanford/LSE, World Bank, other prestigious institutions",
+              "Proprietary AI Frameworks & Methodologies developed by Trainer(s) in-house",
+              "Business Process Re-engineering / re-design with application of AI Agents",
+              "Change management: AS-IS to TO-BE Agentic Process",
+              "Business AI Frameworks",
+              "Sovereign AI: A Key component of Customer proposals & solutioning, implementation",
+              "Finding AI opportunities / use case discovery",
+              "Key AI Services & converting opportunities",
+              "Pilots & implementations",
+              "Post production operations & ROI calculation",
+              "Role Play/Case Method: Selling AI services to a Fintech Enterprise starting with Pilot",
+              "Role Play/Case Method: Pilot Design, Delivery plan creation, post go-live stage planning, outcome measurement",
+              "Role Play/Case Method: Proposal & estimation for AI Implementation: Sprint wise",
+              "Role Play/Case Method: Evaluation metrics and User acceptance testing, security approval for production go-live",
+              "Role Play/Case Method: Setting up AI Governance, Risk & Compliance processes for a Fintech customer",
+              "Role Play / Case Method: Pricing strategies for Agentic AI & RAG Implementations",
+              "Role Play / Case Method: Consulting customers on TCO of AI Implementations and operations"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "engineer": {
+    "totalHours": 80,
+    "outcomes": [
+      "Participants should be able to understand the E2E Agent Development Lifecycle from use case discovery , design, development, testing to deployment and post production operations & optimization",
+      "Participants will be able to build AI Agents (multi-agent systems) and RAG Apps hands-on",
+      "Key Architectural principles / practices on specific technical topics will be covered"
+    ],
+    "highlights": [
+      "Hands-on labs across agents, MCP, RAG, evaluation and AI coding assistants",
+      "Case studies and role plays on selling and delivering AI",
+      "2 capstone projects on Agents and RAG"
+    ],
+    "stages": [
+      {
+        "title": "Agentic AI Engineering & LLM Concepts",
+        "hours": 52,
+        "tools": "LLMs (Anthropic Claude, OpenAI, Google Gemini, Deepseek, Kimi k2, Minimax, GLM, Qwen), Google ADK, AWS Strands SDK, LangGraph, Langflow / n8n.io, AWS Bedrock, Google Enterprise Agent platform, Azure AI Foundry, Databricks, Evals & Observability frameworks, AI Governance Frameworks",
+        "modules": [
+          {
+            "title": "Overview of Generative AI and LLMs",
+            "hours": 6,
+            "topics": [
+              "What is a Forward Deployed Engineer / Architect",
+              "Artificial Intelligence and Machine Learning",
+              "Key types of Machine Learning: Supervised & Unsupervised Learning",
+              "Basics of Deep Neural Network & Transformer Architecture",
+              "Natural Language Processing & Generative AI",
+              "Categories of LLMs & LLM selection criteria",
+              "LLM Mechanics: Tokens, Embeddings, Context Window, Parameters, Hyperparameters, Hallucinations, Inference & training for LLM development",
+              "Mixture of Experts Model Architecture",
+              "Quiz / Assessment and Q&A"
+            ],
+            "labs": [
+              "Multimodal Embedding",
+              "Subword tokenization"
+            ]
+          },
+          {
+            "title": "AI Agents & MCP Servers: Deepdive",
+            "hours": 16,
+            "topics": [
+              "Overview of AI Agents / Agentic AI & role of LLMs / SLMs",
+              "Tool use / function calling",
+              "Overview of LangChain and LangGraph for Agent Building",
+              "MCP Servers - connecting AI Agents to 3rd party apps",
+              "MCP Client & MCP Host",
+              "Business use cases of AI Agents across Industries and Horizontals / Functions incl Vertical AI Agents",
+              "Technical use cases of AI Agents (in SDLC automation)",
+              "MCP Server Security",
+              "Step-by-step - Designing an AI Agent",
+              "Overview of Google ADK v2 for agent building",
+              "Context Engineering for Agents",
+              "Agentic Memory - Long term, short term with demos",
+              "AI Agent / Agentic AI Pricing models & how they are disruptive to existing SAAS models",
+              "Breakout Room Activity: Building use case and specs for a AI Agent",
+              "Multi-agent systems",
+              "Quiz / Assessment and Q&A"
+            ],
+            "labs": [
+              "Build Single Agent with Tool calling in LangGraph",
+              "Build MCP Server with tools",
+              "Build Multi-agent system with LangGraph (Select domain use cases)",
+              "Build Multi-agent system with Google ADK v2"
+            ]
+          },
+          {
+            "title": "Building & integrating AI Agents: Technical Deepdive",
+            "hours": 18,
+            "topics": [
+              "Demo: Building Multi-agent system with LangGraph",
+              "Demo: Building custom MCP Server with FastMCP",
+              "Demo: Building AI Agent with Langflow/n8n.io",
+              "LLM/SLM selection for AI Agents / Agentic AI",
+              "Reflection in AI Agents",
+              "Building multi-agent systems",
+              "Google Agent2Agent (A2A) Protocol for multi-agent collaboration with demo",
+              "Demo: Multi-agent collaboration",
+              "Agentic RAG",
+              "Agent Skills",
+              "Designing and building Agent UI-UX / Conversational experiences - Good practices, frameworks & tooling",
+              "Agent Harness / Harness Engineering",
+              "Loop Engineering",
+              "Ontologies & Knowledge Graph",
+              "Context Graphs",
+              "Different ways of training Agents on custom enterprise data",
+              "Using OpenRouter, Ollama for Agent development with open weight models",
+              "Breakout Room Activities - Technical Design of an AI Agent",
+              "Quiz / Assessment and Q&A"
+            ],
+            "labs": [
+              "Build Multi-agent system with Langflow/n8n.io (Select domain use cases)",
+              "Context Engineering (3 labs)",
+              "Agentic Memory (4 labs)",
+              "Reflection in AI Agents",
+              "Multi-agent collaboration with A2A protocol",
+              "Agent Skills (Select domain use cases)",
+              "Agent Skills (Using scripts option)",
+              "Agent Skills (Using assets / templates / other advanced features)",
+              "Build AI Agent with MCP Server Integration",
+              "Agent Harness",
+              "Context Graph",
+              "Ontology / Knowledge Graph",
+              "Loop Engineering"
+            ]
+          },
+          {
+            "title": "Working with Retrieval Augmented Generation",
+            "hours": 8,
+            "topics": [
+              "Concept of Retrieval Augmented Generation (RAG) with 2 real life examples",
+              "Data pipeline for RAG: single & multiple documents (Code walkthrough)",
+              "Business use cases of RAG Apps across Industries and Horizontals / Functions incl Vertical AI Agents",
+              "Creating Vector embeddings and storing in Vector database, with examples",
+              "Retrieval Mechanics & Similarity / Vector search techniques",
+              "LangChain for RAG Development",
+              "Techniques for improving RAG accuracy: Reranking, chunk optimization, others",
+              "Langflow for low code no code visual modeling based RAG development",
+              "Lab: Building RAG Data ingestion, indexing, retrieval and generation pipeline",
+              "Advanced RAG techniques: Agentic RAG, GraphRAG, Multimodal RAG, Hybrid RAG, Page Index",
+              "Demo / Code walkthrough: Hybrid RAG",
+              "Chunkless RAG / LLM Wiki & Google Open Knowledge Format",
+              "Agentic Document Extraction",
+              "Quiz / Assessment and Q&A"
+            ],
+            "labs": [
+              "Agentic RAG",
+              "Graph RAG",
+              "Hybrid RAG",
+              "Page Index",
+              "LLMWiki / Google Open Knowledge Format"
+            ]
+          },
+          {
+            "title": "Production deployment of AI Agents",
+            "hours": 4,
+            "topics": [
+              "Responsible AI and AI Governance for Agents (Databricks AI Governance Fwk, ISO42001, NIST RMF)",
+              "Agent Governance Deepdive: Policies, Audit Trails, Agent Registry, Agent Identity, Agent Control Plane, Guardrails, others",
+              "2 case studies: Agent Governance Implementation",
+              "Assignment: Building an AI Governance Strategy & Implementation Roadmap",
+              "Agent Evaluation",
+              "Agent Security (Agent identity, Threat modeling, OWASP Top 10, Red teaming)",
+              "Agent deployment & scaling options on AWS Bedrock, Azure AI Foundry, Google Enterprise Agent platform",
+              "Post production considerations for AI Agents",
+              "Demo - Guardrailing LLM / Agent",
+              "Open Secure AI Alliance",
+              "Case: BMW’s AI Gateway: Self hosting cost efficient AI at Enterprise Scale",
+              "Building well architected agents / Architectural perspectives",
+              "How to optimize Agent cost/how to build solutions with token constraints",
+              "Quiz / Assessment and Q&A"
+            ],
+            "labs": [
+              "LLM-as-a-judge for Agent Evaluation",
+              "Agent Evaluation",
+              "Agent Evaluation (Skill Evaluation)"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Autonomous Software Development with AI SDLC Assistants & Spec driven development",
+        "hours": 10,
+        "tools": "OpenAI Codex, Claude Code, GitHub Copilot, GitHub Speckit",
+        "modules": [
+          {
+            "title": "Deep-dive - AI Coding Assistants",
+            "hours": 2,
+            "topics": [
+              "Concepts in Claude Code / Codex - Features, Good practices",
+              "How Codex, Claude code uses memory, tools, skills, harness"
+            ],
+            "labs": [
+              "Spec driven development (SDD) with GitHub Speckit",
+              "Integrating GitHub MCP Server and perform tasks -GitHub Copilot / Claude Code",
+              "Full stack app with Claude Code, Codex for code review"
+            ]
+          },
+          {
+            "title": "Developing with AI Coding Assistants",
+            "hours": 4,
+            "topics": [
+              "Developing software applications, AI Agents & RAG apps with Claude Code & OpenAI Codex (Python, Typescript / Javascript)",
+              "Developing ML , RAG and AI Agent apps with Claude Code & OpenAI Codex",
+              "Spec Driven Development with GitHub Copilot / Claude Code / Codex incl demo",
+              "Setting up MCP Server & integrating in Claude Code & OpenAI Codex",
+              "Using Agent Skills, Agents.md, plugins in Claude Code",
+              "Usage & productivity metrics: Showing value from use of AI Coding Assistants"
+            ],
+            "labs": [
+              "Multi-agent system with Codex, Claude code for code review"
+            ]
+          },
+          {
+            "title": "Agents across SDLC stages",
+            "hours": 4,
+            "topics": [
+              "Application of AI Agents in Software Architecture, Design, Requirements analysis",
+              "Application of AI Agents in Software Testing with examples",
+              "Application of AI Agents in DevOps / Deployment with examples",
+              "Application of AI Agents in Observability / application monitoring",
+              "Application of AI Agents in Incident management / RCA & resolution",
+              "Building AI Agent powered Software Factory, Concept & Case Study / Example",
+              "Quiz / Assessment and Q&A"
+            ],
+            "labs": []
+          }
+        ]
+      },
+      {
+        "title": "Well Architected AI on Cloud",
+        "hours": 4,
+        "tools": "Reference Architectures, Well architected principles, Backend system design, Good practices of using open standards: MCP, Agent Skills, Agents.md, A2A, Working with Gemini API, Azure Foundry SDK, OpenAI Agents SDK, Claude Agents SDK",
+        "modules": [
+          {
+            "title": "Well Architected AI",
+            "hours": 4,
+            "topics": [
+              "Well architected principles applied to AI Agents",
+              "Agentic AI Architectures - Current practices & emerging trends",
+              "Multi-agent collaboration: strategies for agent communications"
+            ],
+            "labs": []
+          }
+        ]
+      },
+      {
+        "title": "AI Infrastructure",
+        "hours": 4,
+        "tools": "Cloud (AWS, GCP, Azure) & On-premise deployment of AI systems",
+        "modules": [
+          {
+            "title": "AI Infrastructure",
+            "hours": 4,
+            "topics": [
+              "Emerging trends in AI Infra",
+              "On-premise AI Infra - Apple Mac Minis / Mac Studio, AMD & NVIDIA stack",
+              "Local development with Ollama",
+              "Palantir Sovereign AI Operating System Reference Architecture with NVIDIA",
+              "AI Inferencing with SambaNova, d-Matrix, Cerebras, Groq",
+              "CNCF LLM-d & vLLM for faster inference & kubernetes deployment",
+              "Air gapped AI",
+              "Wireless GPUs for local AI",
+              "Modular containerized AI datacenters",
+              "Deploying & scaling Agents & MCP Servers on AWS, GCP, Azure"
+            ],
+            "labs": []
+          }
+        ]
+      },
+      {
+        "title": "Selling & delivering AI Products & Solutions",
+        "hours": 8,
+        "tools": "None",
+        "modules": [
+          {
+            "title": "Selling & delivering AI Products & Solutions",
+            "hours": 8,
+            "topics": [
+              "Roles & Responsibilities: AI Forward Deployed Engineer (FDE)/ Architect",
+              "Analyzing FDE JDs from OpenAI, Anthropic, Google, Microsoft, AWS, Palantir",
+              "AI Implementation Team: All Roles (FDA, FDE, Engg Mgr, Harness Engineer, others)",
+              "AI Consulting mindset: Various Hats, One hat at a time, Switching Hats",
+              "Insights on AI Strategy, Solutions, Delivery from McKinsey, BCG, Bain, Gartner, IDC, Forrester, Big 4s, CBInsights, Others",
+              "AI frameworks from top 5 Strategy consulting firms, Harvard/MIT/Stanford/LSE, World Bank, other prestigious institutions",
+              "Proprietary AI Frameworks & Methodologies developed by Trainer(s) in-house",
+              "Business Process Re-engineering / re-design with application of AI Agents",
+              "Change management: AS-IS to TO-BE Agentic Process",
+              "Case Study 1 - How a team of FDEs delivered a complex Agentic AI Pilot (Workflow & delivery practices)",
+              "Case Study 2 - How a team of FDEs delivered a complex Agentic AI Implementation for a Bank (Workflow & delivery practices)",
+              "Business AI Frameworks",
+              "Sovereign AI: A Key component of Customer proposals & solutioning, implementation",
+              "Leveraging AI Partnerships: OpenAI, Anthropic, NVIDIA, others",
+              "Finding AI opportunities / use case discovery",
+              "Key AI Services & converting opportunities",
+              "Pilots & implementations",
+              "Post production operations & ROI calculation",
+              "FDE Interview Q&As",
+              "Implementing Sovereign AI: The Palantir-NVIDIA way",
+              "Role Play/Case Method: Selling AI services to a Fintech Enterprise starting with Pilot",
+              "Role Play/Case Method: Pilot Design, Delivery plan creation, post go-live stage planning, outcome measurement",
+              "Role Play/Case Method: Proposal & estimation for AI Implementation: Sprint wise",
+              "Role Play/Case Method: Evaluation metrics and User acceptance testing, security approval for production go-live",
+              "Role Play/Case Method: Setting up AI Governance, Risk & Compliance processes for a Fintech customer",
+              "Role Play / Case Method: Pricing strategies for Agentic AI & RAG Implementations",
+              "Role Play / Case Method: Consulting customers on TCO of AI Implementations and operations"
+            ],
+            "labs": []
+          }
+        ]
+      },
+      {
+        "title": "2 Capstone Projects: Agent & RAG Development",
+        "hours": 2,
+        "tools": null,
+        "modules": [
+          {
+            "title": "Capstone projects and evaluation",
+            "hours": 2,
+            "labs": [],
+            "topics": [
+              "2 capstone projects per cohort: Agent and RAG development",
+              "Capstone project assessment",
+              "Skills interview",
+              "Post-assessment MCQ test",
+              "Sponsor-grade demo, complete handover artefact and named engagement match"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

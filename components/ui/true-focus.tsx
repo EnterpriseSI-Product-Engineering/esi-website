@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 
 const TrueFocus = ({
   text = "Agentic Business Acceleration Platform",
-  borderColor = "#06b6d4",
-  glowColor = "rgba(6, 182, 212, 0.5)"
+  borderColor = "#10b981",
+  glowColor = "rgba(16, 185, 129, 0.5)"
 }) => {
   return (
     <div className="relative inline-block">

@@ -835,16 +835,16 @@
   --gray-700: #374151;
   --gray-800: #1f2937;
   --gray-900: #111827;
-  --blue-500: #3b82f6;
-  --blue-400: #60a5fa;
-  --blue-300: #93c5fd;
-  --indigo-300: #a5b4fc;
+  --blue-500: #10b981;
+  --blue-400: #34d399;
+  --blue-300: #6ee7b7;
+  --indigo-300: #5eead4;
   --violet-200: #e9d5ff;
   --black: #000000;
   --white: #ffffff;
   --transparent: transparent;
   /* Kloudstac color START*/
-  --esi-primary: #1569a9;
+  --esi-primary: #047857;
   /* Kloudstac color END */
   --radius: 0.625rem;
   --background: oklch(1 0 0);
